@@ -11,8 +11,9 @@
 
 
 
+   <button type="button" class="btn btn-info btn-lg addtocartx" data-prod="{{$product->cartnfo()}}" data-toggle="modal" data-target="#myModal">خرید</button>
 
-  <button type="button" class="btn btn-info btn-lg addtocart" data-prod="{{$product->cartnfo()}}" data-toggle="modal" data-target="#myModal">خرید</button>
+ <button type="button" class="btn btn-info btn-lg addtocart" data-prod="{{$product->cartnfo()}}" >خرید</button>
 
 
 @stop

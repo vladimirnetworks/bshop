@@ -13,7 +13,7 @@
   <script src="/bs4/jquery.min.js"></script>
   <script src="/bs4/popper.min.js"></script>
   <script src="/bs4/bootstrap.min.js"></script>
-
+  <script src="/bs4/cook.js"></script>
 
    </head>
 
@@ -32,21 +32,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
+
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-.cartslider {
-
-    	 -o-transition:.2s;
-  -ms-transition:.2s;
-  -moz-transition:.2s;
-  -webkit-transition:.2s;
-
-  transition:.2s;
-  height:10vh;
-
 }
 </style>
 <body>
@@ -68,19 +56,20 @@ behkiana - phone : 066-42448787
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">سفارش شما با موفقیت ثبت شد</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
+        <div class="modal-body text-center">
+لطفا شماره تماستون رو وارد کنید 
+ <br>
+                 <button style="display:none" type="button" class="btn btn-success" data-dismiss="modal">ثبت</button>  <input class="form-control" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
+
         </div>
         
         <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
+
         
       </div>
     </div>
@@ -91,46 +80,41 @@ behkiana - phone : 066-42448787
 
 
 <script>
-function createCookie(name, value, days) {
-    var expires;
 
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
-    } else {
-        expires = "";
-    }
-    document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
-}
-
-function readCookie(name) {
-    var nameEQ = encodeURIComponent(name) + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ')
-            c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0)
-            return decodeURIComponent(c.substring(nameEQ.length, c.length));
-    }
-    return null;
-}
-
-function eraseCookie(name) {
-    createCookie(name, "", -1);
-}
 ///////////////////////////////////////////
 
+cartsliderdata = {};
+cartsliderdata.isup = false;
+cartsliderdata.userwording = false;
+
 function cartup() {
-$(".cartslider").css({"height":"80vh"})
+
+cartsliderdata.userwording = false;
+cartsliderdata.isup = true;
+$(".cartslider").animate({"height":"80vh"},100)
 $(".cartslider_dim").fadeIn(200);
+
+$(".cartslider_smallview").hide(200);
+setTimeout(function() {
+
+$(".cartslider_bigview").fadeIn(200);
+
+},300);
+
+
 }
 
 
 function cartdown() {
-  $(".cartslider").css({"height":"10vh"})
+cartsliderdata.userwording = false;
+ cartsliderdata.isup = false; 
+
+  $(".cartslider").animate({"height":"10vh"},100)
   $(".cartslider_dim").fadeOut(200);
+
+ $(".cartslider_smallview").fadeIn(200);
+ $(".cartslider_bigview").fadeOut(200);
+
 }
 
 
@@ -142,14 +126,16 @@ function cartlistener() {
     var tot = 0;
 
     $.each(cart, function (i) {
-      tot = tot+parseInt(cart[i]['price']);
+      tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
     }
     );
-    $(".cartslider_body").html(tot)
-    
+    $(".cartslider_smallview_text").html(tot)
+  
+    renderbigviewcart();
 }
 
 function addtocart(prod) {
+
 
     if (!readCookie("cart")) {
         createCookie('cart', JSON.stringify({}), 10);
@@ -157,18 +143,43 @@ function addtocart(prod) {
 
     var cart = JSON.parse(readCookie("cart"));
 
+    var count;
+
     if (cart[prod['id']] == null) {
 
         prod['count'] = 1;
+        count = 1;
 
         cart[prod['id']] = prod;
 
         createCookie('cart', JSON.stringify(cart), 10);
 
-
-
+    } else {
+      count = cart[prod['id']]['count'];
     }
 
+
+/*
+
+$('#itemcount').val(count);
+$("#itemcount").off();
+$("#itemcount").change(function(){
+ console.log($(this).val());
+ cartchangecount(prod['id'],$(this).val());
+  cartlistener();
+
+  $("#itemprice").html(cart[prod['id']]['price']*$(this).val());
+
+  if ($(this).val() < 1) {
+    $("#myModal").modal('toggle');
+  }
+
+});
+
+$("#itemprice").html(cart[prod['id']]['price']*count);
+
+
+*/
     cartlistener();
 
 }
@@ -198,7 +209,22 @@ $('.addtocart').click(function() {
 
     var prod = JSON.parse($(this).attr('data-prod'));
 
+
     addtocart(prod);
+    cartup();
+
+    if (cartsliderdata.timer) {
+      clearTimeout(cartsliderdata.timer);
+    }
+
+    cartsliderdata.timer = setTimeout(function() {
+      if (!cartsliderdata.userwording) {
+
+           console.log("i am false "+cartsliderdata.userwording);
+           cartdown();
+
+      }
+    },4000);
 
 });
 
@@ -206,6 +232,103 @@ $('.addtocart').click(function() {
 
 
 
+
+
+
+function renderbigviewcart() {
+console.log('called');
+    var cart = JSON.parse(readCookie("cart"));
+    
+    var tot = 0;
+
+    var ords = $('<div></div>');
+    ords.empty();
+
+    $.each(cart, function (i) {
+    tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
+
+      var elem  = $('<div class="p-2"></div>');
+
+      var tedad = $('<input type="number">').css({"width":"40px","text-align":"center"}).on('click touchstart',function(){
+       
+        setTimeout(function() {tedad.focus();},50);
+      });
+
+   
+
+      tedad.val(cart[i]['count']);
+      var pricev = $("<span>"+cart[i]['price']*cart[i]['count']+"</span>");
+
+
+      tedad.on('keyup',function() {
+        cartchangecount(i,tedad.val());
+        pricev.text(cart[i]['price']*tedad.val());
+        setTimeout(function() {tedad.focus();},50);
+      });
+
+        elem.append(pricev);
+        elem.append($("<span>"+cart[i]['title']+"</span>"));
+        elem.append(tedad);
+        
+         elem.append($("<button class=\"btn btn-danger\">x</button>").on("touchstart click",function() {
+          elem.remove();
+          cartchangecount(i,0);
+        }));
+
+      ords.append(elem);
+
+
+
+    // ords = '<div>'+cart[i]['title']+'<input class="form-controll" style="width:40px;" value="5">'+'</div>'+ords;
+
+    });
+
+
+//$(".cartslider_bigview").html(ords+"<hr> مجموع : "+tot+" تومان");
+$(".cartslider_bigview").empty();
+$(".cartslider_bigview").append(ords);
+
+
+var finalorder = $('<button class="btn btn-primary">تایید و ثبت نهایی</button>');
+
+finalorder.on('touchstart click',function() {
+  
+
+
+setTimeout(function() {
+
+  $("#myModal").modal('toggle');
+
+  setTimeout(function() {
+  $("#getnumber").focus();
+  },1000);
+
+},100);
+
+
+setTimeout(function() {
+$(".cartslider").css({"display":"none"});  
+$(".cartslider_dim").css({"display":"none"});  
+},50);
+
+setTimeout(function() {
+
+
+//$(".cartslider").show();  
+//$(".cartslider_dim").show();  
+
+
+
+},2000);
+
+
+ cartdown();
+
+});
+
+$(".cartslider_bigview").append(finalorder);
+
+}
 
 
 </script>
@@ -216,8 +339,11 @@ $('.addtocart').click(function() {
 </div>
 
 
-<div style="position:fixed;bottom:0px;left:0px;width:100%;background-color:white;z-index:9999" id="mcartslider" class="cartslider p-3 border-top rounded shadow-lg p-3  bg-white">
- <div class="cartslider_body"></div>
+<div style="position:fixed;bottom:0px;left:0px;height:10vh;width:100%;background-color:white;z-index:9999" id="mcartslider" class="text-center cartslider p-3 border-top  p-3  bg-white">
+ <div class="cartslider_smallview"><button class="btn btn-success">ثبت سفارش</button> مجموع خرید : <span class="cartslider_smallview_text"></span></div>
+
+ <div class="cartslider_bigview text-center" style="display:none">this is big view</div>
+
 </div>
 
 <script>
@@ -236,7 +362,7 @@ $( document ).ready(function() {
 
 
 var interval = setInterval(function () {
-  cartlistener();
+ // cartlistener();
 }, 2000);
 
 
@@ -260,6 +386,9 @@ var cs = document.getElementById('mcartslider');
 self = {};
 
     swipStart = function(e) {
+
+
+
         e.preventDefault();
         self.mousedown = true;
       
@@ -282,17 +411,21 @@ self = {};
             var dif = e.pageY - self.start;
         }
 
-        console.log(dif);
+
+
+
         if (dif <=0) {
           cartup();
         } else {
           cartdown();
         }
 
+         cartsliderdata.userwording = true;
+
  }
 
-    cs.addEventListener("mousedown", this.swipStart, true)
-    //cs.addEventListener("mousemove", this.swiping, true)
+   cs.addEventListener("mousedown", this.swipStart, true)
+        //cs.addEventListener("mousemove", this.swiping, true)
     cs.addEventListener("mouseup", this.swipEnd, true)
     cs.addEventListener("mouseout", function(e) {
 
@@ -304,8 +437,12 @@ self = {};
 
 
     cs.addEventListener("touchstart", this.swipStart, true)
-   // cs.addEventListener("touchmove", this.swiping, true)
+        // cs.addEventListener("touchmove", this.swiping, true)
     cs.addEventListener("touchend", this.swipEnd, true)
+
+
+
+
 
 
 
