@@ -51,7 +51,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $Product)
     {
-        header('Access-Control-Allow-Origin: *');
+        //header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: *');
         header('Access-Control-Allow-Headers: *');
 
