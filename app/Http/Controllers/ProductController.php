@@ -55,7 +55,9 @@ class ProductController extends Controller
         header('Access-Control-Allow-Methods: *');
         header('Access-Control-Allow-Headers: *');
 
-        dd($Product->title);
+        $Product->title = $request->title;
+
+        return ["data" => $Product->save()];
     }
 
     /**
