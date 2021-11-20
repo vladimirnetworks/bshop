@@ -56,6 +56,7 @@ class ProductController extends Controller
         header('Access-Control-Allow-Headers: *');
 
         $Product->title = $request->title;
+        $Product->price = $request->price;
 
         return ["data" => $Product->save()];
     }
