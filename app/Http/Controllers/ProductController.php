@@ -57,6 +57,7 @@ class ProductController extends Controller
 
         $Product->title = $request->title;
         $Product->price = $request->price;
+        $Product->caption = $request->caption;
 
         return ["data" => $Product->save()];
     }
