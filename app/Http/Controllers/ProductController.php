@@ -49,13 +49,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $prod)
+    public function update(Request $request, Product $Product)
     {
         header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Methods: *');
         header('Access-Control-Allow-Headers: *');
 
-        dd($prod->id);
+        dd($Product->title);
     }
 
     /**
