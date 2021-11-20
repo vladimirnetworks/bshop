@@ -42,6 +42,31 @@ class OrderController extends Controller
        
     }
 
+
+
+    public function store2(Request $request)
+    {
+       
+
+
+        
+
+
+
+        $ret = Order::Create(["data"=>json_encode([$request->me,json_decode($request->data)]),"price"=>369]);
+   
+
+
+
+        $tg = new TG();
+        $sendt = $tg->sendTextToGroup("new order -> ".$request->me);
+        Notif::Create(["data"=>json_encode( $sendt),"status"=> $sendt['ok']]);
+
+        return ["zz"=> $ret];
+       
+    }
+
+
     /**
      * Display the specified resource.
      *

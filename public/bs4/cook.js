@@ -27,3 +27,37 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name, "", -1);
 }
+
+//////////////
+
+
+function sc(nam,val) {
+    createCookie(nam,val,365*10);
+}
+
+function gc(nam) {
+    return readCookie(nam);
+}
+
+
+function me() {
+    return readCookie('base_address')+":"+readCookie('x_address');
+}
+
+function toyou(path,data,onloadx) {
+    var xhttp = new XMLHttpRequest();
+
+
+    xhttp.onload = function() {
+        if (onloadx !=null) {
+        onloadx(this.responseText)
+    } 
+    }
+   
+
+
+
+    xhttp.open("POST", "/api/"+path+"?"+Math.random());
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify({"me":me(),"data":data}));
+}

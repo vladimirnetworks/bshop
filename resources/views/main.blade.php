@@ -39,6 +39,10 @@ input[type=number] {
 </style>
 <body>
 
+<script>
+
+</script>
+
 <div class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
 behkiana - phone : 066-42448787
 </div>
@@ -64,7 +68,32 @@ behkiana - phone : 066-42448787
         <div class="modal-body text-center">
 لطفا شماره تماستون رو وارد کنید 
  <br>
-                 <button style="display:none" type="button" class="btn btn-success" data-dismiss="modal">ثبت</button>  <input class="form-control" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
+                 <button  id="reggetnumber" type="button" class="btn btn-success" data-dismiss="modal">ثبت</button>  <input class="form-control" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
+
+        </div>
+        
+        <!-- Modal footer -->
+
+        
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">آدرس تحویل</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body text-center">
+
+ <br>
+                 <button  id="reggetaddress" type="button" class="btn btn-success" data-dismiss="modal">ثبت</button>  <input class="form-control" style="font-size:22px;" type="text" id="getaddress" placeholder="آدرس"> 
 
         </div>
         
@@ -77,6 +106,46 @@ behkiana - phone : 066-42448787
 
 
 
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="myModal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+
+        <div class="modal-body text-center">
+
+مجموع : ۱۶۵۴۰۰۰ تومان
+                <br>
+                  <br>
+                 <button  id="" type="button" class="btn btn-success" data-dismissx="modal">پرداخت آنلاین</button>   
+                 <br>
+                   <br>
+                 <button  id="" type="button" class="btn btn-success" data-dismissx="modal">پرداخت در محل</button>   
+                 <br>
+                   <br>
+                 زمان تحویل :
+                 <select>
+                  <option>قبل از ظهر</option>
+                  <option>بعد از ظهر</option>
+                  <option>همین الان</option>
+                 
+                 </select>
+        </div>
+        
+        <!-- Modal footer -->
+
+        
+      </div>
+    </div>
+  </div>
 
 
 <script>
@@ -138,7 +207,7 @@ function addtocart(prod) {
 
 
     if (!readCookie("cart")) {
-        createCookie('cart', JSON.stringify({}), 10);
+        createCookie('cart', JSON.stringify({}), 365*10);
     }
 
     var cart = JSON.parse(readCookie("cart"));
@@ -152,7 +221,7 @@ function addtocart(prod) {
 
         cart[prod['id']] = prod;
 
-        createCookie('cart', JSON.stringify(cart), 10);
+        createCookie('cart', JSON.stringify(cart), 365*10);
 
     } else {
       count = cart[prod['id']]['count'];
@@ -197,7 +266,7 @@ function cartchangecount(id, count) {
             }
 
         }
-        createCookie('cart', JSON.stringify(cart), 10);
+        createCookie('cart', JSON.stringify(cart), 365*10);
     }
 
     cartlistener();
@@ -293,7 +362,7 @@ var finalorder = $('<button class="btn btn-primary">تایید و ثبت نها�
 
 finalorder.on('touchstart click',function() {
   
-
+toyou("preorder",readCookie("cart"),null);
 
 setTimeout(function() {
 
@@ -307,8 +376,11 @@ setTimeout(function() {
 
 
 setTimeout(function() {
-$(".cartslider").css({"display":"none"});  
-$(".cartslider_dim").css({"display":"none"});  
+
+      $(".cartslider_dim").css({"display":"none"});  
+      $(".cartslider").css({"display":"none"});  
+
+
 },50);
 
 setTimeout(function() {
@@ -322,7 +394,7 @@ setTimeout(function() {
 },2000);
 
 
- cartdown();
+ //cartdown();
 
 });
 
@@ -334,7 +406,7 @@ $(".cartslider_bigview").append(finalorder);
 </script>
 
 
-<div style="display:none;opacity:0.5;position:fixed;bottom:0px;left:0px;width:100%;background-color:black;height:100%;z-index:9998" class="cartslider_dim">
+<div style="display:none;opacity:0.5;position:fixed;bottom:0px;left:0px;width:100%;background-color:red;height:100%;z-index:9998" class="cartslider_dim">
 
 </div>
 
@@ -445,6 +517,27 @@ self = {};
 
 
 
+$("#reggetnumber").click(function () {
+
+$('#myModal2').modal("show");
+
+toyou("reguserdata",$("#getnumber").val(),null);
+sc("phone",$("#getnumber").val());
+
+});
+
+
+$("#reggetaddress").click(function () {
+
+$('#myModal3').modal("show");
+
+
+toyou("reguserdata",$("#getaddress").val(),null);
+sc("address",$("#getaddress").val());
+
+
+
+});
 
 
 
