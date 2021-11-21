@@ -219,7 +219,10 @@ function addtocart(prod) {
 function cartchangecount(id, count) {
  var mycart = cart();
          if (mycart[id] != null) {
-            if (count > 0) {
+
+         
+
+            if (parseInt(count) > 0) {
                 mycart[id]['count'] = count;
             } 
             if (count == '0' || count == 0) {
