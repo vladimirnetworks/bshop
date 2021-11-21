@@ -203,7 +203,7 @@ function cartlistener() {
     );
 
     tot = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    $(".cartslider_smallview_text").html(num+' مورد '+tot+' تومان')
+    $(".cartslider_smallview_text").html(topersiannumber(num+' مورد '+tot+' تومان'))
   
     renderbigviewcart();
 }

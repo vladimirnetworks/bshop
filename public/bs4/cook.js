@@ -79,3 +79,18 @@ function toyou(path,data,onloadx) {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({"me":me(),"data":data}));
 }
+
+
+//util
+function topersiannumber(str) {
+    var numbers = [/[0۰٠]/g,/[1۱١]/g,/[2۲٢]/g,/[3۳٣]/g,/[4۴٤]/g,/[5۵٥]/g,/[6۶٦]/g,/[7۷٧]/g,/[8۸٨]/g,/[9۹٩]/g];
+    var persiannumbers = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    
+    
+    for(var i=0; i<numbers.length; i++)
+    {
+        str = str.replace(numbers[i],persiannumbers[i]);
+    }
+    return str;
+    
+    }
