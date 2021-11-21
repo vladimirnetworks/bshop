@@ -225,7 +225,7 @@ function cartchangecount(id, count) {
             if (parseInt(count) > 0) {
                 mycart[id]['count'] = count;
             } 
-            if (count == '0' || count == 0) {
+            if (count === '0' || count === 0) {
                 delete mycart[id];
             }
             cart(mycart);
