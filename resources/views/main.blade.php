@@ -204,12 +204,12 @@ function cartlistener() {
 }
 
 function addtocart(prod) {
-  var cart = cart();
+  var mycart = cart();
 
-  if (cart[prod['id']] == null) {
+  if (mycart[prod['id']] == null) {
           prod['count'] = 1;
-          cart[prod['id']] = prod;
-          cart(cart);
+          mycart[prod['id']] = prod;
+          cart(mycart);
   }
 
  //cartlistener();
