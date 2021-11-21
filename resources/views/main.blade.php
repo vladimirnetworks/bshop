@@ -218,8 +218,6 @@ function gen_sabad_text() {
 function cartlistener() {
 
 
-
-
     $(".cartslider_smallview_text").html(gen_sabad_text());
 
   
@@ -235,7 +233,7 @@ function addtocart(prod) {
           cart(mycart);
   }
 
- //cartlistener();
+cartlistener();
 
 }
 
@@ -254,7 +252,7 @@ function cartchangecount(id, count) {
             cart(mycart);
          }
 
-     //cartlistener();   
+cartlistener();   
 }
 
 
