@@ -324,7 +324,7 @@ console.log('called');
         setTimeout(function() {tedad.focus();},50);
       });
 
-        elem.append($("<span class=\"col\">"+cart[i]['title']+"</span>"));
+        elem.append($("<span class=\"col-7\">"+cart[i]['title']+"</span>"));
         elem.append(pricev);     
         elem.append(tedad);
         
