@@ -317,7 +317,7 @@ console.log('called');
 
 
         elem.append($("<span class=\"col-7\">"+cart[i]['title']+"</span>"));
-        elem.append($("<span class=\"col\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
+        elem.append($("<span class=\"col-3\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
 
 
 
