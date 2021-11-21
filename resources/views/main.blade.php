@@ -209,7 +209,7 @@ function cart_gen_tot_and_num() {
 }
 
 function farsi_price(inp) {
-var inpc = inp.tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+var inpc = inp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 return topersiannumber(inpc);
 }
 
