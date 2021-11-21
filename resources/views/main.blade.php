@@ -13,7 +13,7 @@
   <script src="/bs4/jquery.min.js"></script>
   <script src="/bs4/popper.min.js"></script>
   <script src="/bs4/bootstrap.min.js"></script>
-  <script src="/bs4/cook.js"></script>
+  <script src="/bs4/cook.js?{{time()}}"></script>
 
    </head>
 
