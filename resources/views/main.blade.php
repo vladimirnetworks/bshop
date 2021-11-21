@@ -319,27 +319,29 @@ console.log('called');
         elem.append($("<span class=\"col-7\">"+cart[i]['title']+"</span>"));
         elem.append($("<span class=\"col\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
 
-         elem.append($("<button class=\"btn-sm btn-danger\">+</button>").on("touchstart click",function() {
 
+
+        var countsection = $('<div class="col-2"></div>')  
+
+        countsection.append($("<button class=\"btn-sm btn-danger\">+</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']+1);
         }));
 
 
+        countsection.append($("<span>"+cart[i]['count']+"</span>"));
 
-        elem.append($("<span class=\"col-1\">"+cart[i]['count']+"</span>"));
 
-
-                 elem.append($("<button class=\"btn-sm btn-danger\">-</button>").on("touchstart click",function() {
-
+        countsection.append($("<button class=\"btn-sm btn-danger\">-</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']-1);
         }));
 
-
+        elem.append(countsection);
         
-         elem.append($("<button class=\"btn btn-danger\">x</button>").on("touchstart click",function() {
+        /*elem.append($("<button class=\"btn btn-danger\">x</button>").on("touchstart click",function() {
           elem.remove();
           cartchangecount(i,0);
         }));
+        */
 
       ords.append(elem);
 
