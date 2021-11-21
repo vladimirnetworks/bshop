@@ -323,7 +323,7 @@ console.log('called');
 
         var countsection = $('<div class="" style="white-space:nowrap;float:left"></div>')  
 
-        countsection.append($("<button class=\"btn btn-danger rounded-left\" style=\"padding:2px 4px 2px 4px\">+</button>").on("touchstart click",function() {
+        countsection.append($("<button class=\"btn btn-danger \" style=\"padding:2px 7px 2px 7px\;  border-top-right-radius: 5px;border-bottom-right-radius: 5px;">+</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']+1);
         }));
 
@@ -331,7 +331,7 @@ console.log('called');
         countsection.append($("<span>"+cart[i]['count']+"</span>"));
 
 
-        countsection.append($("<button  class=\"btn btn-danger\" style=\"padding-left:2px;padding:2px 4px 2px 4px\">-</button>").on("touchstart click",function() {
+        countsection.append($("<button  class=\"btn btn-danger\" style=\"padding-left:2px;padding:2px 7px 2px 7px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;\">-</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']-1);
         }));
 
