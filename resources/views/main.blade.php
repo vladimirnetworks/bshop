@@ -320,11 +320,11 @@ console.log('called');
       var pricev = $("<span class=\"col\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>");
 
 
-     /* tedad.on('keyup',function() {
+      tedad.on('keyup',function() {
         cartchangecount(i,tedad.val());
         pricev.text(cart[i]['price']*tedad.val());
-        setTimeout(function() {tedad.focus();},50);
-      });*/
+        setTimeout(function() {tedad.focus();},1000);
+      });
 
         elem.append($("<span class=\"col-7\">"+cart[i]['title']+"</span>"));
         elem.append(pricev);     
