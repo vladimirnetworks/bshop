@@ -343,7 +343,7 @@ $(".cartslider_bigview").empty();
 $(".cartslider_bigview").append(ords);
 
 
-var finalorder = $('<button class="btn btn-primary">تایید و ثبت نهایی</button>');
+var finalorder = $('<button class="btn btn-primary m-2">تایید و ثبت نهایی</button>');
 
 finalorder.on('touchstart click',function() {
   
