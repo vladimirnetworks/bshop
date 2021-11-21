@@ -309,7 +309,7 @@ console.log('called');
 
 
 
-   var cont = $('<div style="width:100%;float:right;" class="border rounded m-2"></div>');
+   var cont = $('<div style="width:100%;float:right;" class="border rounded m-2 p-2"></div>');
 
 
     
@@ -402,7 +402,7 @@ setTimeout(function() {
 var ctot = cart_gen_tot_and_num();
 
 
-$(".cartslider_bigview").append('<hr>');
+$(".cartslider_bigview").append('<div style="width:100%;float:left"></div>');
 
 $(".cartslider_bigview").append($('<div>'+gen_sabad_text()+'<br>('+ctot['farsi']+')</div>'));
 
