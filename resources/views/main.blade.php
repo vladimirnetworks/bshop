@@ -328,7 +328,22 @@ console.log('called');
 
         elem.append($("<span class=\"col-7\">"+cart[i]['title']+"</span>"));
         elem.append(pricev);     
+
+         elem.append($("<button class=\"btn btn-danger\">+</button>").on("touchstart click",function() {
+
+          cartchangecount(i,cart[i]['count']+1);
+        }));
+
+
         elem.append(tedad);
+
+
+                 elem.append($("<button class=\"btn btn-danger\">-</button>").on("touchstart click",function() {
+
+          cartchangecount(i,cart[i]['count']-1);
+        }));
+
+
         
          elem.append($("<button class=\"btn btn-danger\">x</button>").on("touchstart click",function() {
           elem.remove();
