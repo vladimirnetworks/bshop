@@ -187,7 +187,7 @@ cartsliderdata.userwording = false;
 }
 
 
-cart_gen_tot_and_num() {
+function cart_gen_tot_and_num() {
     var cart = JSON.parse(readCookie("cart"));
     
     var tot = 0;
