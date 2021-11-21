@@ -383,7 +383,7 @@ setTimeout(function() {
 
 $(".cartslider_bigview").append(finalorder);
 
-$(".cartslider_bigview").append($('<div>'.gen_sabad_text().'</div>'));
+$(".cartslider_bigview").append($('<div>'+gen_sabad_text()+'</div>'));
 
 
 
