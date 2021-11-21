@@ -386,7 +386,7 @@ setTimeout(function() {
 $(".cartslider_bigview").append(finalorder);
 
 var ctot = cart_gen_tot_and_num();
-$(".cartslider_bigview").append($('<div>'+gen_sabad_text()+'<br>'+ctot['farsi']+'</div>'));
+$(".cartslider_bigview").append($('<div>'+gen_sabad_text()+'<br>('+ctot['farsi']+')</div>'));
 
 
 
