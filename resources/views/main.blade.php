@@ -203,7 +203,9 @@ function cartlistener() {
     );
 
     tot = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    $(".cartslider_smallview_text").html(topersiannumber(num+' مورد '+tot+' تومان'))
+    var sabadtext = topersiannumber(num+' مورد '+tot+' تومان');
+    $(".cartslider_smallview_text").html(sabadtext);
+    $(".cartslider_underfinal").html(sabadtext);
   
     renderbigviewcart();
 }
@@ -366,6 +368,10 @@ setTimeout(function() {
 });
 
 $(".cartslider_bigview").append(finalorder);
+
+$(".cartslider_bigview").append($('<div class="cartslider_underfinal"></div>'));
+
+
 
 }
 
