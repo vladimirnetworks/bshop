@@ -376,9 +376,11 @@ $(".cartslider_bigview").append(finalorder);
 
 
 <div style="direction:rtl;position:fixed;bottom:0px;left:0px;height:10vh;width:100%;background-color:white;z-index:9999" id="mcartslider" class="text-center cartslider p-3 border-top  p-3  bg-white">
- <div class="cartslider_smallview"><button class="btn btn-success">
+ <div class="cartslider_smallview">
+ <span class="cartslider_smallview_text"></span>
+ <button class="btn btn-success m-2">
  ثبت سفارش
- </button><span class="cartslider_smallview_text"></span></div>
+ </button></div>
 
  <div class="cartslider_bigview text-center" style="display:none">this is big view</div>
 
