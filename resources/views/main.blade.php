@@ -201,7 +201,7 @@ function cartlistener() {
     }
     );
 
-    tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    tot = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     $(".cartslider_smallview_text").html(num+' مورد '+tot+' تومان')
   
     renderbigviewcart();
