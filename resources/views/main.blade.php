@@ -305,7 +305,7 @@ console.log('called');
     $.each(cart, function (i) {
     tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
 
-      var elem  = $('<div class="p-2 row border rounded m-2"></div>');
+      var elem  = $('<div class="p-2  border rounded m-2"></div>');
 
 
 
@@ -316,12 +316,12 @@ console.log('called');
 
 
 
-        elem.append($("<span class=\"col-7\">"+cart[i]['title']+"</span>"));
-        elem.append($("<span class=\"col-3\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
+        elem.append($("<span style=\"float:right;\">"+cart[i]['title']+"</span>"));
+        elem.append($("<span style=\"float:right\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
 
 
 
-        var countsection = $('<div class="col-2" style="white-space:nowrap"></div>')  
+        var countsection = $('<div class="" style="white-space:nowrap;float:left"></div>')  
 
         countsection.append($("<button class=\"btn btn-danger rounded-left\">+</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']+1);
