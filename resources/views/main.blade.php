@@ -187,9 +187,7 @@ cartsliderdata.userwording = false;
 }
 
 
-
-
-function cartlistener() {
+cart_gen_tot_and_num() {
     var cart = JSON.parse(readCookie("cart"));
     
     var tot = 0;
@@ -202,10 +200,26 @@ function cartlistener() {
     }
     );
 
-    tot = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    var ret = {};
+    ret['tot'] = tot;
+    ret['num'] = num;
+    return ret;
+
+}
+
+function gen_sabad_text() {
+    var totnum = cart_gen_tot_and_num();
+    totnum.tot = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     var sabadtext = topersiannumber(num+' مورد '+tot+' تومان');
-    $(".cartslider_smallview_text").html(sabadtext);
-    $(".cartslider_underfinal").html(sabadtext);
+    return sabadtext;
+}
+function cartlistener() {
+
+
+
+
+    $(".cartslider_smallview_text").html(gen_sabad_text());
+
   
     renderbigviewcart();
 }
@@ -369,7 +383,7 @@ setTimeout(function() {
 
 $(".cartslider_bigview").append(finalorder);
 
-$(".cartslider_bigview").append($('<div class="cartslider_underfinal"></div>'));
+$(".cartslider_bigview").append($('<div>'.gen_sabad_text().'</div>'));
 
 
 
