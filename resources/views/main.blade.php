@@ -368,7 +368,7 @@ $(".cartslider_bigview").append(finalorder);
 </script>
 
 
-<div style="display:none;opacity:0.5;position:fixed;bottom:0px;left:0px;width:100%;background-color:red;height:100%;z-index:9998" class="cartslider_dim">
+<div style="display:none;opacity:0.5;position:fixed;bottom:0px;left:0px;width:100%;background-color:black;height:100%;z-index:9998" class="cartslider_dim">
 
 </div>
 
