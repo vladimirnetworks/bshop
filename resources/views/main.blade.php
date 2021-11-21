@@ -544,6 +544,7 @@ $('#myModal2').modal("show");
 
 toyou("reguserdata",$("#getnumber").val(),null);
 sc("phone",$("#getnumber").val());
+return false;
 
 });
 
