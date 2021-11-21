@@ -209,8 +209,9 @@ function cart_gen_tot_and_num() {
 
 function gen_sabad_text() {
     var totnum = cart_gen_tot_and_num();
-    totnum.tot = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    var sabadtext = topersiannumber(num+' مورد '+tot+' تومان');
+
+    var totcm = totnum.tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    var sabadtext = topersiannumber(totnum.num+' مورد '+totcm+' تومان');
     return sabadtext;
 }
 function cartlistener() {
