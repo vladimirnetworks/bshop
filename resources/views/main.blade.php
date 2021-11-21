@@ -374,7 +374,7 @@ toyou("preorder",readCookie("cart"),null);
 
 setTimeout(function() {
 
- // $("#myModal").modal('toggle');
+ $("#myModal").modal('show');
 
   setTimeout(function() {
   $("#getnumber").focus();
