@@ -540,6 +540,7 @@ self = {};
 
 $("#numberform").on('submit',function () {
 
+console.log("c");
 $('#myModal2').modal("show");
 toyou("reguserdata",$("#getnumber").val(),null);
 sc("phone",$("#getnumber").val());
