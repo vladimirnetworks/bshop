@@ -540,10 +540,10 @@ self = {};
 
 $("#reggetnumber").on('submit',function () {
 console.log("dd");
-/*$('#myModal2').modal("show");
+$('#myModal2').modal("show");
 toyou("reguserdata",$("#getnumber").val(),null);
 sc("phone",$("#getnumber").val());
-*/
+
 return false;
 
 });
