@@ -305,7 +305,7 @@ console.log('called');
     $.each(cart, function (i) {
     tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
 
-      var elem  = $('<div class="p-2  border rounded m-2"></div>');
+
 
 
 
@@ -323,7 +323,7 @@ console.log('called');
 
         var countsection = $('<div class="" style="white-space:nowrap;float:left"></div>')  
 
-        countsection.append($("<button class=\"btn btn-danger rounded-left\">+</button>").on("touchstart click",function() {
+        countsection.append($("<button class=\"btn btn-danger rounded-left\" style=\"padding:0px\">+</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']+1);
         }));
 
@@ -331,7 +331,7 @@ console.log('called');
         countsection.append($("<span>"+cart[i]['count']+"</span>"));
 
 
-        countsection.append($("<button class=\"btn btn-danger\">-</button>").on("touchstart click",function() {
+        countsection.append($("<button  class=\"btn btn-danger\" style=\"padding:0px\">-</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']-1);
         }));
 
