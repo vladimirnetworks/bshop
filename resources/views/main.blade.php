@@ -309,15 +309,15 @@ console.log('called');
 
 
 
-   
+   var cont = $('<div style="width:100%;display:inline-block"></div>');
 
 
     
 
 
 
-        elem.append($("<span style=\"float:right;\">"+cart[i]['title']+"</span>"));
-        elem.append($("<span style=\"float:right\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
+        cont.append($("<span style=\"float:right;\">"+cart[i]['title']+"</span>"));
+        cont.append($("<span style=\"float:right\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
 
 
 
@@ -335,7 +335,7 @@ console.log('called');
           cartchangecount(i,cart[i]['count']-1);
         }));
 
-        elem.append(countsection);
+        cont.append(countsection);
         
         /*elem.append($("<button class=\"btn btn-danger\">x</button>").on("touchstart click",function() {
           elem.remove();
@@ -343,7 +343,7 @@ console.log('called');
         }));
         */
 
-      ords.append(elem);
+      ords.append(cont);
 
 
 
