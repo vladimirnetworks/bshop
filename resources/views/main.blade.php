@@ -203,7 +203,7 @@ function cart_gen_tot_and_num() {
     var ret = {};
     ret['tot'] = tot;
     ret['num'] = num;
-    ret['farsi'] = Num2persian(num);
+    ret['farsi'] = Num2persian(tot);
     return ret;
 
 }
