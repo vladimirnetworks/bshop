@@ -321,9 +321,9 @@ console.log('called');
 
 
 
-        var countsection = $('<div class="col-2"></div>')  
+        var countsection = $('<div class="col-2" style="white-space:nowrap"></div>')  
 
-        countsection.append($("<button class=\"btn-sm btn-danger\">+</button>").on("touchstart click",function() {
+        countsection.append($("<button class=\"btn btn-danger\">+</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']+1);
         }));
 
@@ -331,7 +331,7 @@ console.log('called');
         countsection.append($("<span>"+cart[i]['count']+"</span>"));
 
 
-        countsection.append($("<button class=\"btn-sm btn-danger\">-</button>").on("touchstart click",function() {
+        countsection.append($("<button class=\"btn btn-danger\">-</button>").on("touchstart click",function() {
           cartchangecount(i,cart[i]['count']-1);
         }));
 
