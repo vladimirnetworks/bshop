@@ -40,6 +40,24 @@ function gc(nam) {
 }
 
 
+function cart(inp=null) {
+
+    if (inp!=null) {
+        createCookie('cart', JSON.stringify(inp), 365*10);
+    }
+
+    var cart = null;
+    if (readCookie("cart")) {
+       cart = JSON.parse(readCookie("cart"));
+    } else {
+       createCookie('cart', JSON.stringify({}), 365*10); 
+       cart = {};
+    }
+
+    return cart;
+}
+
+
 function me() {
     return readCookie('base_address')+":"+readCookie('x_address');
 }

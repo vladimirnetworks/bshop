@@ -204,74 +204,33 @@ function cartlistener() {
 }
 
 function addtocart(prod) {
+  var cart = cart();
 
-
-    if (!readCookie("cart")) {
-        createCookie('cart', JSON.stringify({}), 365*10);
-    }
-
-    var cart = JSON.parse(readCookie("cart"));
-
-    var count;
-
-    if (cart[prod['id']] == null) {
-
-        prod['count'] = 1;
-        count = 1;
-
-        cart[prod['id']] = prod;
-
-        createCookie('cart', JSON.stringify(cart), 365*10);
-
-    } else {
-      count = cart[prod['id']]['count'];
-    }
-
-
-/*
-
-$('#itemcount').val(count);
-$("#itemcount").off();
-$("#itemcount").change(function(){
- console.log($(this).val());
- cartchangecount(prod['id'],$(this).val());
-  cartlistener();
-
-  $("#itemprice").html(cart[prod['id']]['price']*$(this).val());
-
-  if ($(this).val() < 1) {
-    $("#myModal").modal('toggle');
+  if (cart[prod['id']] == null) {
+          prod['count'] = 1;
+          cart[prod['id']] = prod;
+          cart(cart);
   }
 
-});
-
-$("#itemprice").html(cart[prod['id']]['price']*count);
-
-
-*/
-    cartlistener();
+ //cartlistener();
 
 }
 
 function cartchangecount(id, count) {
-
-    if (readCookie("cart")) {
-        var cart = JSON.parse(readCookie("cart"));
-        if (cart[id] != null) {
+ var cart = cart();
+         if (cart[id] != null) {
             if (count > 0) {
                 cart[id]['count'] = count;
-            } else {
-
+            } 
+            if (count == '0' || count == 0) {
                 delete cart[id];
             }
+            cart(cart);
+         }
 
-        }
-        createCookie('cart', JSON.stringify(cart), 365*10);
-    }
-
-    cartlistener();
-
+     //cartlistener();   
 }
+
 
 
 $('.addtocart').click(function() {
