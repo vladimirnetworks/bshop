@@ -309,7 +309,7 @@ console.log('called');
 
 
 
-   var cont = $('<div style="width:100%;float:right;" class="border rounded m-2 p-2"></div>');
+   var cont = $('<div style="width:100%;float:right;" class="border rounded p-2"></div>');
 
 
     
