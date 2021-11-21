@@ -208,10 +208,15 @@ function cart_gen_tot_and_num() {
 
 }
 
-function gen_sabad_text() {
-    var totnum = cart_gen_tot_and_num();
+function farsi_price(inp) {
+var inpc = inp.tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+return topersiannumber(inpc);
+}
 
-    var totcm = totnum.tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+function gen_sabad_text() {
+  
+    var totnum = cart_gen_tot_and_num();
+    var totcm = farsi_price(totnum.tot);
     var sabadtext = topersiannumber(totnum.num+' مورد '+totcm+' تومان');
     return sabadtext;
 }
