@@ -193,12 +193,14 @@ function cartlistener() {
     var cart = JSON.parse(readCookie("cart"));
     
     var tot = 0;
+    var num = 0;
 
     $.each(cart, function (i) {
+      num++;
       tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
     }
     );
-    $(".cartslider_smallview_text").html(tot)
+    $(".cartslider_smallview_text").html(num+' مورد '+tot+' تومان')
   
     renderbigviewcart();
 }
@@ -374,7 +376,9 @@ $(".cartslider_bigview").append(finalorder);
 
 
 <div style="position:fixed;bottom:0px;left:0px;height:10vh;width:100%;background-color:white;z-index:9999" id="mcartslider" class="text-center cartslider p-3 border-top  p-3  bg-white">
- <div class="cartslider_smallview"><button class="btn btn-success">ثبت سفارش</button> مجموع خرید : <span class="cartslider_smallview_text"></span></div>
+ <div class="cartslider_smallview"><button class="btn btn-success">
+ ثبت سفارش
+ </button><span class="cartslider_smallview_text"></span></div>
 
  <div class="cartslider_bigview text-center" style="display:none">this is big view</div>
 
