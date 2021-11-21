@@ -219,6 +219,7 @@ function gen_sabad_text() {
     var totcm = farsi_price(totnum.tot);
     var sabadtext = topersiannumber(totnum.num+' مورد '+totcm+' تومان');
     return sabadtext;
+
 }
 function cartlistener() {
 
@@ -314,7 +315,7 @@ console.log('called');
    
 
       tedad.val(cart[i]['count']);
-      var pricev = $("<span>"+cart[i]['price']*cart[i]['count']+"</span>");
+      var pricev = $("<span>"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>");
 
 
       tedad.on('keyup',function() {
