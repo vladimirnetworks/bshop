@@ -308,7 +308,8 @@ console.log('called');
       var elem  = $('<div class="p-2 row"></div>');
 
       var tedad = $('<input class="col-1 text-center" type="number">').css({"width":"40px","text-align":"center"}).on('click touchstart',function(e){
-       e.stopPropagation();
+            e.preventDefault();
+            e.stopPropagation();
        return true;
         //setTimeout(function() {tedad.focus();},50);
       });
