@@ -217,15 +217,15 @@ function addtocart(prod) {
 }
 
 function cartchangecount(id, count) {
- var cart = cart();
-         if (cart[id] != null) {
+ var mycart = cart();
+         if (mycart[id] != null) {
             if (count > 0) {
-                cart[id]['count'] = count;
+                mycart[id]['count'] = count;
             } 
             if (count == '0' || count == 0) {
-                delete cart[id];
+                delete mycart[id];
             }
-            cart(cart);
+            cart(mycart);
          }
 
      //cartlistener();   
