@@ -539,11 +539,11 @@ self = {};
 
 
 $("#reggetnumber").on('submit',function () {
-
-$('#myModal2').modal("show");
-
+console.log("dd");
+/*$('#myModal2').modal("show");
 toyou("reguserdata",$("#getnumber").val(),null);
 sc("phone",$("#getnumber").val());
+*/
 return false;
 
 });
