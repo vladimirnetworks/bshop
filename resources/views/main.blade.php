@@ -307,7 +307,7 @@ console.log('called');
 
       var elem  = $('<div class="p-2 row"></div>');
 
-      var tedad = $('<input class="col-1 text-center" type="number">').css({"width":"40px","text-align":"center"}).on('click touchstart',function(e){
+      var tedad = $('<input class="col-1 text-center" type="number">').css({"width":"40px","text-align":"center"}).on('mousedown touchstart',function(e){
        e.stopPropagation();
         setTimeout(function() {tedad.focus();},50);
       });
