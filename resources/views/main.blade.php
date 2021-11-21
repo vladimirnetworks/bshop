@@ -198,7 +198,7 @@ function cartlistener() {
     $.each(cart, function (i) {
       //num++;
       tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
-      num=num+cart[i]['count'];
+      num=num+parseInt(cart[i]['count']);
     }
     );
 
