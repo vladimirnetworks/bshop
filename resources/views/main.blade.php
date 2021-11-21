@@ -321,9 +321,9 @@ console.log('called');
 
 
       tedad.on('keyup',function() {
-        cartchangecount(i,tedad.val());
+        //cartchangecount(i,tedad.val());
         pricev.text(cart[i]['price']*tedad.val());
-        setTimeout(function() {tedad.focus();},1000);
+        //setTimeout(function() {tedad.focus();},1000);
       });
 
         elem.append($("<span class=\"col-7\">"+cart[i]['title']+"</span>"));
