@@ -69,9 +69,9 @@ behkiana - phone : 066-42448787
 لطفا شماره تماستون رو وارد کنید 
  <br>
  <div class="row p-3">
-<form id="reggetnumber0">
+<form id="numberform">
 <input class="form-control col-10" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
-<!--<button type="submit" class="btn btn-success col-2" data-dismiss="modal">ثبت</button> -->
+<button type="submit" class="btn btn-success col-2" data-dismiss="modal">ثبت</button>
 <form>
 </div>
         </div>
@@ -538,7 +538,7 @@ self = {};
 
 
 
-$("#reggetnumber").on('submit',function () {
+$("#numberform").on('submit',function () {
 console.log("dd");
 /*$('#myModal2').modal("show");
 toyou("reguserdata",$("#getnumber").val(),null);
