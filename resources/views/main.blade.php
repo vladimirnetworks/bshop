@@ -305,9 +305,9 @@ console.log('called');
     $.each(cart, function (i) {
     tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
 
-      var elem  = $('<div class="p-2"></div>');
+      var elem  = $('<div class="p-2 row"></div>');
 
-      var tedad = $('<input type="number">').css({"width":"40px","text-align":"center"}).on('click touchstart',function(){
+      var tedad = $('<input class="col" type="number">').css({"width":"40px","text-align":"center"}).on('click touchstart',function(){
        
         setTimeout(function() {tedad.focus();},50);
       });
@@ -315,7 +315,7 @@ console.log('called');
    
 
       tedad.val(cart[i]['count']);
-      var pricev = $("<span>"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>");
+      var pricev = $("<span class=\"col\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>");
 
 
       tedad.on('keyup',function() {
@@ -324,8 +324,8 @@ console.log('called');
         setTimeout(function() {tedad.focus();},50);
       });
 
-        elem.append(pricev);
-        elem.append($("<span>"+cart[i]['title']+"</span>"));
+        elem.append($("<span class=\"col\">"+cart[i]['title']+"</span>"));
+        elem.append(pricev);     
         elem.append(tedad);
         
          elem.append($("<button class=\"btn btn-danger\">x</button>").on("touchstart click",function() {
