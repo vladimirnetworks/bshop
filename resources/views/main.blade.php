@@ -335,7 +335,8 @@ console.log('called');
         }));
 
 
-        elem.append(tedad);
+
+        elem.append($("<span class=\"col-1\">"+cart[i]['count']+"</span>"));
 
 
                  elem.append($("<button class=\"btn btn-danger\">-</button>").on("touchstart click",function() {
