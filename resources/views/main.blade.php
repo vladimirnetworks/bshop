@@ -386,6 +386,10 @@ setTimeout(function() {
 
 
 var ctot = cart_gen_tot_and_num();
+
+
+$(".cartslider_bigview").append('<hr>');
+
 $(".cartslider_bigview").append($('<div>'+gen_sabad_text()+'<br>('+ctot['farsi']+')</div>'));
 
 $(".cartslider_bigview").append(finalorder);
