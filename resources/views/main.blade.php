@@ -465,7 +465,7 @@ self = {};
 
 
 
-        e.preventDefault();
+       // e.preventDefault();
         self.mousedown = true;
       
         
