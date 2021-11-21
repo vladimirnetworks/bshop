@@ -203,6 +203,7 @@ function cart_gen_tot_and_num() {
     var ret = {};
     ret['tot'] = tot;
     ret['num'] = num;
+    ret['farsi'] = Num2persian(num);
     return ret;
 
 }
@@ -384,7 +385,8 @@ setTimeout(function() {
 
 $(".cartslider_bigview").append(finalorder);
 
-$(".cartslider_bigview").append($('<div>'+gen_sabad_text()+'</div>'));
+var ctot = cart_gen_tot_and_num();
+$(".cartslider_bigview").append($('<div>'+gen_sabad_text()+'<br>'+ctot['farsi']+'</div>'));
 
 
 
