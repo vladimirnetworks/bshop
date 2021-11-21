@@ -200,6 +200,8 @@ function cartlistener() {
       tot = tot+parseInt(cart[i]['price']*cart[i]['count']);
     }
     );
+
+    tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     $(".cartslider_smallview_text").html(num+' مورد '+tot+' تومان')
   
     renderbigviewcart();
@@ -377,7 +379,7 @@ $(".cartslider_bigview").append(finalorder);
 
 <div style="direction:rtl;position:fixed;bottom:0px;left:0px;height:10vh;width:100%;background-color:white;z-index:9999" id="mcartslider" class="text-center cartslider p-3 border-top  p-3  bg-white">
  <div class="cartslider_smallview">
- <span class="cartslider_smallview_text"></span>
+ سبد خرید : <span class="cartslider_smallview_text"></span>
  <button class="btn btn-success m-2">
  ثبت سفارش
  </button></div>
