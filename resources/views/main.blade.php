@@ -68,10 +68,13 @@ behkiana - phone : 066-42448787
         <div class="modal-body text-center">
 لطفا شماره تماستون رو وارد کنید 
  <br>
+ <div>
+<form id="reggetnumber" name="reggetnumberform"  action="/" method="post">
+
  <div class="row p-3">
-<form style="display:flex" id="reggetnumber" name="reggetnumberform"  action="/" method="post">
-<input class="form-control col-10" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
+ <input class="form-control col-10" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
  <button type="submit" class="btn btn-success col-2">ثبت</button>
+ </div>
 </form>
 </div>
         </div>
