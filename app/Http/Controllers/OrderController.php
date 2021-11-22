@@ -23,7 +23,7 @@ class OrderController extends Controller
         $orders = liteauth::me()->orders;
 
 
-        dd($orders);
+
 
         return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$orders]);
 
