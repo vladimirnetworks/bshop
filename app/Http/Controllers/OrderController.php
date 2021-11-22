@@ -23,7 +23,7 @@ class OrderController extends Controller
         $mliteauth = new liteauth();
         $me = $mliteauth->me();
 
-        dd( $me->first());
+        dd( $me->first()->orders());
 
         return view('myorders',['pageTitle'=>"سفارشات من","orders"=>[]]);
 
