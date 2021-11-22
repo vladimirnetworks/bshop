@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $fillable = ['data','price'];
+    protected $fillable = ['data','liteauth_id'];
 }

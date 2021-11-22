@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Notif;
 use App\Models\Order;
 use App\Models\TG;
+use App\Models\liteauth;
 use Illuminate\Http\Request;
 use Telegram;
 
@@ -53,9 +54,11 @@ class OrderController extends Controller
 
         
 
+       $mliteauth = new liteauth();
+      
+       $me = $mliteauth->me();
 
-
-        $ret = Order::Create(["data"=>json_encode([$request->me,json_decode($request->data)]),"price"=>369]);
+        $ret = Order::Create(["data"=>json_encode([json_decode($request->data)]),"liteauth_id"=>$me[0]['id']]);
    
 
 
