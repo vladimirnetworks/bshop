@@ -20,13 +20,12 @@ class OrderController extends Controller
     {
 
 
-        $mliteauth = new liteauth();
-        $me = $mliteauth->me()->first();
+        $orders = liteauth::me()->orders;
 
 
-        dd($me->orders);
+        dd($orders);
 
-        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$me->first()->orders]);
+        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$orders]);
 
 
     }
@@ -60,11 +59,9 @@ class OrderController extends Controller
 
         
 
-       $mliteauth = new liteauth();
-      
-       $me = $mliteauth->me()->get();
+        $me = liteauth::me();
 
-        $ret = Order::Create(["data"=>json_encode([json_decode($request->data)]),"liteauth_id"=>$me[0]['id']]);
+        $ret = Order::Create(["data"=>json_encode([json_decode($request->data)]),"liteauth_id"=>$me->id]);
    
 
 

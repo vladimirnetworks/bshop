@@ -10,11 +10,11 @@ class liteauth extends Model
     use HasFactory;
     protected $fillable = ['hash'];
 
-    public function me()
+    public static function me()
     {
         $id =  base_convert($_COOKIE['base_address'],33,10);
         $whoiam = liteauth::where([["id",'=',$id],['hash','=',$_COOKIE['x_address']]]);
-        return $whoiam;
+        return $whoiam->first();
     }
 
     public function orders()
