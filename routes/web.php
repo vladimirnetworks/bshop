@@ -17,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "App\Http\Controllers\mainPageController@index")->middleware('tokin');
 
+Route::get('/myorders', "App\Http\Controllers\OrderController@index")->middleware('tokin');
+
 
 Route::get('/product/{product}', "App\Http\Controllers\ProductController@show")->middleware('tokin');

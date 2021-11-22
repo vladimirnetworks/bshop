@@ -45,6 +45,8 @@ input[type=number] {
 
 <div class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
 behkiana - phone : 066-42448787
+
+<a class="btn btn-primary" href="/myorders">سفارشات من</a>
 </div>
 
 

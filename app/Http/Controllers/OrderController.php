@@ -19,6 +19,8 @@ class OrderController extends Controller
     {
 
 
+        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>[]]);
+
 
     }
 

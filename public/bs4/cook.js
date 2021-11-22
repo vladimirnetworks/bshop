@@ -58,6 +58,33 @@ function cart(inp=null) {
 }
 
 
+function order() {
+
+    this.cookiename = 'orders';
+    this.expire = 365*10;
+
+    this.init = function() {
+      if (!readCookie(this.cookiename)) {
+          createCookie(this.cookiename,{}, this.expire);
+      }
+    }
+
+    this.orders = function() {
+        return JSON.parse(readCookie(this.cookiename));
+    }
+
+    this.add = function(inp) {      
+        this.orders[inp['id']] = inp;
+        createCookie(this.cookiename,JSON.stringify(this.orders), this.expire);
+    }
+    this.getOrderById = function(id) {
+       return this.orders[id];
+    }
+
+}
+
+
+
 function me() {
     return readCookie('base_address')+":"+readCookie('x_address');
 }
