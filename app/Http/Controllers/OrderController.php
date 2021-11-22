@@ -24,9 +24,9 @@ class OrderController extends Controller
         $me = $mliteauth->me()->first();
 
 
-        dd($me->id);
 
-        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$me->first()->orders()]);
+
+        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$me->first()->orders]);
 
 
     }
