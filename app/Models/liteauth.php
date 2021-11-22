@@ -14,7 +14,7 @@ class liteauth extends Model
     {
         $id =  base_convert($_COOKIE['base_address'],33,10);
         $whoiam = liteauth::where([["id",'=',$id],['hash','=',$_COOKIE['x_address']]]);
-        return $whoiam->get();
+        return $whoiam;
     }
 
     public function orders()
