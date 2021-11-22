@@ -4,9 +4,21 @@
 
 <h1>سفارشات من</h1>
 
-<div>
+
+
+<div class="container-fluid" >
+
+    <div class="row">
+    @foreach($orders as $order)
+
+      {{$order->data}}
+
+    @endforeach
+    </div>
 
 </div>
+
+
 
 
 
