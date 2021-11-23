@@ -36,13 +36,13 @@ class OrderController extends Controller
             $orderTot = 0;
             foreach ($cart as $cartitem) {
 
-              $orderTitles[] = ["text"=>$cartitem['title'],"count"=>$cartitem['count']];
+              $orderItems[] = ["text"=>$cartitem['title'],"count"=>$cartitem['count']];
             
                 $orderTot = $orderTot+intval($cartitem['price'])*intval($cartitem['count']);
             }
 
             $ords[] = [
-                'titles'=>$orderTitles,
+                'items'=>$orderItems,
                 'total'=>$orderTot,
                 'shipping_status'=>$order->shipping_status,
                 'payment_status'=>$order->payment_status,

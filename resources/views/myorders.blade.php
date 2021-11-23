@@ -15,7 +15,9 @@
      <div class="row border">
        
        <div>
-        {!!implode("<br>",$order['titles'])!!}
+          @foreach($order['items'] as $title)
+           {{$title['title']}} ( {{$title['count']}} عدد )
+          @endforeach
        </div>
 
        <div>
