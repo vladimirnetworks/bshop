@@ -122,10 +122,10 @@ behkiana - phone : 066-42448787
 
  <div class="row p-3 justify-content-center align-items-center" style="direction:rtl">
 
-<div class="col-3">
-زمان تحویل
-</div>
+
                  <select class="col form-control">
+
+<option id="zamantahvil">زمان تحویل</option>
 
                   <option>قبل از ظهر</option>
                   <option>بعد از ظهر</option>
