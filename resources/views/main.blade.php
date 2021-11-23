@@ -607,7 +607,7 @@ $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernum
 $('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+totx['farsi']+"</div>"));
 
 
-toyou("reguserdata",{"address":$("#getaddress").val(),"ordernumber": $('.ordernumber').first().val(),null);
+toyou("reguserdata",{"address":$("#getaddress").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("address",$("#getaddress").val());
 
 
