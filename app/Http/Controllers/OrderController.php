@@ -42,10 +42,16 @@ class OrderController extends Controller
 
         $tg = new TG();
         $sendt = $tg->sendTextToGroup("okok");
+
+
         Notif::Create(["data"=>json_encode( $sendt),"status"=> $sendt['ok']]);
         
 
-        $ret = Order::Create(["data"=>json_encode($request->data),"price"=>369]);
+        foreach ($request->data as $hitdata) {
+          $cartx[] = $hitdata;
+        }
+
+        $ret = Order::Create(["data"=>json_encode($cartx),"price"=>369]);
         return ["zz"=> $ret];
        
     }
@@ -61,7 +67,11 @@ class OrderController extends Controller
 
         $me = liteauth::me();
 
-        $ret = Order::Create(["data"=>json_encode([json_decode($request->data)]),"liteauth_id"=>$me->id]);
+        foreach ($request->data as $hitdata) {
+            $cartx[] = $hitdata;
+          }
+
+        $ret = Order::Create(["data"=>json_encode($cartx),"liteauth_id"=>$me->id]);
    
 
 
