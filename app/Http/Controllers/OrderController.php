@@ -108,11 +108,14 @@ class OrderController extends Controller
         $sendt = $tg->sendTextToGroup("new order -> ".$request->me);
         Notif::Create(["data"=>json_encode( $sendt),"status"=> $sendt['ok']]);
 
-        return ["data"=> ["id"=>$ret->id]];
+
+
+        return ["data"=> ["id"=>encode_id($ret->id)]];
        
     }
 
 
+    
     /**
      * Display the specified resource.
      *
