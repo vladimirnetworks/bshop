@@ -127,12 +127,14 @@ behkiana - phone : 066-42448787
   <label class="">
     <input type="radio" class="" name="optradio">
     فردا قبل از ظهر
+(ارسال رایگان)
   </label>
 </div>
 <div class="">
   <label class="">
     <input type="radio" class="" name="optradio">
     فردا بعد از ظهر
+(ارسال رایگان)
   </label>
 </div>
 <div class="">
