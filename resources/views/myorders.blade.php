@@ -14,17 +14,17 @@
      @foreach($orders as $order)
      <div class="row border">
        
-       <div>
+       <div class="col">
           @foreach($order['items'] as $item)
            {{$item['text']}} ( {{$item['count']}} عدد ) <br>
           @endforeach
        </div>
 
-       <div>
+       <div class="col">
         {{number_format($order['total'])}} تومان
        </div>
 
-       <div>
+       <div class="col">
        وضعیت : 
 
        @if($order['shipping_status'] === 0)
@@ -39,13 +39,11 @@
        تحویل داده شده
        @endif
 
-
        </div>
 
 
 
-     <div>
-     
+     <div class="col">
        @if($order['payment_status'] === 0)
         پرداخت نشده
        @endif
@@ -53,8 +51,9 @@
        @if($order['payment_status'] === 1)
        پرداخت شده
        @endif
+     </div>
 
-    </div>
+
 
      </div>
      @endforeach
