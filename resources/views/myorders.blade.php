@@ -8,54 +8,54 @@
 
 <div class="container-fluid" >
 
-    <div class="row">
-    @foreach($orders as $order)
 
-    <div class="border">
-      {!!implode("<br>",$order['titles'])!!}
-    </div>
 
-    <div class="border">
-      {{number_format($order['total'])}} تومان
-    </div>
+    
+     @foreach($orders as $order)
+     <div class="row border">
+       
+       <div>
+        {!!implode("<br>",$order['titles'])!!}
+       </div>
 
-    <div class="border">
-    وضعیت : 
+       <div>
+        {{number_format($order['total'])}} تومان
+       </div>
+
+       <div>
+       وضعیت : 
+
        @if($order['shipping_status'] === 0)
-     در حال بررسی
+          در حال بررسی
        @endif
 
-     @if($order['shipping_status'] === 1)
-     ارسال شده
+       @if($order['shipping_status'] === 1)
+        ارسال شده
        @endif
 
-      @if($order['shipping_status'] === 2)
-     تحویل داده شده
+       @if($order['shipping_status'] === 2)
+       تحویل داده شده
        @endif
-    </div>
+
+
+       </div>
 
 
 
-    <div class="border">
+     <div class="border">
      
        @if($order['payment_status'] === 0)
-   پرداخت نشده
+        پرداخت نشده
        @endif
 
-     @if($order['payment_status'] === 1)
-    پرداخت شده
+       @if($order['payment_status'] === 1)
+       پرداخت شده
        @endif
-
 
     </div>
 
-
-    @endforeach
-    </div>
-
-
-
-
+     </div>
+     @endforeach
 
 
 </div>

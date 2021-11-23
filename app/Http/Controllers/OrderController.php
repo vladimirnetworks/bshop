@@ -36,7 +36,7 @@ class OrderController extends Controller
             $orderTot = 0;
             foreach ($cart as $cartitem) {
 
-              $orderTitles[] = $cartitem['title'];
+              $orderTitles[] = ["text"=>$cartitem['title'],"count"=>$cartitem['count']];
             
                 $orderTot = $orderTot+intval($cartitem['price'])*intval($cartitem['count']);
             }
