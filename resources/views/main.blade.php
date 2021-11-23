@@ -604,8 +604,10 @@ $('#myModal3').modal("show");
 var totx = cart_gen_tot_and_num();
 $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"</div>"));
 
-$('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+totx['farsi']+"</div>"));
 
+$('#modal3successtext').empty();
+$('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+farsi_price(totx['tot'])+"</div>"));
+$('#modal3successtext').append($("<div>"+totx['farsi']+"</div>"));
 
 toyou("reguserdata",{"address":$("#getaddress").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("address",$("#getaddress").val());
