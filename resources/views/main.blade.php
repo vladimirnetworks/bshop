@@ -75,7 +75,7 @@ behkiana - phone : 066-42448787
  <div>
 <form id="reggetnumber" name="reggetnumberform"  action="/" method="post">
 
- <input readonly class="ordernumber" style="font-size:24px;" type="number" id="ordernumber" placeholder="شماره سفارش"> 
+ <input readonly class="ordernumber" style="font-size:24px;" type="number"  placeholder="شماره سفارش"> 
 
  <div class="row p-3">
  <input class="form-control col-10" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
@@ -113,7 +113,7 @@ behkiana - phone : 066-42448787
 
  <div>
 <form id="reggetaddress" name="reggetaddressform"  action="/" method="post">
- <input readonly class="ordernumber" style="font-size:24px;" type="number" id="ordernumber" placeholder="شماره سفارش"> 
+ <input readonly class="ordernumber" style="font-size:24px;" type="number"  placeholder="شماره سفارش"> 
 
  <div class="row p-3">
  <input class="form-control col-10" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
@@ -585,7 +585,7 @@ $('#myModal2').modal("show");
   $("#getaddress").focus();
   },500);
 
-toyou("reguserdata",$("#getnumber").val(),null);
+toyou("reguserdata",{"number":$("#getnumber").val(),"ordernumber":$('.ordernumber')[0].val()},null);
 sc("phone",$("#getnumber").val());
 
 return false;
