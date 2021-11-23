@@ -585,7 +585,7 @@ $('#myModal2').modal("show");
   $("#getaddress").focus();
   },500);
 
-toyou("reguserdata",{"number":$("#getnumber").val(),"ordernumber":$('.ordernumber')[0].val()},null);
+toyou("reguserdata",{"number":$("#getnumber").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("phone",$("#getnumber").val());
 
 return false;
