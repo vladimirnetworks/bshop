@@ -25,6 +25,9 @@ class OrderController extends Controller
 
         foreach ($orders as $order) {
 
+            dd($order);
+
+
             $cart = json_decode($order->data,true);
 
             $orderText = null;
@@ -42,8 +45,7 @@ class OrderController extends Controller
             ];
         }
       
-        dd($ords);
-
+       
 
         return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$ords]);
 
