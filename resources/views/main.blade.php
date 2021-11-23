@@ -116,9 +116,28 @@ behkiana - phone : 066-42448787
  <input readonly class="ordernumber" style="font-size:24px;" type="hidden"  placeholder="شماره سفارش"> 
 
  <div class="row p-3">
- <input class="form-control col-10" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
- <button type="submit" class="btn btn-success col-2">ثبت</button>
+ <input class="form-control col-12" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
+
  </div>
+
+ <div class="row p-3">
+
+<div class="col-3">
+زمان تحویل
+</div>
+                 <select class="col form-control">
+
+                  <option>قبل از ظهر</option>
+                  <option>بعد از ظهر</option>
+                  <option>همین الان</option>
+                 
+                 </select>
+
+ </div>
+
+  <div class="row p-3">
+   <button type="submit" class="btn btn-success col m-4">ثبت</button>
+  </div>
 
 </form>
 </div>
