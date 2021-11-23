@@ -120,20 +120,25 @@ behkiana - phone : 066-42448787
 
  </div>
 
- <div class="row p-3 justify-content-center align-items-center" style="direction:rtl">
+ <div class="row p-3 justify-content-center align-items-center border rounded" style="direction:rtl">
 
-
-                 <select id="zamantahvil" class="col form-control">
-
-
- <option value="" disabled selected>زمان تحویل</option>
-
-
-                  <option>قبل از ظهر</option>
-                  <option>بعد از ظهر</option>
-                  <option>همین الان</option>
-                 
-                 </select>
+<div style="color:grey">زمان تحویل </div>
+<div class="form-check">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="optradio">فردا قبل از ظهر
+  </label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="optradio">فردا بعد از ظهر
+  </label>
+</div>
+<div class="form-check disabled">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name="optradio">
+    همین الان (۵۰۰۰ تومان هزینه)
+  </label>
+</div>
 
  </div>
 
@@ -605,19 +610,6 @@ $('#myModal2').modal("show");
 
 
 /**/
-var element = $("#zamantahvil")[0], worked = false;
-if (document.createEvent) {
-    var e = document.createEvent("MouseEvents");
-    e.initMouseEvent("mousedown", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-    worked = element.dispatchEvent(e);
-     console.log("asdddx");
-} else if (element.fireEvent) {
-    worked = element.fireEvent("onmousedown");
-     console.log("asdx");
-}
-if (!worked) {
-    console.log("asd");
-}
 
 /**/
 
