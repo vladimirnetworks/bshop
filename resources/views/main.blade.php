@@ -651,7 +651,8 @@ sc("address",$("#getaddress").val());
 $("#reggetaddress").on('submit',function () {
 
 
-$('html, body').animate({ scrollTop: $('#zamantahvilsection').offset().top }, 'slow');
+
+$('#zamantahvilsection').animate({'zoom': 1.2}, 400).delay(100).animate({'zoom': 1}, 400)
 
 
 
