@@ -35,13 +35,6 @@
     </div>
 
 
-    @endforeach
-    </div>
-
-
-
-
-
 
     <div class="border">
      
