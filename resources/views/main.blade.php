@@ -122,20 +122,20 @@ behkiana - phone : 066-42448787
 
  <div class=" p-3  border rounded" style="direction:rtl;text-align:right">
 
-<div style="color:grey">زمان تحویل </div>
+<div style="color:grey">زمان تحویل </div><hr>
 <div class="form-check">
   <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">فردا قبل از ظهر
+    <input type="radio" class="form-check-input m-2" name="optradio">فردا قبل از ظهر
   </label>
 </div>
 <div class="form-check">
   <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">فردا بعد از ظهر
+    <input type="radio" class="form-check-input m-2" name="optradio">فردا بعد از ظهر
   </label>
 </div>
 <div class="form-check disabled">
   <label class="form-check-label">
-    <input type="radio" class="form-check-input" name="optradio">
+    <input type="radio" class="form-check-input m-2" name="optradio">
     همین الان (۵۰۰۰ تومان هزینه)
   </label>
 </div>
