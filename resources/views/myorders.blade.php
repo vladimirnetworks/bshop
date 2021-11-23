@@ -12,7 +12,7 @@
     @foreach($orders as $order)
 
     <div class="border">
-      {{implode("<br>",$order->titles)}}
+      {{implode("<br>",$order['titles'])}}
     </div>
     @endforeach
     </div>
