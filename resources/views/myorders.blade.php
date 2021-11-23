@@ -12,7 +12,7 @@
 
     
      @foreach($orders as $order)
-     <div class="row border">
+     <div class="row border justify-content-center align-items-center">
        
        <div class="col">
           @foreach($order['items'] as $item)
