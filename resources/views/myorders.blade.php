@@ -6,7 +6,7 @@
 
 
 
-<div class="container-fluid" >
+<div class="container-fluid" style="direction:rtl" >
 
 
 
