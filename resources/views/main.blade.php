@@ -607,7 +607,7 @@ $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernum
 
 $('#modal3successtext').empty();
 $('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+farsi_price(totx['tot'])+"</div>"));
-$('#modal3successtext').append($("<div>"+totx['farsi']+"</div>"));
+$('#modal3successtext').append($("<div style=\"color:grey\">("+totx['farsi']+")</div>"));
 
 toyou("reguserdata",{"address":$("#getaddress").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("address",$("#getaddress").val());
