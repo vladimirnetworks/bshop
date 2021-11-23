@@ -32,8 +32,9 @@ class OrderController extends Controller
 
           
 
-            $orderTitles = null;
+            $orderItems = null;
             $orderTot = 0;
+         
             foreach ($cart as $cartitem) {
 
               $orderItems[] = ["text"=>$cartitem['title'],"count"=>$cartitem['count']];
