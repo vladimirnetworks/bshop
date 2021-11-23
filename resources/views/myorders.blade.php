@@ -15,8 +15,8 @@
      <div class="row border">
        
        <div>
-          @foreach($order['items'] as $title)
-           {{$title['title']}} ( {{$title['count']}} عدد )
+          @foreach($order['items'] as $item)
+           {{$item['title']}} ( {{$item['count']}} عدد )
           @endforeach
        </div>
 
