@@ -191,6 +191,9 @@ behkiana - phone : 066-42448787
                    <br>
                  <button  id="" type="button" class="btn btn-success" data-dismissx="modal">پرداخت در محل</button>   
                  <br>
+<hr>
+
+ <input class="form-control col-10" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
 
 
         </div>
