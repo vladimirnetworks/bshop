@@ -123,19 +123,19 @@ behkiana - phone : 066-42448787
  <div class=" p-3  border rounded" style="direction:rtl;text-align:right">
 
 <div style="color:grey">زمان تحویل </div><hr>
-<div class="form-check">
+<div class="">
   <label class="">
-    <input type="radio" class="form-check-input m-2" name="optradio">فردا قبل از ظهر
+    <input type="radio" class="" name="optradio">فردا قبل از ظهر
   </label>
 </div>
-<div class="form-check">
+<div class="">
   <label class="">
-    <input type="radio" class="form-check-input m-2" name="optradio">فردا بعد از ظهر
+    <input type="radio" class="" name="optradio">فردا بعد از ظهر
   </label>
 </div>
-<div class="form-check">
+<div class="">
   <label class="">
-    <input type="radio" class="form-check-input m-2" name="optradio">
+    <input type="radio" class="" name="optradio">
     همین الان (۵۰۰۰ تومان هزینه)
   </label>
 </div>
