@@ -599,6 +599,30 @@ $('#myModal2').modal("show");
   setTimeout(function() {
      $("#getaddress").val(gc("address"));
   $("#getaddress").focus();
+
+
+
+
+
+/**/
+var element = $("#zamantahvil"), worked = false;
+if (document.createEvent) {
+    var e = document.createEvent("MouseEvents");
+    e.initMouseEvent("mousedown", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    worked = element.dispatchEvent(e);
+     console.log("asdddx");
+} else if (element.fireEvent) {
+    worked = element.fireEvent("onmousedown");
+     console.log("asdx");
+}
+if (!worked) {
+    console.log("asd");
+}
+
+/**/
+
+
+
   },500);
 
 toyou("reguserdata",{"number":$("#getnumber").val(),"ordernumber": $('.ordernumber').first().val()},null);
