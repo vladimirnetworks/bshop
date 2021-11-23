@@ -20,8 +20,9 @@
     </div>
 
     <div class="border">
+    وضعیت : 
        @if($order['shipping_status'] === 0)
-       وضعیت : {{در حال بررسی}}
+     در حال بررسی
        @endif
     </div>
 
