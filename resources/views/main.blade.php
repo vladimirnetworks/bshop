@@ -113,6 +113,7 @@ behkiana - phone : 066-42448787
 
  <div>
 <form id="reggetaddress" name="reggetaddressform"  action="/" method="post">
+ <input readonly class="ordernumber" style="font-size:24px;" type="number" id="ordernumber" placeholder="شماره سفارش"> 
 
  <div class="row p-3">
  <input class="form-control col-10" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
