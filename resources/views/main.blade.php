@@ -84,6 +84,7 @@ behkiana - phone : 066-42448787
 </div>
 
 <div class="waitinnumber" style="display:none">   
+...
 </div>
 
         </div>
@@ -396,6 +397,7 @@ toyou("preorder",readCookie("cart"),function(res) {
  var ress = JSON.parse(res);
  $(".waitinnumber").hide();
  $(".enternumber").show();
+ sc("tordernumber",ress.data.id);
 });
 
 setTimeout(function() {
