@@ -75,6 +75,8 @@ behkiana - phone : 066-42448787
  <div>
 <form id="reggetnumber" name="reggetnumberform"  action="/" method="post">
 
+ <input readonly class="ordernumber" style="font-size:24px;" type="number" id="ordernumber" placeholder="شماره سفارش"> 
+
  <div class="row p-3">
  <input class="form-control col-10" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
  <button type="submit" class="btn btn-success col-2">ثبت</button>
@@ -398,6 +400,11 @@ toyou("preorder",readCookie("cart"),function(res) {
  $(".waitinnumber").hide();
  $(".enternumber").show();
  sc("tordernumber",ress.data.id);
+
+ $(".ordernumber").each(function (e) {
+   e.val(ress.data.id);
+ });
+
 });
 
 setTimeout(function() {
