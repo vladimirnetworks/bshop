@@ -12,7 +12,7 @@
     @foreach($orders as $order)
 
       {{$order->data}}
-
+<hr>
     @endforeach
     </div>
 
