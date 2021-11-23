@@ -23,9 +23,29 @@ class OrderController extends Controller
         $orders = liteauth::me()->orders;
 
 
+        foreach ($orders as $order) {
+
+            $cart = json_decode($order->data,true);
+
+            $orderText = null;
+            $orderTot = 0;
+            foreach ($cart as $cartitem) {
+                $orderTitles[] = $cartitem['title'];
+                $orderTot = $orderTot+intval($cartitem['price'])*intval($cartitem['count']);
+            }
+
+            $ords[] = [
+                'titles'=>$orderTitles,
+                'total'=>$orderTot,
+                'shipping_status'=>$order->shipping_status,
+                'payment_status'=>$order->payment_status,
+            ];
+        }
+      
+        dd($ords);
 
 
-        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$orders]);
+        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$ords]);
 
 
     }
