@@ -118,16 +118,7 @@ behkiana - phone : 066-42448787
  <div class="row p-3">
  <input class="form-control col-8" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
  
- <div class="col-2">
-               
-                 <select>
 
-                  <option>قبل از ظهر</option>
-                  <option>بعد از ظهر</option>
-                  <option>همین الان</option>
-                 
-                 </select>
-</div>
 
  <button type="submit" class="btn btn-success col-2">ثبت</button>
  </div>
