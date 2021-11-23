@@ -24,11 +24,46 @@
        @if($order['shipping_status'] === 0)
      در حال بررسی
        @endif
+
+     @if($order['shipping_status'] === 1)
+     ارسال شده
+       @endif
+
+      @if($order['shipping_status'] === 2)
+     تحویل داده شده
+       @endif
     </div>
 
 
     @endforeach
     </div>
+
+
+
+
+
+
+    <div class="border">
+     
+       @if($order['payment_status'] === 0)
+   پرداخت نشده
+       @endif
+
+     @if($order['payment_status'] === 1)
+    پرداخت شده
+       @endif
+
+
+    </div>
+
+
+    @endforeach
+    </div>
+
+
+
+
+
 
 </div>
 
