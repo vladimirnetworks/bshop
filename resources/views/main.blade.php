@@ -101,8 +101,18 @@ behkiana - phone : 066-42448787
         <!-- Modal body -->
         <div class="modal-body text-center">
 
- <br>
-                 <button  id="reggetaddress" type="button" class="btn btn-success" data-dismiss="modal">ثبت</button>  <input class="form-control" style="font-size:22px;" type="text" id="getaddress" placeholder="آدرس"> 
+ <div>
+<form id="reggetaddress" name="reggetaddressform"  action="/" method="post">
+
+ <div class="row p-3">
+ <input class="form-control col-10" style="font-size:24px;" type="text" id="getaddress" placeholder="آدرس"> 
+ <button type="submit" class="btn btn-success col-2">ثبت</button>
+ </div>
+</form>
+</div>
+
+
+
 
         </div>
         
@@ -383,7 +393,7 @@ setTimeout(function() {
 
   setTimeout(function() {
   $("#getnumber").focus();
-  },1000);
+  },100);
 
 },100);
 
@@ -544,7 +554,7 @@ self = {};
 
 
 $("#reggetnumber").on('submit',function () {
-console.log("dd");
+
 $('#myModal').modal("hide");
 $('#myModal2').modal("show");
 toyou("reguserdata",$("#getnumber").val(),null);
@@ -555,17 +565,21 @@ return false;
 });
 
 
-$("#reggetaddress").click(function () {
 
+$("#reggetaddress").on('submit',function () {
+
+$('#myModal2').modal("hide");
 $('#myModal3').modal("show");
-
 
 toyou("reguserdata",$("#getaddress").val(),null);
 sc("address",$("#getaddress").val());
 
 
+return false;
 
 });
+
+
 
 
 
