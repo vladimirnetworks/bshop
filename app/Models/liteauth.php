@@ -19,7 +19,7 @@ class liteauth extends Model
 
     public function orders()
     {
-        return $this->hasMany('App\Models\Order')->orderBy('id');
+        return $this->hasMany('App\Models\Order')->orderBy('id','desc');
     }
 
 }
