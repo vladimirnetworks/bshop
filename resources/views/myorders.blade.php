@@ -16,7 +16,7 @@
        
        <div>
           @foreach($order['items'] as $item)
-           {{$item['title']}} ( {{$item['count']}} عدد )
+          ۱
           @endforeach
        </div>
 
