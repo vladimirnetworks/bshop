@@ -25,10 +25,12 @@ class OrderController extends Controller
 
         foreach ($orders as $order) {
 
-            dd($order->data);
+          
 
 
             $cart = json_decode($order->data,true);
+
+            dd($cart);
 
             $orderText = null;
             $orderTot = 0;
