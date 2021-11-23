@@ -605,7 +605,7 @@ $('#myModal2').modal("show");
 
 
 /**/
-var element = $("#zamantahvil"), worked = false;
+var element = $("#zamantahvil").first(), worked = false;
 if (document.createEvent) {
     var e = document.createEvent("MouseEvents");
     e.initMouseEvent("mousedown", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
