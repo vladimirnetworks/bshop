@@ -401,8 +401,8 @@ toyou("preorder",readCookie("cart"),function(res) {
  $(".enternumber").show();
  sc("tordernumber",ress.data.id);
 
- $(".ordernumber").each(function (e) {
-   e.val(ress.data.id);
+ $(".ordernumber").each(function (index) {
+   $(this).val(ress.data.id);
  });
 
 });
