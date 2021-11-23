@@ -20,7 +20,7 @@ class OrderController extends Controller
     {
 
 
-        $orders = liteauth::me()->orders->orderBy('id', 'desc');
+        $orders = liteauth::me()->orders;
 
 
 
