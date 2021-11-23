@@ -393,7 +393,7 @@ setTimeout(function() {
 
   setTimeout(function() {
   $("#getnumber").focus();
-  },100);
+  },500);
 
 },100);
 
@@ -557,6 +557,11 @@ $("#reggetnumber").on('submit',function () {
 
 $('#myModal').modal("hide");
 $('#myModal2').modal("show");
+
+  setTimeout(function() {
+  $("#getaddress").focus();
+  },500);
+
 toyou("reguserdata",$("#getnumber").val(),null);
 sc("phone",$("#getnumber").val());
 
