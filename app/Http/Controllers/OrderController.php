@@ -30,11 +30,12 @@ class OrderController extends Controller
 
             $cart = json_decode($order->data,true);
 
-            dd($cart);
+          
 
             $orderText = null;
             $orderTot = 0;
             foreach ($cart as $cartitem) {
+                dd($cartitem);
                 $orderTitles[] = $cartitem['title'];
                 $orderTot = $orderTot+intval($cartitem['price'])*intval($cartitem['count']);
             }
