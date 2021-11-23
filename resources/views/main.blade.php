@@ -120,17 +120,19 @@ behkiana - phone : 066-42448787
 
  </div>
 
- <div class=" p-3  border rounded" style="direction:rtl;text-align:right">
+ <div id="zamantahvilsection" class=" p-3  border rounded" style="direction:rtl;text-align:right">
 
 <div style="color:grey">زمان تحویل </div><hr>
 <div class="">
   <label class="">
-    <input type="radio" class="" name="optradio">فردا قبل از ظهر
+    <input type="radio" class="" name="optradio">
+    فردا قبل از ظهر
   </label>
 </div>
 <div class="">
   <label class="">
-    <input type="radio" class="" name="optradio">فردا بعد از ظهر
+    <input type="radio" class="" name="optradio">
+    فردا بعد از ظهر
   </label>
 </div>
 <div class="">
@@ -626,10 +628,12 @@ return false;
 
 
 
-$("#reggetaddress").on('submit',function () {
 
-$('#myModal2').modal("hide");
+function regaddress() {
+  $('#myModal2').modal("hide");
 $('#myModal3').modal("show");
+
+
 
 
 
@@ -642,6 +646,13 @@ $('#modal3successtext').append($("<div style=\"color:grey\">("+totx['farsi']+")<
 
 toyou("reguserdata",{"address":$("#getaddress").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("address",$("#getaddress").val());
+
+}
+$("#reggetaddress").on('submit',function () {
+
+
+$('html, body').animate({ scrollTop: $('#zamantahvilsection').offset().top }, 'slow');
+
 
 
 return false;
