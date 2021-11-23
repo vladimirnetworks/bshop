@@ -68,6 +68,8 @@ behkiana - phone : 066-42448787
         
         <!-- Modal body -->
         <div class="modal-body text-center">
+
+<div class="enternumber" style="display:none">        
 لطفا شماره تماستون رو وارد کنید 
  <br>
  <div>
@@ -79,6 +81,11 @@ behkiana - phone : 066-42448787
  </div>
 </form>
 </div>
+</div>
+
+<div class="waitinnumber" style="display:none">   
+</div>
+
         </div>
         
         <!-- Modal footer -->
@@ -385,7 +392,11 @@ var finalorder = $('<button class="btn btn-primary m-2">تایید و ثبت ن�
 
 finalorder.on('touchstart click',function() {
   
-toyou("preorder",readCookie("cart"),null);
+toyou("preorder",readCookie("cart"),function(res) {
+ var ress = JSON.parse(res);
+ $(".waitinnumber").hide();
+ $(".enternumber").show();
+});
 
 setTimeout(function() {
 
