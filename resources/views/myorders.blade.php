@@ -14,6 +14,12 @@
     <div class="border">
       {!!implode("<br>",$order['titles'])!!}
     </div>
+
+    <div class="border">
+      {{number_format($order['total'])}}
+    </div>
+
+
     @endforeach
     </div>
 
