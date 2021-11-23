@@ -49,7 +49,7 @@ class OrderController extends Controller
             ];
         }
     
-      //  dd($ords);
+      dd($ords);
        
 
         return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$ords]);
