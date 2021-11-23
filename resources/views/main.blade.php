@@ -392,6 +392,7 @@ setTimeout(function() {
   $("#myModal").modal('toggle');
 
   setTimeout(function() {
+    $("#getnumber").val(gc("phone"));
   $("#getnumber").focus();
   },500);
 
@@ -559,6 +560,7 @@ $('#myModal').modal("hide");
 $('#myModal2').modal("show");
 
   setTimeout(function() {
+     $("#getaddress").val(gc("address"));
   $("#getaddress").focus();
   },500);
 
