@@ -116,7 +116,19 @@ behkiana - phone : 066-42448787
  <input readonly class="ordernumber" style="font-size:24px;" type="number"  placeholder="شماره سفارش"> 
 
  <div class="row p-3">
- <input class="form-control col-10" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
+ <input class="form-control col-8" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
+ 
+ <div class="col-2">
+                  زمان تحویل :
+                 <select>
+
+                  <option>قبل از ظهر</option>
+                  <option>بعد از ظهر</option>
+                  <option>همین الان</option>
+                 
+                 </select>
+</div>
+
  <button type="submit" class="btn btn-success col-2">ثبت</button>
  </div>
 </form>
@@ -160,14 +172,8 @@ behkiana - phone : 066-42448787
                    <br>
                  <button  id="" type="button" class="btn btn-success" data-dismissx="modal">پرداخت در محل</button>   
                  <br>
-                   <br>
-                 زمان تحویل :
-                 <select>
-                  <option>قبل از ظهر</option>
-                  <option>بعد از ظهر</option>
-                  <option>همین الان</option>
-                 
-                 </select>
+
+
         </div>
         
         <!-- Modal footer -->
