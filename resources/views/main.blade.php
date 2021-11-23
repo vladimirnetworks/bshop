@@ -120,7 +120,7 @@ behkiana - phone : 066-42448787
 
  </div>
 
- <div class="row p-3">
+ <div class="row p-3 justify-content-center align-items-center" style="direction:rtl">
 
 <div class="col-3">
 زمان تحویل
