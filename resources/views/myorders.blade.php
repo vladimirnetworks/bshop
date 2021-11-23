@@ -44,7 +44,7 @@
 
 
 
-     <div class="border">
+     <div>
      
        @if($order['payment_status'] === 0)
         پرداخت نشده
