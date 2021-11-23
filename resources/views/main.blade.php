@@ -105,7 +105,7 @@ behkiana - phone : 066-42448787
 <form id="reggetaddress" name="reggetaddressform"  action="/" method="post">
 
  <div class="row p-3">
- <input class="form-control col-10" style="font-size:24px;" type="text" id="getaddress" placeholder="آدرس"> 
+ <input class="form-control col-10" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
  <button type="submit" class="btn btn-success col-2">ثبت</button>
  </div>
 </form>
