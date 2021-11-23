@@ -11,8 +11,9 @@
     <div class="row">
     @foreach($orders as $order)
 
+<div class="border">
       {{$order->data}}
-
+</div>
     @endforeach
     </div>
 
