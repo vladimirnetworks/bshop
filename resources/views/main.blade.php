@@ -152,7 +152,7 @@ behkiana - phone : 066-42448787
 
         <div class="modal-body text-center">
 
-مجموع : ۱۶۵۴۰۰۰ تومان
+<div id="modal3successtext"></div>
                 <br>
                   <br>
                  <button  id="" type="button" class="btn btn-success" data-dismissx="modal">پرداخت آنلاین</button>   
@@ -599,7 +599,15 @@ $("#reggetaddress").on('submit',function () {
 $('#myModal2').modal("hide");
 $('#myModal3').modal("show");
 
-toyou("reguserdata",$("#getaddress").val(),null);
+
+
+var totx = cart_gen_tot_and_num();
+$('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"</div>"));
+
+$('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+totx['farsi']+"</div>"));
+
+
+toyou("reguserdata",{"address":$("#getaddress").val(),"ordernumber": $('.ordernumber').first().val(),null);
 sc("address",$("#getaddress").val());
 
 
