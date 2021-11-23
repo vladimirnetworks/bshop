@@ -144,8 +144,8 @@ behkiana - phone : 066-42448787
 
  </div>
 
-  <div class="row p-3">
-   <button type="submit" class="btn btn-success col m-4">ثبت</button>
+  <div id="reggetaddressedame" class="row p-3">
+   <button type="button" class="btn btn-success col m-4">ادامه</button>
   </div>
 
 </form>
@@ -660,6 +660,10 @@ return false;
 
 });
 
+
+$("#reggetaddressedame").click(function() {
+  regaddress();
+});
 
 
 
