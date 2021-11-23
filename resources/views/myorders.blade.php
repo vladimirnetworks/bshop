@@ -16,7 +16,13 @@
     </div>
 
     <div class="border">
-      {{number_format($order['total'])}}
+      {{number_format($order['total'])}} تومان
+    </div>
+
+    <div class="border">
+       @if($order['shipping_status'] === 0)
+       وضعیت : {{در حال بررسی}}
+       @endif
     </div>
 
 
