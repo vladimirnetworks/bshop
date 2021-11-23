@@ -35,7 +35,7 @@ class OrderController extends Controller
             $orderTitles = null;
             $orderTot = 0;
             foreach ($cart as $cartitem) {
-                
+
               $orderTitles[] = $cartitem['title'];
             
                 $orderTot = $orderTot+intval($cartitem['price'])*intval($cartitem['count']);
@@ -48,7 +48,8 @@ class OrderController extends Controller
                 'payment_status'=>$order->payment_status,
             ];
         }
-      
+    
+        dd($ords);
        
 
         return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$ords]);
