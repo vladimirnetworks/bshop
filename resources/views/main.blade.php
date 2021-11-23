@@ -597,10 +597,9 @@ $('#myModal3').modal("show");
 
 
 var totx = cart_gen_tot_and_num();
-$('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"</div>"));
-
 
 $('#modal3successtext').empty();
+$('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"</div>"));
 $('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+farsi_price(totx['tot'])+" تومان</div>"));
 $('#modal3successtext').append($("<div style=\"color:grey\">("+totx['farsi']+")</div>"));
 
