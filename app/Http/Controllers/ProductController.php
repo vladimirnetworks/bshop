@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         //
-        header('Access-Control-Allow-Origin: *');
+      
         $targets = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
         return $targets;
     }
