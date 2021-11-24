@@ -463,7 +463,7 @@ var maindiv = $("<div></div>").append('<label></label>').
 maindiv.append('<input type="radio" class="" name="shiptype" value="'+i+'">');
 maindiv.append('<span></span>').html(ress.data.shipping[i].text);
 
-$("#shipping_radio").append();
+$("#shipping_radio").append(maindiv);
 
 }
 
