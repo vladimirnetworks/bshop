@@ -132,21 +132,21 @@ behkiana - phone : 066-42448787
 <div style="color:grey">زمان تحویل </div><hr>
 <div class="">
   <label class="">
-    <input type="radio" class="" name="optradio">
+    <input type="radio" class="" name="shiptype" value="0">
     فردا قبل از ظهر
 (ارسال رایگان)
   </label>
 </div>
 <div class="">
   <label class="">
-    <input type="radio" class="" name="optradio">
+    <input type="radio" class="" name="shiptype" value="1">
     فردا بعد از ظهر
 (ارسال رایگان)
   </label>
 </div>
 <div class="">
   <label class="">
-    <input type="radio" class="" name="optradio">
+    <input type="radio" class="" name="shiptype" value="2">
     همین الان (۵۰۰۰ تومان هزینه)
   </label>
 </div>
@@ -701,9 +701,11 @@ $("#myModal3_address").html($("#getaddress").val());
 $("#reggetaddress").on('submit',function () {
 
 
+//$("input[name='Surv_Q1']:checked").parent('label').text();
 
+if ($("input[name='shiptype']:checked").val == null) {
 $('#zamantahvilsection').animate({'zoom': 1.2}, 400).delay(100).animate({'zoom': 1}, 400)
-
+}
 
 
 return false;
