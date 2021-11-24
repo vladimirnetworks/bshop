@@ -13,6 +13,6 @@ class mainPageController extends Controller
       
         $prods = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
 
-       return view('index',['pageTitle'=>"bshop","products"=>$prods]);
+       return view('index',['pageTitle'=>"بهکیانا - فروشگاه محصولات بهداشتی","products"=>$prods]);
     }
 }
