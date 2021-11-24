@@ -44,7 +44,9 @@ tdata = {};
 </script>
 
 <div class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
-behkiana - phone : 066-42448787
+فروشگاه اینترنی محصولات بهداشتی بهکیانا
+<br>
+ارسال فقط در شهر بروجرد
 
 <div class="text-right">
 <a class="btn btn-primary" href="/">صفحه اول</a>
@@ -53,6 +55,15 @@ behkiana - phone : 066-42448787
 </div>
 
 </div>
+
+<div class="text-center">
+<a class="btn btn-info" href="/cat/1">بهداشت و مراقبت بدن</a>
+<a class="btn btn-info" href="/cat/2">بهداشت دهان و دندان</a>
+<a class="btn btn-info" href="/cat/3">مراقبت پوست</a>
+<a class="btn btn-info" href="/cat/4">صابون شستشو</a>
+<a class="btn btn-info" href="/cat/5">انواع شامپو</a>
+</div>
+
 
 
 <div class="container">
