@@ -73,6 +73,10 @@ behkiana - phone : 066-42448787
 لطفا شماره تماستون رو وارد کنید 
  <br>
  <div>
+
+  <input id="myModal_next" value="address"/> 
+
+
 <form id="reggetnumber" name="reggetnumberform"  action="/" method="post">
 
  <input readonly class="ordernumber" style="font-size:24px;" type="hidden"  placeholder="شماره سفارش"> 
@@ -484,7 +488,9 @@ setTimeout(function() {
 
 
 $("#myModal3_phone_change").click(function() {
+  $("#myModal3").modal('hide');
   $("#myModal").modal('show');
+  $('#myModal_next').val("final");
 });
 
 
@@ -623,7 +629,16 @@ self = {};
 $("#reggetnumber").on('submit',function () {
 
 $('#myModal').modal("hide");
-$('#myModal2').modal("show");
+
+if ($("#myModal_next").val() == 'address') {
+  $('#myModal2').modal("show");
+}
+
+if ($("#myModal_next").val() == 'final') {
+  $('#myModal3').modal("show");
+  $("#myModal_next").val("address");
+}
+
 
   setTimeout(function() {
      $("#getaddress").val(gc("address"));
