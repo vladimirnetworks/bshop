@@ -6,7 +6,7 @@
          <a href="product/{{$product->id}}" class="d-block">{{$product->title}}</a>
 
 <br>
-        <img class="mw-100" src="https://shopid.ir/De-Ordiner-Skin-Serum-Model-Lactic-Acid-Volume-30-ml-2.jpg"/>
+      <a href="product/{{$product->id}}">  <img class="mw-100" src="https://shopid.ir/De-Ordiner-Skin-Serum-Model-Lactic-Acid-Volume-30-ml-2.jpg"/></a>
 
          {{number_format($product->price)}} تومان
 

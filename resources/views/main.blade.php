@@ -43,7 +43,7 @@ input[type=number] {
 tdata = {};
 </script>
 
-<div class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
+<div  style="text-align:right;direction:rtl" class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
 فروشگاه اینترنی محصولات بهداشتی بهکیانا
 <br>
 ارسال فقط در شهر بروجرد
