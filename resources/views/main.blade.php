@@ -466,6 +466,8 @@ var textx = $('<span>'+ress.data.shipping[i].text+'</span>');
 labelx.append(inputx);
 labelx.append(textx);
 
+maindiv.append(labelx);
+
 $("#shipping_radio").append(maindiv);
 
 }
