@@ -203,7 +203,7 @@ behkiana - phone : 066-42448787
 <div style="direction:rtl">
 شماره تماس : <span id="myModal3_phone"></span> <button id="myModal3_phone_change" class="btn btn-primary">تغییر</button>
 <br>
-آدرس : <span id="myModal3_address"></span> , تحویل : (<span  id="myModal3_shiping"></span>) <button id="myModal3_address_change" class="btn btn-primary">تغییر</button>
+آدرس : <span id="myModal3_address"></span> , تحویل در <span  id="myModal3_shiping"></span> <button id="myModal3_address_change" class="btn btn-primary">تغییر</button>
 <br>
 <br>
 </div>
