@@ -15,12 +15,15 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         //
-   header('Access-Control-Allow-Origin: *');
-   header('Access-Control-Allow-Methods: *');
-   header('Access-Control-Allow-Headers: *');
+   //header('Access-Control-Allow-Origin: *');
+  // header('Access-Control-Allow-Methods: *');
+   //header('Access-Control-Allow-Headers: *');
 
         $targets = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
-        return $targets;
+        return response($targets);
+
+      
+
     }
 
     /**
