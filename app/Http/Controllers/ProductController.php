@@ -38,7 +38,7 @@ class ProductController extends Controller
         header('Access-Control-Allow-Headers: *');
 
         $newprod = Product::create([
-            'title' => $request['title'], 'price' => $request['price'],
+            'title' => $request['title'], 'price' => $request['price'], 'photos' => $request['photos'],
         ]);
 
         return ["data" => $newprod];
@@ -67,12 +67,13 @@ class ProductController extends Controller
     public function update(Request $request, Product $Product)
     {
         //header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Methods: *');
-        header('Access-Control-Allow-Headers: *');
+        //header('Access-Control-Allow-Methods: *');
+        //header('Access-Control-Allow-Headers: *');
 
         $Product->title = $request->title;
         $Product->price = $request->price;
         $Product->caption = $request->caption;
+        $Product->photos = $request->photos;
 
         return ["data" => $Product->save()];
     }
