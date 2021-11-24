@@ -716,7 +716,12 @@ return false;
 
 
 $("#reggetaddressedame").click(function() {
+if (!$("input[name='shiptype']:checked").val()) {
+$('#zamantahvilsection').animate({'zoom': 1.2}, 400).delay(100).animate({'zoom': 1}, 400)
+} else {
   regaddress();
+}
+
 });
 
 
