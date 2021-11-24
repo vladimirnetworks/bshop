@@ -203,7 +203,7 @@ behkiana - phone : 066-42448787
 <div style="direction:rtl">
 شماره تماس : <span id="myModal3_phone"></span> <button id="myModal3_phone_change" class="btn btn-primary">تغییر</button>
 <br>
-آدرس : <span id="myModal3_address"></span> , تحویل در <span  id="myModal3_shiping"></span> <button id="myModal3_address_change" class="btn btn-primary">تغییر</button>
+آدرس : <span id="myModal3_address"></span> , تحویل در <span  id="myModal3_shipping"></span> <button id="myModal3_address_change" class="btn btn-primary">تغییر</button>
 <br>
 <br>
 </div>
@@ -692,12 +692,12 @@ $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernum
 $('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+farsi_price(totx['tot'])+" تومان</div>"));
 $('#modal3successtext').append($("<div style=\"color:grey\">("+totx['farsi']+")</div>"));
 
-toyou("reguserdata",{"address":$("#getaddress").val(),"shiping":$("input:radio[name ='shiptype']:checked").val(),"ordernumber": $('.ordernumber').first().val()},null);
+toyou("reguserdata",{"address":$("#getaddress").val(),"shipping":$("input:radio[name ='shiptype']:checked").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("address",$("#getaddress").val());
 tdata.address = $("#getaddress").val();
 $("#myModal3_address").html($("#getaddress").val());
 
-$("#myModal3_shiping").html($("input[name='shiptype']:checked").parent('label').text());
+$("#myModal3_shipping").html($("input[name='shiptype']:checked").parent('label').text());
 
 
 }
