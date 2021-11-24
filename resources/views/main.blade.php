@@ -727,7 +727,7 @@ var shippingcost = tdata.shippingcost[$("input:radio[name ='shiptype']:checked")
 $('#modal3successtext').empty();
 $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"<br></div>"));
 $('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+farsi_price(totx['tot']+shippingcost)+" تومان</div>"));
-$('#modal3successtext').append($("<div style=\"color:grey\">("+totx['farsi']+")</div>"));
+$('#modal3successtext').append($("<div style=\"color:grey\">("+Num2persian(totx['tot']+shippingcost)+")</div>"));
 
 toyou("reguserdata",{"address":$("#getaddress").val(),"shipping":$("input:radio[name ='shiptype']:checked").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("address",$("#getaddress").val());
