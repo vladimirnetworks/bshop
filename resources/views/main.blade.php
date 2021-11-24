@@ -703,8 +703,10 @@ $("#reggetaddress").on('submit',function () {
 
 //$("input[name='Surv_Q1']:checked").parent('label').text();
 
-if ($("input[name='shiptype']:checked").val == null) {
+if (!$("input[name='shiptype']:checked").val()) {
 $('#zamantahvilsection').animate({'zoom': 1.2}, 400).delay(100).animate({'zoom': 1}, 400)
+} else {
+  regaddress();
 }
 
 
