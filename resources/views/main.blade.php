@@ -458,10 +458,13 @@ $("#shipping_radio").empty();
 for (var i=0 ; i < ress.data.shipping.length ; i++) {
   console.log(ress.data.shipping[i]);
 
-var maindiv = $("<div></div>").append($('<label></label>'));
+var maindiv = $("<div></div>");
+var labelx = $('<label></label>');
+var inputx = $('<input type="radio" class="" name="shiptype" value="'+i+'">');
+var textx = $('<span>'+ress.data.shipping[i].text+'</span>');
 
-maindiv.append($('<input type="radio" class="" name="shiptype" value="'+i+'">'));
-maindiv.append($('<span></span>')).html(ress.data.shipping[i].text);
+labelx.append(inputx);
+labelx.append(textx);
 
 $("#shipping_radio").append(maindiv);
 
