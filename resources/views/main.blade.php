@@ -56,12 +56,12 @@ tdata = {};
 
 </div>
 
-<div class="text-center">
-<a class="btn btn-info" href="/cat/1">بهداشت و مراقبت بدن</a>
-<a class="btn btn-info" href="/cat/2">بهداشت دهان و دندان</a>
-<a class="btn btn-info" href="/cat/3">مراقبت پوست</a>
-<a class="btn btn-info" href="/cat/4">صابون شستشو</a>
-<a class="btn btn-info" href="/cat/5">انواع شامپو</a>
+<div class="text-center m-2">
+<a class="btn btn-warning" href="/cat/1">بهداشت و مراقبت بدن</a>
+<a class="btn btn-warning" href="/cat/2">بهداشت دهان و دندان</a>
+<a class="btn btn-warning" href="/cat/3">مراقبت پوست</a>
+<a class="btn btn-warning" href="/cat/4">صابون شستشو</a>
+<a class="btn btn-warning" href="/cat/5">انواع شامپو</a>
 </div>
 
 
