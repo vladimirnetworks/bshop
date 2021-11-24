@@ -446,6 +446,12 @@ toyou("preorder",readCookie("cart"),function(res) {
    $(this).val(ress.data.id);
  });
 
+
+for (var i=0 ; i < ress.data.shipping.length ; i++) {
+  console.log(ress.data.shipping[i]);
+}
+
+
 });
 
 
