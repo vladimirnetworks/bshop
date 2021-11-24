@@ -455,7 +455,7 @@ toyou("preorder",readCookie("cart"),function(res) {
 
 
 $("#shipping_radio").empty();
-tdata.shippingcost = []];
+tdata.shippingcost = [];
 for (var i=0 ; i < ress.data.shipping.length ; i++) {
   console.log(ress.data.shipping[i]);
 
