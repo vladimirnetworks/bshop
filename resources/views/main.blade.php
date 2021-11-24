@@ -455,8 +455,11 @@ toyou("preorder",readCookie("cart"),function(res) {
 
 
 $("#shipping_radio").empty();
+tdata.shippingcost = []];
 for (var i=0 ; i < ress.data.shipping.length ; i++) {
   console.log(ress.data.shipping[i]);
+
+tdata.shippingcost.push(ress.data.shipping[i].cost);
 
 var maindiv = $("<div></div>");
 var labelx = $('<label></label>');
@@ -465,10 +468,12 @@ var textx = $('<span>'+ress.data.shipping[i].text+'</span>');
 
 labelx.append(inputx);
 labelx.append(textx);
-
 maindiv.append(labelx);
 
 $("#shipping_radio").append(maindiv);
+
+
+
 
 }
 
