@@ -74,7 +74,7 @@ behkiana - phone : 066-42448787
  <br>
  <div>
 
-  <input id="myModal_next" value="address"/> 
+  <input type="hidden" id="myModal_next" value="address"/> 
 
 
 <form id="reggetnumber" name="reggetnumberform"  action="/" method="post">
@@ -116,6 +116,9 @@ behkiana - phone : 066-42448787
         <div class="modal-body text-center">
 
  <div>
+
+
+
 <form id="reggetaddress" name="reggetaddressform"  action="/" method="post">
  <input readonly class="ordernumber" style="font-size:24px;" type="hidden"  placeholder="شماره سفارش"> 
 
@@ -200,7 +203,7 @@ behkiana - phone : 066-42448787
 <div style="direction:rtl">
 شماره تماس : <span id="myModal3_phone"></span> <button id="myModal3_phone_change" class="btn btn-primary">تغییر</button>
 <br>
-آدرس : <span id="myModal3_address"></span> , تحویل : (<span id="myModal3_address_change" id="myModal3_address"></span>) <button class="btn btn-primary">تغییر</button>
+آدرس : <span id="myModal3_address"></span> , تحویل : (<span  id="myModal3_address"></span>) <button id="myModal3_address_change" class="btn btn-primary">تغییر</button>
 <br>
 <br>
 </div>
@@ -491,6 +494,11 @@ $("#myModal3_phone_change").click(function() {
   $("#myModal3").modal('hide');
   $("#myModal").modal('show');
   $('#myModal_next').val("final");
+});
+
+$("#myModal3_address_change").click(function() {
+  $("#myModal3").modal('hide');
+  $("#myModal2").modal('show');
 });
 
 
