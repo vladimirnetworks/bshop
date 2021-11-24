@@ -84,6 +84,14 @@ class OrderController extends Controller
        
     }
 
+    public static function shipping() {
+
+        $ship[] = ["text"=>"shipping1","cost"=>0];
+        $ship[] = ["text"=>"shipping2","cost"=>0];
+        $ship[] = ["text"=>"shipping3","cost"=>4000];
+         return $ship;
+
+    }
 
 
     public function store2(Request $request)
@@ -99,7 +107,9 @@ class OrderController extends Controller
             $cartx[] = $hitdata;
           }
 
-        $ret = Order::Create(["data"=>json_encode($cartx),"liteauth_id"=>$me->id]);
+        $xshiping = $this::shipping();
+
+        $ret = Order::Create(["data"=>json_encode($cartx),"liteauth_id"=>$me->id,"shiping"=>json_encode($xshiping)]);
    
 
 
@@ -109,8 +119,7 @@ class OrderController extends Controller
         Notif::Create(["data"=>json_encode( $sendt),"status"=> $sendt['ok']]);
 
 
-
-        return ["data"=> ["id"=>encode_id($ret->id)]];
+        return ["data"=> ["id"=>encode_id($ret->id),"shipping"=>$xshiping]];
        
     }
 
