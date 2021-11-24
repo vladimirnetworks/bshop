@@ -40,7 +40,7 @@ input[type=number] {
 <body>
 
 <script>
-
+tdata = {};
 </script>
 
 <div class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
@@ -193,7 +193,12 @@ behkiana - phone : 066-42448787
                  <br>
 <hr>
 
- <input class="form-control col-10" style="font-size:24px;" type="number" id="getnumber" placeholder="شماره تماس"> 
+
+شماره تماس : <span id="myModal3_phone"></span> <button id="myModal3_phone_change" class="btn btn-primary">تغییر</button>
+<br>
+آدرس : <span id="myModal3_address"></span> , تحویل : (<span id="myModal3_address_change" id="myModal3_address"></span>) <button class="btn btn-primary">تغییر</button>
+<br>
+<br>
 
 
         </div>
@@ -626,6 +631,9 @@ $('#myModal2').modal("show");
 
 toyou("reguserdata",{"number":$("#getnumber").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("phone",$("#getnumber").val());
+tdata.phone = $("#getnumber").val();
+$("#myModal3_phone").html($("#getnumber").val());
+
 
 return false;
 
@@ -651,6 +659,8 @@ $('#modal3successtext').append($("<div style=\"color:grey\">("+totx['farsi']+")<
 
 toyou("reguserdata",{"address":$("#getaddress").val(),"ordernumber": $('.ordernumber').first().val()},null);
 sc("address",$("#getaddress").val());
+tdata.address = $("#getaddress").val();
+$("#myModal3_address").html($("#getaddress").val());
 
 }
 $("#reggetaddress").on('submit',function () {
