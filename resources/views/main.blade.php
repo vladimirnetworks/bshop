@@ -697,14 +697,14 @@ sc("address",$("#getaddress").val());
 tdata.address = $("#getaddress").val();
 $("#myModal3_address").html($("#getaddress").val());
 
-$("#myModal3_shiping").html($("input[name='Surv_Q1']:checked").parent('label').text());
+$("#myModal3_shiping").html($("input[name='shiptype']:checked").parent('label').text());
 
 
 }
 $("#reggetaddress").on('submit',function () {
 
 
-//$("input[name='Surv_Q1']:checked").parent('label').text();
+
 
 if (!$("input[name='shiptype']:checked").val()) {
 $('#zamantahvilsection').animate({'zoom': 1.2}, 400).delay(100).animate({'zoom': 1}, 400)
