@@ -199,7 +199,7 @@ behkiana - phone : 066-42448787
 آدرس : <span id="myModal3_address"></span> , تحویل : (<span id="myModal3_address_change" id="myModal3_address"></span>) <button class="btn btn-primary">تغییر</button>
 <br>
 <br>
-<div>
+</div>
 
         </div>
         
