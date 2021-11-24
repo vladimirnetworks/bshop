@@ -130,6 +130,9 @@ behkiana - phone : 066-42448787
  <div id="zamantahvilsection" class=" p-3  border rounded" style="direction:rtl;text-align:right">
 
 <div style="color:grey">زمان تحویل </div><hr>
+
+
+ <div id="shipping_radio">
 <div class="">
   <label class="">
     <input type="radio" class="" name="shiptype" value="0">
@@ -137,6 +140,7 @@ behkiana - phone : 066-42448787
 (ارسال رایگان)
   </label>
 </div>
+
 <div class="">
   <label class="">
     <input type="radio" class="" name="shiptype" value="1">
@@ -144,11 +148,14 @@ behkiana - phone : 066-42448787
 (ارسال رایگان)
   </label>
 </div>
+
 <div class="">
   <label class="">
     <input type="radio" class="" name="shiptype" value="2">
     همین الان (۵۰۰۰ تومان هزینه)
   </label>
+</div>
+
 </div>
 
  </div>
@@ -447,9 +454,21 @@ toyou("preorder",readCookie("cart"),function(res) {
  });
 
 
+$("#shipping_radio").empty();
 for (var i=0 ; i < ress.data.shipping.length ; i++) {
   console.log(ress.data.shipping[i]);
+
+var maindiv = $("<div></div>").append('<label></label>').
+
+maindiv.append('<input type="radio" class="" name="shiptype" value="'+i+'">');
+maindiv.append('<span></span>').html(ress.data.shipping[i].text);
+
+$("#shipping_radio").append();
+
 }
+
+
+
 
 
 });
