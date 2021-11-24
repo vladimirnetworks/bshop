@@ -193,10 +193,10 @@ behkiana - phone : 066-42448787
 <div id="modal3successtext"></div>
                 <br>
                  
-                 <button  id="" type="button" class="btn btn-success" data-dismissx="modal">پرداخت آنلاین</button>   
+                 <button  id="onlinepayment" type="button" class="btn btn-success" data-dismissx="modal">پرداخت آنلاین</button>   
                  <br>
                    <br>
-                 <button  id="" type="button" class="btn btn-success" data-dismissx="modal">پرداخت در محل</button>   
+                 <button  id="offlinepayment" type="button" class="btn btn-success" data-dismissx="modal">پرداخت در محل</button>   
                  <br>
 <hr>
 
@@ -729,6 +729,22 @@ $('#zamantahvilsection').animate({'zoom': 1.2}, 400).delay(100).animate({'zoom':
 
 
 
+
+
+
+
+
+$("#onlinepayment").click(function() {
+toyou("reguserdata",{"payment":"online","ordernumber": $('.ordernumber').first().val()},function(res) {
+window.location="/onlinepayment/"+$('.ordernumber').first().val()
+});
+});
+
+$("#offlinepayment").click(function() {
+toyou("reguserdata",{"payment":"offline","ordernumber": $('.ordernumber').first().val()},function(res) {
+window.location="/myorders/"+$('.ordernumber').first().val()
+});
+});
 
 
 </script>
