@@ -19,10 +19,11 @@ class ProductController extends Controller
   // header('Access-Control-Allow-Methods: *');
    //header('Access-Control-Allow-Headers: *');
 
-        $targets = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
-        return response($targets)->header('b-tupe','yes')->header('Access-Control-Allow-Methods','*')->header('Access-Control-Allow-Headers','*');
+       // $targets = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+       // return response($targets)->header('b-tupe','yes')->header('Access-Control-Allow-Methods','*')->header('Access-Control-Allow-Headers','*');
 
       
+        return response([])->header('b-tupe','yes')->header('Access-Control-Allow-Methods','*')->header('Access-Control-Allow-Headers','*');
 
     }
 
