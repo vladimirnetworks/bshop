@@ -9,6 +9,7 @@
 {{$product->caption}}
 </div>
 
+قیمت : {{number_format($product->price)}}
 
 <!--
    <button type="button" class="btn btn-info btn-lg addtocartx" data-prod="{{$product->cartnfo()}}" data-toggle="modal" data-target="#myModal">خرید</button>
