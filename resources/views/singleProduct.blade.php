@@ -5,7 +5,7 @@
 <h1>{{$product->title}}</h1>
 
 <div>
- <img src="{{$product->photos}}" style="max-width:100%"><br>
+ <img style="width:200px;" src="{{$product->photos}}" style="max-width:100%"><br>
 {{$product->caption}}
 </div>
 
