@@ -19,7 +19,7 @@ Route::apiResource('orders', 'App\Http\Controllers\OrderController');
 
 Route::post('preorder', 'App\Http\Controllers\OrderController@store2');
 
-Route::apiResource('products', 'App\Http\Controllers\ProductController')->middleware('cros');
+Route::apiResource('products', 'App\Http\Controllers\ProductController')->middleware('cors');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
