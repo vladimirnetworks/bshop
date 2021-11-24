@@ -441,6 +441,12 @@ toyou("preorder",readCookie("cart"),function(res) {
 
 });
 
+
+
+
+
+
+
 setTimeout(function() {
 
   $("#myModal").modal('toggle');
@@ -475,6 +481,12 @@ setTimeout(function() {
  //cartdown();
 
 });
+
+
+$("#myModal3_phone_change").click(function() {
+  $("#myModal").modal('show');
+});
+
 
 
 
