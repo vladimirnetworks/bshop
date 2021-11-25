@@ -644,5 +644,36 @@ window.location="/myorders"
 
 
 </script>
+
+
+
+
+
+
+
+
+
+<div  style="text-align:right;direction:rtl" class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
+
+
+
+جهت پیگیری سفارش و یا ثبت سفارش به صورت تلفنی با شماره ی زیر تماس بگیرید
+<br>
+شماره تماس  : ۴۲۴۴۸۷۸۷ 
+
+<br>
+همراه : ۰۹۳۳۲۸۰۶۱۴۴
+(هر روز از ۸ صبح تا ۱۰ شب)
+<hr>
+
+آدرس :‌ خیابان جعفری کوچه خوشبین بنبست تختی پلاک ۲۲۹
+(فروش حضوری نداریم)
+
+
+
+
+</div>
+
+
 </body>
 </html>
