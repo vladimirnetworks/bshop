@@ -44,6 +44,9 @@ tdata = {};
 </script>
 
 <div  style="text-align:right;direction:rtl" class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
+
+<img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="float:right" class="m-2"/>
+
 فروشگاه اینترنی محصولات بهداشتی بهکیانا
 <br>
 ارسال فقط در شهر بروجرد
