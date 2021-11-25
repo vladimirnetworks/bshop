@@ -14,7 +14,7 @@
 <div class="w-50 mx-auto">
  <div class="row">
     <div class="col text-left">نام کاربری</div>
-    <div class="col text-right"><input style="text-align:left;direction:ltr" name="user" type="text" class="form-control"></div>
+    <div class="col text-right"><input class="border border-dark" style="text-align:left;direction:ltr" name="user" type="text" class="form-control"></div>
  </div>
 
   <div class="row ">
