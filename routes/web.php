@@ -26,6 +26,12 @@ Route::get('/product/{product}', "App\Http\Controllers\ProductController@show")-
 
 
 
+
+Route::get('/200297.txt',function() {
+    return "";
+});
+
+
 Route::get('/login', "App\Http\Controllers\Logincontroller@login")->middleware('tokin');
 Route::post('/login', "App\Http\Controllers\Logincontroller@login2")->middleware('tokin');
 
