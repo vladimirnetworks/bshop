@@ -56,7 +56,7 @@ tdata = {};
 ارسال فقط در شهر بروجرد
  </div>
 
- <img class="col" src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="float:right" class="m-2"/>
+ <img class="col" src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="float:right;max-height:100px" class="m-2"/>
 
 
 </div>
