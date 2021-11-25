@@ -50,18 +50,21 @@ tdata = {};
 
 <div class="row justify-content-center align-items-center">
 
+
+<div class="col" >
+ <img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="max-height:90px" class="m-2"/>
+</div>
+
  <div class="col">
  فروشگاه اینترنی محصولات بهداشتی بهکیانا
 <br>
 ارسال فقط در شهر بروجرد
  </div>
 
-<div class="col" >
- <img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="max-height:90px" class="m-2"/>
-</div>
+
 
 <div class="col" >
-<a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=244136&Code=NAYvp5VDiHI1pstposy1"><img referrerpolicy="origin" src="https://s4.uupload.ir/files/star0_22zf.png" alt="" style="cursor:pointer" id="NAYvp5VDiHI1pstposy1"></a>
+<a referrerpolicy="origin" class="rounded" target="_blank" href="https://trustseal.enamad.ir/?id=244136&Code=NAYvp5VDiHI1pstposy1"><img referrerpolicy="origin" src="https://s4.uupload.ir/files/star0_22zf.png" alt="" style="cursor:pointer" id="NAYvp5VDiHI1pstposy1"></a>
 </div>
 
 </div>
