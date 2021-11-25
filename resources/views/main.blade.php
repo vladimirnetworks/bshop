@@ -631,13 +631,14 @@ $('#zamantahvilsection').animate({'zoom': 1.2}, 400).delay(100).animate({'zoom':
 
 $("#onlinepayment").click(function() {
 toyou("reguserdata",{"payment":"online","ordernumber": $('.ordernumber').first().val()},function(res) {
-window.location="/onlinepayment/"+$('.ordernumber').first().val()
+//window.location="/onlinepayment/"+$('.ordernumber').first().val()
 });
 });
 
 $("#offlinepayment").click(function() {
 toyou("reguserdata",{"payment":"offline","ordernumber": $('.ordernumber').first().val()},function(res) {
-window.location="/myorders/"+$('.ordernumber').first().val()
+//window.location="/myorders/"+$('.ordernumber').first().val()
+window.location="/myorders"
 });
 });
 
