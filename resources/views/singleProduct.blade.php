@@ -5,7 +5,7 @@
 <h1>{{$product->title}}</h1>
 
 <div class="row">
-<div class="col-8">
+<div class="col-6">
 <div>
  <img style="width:200px;" src="{{$product->photos}}" style="max-width:100%"><br>
 
@@ -16,7 +16,7 @@
 </ul>
 </div>
 </div>
-<div class="col-4">
+<div class="col-6">
 <div class="p-3" style="font-size:150%;font-weight:bold">
 قیمت : {{number_format($product->price)}}
 <div>
@@ -24,7 +24,7 @@
    <button type="button" class="btn btn-info btn-lg addtocartx" data-prod="{{$product->cartnfo()}}" data-toggle="modal" data-target="#myModal">خرید</button>
 -->
 <br>
- <button type="button" class="btn btn-success btn-lg addtocart" data-prod="{{$product->cartnfo()}}" >خرید</button>
+ <button type="button" class="btn btn-success btn-lg addtocart" data-prod="{{$product->cartnfo()}}" >افزودن به سبد خرید</button>
 </div>
 </div>
 
