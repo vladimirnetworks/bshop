@@ -640,7 +640,7 @@ $('#modal3successtext').append($("<h4 class=\"text-success\">سفارش شما �
      cartlistener();  
 
 
-$('#modal3successcart').append(ords);
+//$('#modal3successcart').append(ords);
 
 
 $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"<br></div>"));
