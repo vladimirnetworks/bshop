@@ -17,8 +17,9 @@
 </div>
 </div>
 <div class="col-4">
+<div class="p-3" style="font-size:150%;font-weight:bold">
 قیمت : {{number_format($product->price)}}
-
+<div>
 <!--
    <button type="button" class="btn btn-info btn-lg addtocartx" data-prod="{{$product->cartnfo()}}" data-toggle="modal" data-target="#myModal">خرید</button>
 -->
