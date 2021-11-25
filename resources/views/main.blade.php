@@ -14,9 +14,6 @@
   <script src="/bs4/popper.min.js"></script>
   <script src="/bs4/bootstrap.min.js"></script>
   <script src="/bs4/cook.js?{{time()}}"></script>
-
-   </head>
-
 <style>
 body {
 
@@ -37,6 +34,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 </style>
+   </head>
+
+
 <body>
 
 <script>
