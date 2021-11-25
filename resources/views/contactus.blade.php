@@ -2,7 +2,7 @@
 
 @section('main')
 
-<div class="container p-3">
+<div class="container p-3" sytle="line-height:33px">
 
 <h1>تماس با ما</h1>
 جهت پیگیری سفارش و یا ثبت سفارش به صورت تلفنی با شماره ی زیر تماس بگیرید
