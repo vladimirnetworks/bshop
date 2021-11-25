@@ -134,9 +134,11 @@
         <div class="modal-body text-center">
 
 
+<div id="modal3successcart"></div>
+
 <div id="modal3successtext"></div>
 
-<div id="modal3successcart"></div>
+
 
 
 
