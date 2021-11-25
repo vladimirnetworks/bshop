@@ -12,6 +12,11 @@
 <div class="container-fluid text-center border rounded p-3 ">
 
 <div class="w-50 mx-auto">
+
+@if(isset($error))
+ <div class=".text-danger">نام کاربری و یا رمز عبور اشتباه است</div>
+@endif
+
  <div class="row p-1">
     <div class="col text-left">نام کاربری</div>
     <div class="col text-right"><input class="border border-secondary rounded" style="text-align:left;direction:ltr" name="user" type="text" class="form-control"></div>

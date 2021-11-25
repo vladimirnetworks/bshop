@@ -10,4 +10,26 @@ class Logincontroller extends Controller
     {
         return view("login",["pageTitle"=>"ورود کاربران"]);
     }
+
+    public function login2(Request $request)
+    {
+
+        if ($request->user == 'ben' && $request->pass == '1') {
+
+            setcookie(
+                "xlogin",
+               "auth",
+                time() + (10 * 365 * 24 * 60 * 60)
+              ); 
+
+              return redirect("/");
+    
+        } else {
+
+            return view("login",["pageTitle"=>"ورود کاربران","error"=>true]);
+
+        }
+        
+    }
+
 }
