@@ -11,18 +11,19 @@
 
 <div class="container-fluid text-center border rounded p-3 ">
 
+<div class="w-50">
  <div class="row">
     <div class="col text-left">نام کاربری</div>
-    <div class="col text-right"><input name="user" type="text" class="form-control"></div>
+    <div class="col text-right"><input style="text-align:left;direction:ltr" name="user" type="text" class="form-control"></div>
  </div>
 
   <div class="row ">
     <div class="col text-left">رمز عبور</div>
-    <div class="col text-right"><input name="pass" type="password" class="form-control"></div>
+    <div class="col text-right"><input style="text-align:left;direction:ltr" name="pass" type="password" class="form-control"></div>
  </div>
+</div>
 
-
- <button class="btn btn-primary m-3 p-3">ورود</button>
+ <button class="btn btn-primary m-3 ">ورود</button>
 </div>
 
 </form>
