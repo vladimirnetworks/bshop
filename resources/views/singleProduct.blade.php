@@ -4,6 +4,8 @@
 
 <div style="text-align:right;direction:rtl">
 
+<hr>
+
 <h1>{{$product->title}}</h1>
 
 <div class="row">
