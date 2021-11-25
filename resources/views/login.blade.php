@@ -9,16 +9,16 @@
 <form action="login" method="post">
 
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-center border rounded p-3">
 
  <div class="row">
-    <div class="col">نام کاربری</div>
-    <div class="col"><input name="user" type="text" class="form-control"></div>
+    <div class="col text-left">نام کاربری</div>
+    <div class="col text-right"><input name="user" type="text" class="form-control"></div>
  </div>
 
   <div class="row">
-    <div class="col">رمز عبور</div>
-    <div class="col"><input name="pass" type="password" class="form-control"></div>
+    <div class="col text-left">رمز عبور</div>
+    <div class="col text-right"><input name="pass" type="password" class="form-control"></div>
  </div>
 
 
