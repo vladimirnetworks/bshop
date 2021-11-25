@@ -617,7 +617,7 @@ $('#modal3successtext').append($("<h4 class=\"text-success\">سفارش شما �
     
 
 
-   var cont = $('<div style="width:100%; float:right; direction:rtl" class="row border rounded p-2"></div>');
+   var cont = $('<div style=" direction:rtl" class="row border rounded p-1"></div>');
 
 
 
