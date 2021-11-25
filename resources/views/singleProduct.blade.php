@@ -18,7 +18,7 @@
 </div>
 <div class="col-6">
 <div class="p-3 text-success" style="font-size:150%;font-weight:bold">
-قیمت : {{number_format($product->price)}}
+قیمت : {{number_format($product->price)}} تومان
 <div>
 <!--
    <button type="button" class="btn btn-info btn-lg addtocartx" data-prod="{{$product->cartnfo()}}" data-toggle="modal" data-target="#myModal">خرید</button>
