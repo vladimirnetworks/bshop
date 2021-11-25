@@ -17,7 +17,7 @@
 </div>
 </div>
 <div class="col-6">
-<div class="p-3" style="font-size:150%;font-weight:bold">
+<div class="p-3 text-success" style="font-size:150%;font-weight:bold">
 قیمت : {{number_format($product->price)}}
 <div>
 <!--
