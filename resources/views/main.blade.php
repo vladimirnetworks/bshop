@@ -391,8 +391,8 @@ setTimeout(function() {
     //  $(".cartslider_dim").css({"display":"none"});  
     //  $(".cartslider").css({"display":"none"});  
      
-     sc("cart",'{}');
-     cartlistener();  
+    //sc("cart",'{}');
+     //cartlistener();  
     cartdown();
 
 
