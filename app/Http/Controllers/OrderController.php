@@ -86,9 +86,9 @@ class OrderController extends Controller
 
     public static function shipping() {
 
-        $ship[] = ["text"=>"shipping1","cost"=>0];
-        $ship[] = ["text"=>"shipping2","cost"=>0];
-        $ship[] = ["text"=>"shipping3","cost"=>4000];
+        $ship[] = ["text"=>"امروز قبل از ظهر","cost"=>0];
+        $ship[] = ["text"=>"امروز بعد از ظهر","cost"=>0];
+        $ship[] = ["text"=>"همین الان (۴۰۰۰+ تومان هزینه)","cost"=>4000];
          return $ship;
 
     }
