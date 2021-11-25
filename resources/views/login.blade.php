@@ -14,7 +14,7 @@
 <div class="w-50 mx-auto">
 
 @if(isset($error))
- <div class=".text-danger">نام کاربری و یا رمز عبور اشتباه است</div>
+ <div class="text-danger">نام کاربری و یا رمز عبور اشتباه است</div>
 @endif
 
  <div class="row p-1">
