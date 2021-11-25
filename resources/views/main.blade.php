@@ -57,7 +57,7 @@ tdata = {};
  </div>
 
 <div class="col" >
- <img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="max-height:100px" class="m-2"/>
+ <img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="max-height:150px" class="m-2"/>
 </div>
 
 
@@ -68,6 +68,7 @@ tdata = {};
 <a class="btn btn-primary" href="/">صفحه اول</a>
 <a class="btn btn-primary" href="/myorders">سفارشات من</a>
 <a class="btn btn-primary" href="/contact-us">تماس با ما</a>
+<a class="btn btn-primary" href="/login">ورود کاربران</a>
 </div>
 
 </div>
