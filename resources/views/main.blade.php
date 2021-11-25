@@ -605,9 +605,42 @@ $('#modal3successtext').append($("<h4 class=\"text-success\">سفارش شما �
 
 
 
+/**/
+    var cart = JSON.parse(readCookie("cart"));
+    
+
+
+    var ords = $('<div></div>');
+    ords.empty();
+
+    $.each(cart, function (i) {
+    
+
+
+   var cont = $('<div style="width:100%;float:right;" class="border rounded p-2"></div>');
+
+
+
+        cont.append($("<span style=\"float:right;\">"+cart[i]['title']+"</span>"));
+        cont.append($("<span style=\"float:right\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
+
+        cont.append($("<span>"+cart[i]['count']+" عدد </span>"));
+
+        cont.append(countsection);
+        
+
+      ords.append(cont);
+
+
+    
+    });
+/**/
+
      sc("cart",'{}');
      cartlistener();  
 
+
+$('#modal3successcart').append(ords);
 
 
 $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"<br></div>"));
