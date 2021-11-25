@@ -15,6 +15,17 @@
    {!!lize($product->caption)!!}
    </ul>
  </div>
+
+ <div class="col-6">
+
+   <div class="p-3 text-success" style="font-size:150%;font-weight:bold">
+   قیمت : {{number_format($product->price)}} تومان
+   </div>
+
+    <button type="button" class="btn btn-success btn-lg addtocart" data-prod="{{$product->cartnfo()}}" >افزودن به سبد خرید</button>
+
+ </div>
+
 </div>
 
 </div>
