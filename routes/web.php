@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "App\Http\Controllers\mainPageController@index")->middleware('tokin');
 
-Route::get('/cat{cat}', "App\Http\Controllers\mainPageController@index")->middleware('tokin');
+Route::get('/cat/{cat}', "App\Http\Controllers\mainPageController@index")->middleware('tokin');
 
 Route::get('/myorders', "App\Http\Controllers\OrderController@index")->middleware('tokin');
 
@@ -26,5 +26,5 @@ Route::get('/product/{product}', "App\Http\Controllers\ProductController@show")-
 
 
 Route::get('/contact-us', function() {
-    return view("contactus");
+    return view("contactus",["pageTitle"=>"تماس با ما"]);
 })->middleware('tokin');
