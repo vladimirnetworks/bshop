@@ -48,7 +48,7 @@ tdata = {};
 
 
 
-<div class="row">
+<div class="row border justify-content-center align-items-center">
 
  <div class="col">
  فروشگاه اینترنی محصولات بهداشتی بهکیانا
