@@ -39,5 +39,17 @@ function decode_id($inp)
 
 
 
+function lize($i) {
+    $bits = explode("\n", trim($i));
+
+    $lines = "";
+    foreach($bits as $bit)
+    {
+      $lines .= "<li>" . $bit . "</li>";
+    }
+
+    return  $lines;
+
+}
 
 ?>

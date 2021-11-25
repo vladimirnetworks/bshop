@@ -6,8 +6,11 @@
 
 <div>
  <img style="width:200px;" src="{{$product->photos}}" style="max-width:100%"><br>
-{{$product->caption}}
+<ol>
+{{lize($product->caption)}}
+</ol>
 </div>
+
 
 قیمت : {{number_format($product->price)}}
 
