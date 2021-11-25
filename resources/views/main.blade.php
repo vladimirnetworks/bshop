@@ -604,6 +604,12 @@ $('#modal3successtext').empty();
 $('#modal3successtext').append($("<h4 class=\"text-success\">سفارش شما با موفقیت ثبت شد</h4>"));
 
 
+
+     sc("cart",'{}');
+     cartlistener();  
+
+
+
 $('#modal3successtext').append($("<div>شماره ی سفارش : "+$('.ordernumber').first().val()+"<br></div>"));
 $('#modal3successtext').append($("<div> مبلغ قابل پرداخت : "+farsi_price(totx['tot']+shippingcost)+" تومان</div>"));
 $('#modal3successtext').append($("<div style=\"color:grey\">("+Num2persian(totx['tot']+shippingcost)+")</div>"));
