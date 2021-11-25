@@ -653,7 +653,7 @@ window.location="/myorders"
 
 
 
-<div  style="text-align:right;direction:rtl" class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
+<div  style="text-align:right;direction:rtl;margin-top:100px;padding-bottom:150px" class="text-white bg-dark text-md-end">
 
 
 
