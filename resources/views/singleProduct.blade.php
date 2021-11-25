@@ -1,6 +1,9 @@
 @extends('main')
 
 @section('main')
+
+<div style="text-align:right;direction:rtl">
+
 <h1>{{$product->title}}</h1>
 
 <div class="row">
@@ -14,5 +17,5 @@
  </div>
 </div>
 
-
+</div>
 @stop
