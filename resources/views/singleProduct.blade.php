@@ -6,9 +6,9 @@
 
 <div>
  <img style="width:200px;" src="{{$product->photos}}" style="max-width:100%"><br>
-<ol>
+<ul>
 {!!lize($product->caption)!!}
-</ol>
+</ul>
 </div>
 
 
