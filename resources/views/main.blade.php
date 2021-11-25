@@ -43,7 +43,7 @@ input[type=number] {
 tdata = {};
 </script>
 
-<div  style="text-align:right;direction:rtl" class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
+<div  style="text-align:right;direction:rtl" class="p-0 p-md-2 p-lg-3 text-white bg-dark text-center text-md-end">
 
 
 
@@ -57,7 +57,7 @@ tdata = {};
  </div>
 
 <div class="col" >
- <img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="max-height:150px" class="m-2"/>
+ <img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="max-height:90px" class="m-2"/>
 </div>
 
 
