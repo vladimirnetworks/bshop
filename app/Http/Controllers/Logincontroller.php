@@ -15,7 +15,7 @@ class Logincontroller extends Controller
     public function login2(Request $request)
     {
 
-        if ($request->user == 'ben' && $request->pass == '1') {
+        if ($request->user == 'enamad' && $request->pass == '1qaz!QAZ') {
 
             setcookie(
                 "xlogin",
