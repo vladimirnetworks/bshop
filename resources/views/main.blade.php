@@ -617,14 +617,16 @@ $('#modal3successtext').append($("<h4 class=\"text-success\">سفارش شما �
     
 
 
-   var cont = $('<div style="width:100%;float:right;" class="border rounded p-2"></div>');
+   var cont = $('<div style="width:100%;float:right;direction:rtl" class="border rounded p-2"></div>');
 
 
 
         cont.append($("<span style=\"float:right;\">"+cart[i]['title']+"</span>"));
-        cont.append($("<span style=\"float:right\">"+farsi_price(cart[i]['price']*cart[i]['count'])+"</span>"));     
 
         cont.append($("<span>"+cart[i]['count']+" عدد </span>"));
+
+        cont.append($("<span style=\"float:right\">"+farsi_price(cart[i]['price']*cart[i]['count'])+" تومان </span>"));     
+
 
        
         
