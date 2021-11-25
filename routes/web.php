@@ -25,6 +25,12 @@ Route::get('/myorders', "App\Http\Controllers\OrderController@index")->middlewar
 Route::get('/product/{product}', "App\Http\Controllers\ProductController@show")->middleware('tokin');
 
 
+
+Route::get('/login', "App\Http\Controllers\Logincontroller@login")->middleware('tokin');
+
+
+
+
 Route::get('/contact-us', function() {
     return view("contactus",["pageTitle"=>"تماس با ما"]);
 })->middleware('tokin');
