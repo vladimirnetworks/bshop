@@ -1,5 +1,4 @@
-
-   <?php
+<?php
 
 function encode_id($inp)
 {
