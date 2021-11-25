@@ -133,10 +133,15 @@
 
         <div class="modal-body text-center">
 
+
+<div id="modal3successtext"></div>
+
 <div id="modal3successcart"></div>
 
 
-<div id="modal3successtext"></div>
+
+
+
                 <br>
                  
                  <button  id="onlinepayment" type="button" class="btn btn-success" data-dismissx="modal">پرداخت آنلاین</button>   
