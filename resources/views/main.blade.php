@@ -66,7 +66,7 @@ tdata = {};
 
 
 
-<div class="container" style="text-align:right;direction:rtl">
+<div class="container" style="text-align:right;">
 @yield('main')  
 </div>
 
