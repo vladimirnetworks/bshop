@@ -60,6 +60,9 @@ tdata = {};
  <img src="https://s4.uupload.ir/files/new_project_(1)_zt1i.png" style="max-height:90px" class="m-2"/>
 </div>
 
+<div class="col" >
+<a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=244136&amp;Code=NAYvp5VDiHI1pstposy1"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=244136&amp;Code=NAYvp5VDiHI1pstposy1" alt="" style="cursor:pointer" id="NAYvp5VDiHI1pstposy1"></a>
+</div>
 
 </div>
 
