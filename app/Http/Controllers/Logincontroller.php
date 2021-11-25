@@ -8,6 +8,6 @@ class Logincontroller extends Controller
 {
     public function login()
     {
-        return view("login");
+        return view("login",["pageTitle"=>"ورود کاربران"]);
     }
 }
