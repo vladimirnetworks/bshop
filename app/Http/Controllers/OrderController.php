@@ -88,7 +88,7 @@ class OrderController extends Controller
 
         $ship[] = ["text"=>"امروز قبل از ظهر","cost"=>0];
         $ship[] = ["text"=>"امروز بعد از ظهر","cost"=>0];
-        $ship[] = ["text"=>"همین الان (۴۰۰۰+ تومان هزینه)","cost"=>4000];
+       // $ship[] = ["text"=>"همین الان (۴۰۰۰+ تومان هزینه)","cost"=>4000];
          return $ship;
 
     }
