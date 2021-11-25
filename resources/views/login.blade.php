@@ -9,7 +9,7 @@
 <form action="login" method="post">
 
 
-<div class="container-fluid text-center border rounded p-3">
+<div class="container-fluid text-center border rounded p-3 w-70">
 
  <div class="row">
     <div class="col text-left">نام کاربری</div>
@@ -22,7 +22,7 @@
  </div>
 
 
- <button class="btn btn-primary">ورود</button>
+ <button class="btn btn-primary m-3">ورود</button>
 </div>
 
 </form>
