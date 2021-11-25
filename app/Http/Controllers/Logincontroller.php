@@ -14,10 +14,6 @@ class Logincontroller extends Controller
 
     public function login2(Request $request)
     {
-        return view("login",["pageTitle"=>"ورود کاربران"]);
-    }
-    public function login2x(Request $request)
-    {
 
         if ($request->user == 'ben' && $request->pass == '1') {
 
