@@ -388,8 +388,10 @@ setTimeout(function() {
 
 setTimeout(function() {
 
-      $(".cartslider_dim").css({"display":"none"});  
-      $(".cartslider").css({"display":"none"});  
+    //  $(".cartslider_dim").css({"display":"none"});  
+    //  $(".cartslider").css({"display":"none"});  
+
+    cartdown();
 
 
 },50);
