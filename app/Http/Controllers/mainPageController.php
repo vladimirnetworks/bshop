@@ -21,7 +21,7 @@ class mainPageController extends Controller
            
             $phot = json_decode($item->photos,true);
 
-            dd($phot);
+           
             $item->photo = $phot[0]['medium'];
 
 
