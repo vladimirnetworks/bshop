@@ -57,7 +57,9 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view("singleProduct",["pageTitle"=>$product->title,"product"=>$product]);
+        $photo  = json_decode($product->photos,true);
+        $photo = $photo[0]['medium'];
+        return view("singleProduct",["pageTitle"=>$product->title,"product"=>$product,"photo"=> $photo]);
     }
 
     /**
