@@ -51,7 +51,7 @@ class OrderController extends Controller
             if (empty($result['errors'])) {
                 if ($result['data']['code'] == 100) {
 
-                    dd($result['data']["authority"]);
+                 
 
                     header('Location: https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
                 }
