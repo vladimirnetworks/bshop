@@ -78,7 +78,7 @@ class ProductController extends Controller
         $Product->caption = $request->caption;
        
 
-
+        $sgal = [];
         foreach ($request->gal as $gal) {
 
               if ( strtolower(substr($gal['small'],0,10)) == 'data:image') {
