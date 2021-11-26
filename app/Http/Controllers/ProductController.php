@@ -81,7 +81,7 @@ class ProductController extends Controller
 
 
         $newprod = Product::create([
-            'title' => $request['title'], 'price' => $request['price'], 'photos' =>  $photos,
+            'title' => $request['title'], 'price' => $request['price'], 'photos' =>  $photos,"caption"=>$request['caption']
         ]);
 
         return ["data" => $newprod];
