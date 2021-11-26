@@ -14,7 +14,8 @@ class Product extends Model
     protected $fillable = [
         'title',
         'price',
-        'photos'
+        'photos',
+        'photo'
     ];
 
     public function cartnfo()
