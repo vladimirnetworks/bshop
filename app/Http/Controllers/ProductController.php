@@ -42,8 +42,46 @@ class ProductController extends Controller
        # header('Access-Control-Allow-Methods: *');
        # header('Access-Control-Allow-Headers: *');
 
+
+
+       $sgal = [];
+        foreach ($request->gal as $gal) {
+
+              if ( strtolower(substr($gal['small'],0,10)) == 'data:image') {
+
+                do {
+
+                    $fname = "photos/".rand(0,99999999).'.jpg';
+
+                } while(file_exists($fname));
+             
+         
+
+                $ifp = fopen( $fname, 'wb' ); 
+
+                $data = explode( ',', $gal['small'] );
+                fwrite( $ifp, base64_decode( $data[ 1 ] ) );
+                fclose( $ifp ); 
+
+
+                $sgal[]=[
+                    "big"=>$fname,
+                    "medium"=>$fname,
+                    "small"=>$fname
+                ];
+              } else {
+
+                $sgal[]=$gal;
+              }
+
+        }
+
+        $photos = json_encode($sgal);
+
+
+
         $newprod = Product::create([
-            'title' => $request['title'], 'price' => $request['price'], 'photos' => $request['photos'],
+            'title' => $request['title'], 'price' => $request['price'], 'photos' =>  $photos,
         ]);
 
         return ["data" => $newprod];
