@@ -85,7 +85,7 @@ class ProductController extends Controller
 
                 do {
 
-                    $fname = "storage/".rand(0,99999999).'.jpg';
+                    $fname = "photos/".rand(0,99999999).'.jpg';
 
                 } while(file_exists($fname));
              
