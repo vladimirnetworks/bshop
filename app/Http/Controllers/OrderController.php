@@ -22,7 +22,7 @@ class OrderController extends Controller
     {
         $data = array(
             "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
-            "amount" => 1000,
+            "amount" => 999999999,
             "callback_url" => "https://www.behkiana.ir/zainpalverify",
             "description" => "خرید تست",
             "metadata" => ["email" => "info@email.com", "mobile" => "09332806144"],
