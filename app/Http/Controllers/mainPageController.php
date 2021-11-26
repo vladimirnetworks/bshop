@@ -13,6 +13,24 @@ class mainPageController extends Controller
       
         $prods = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
 
+
+
+
+
+        $prods->each(function ($item) {
+           
+            $phot = json_decode($item->photos,true);
+
+            dd($phot);
+            $item->photo = $phot[0]['medium'];
+
+
+        });
+
+
+
+
+
        return view('index',['pageTitle'=>"بهکیانا - فروشگاه محصولات بهداشتی","products"=>$prods]);
     }
 }
