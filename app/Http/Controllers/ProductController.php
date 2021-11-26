@@ -26,8 +26,9 @@ class ProductController extends Controller
         foreach ($targets as $target) {
 
             $phot = json_decode($target->photos,true);
-            $target->$photo = $phot[0]['medium'];
-    
+            $target->photo = $phot[0]['medium'];
+
+            $target->setd("sdfsd");
 
         }
 

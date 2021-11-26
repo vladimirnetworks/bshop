@@ -9,7 +9,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    public $photo ="test";
+    public $photo;
  
     protected $fillable = [
         'title',
@@ -18,6 +18,10 @@ class Product extends Model
         'photo'
     ];
 
+    public function setd($i): void
+    {
+        $this->photo = $i;
+    }
     public function cartnfo()
     {
         return str_replace('','',json_encode(["id"=>$this->id,"title"=>$this->title,"price"=>$this->price]));
