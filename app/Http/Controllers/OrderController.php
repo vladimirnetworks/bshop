@@ -21,7 +21,7 @@ class OrderController extends Controller
     public function onlinepayment()
     {
         $data = array(
-            "merchant_id" => "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
             "amount" => 1000,
             "callback_url" => "http://www.yoursite.com/verify.php",
             "description" => "خرید تست",
