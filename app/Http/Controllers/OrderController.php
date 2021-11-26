@@ -53,7 +53,7 @@ class OrderController extends Controller
 
                  
 
-                    header('Location: https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
+                  return redirect('https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
                 }
             } else {
                 echo 'Error Code: ' . $result['errors']['code'];
