@@ -29,6 +29,10 @@ Route::get('/onlinepayment/{orderid}', "App\Http\Controllers\OrderController@onl
 
 
 
+Route::get('/admin',function() {
+    return redirect('https://angular-ivy-vowr18.stackblitz.io/');
+});
+
 
 
 Route::get('/200297.txt',function() {
