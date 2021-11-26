@@ -22,7 +22,9 @@ class mainPageController extends Controller
             $phot = json_decode($item->photos,true);
 
            
-            $item->photo = $phot[0]['medium'];
+          //  $item->photo = $phot[0]['medium'];
+
+            $item->photo = 'test';
 
 
         });
