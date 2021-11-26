@@ -23,9 +23,9 @@ class OrderController extends Controller
         $data = array(
             "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
             "amount" => 1000,
-            "callback_url" => "http://www.yoursite.com/verify.php",
+            "callback_url" => "https://www.behkiana.ir/zainpalverify",
             "description" => "خرید تست",
-            "metadata" => ["email" => "info@email.com", "mobile" => "09121234567"],
+            "metadata" => ["email" => "info@email.com", "mobile" => "09332806144"],
         );
         $jsonData = json_encode($data);
         $ch = curl_init('https://api.zarinpal.com/pg/v4/payment/request.json');
