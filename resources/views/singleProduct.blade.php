@@ -10,7 +10,7 @@
 
 <div class="row">
  <div class="col-6">
-   <img style="width:200px;" src="{{$photo}}" style="max-width:100%"><br>
+   <img style="width:200px;" src="/{{$photo}}" style="max-width:100%"><br>
    <h4> مشخصات محصول 
    </h4>
    <ul>
