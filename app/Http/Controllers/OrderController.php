@@ -41,6 +41,8 @@ class OrderController extends Controller
         $result = curl_exec($ch);
         $err = curl_error($ch);
         $result = json_decode($result, true, JSON_PRETTY_PRINT);
+
+        dd($result);
         curl_close($ch);
 
         if ($err) {
