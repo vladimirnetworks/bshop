@@ -42,7 +42,7 @@ class OrderController extends Controller
         $err = curl_error($ch);
         $result = json_decode($result, true, JSON_PRETTY_PRINT);
 
-        dd($result);
+ 
         curl_close($ch);
 
         if ($err) {
@@ -50,6 +50,9 @@ class OrderController extends Controller
         } else {
             if (empty($result['errors'])) {
                 if ($result['data']['code'] == 100) {
+
+                    dd($result['data']["authority"]);
+
                     header('Location: https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
                 }
             } else {
