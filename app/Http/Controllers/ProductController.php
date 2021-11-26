@@ -20,6 +20,9 @@ class ProductController extends Controller
    //header('Access-Control-Allow-Headers: *');
 
         $targets = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+
+        
+
         return response($targets);
 
       
@@ -73,7 +76,21 @@ class ProductController extends Controller
         $Product->title = $request->title;
         $Product->price = $request->price;
         $Product->caption = $request->caption;
-        $Product->photos = $request->photos;
+       
+
+
+        foreach ($request->gal as $gal) {
+
+              if ( strtolower(substr($gal,0,10)) == 'data:image') {
+                $sgal[]="frombase64.jpg";
+              } else {
+
+                $sgal[]=$gal;
+              }
+
+        }
+
+        $Product->photos = json_encode($sgal);
 
         return ["data" => $Product->save()];
     }
