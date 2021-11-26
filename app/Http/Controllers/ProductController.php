@@ -82,10 +82,26 @@ class ProductController extends Controller
         foreach ($request->gal as $gal) {
 
               if ( strtolower(substr($gal['small'],0,10)) == 'data:image') {
+
+                do {
+
+                    $fname = "storage/".rand(0,99999999).'.jpg';
+
+                } while(file_exists($fname));
+             
+         
+
+                $ifp = fopen( $fname, 'wb' ); 
+
+                $data = explode( ',', $gal['small'] );
+                fwrite( $ifp, base64_decode( $data[ 1 ] ) );
+                fclose( $ifp ); 
+
+
                 $sgal[]=[
-                    "big"=>"from_base64_big.jpg",
-                    "medium"=>"from_base64_medium.jpg",
-                    "small"=>"from_base64_small.jpg"
+                    "big"=>$fname,
+                    "medium"=>$fname,
+                    "small"=>$fname
                 ];
               } else {
 
