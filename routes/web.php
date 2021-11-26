@@ -25,6 +25,10 @@ Route::get('/myorders', "App\Http\Controllers\OrderController@index")->middlewar
 Route::get('/product/{product}', "App\Http\Controllers\ProductController@show")->middleware('tokin');
 
 
+Route::get('/onlinepayment/{orderid}', "App\Http\Controllers\OrderController@onlinepayment")->middleware('tokin');
+
+
+
 
 
 Route::get('/200297.txt',function() {

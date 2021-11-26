@@ -16,6 +16,47 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    public function onlinepayment()
+    {
+        $data = array(
+            "merchant_id" => "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "amount" => 1000,
+            "callback_url" => "http://www.yoursite.com/verify.php",
+            "description" => "خرید تست",
+            "metadata" => ["email" => "info@email.com", "mobile" => "09121234567"],
+        );
+        $jsonData = json_encode($data);
+        $ch = curl_init('https://api.zarinpal.com/pg/v4/payment/request.json');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'ZarinPal Rest Api v1');
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($jsonData)
+        ));
+
+        $result = curl_exec($ch);
+        $err = curl_error($ch);
+        $result = json_decode($result, true, JSON_PRETTY_PRINT);
+        curl_close($ch);
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            if (empty($result['errors'])) {
+                if ($result['data']['code'] == 100) {
+                    header('Location: https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
+                }
+            } else {
+                echo 'Error Code: ' . $result['errors']['code'];
+                echo 'message: ' .  $result['errors']['message'];
+            }
+        }
+    }
+
     public function index()
     {
 
@@ -25,37 +66,35 @@ class OrderController extends Controller
 
         foreach ($orders as $order) {
 
-          
 
 
-            $cart = json_decode($order->data,true);
 
-          
+            $cart = json_decode($order->data, true);
+
+
 
             $orderItems = null;
             $orderTot = 0;
-         
+
             foreach ($cart as $cartitem) {
 
-              $orderItems[] = ["text"=>$cartitem['title'],"count"=>$cartitem['count']];
-            
-                $orderTot = $orderTot+intval($cartitem['price'])*intval($cartitem['count']);
+                $orderItems[] = ["text" => $cartitem['title'], "count" => $cartitem['count']];
+
+                $orderTot = $orderTot + intval($cartitem['price']) * intval($cartitem['count']);
             }
 
             $ords[] = [
-                'items'=>$orderItems,
-                'total'=>$orderTot,
-                'shipping_status'=>$order->shipping_status,
-                'payment_status'=>$order->payment_status,
+                'items' => $orderItems,
+                'total' => $orderTot,
+                'shipping_status' => $order->shipping_status,
+                'payment_status' => $order->payment_status,
             ];
         }
-    
-    
-       
-
-        return view('myorders',['pageTitle'=>"سفارشات من","orders"=>$ords]);
 
 
+
+
+        return view('myorders', ['pageTitle' => "سفارشات من", "orders" => $ords]);
     }
 
     /**
@@ -66,65 +105,63 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-       
+
 
         $tg = new TG();
         $sendt = $tg->sendTextToGroup("okok");
 
 
-        Notif::Create(["data"=>json_encode( $sendt),"status"=> $sendt['ok']]);
-        
+        Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
+
 
         foreach ($request->data as $hitdata) {
-          $cartx[] = $hitdata;
+            $cartx[] = $hitdata;
         }
 
-        $ret = Order::Create(["data"=>json_encode($cartx),"price"=>369]);
-        return ["zz"=> $ret];
-       
+        $ret = Order::Create(["data" => json_encode($cartx), "price" => 369]);
+        return ["zz" => $ret];
     }
 
-    public static function shipping() {
+    public static function shipping()
+    {
 
-        $ship[] = ["text"=>"امروز قبل از ظهر","cost"=>0];
-        $ship[] = ["text"=>"امروز بعد از ظهر","cost"=>0];
-       // $ship[] = ["text"=>"همین الان (۴۰۰۰+ تومان هزینه)","cost"=>4000];
-         return $ship;
-
+        $ship[] = ["text" => "امروز قبل از ظهر", "cost" => 0];
+        $ship[] = ["text" => "امروز بعد از ظهر", "cost" => 0];
+        // $ship[] = ["text"=>"همین الان (۴۰۰۰+ تومان هزینه)","cost"=>4000];
+        return $ship;
     }
 
 
     public function store2(Request $request)
     {
-       
 
 
-        
+
+
 
         $me = liteauth::me();
 
-        foreach (json_decode($request->data,true) as $hitdata) {
+        foreach (json_decode($request->data, true) as $hitdata) {
             $cartx[] = $hitdata;
-          }
+        }
 
         $xshiping = $this::shipping();
 
-        $ret = Order::Create(["data"=>json_encode($cartx),"liteauth_id"=>$me->id,"shiping"=>json_encode($xshiping)]);
-   
+        $ret = Order::Create(["data" => json_encode($cartx), "liteauth_id" => $me->id, "shiping" => json_encode($xshiping)]);
+
 
 
 
         $tg = new TG();
-        $sendt = $tg->sendTextToGroup("new order -> ".$request->me);
-        Notif::Create(["data"=>json_encode( $sendt),"status"=> $sendt['ok']]);
+        $sendt = $tg->sendTextToGroup("new order -> " . $request->me);
+        Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
-        return ["data"=> ["id"=>encode_id($ret->id),"shipping"=>$xshiping]];
-       
+        return ["data" => ["id" => encode_id($ret->id), "shipping" => $xshiping]];
     }
 
 
-    
+
     /**
      * Display the specified resource.
      *
