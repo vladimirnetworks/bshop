@@ -5,7 +5,7 @@
          <a href="product/{{$product->id}}" class="d-block">{{$product->title}}</a>
 
 <br>
-      <a href="product/{{$product->id}}">  <img class="mw-100" src="{{$product->photos}}"/></a>
+      <a href="product/{{$product->id}}">  <img class="mw-100" src="{{$product->photo}}"/></a>
 
          {{number_format($product->price)}} تومان
 
