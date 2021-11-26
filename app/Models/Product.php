@@ -15,7 +15,8 @@ class Product extends Model
         'title',
         'price',
         'photos',
-        'photo'
+        'photo',
+        'caption'
     ];
 
     public function setd($i): void
