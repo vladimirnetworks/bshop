@@ -25,7 +25,7 @@ class mainPageController extends Controller
            
            $item->photo = $phot[0]['medium'];
 
-           dd( $item );
+       
 
 
         });
