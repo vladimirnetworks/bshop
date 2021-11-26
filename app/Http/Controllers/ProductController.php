@@ -23,16 +23,17 @@ class ProductController extends Controller
 
         
 
-        foreach ($targets as $target) {
 
-            $phot = json_decode($target->photos,true);
+
+        $targets->each(function ($item) {
+           
+            $phot = json_decode($item->photos,true);
 
             dd($phot);
-            $target->photo = $phot[0]['medium'];
+            $item->photo = $phot[0]['medium'];
 
-            $target->setd("sdfsd");
 
-        }
+        });
 
 
 
