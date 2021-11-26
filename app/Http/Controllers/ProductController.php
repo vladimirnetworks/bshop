@@ -81,7 +81,10 @@ class ProductController extends Controller
 
 
         $newprod = Product::create([
-            'title' => $request['title'], 'price' => $request['price'], 'photos' =>  $photos,"caption"=>$request['caption']
+            'title' => $request['title'],
+             'price' => $request['price'], 
+             'photos' =>  $photos,
+            "caption"=>$request['caption']
         ]);
 
         return ["data" => $newprod];
@@ -98,7 +101,13 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $photo  = json_decode($product->photos,true);
-        $photo = $photo[0]['medium'];
+
+        if (isset($photo[0])) {
+            $photo = $photo[0]['medium'];
+        } else {
+            $photo = "";
+        }
+        
         return view("singleProduct",["pageTitle"=>$product->title,"product"=>$product,"photo"=> $photo]);
     }
 
