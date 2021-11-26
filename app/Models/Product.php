@@ -9,7 +9,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    public $photo;
+    public $photo ="test";
  
     protected $fillable = [
         'title',
