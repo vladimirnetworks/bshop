@@ -81,8 +81,12 @@ class ProductController extends Controller
 
         foreach ($request->gal as $gal) {
 
-              if ( strtolower(substr($gal,0,10)) == 'data:image') {
-                $sgal[]="frombase64.jpg";
+              if ( strtolower(substr($gal['small'],0,10)) == 'data:image') {
+                $sgal[]=[
+                    "big"=>"from_base64_big.jpg",
+                    "medium"=>"from_base64_medium.jpg",
+                    "small"=>"from_base64_small.jpg"
+                ];
               } else {
 
                 $sgal[]=$gal;
