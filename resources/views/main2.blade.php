@@ -26,6 +26,25 @@
 
 
 <script>
+function animate(from,to,time,func) {
+   
+    var start = new Date().getTime(),
+        timer = setInterval(function() {
+            var step = Math.min(1,(new Date().getTime()-start)/time);
+            
+            var x = from+step*(to-from);
+            
+            console.log(x);
+            
+            func(x);
+            
+            if( step == 1) clearInterval(timer);
+        },25);
+   
+}
+</script>
+
+<script>
 
 
 elemclicked = -1;
@@ -100,9 +119,14 @@ $(this).addClass("col-12");
 
 
 
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $(this).offset().top-20
-    }, 200);
+
+
+animate(document.scrollTop,$(this).offset().top-20,200,function (x) {
+  document.scrollTop = x;  
+});
+
+
+
 
 
 elemclicked = $(this);
