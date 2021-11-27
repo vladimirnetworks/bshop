@@ -91,7 +91,7 @@ $('.prodbox').remove();
 lastt.after(myprodbox);
 
 
-animate(document.body.scrollTop,myprodbox.offset().top-50,5000,function (x) {
+animate(document.documentElement.scrollTop,myprodbox.offset().top-50,5000,function (x) {
   window.scrollTo(0, x);
 });
 
