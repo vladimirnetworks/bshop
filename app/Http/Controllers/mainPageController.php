@@ -53,6 +53,7 @@ class mainPageController extends Controller
                 "title"=>$item->title,
                 "price"=>$item->price,
                 "caption"=>lize($item->caption),
+                "photos"=>$phot,
                 
 
             ]));
