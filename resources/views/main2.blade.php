@@ -268,12 +268,13 @@ $(this).html('');
 
 var vals = JSON.parse($(this).attr("data-me"));
 
-var cont = $('<div class="saving p-1 m-1 rounded" style="min-height:70vh;background-color:white"></div>');
+var cont = $('<div class="saving p-1 m-1 rounded text-right" style="min-height:70vh;background-color:white"></div>');
 var title = $('<div class="p-3 text-dark" style="font-size:150%;font-weight:bold">'+vals.title+'</div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+vals.price+'</div>');
+var caption = $('<ul>'+vals.caption+'</ul>');
 cont.append(title);
 cont.append(price);
-
+cont.append(caption);
 
 var kharid = $('<button class="btn btn-danger bolder">خرید</button>');
 cont.append(kharid);
