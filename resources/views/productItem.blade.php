@@ -6,13 +6,14 @@
          <a href="product/{{$product->id}}">  <img class="mw-100" src="{{$product->photo}}"/></a>
        
 
+<div style="margin-top:auto">
+ <a href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
+</div>
       
 <div  style="margin-top:auto">
-        <a href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
-
+       
          {{number_format($product->price)}} تومان
-
-         </div>
+</div>
 
 </div>
 
