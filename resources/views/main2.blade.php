@@ -69,7 +69,9 @@ for (var i = 0 ; i < myprevs.length ; i++) {
 
 }
 
-
+for (var i = 0 ; i < back_myprevs.length ; i++) {
+$(this).after(back_myprevs[i]);
+}
 
 //console.log(back_myprevs);
 //$(this).fadeOut();
