@@ -528,19 +528,8 @@ $(this).unbind('click');
 
 });
 </script>
-<style>
-.barx:after {
-    content:"";
-    position:absolute;
-    width:100%;
-    bottom:1px;
-    z-index:-1;
-    transform:scale(.9);
-    box-shadow: 0px 0px 8px 2px #000000;
-}
 
-</style>
-<div style="position:fixed;height:5vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" class="row barx">
+<div style="position:fixed;height:5vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >
 
 behkiana
 
