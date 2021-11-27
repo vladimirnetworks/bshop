@@ -46,7 +46,7 @@ function animate(from,to,time,func) {
 
 <script>
 
-$(".miniproduct").click(function(e) {
+$(".miniproductddd").click(function(e) {
 
     var me_offset = $(this).offset();
     var me_top = me_offset.top;
@@ -163,7 +163,7 @@ console.log(back_mynext[back_mynext.length-1].html());
 
 elemclicked = -1;
 
-$(".miniproductz").click(function(e) {
+$(".miniproduct").click(function(e) {
 
 
 if (elemclicked != -1) {
@@ -235,7 +235,7 @@ $(this).addClass("col-12");
 
 
 
-animate(document.body.scrollTop,$(this).offset().top-50,200,function (x) {
+animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function (x) {
   window.scrollTo(0, x);
 });
 
