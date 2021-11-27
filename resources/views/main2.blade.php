@@ -121,8 +121,8 @@ $(this).addClass("col-12");
 
 
 
-animate(body.scrollTop,$(this).offset().top-20,200,function (x) {
-  body.scrollTop = x;  
+animate(document.body.scrollTop,$(this).offset().top-20,200,function (x) {
+  document.body.scrollTop = x;  
 });
 
 
