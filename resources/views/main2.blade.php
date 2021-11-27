@@ -246,10 +246,11 @@ animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function 
   window.scrollTo(0, x);
 });
 
+$(this).css("background-color","#a9a9a9");
 
 $(this).html('');
 
-var cont = $('<div class="border border-primary p-1 m-1 rounded" style="height:70vh"></div>');
+var cont = $('<div class="border border-primary p-1 m-1 rounded" style="height:70vh;background-color:white"></div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">18,000 تومان</div>');
 cont.append(price);
 
