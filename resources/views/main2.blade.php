@@ -24,5 +24,11 @@
 
 @yield('main')  
 
+
+<script>
+$(".miniproduct").click(function(e) {
+   $(this).fadeOut();
+});
+</script>
 </body>
 </html>
