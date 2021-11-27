@@ -246,7 +246,7 @@ function SwiperBox(fields) {
 }
 
 body {
-  margin-top:5vh;
+  margin-top:7vh;
 }
 </style>
 </head>
@@ -529,7 +529,7 @@ $(this).unbind('click');
 });
 </script>
 
-<div style="position:fixed;height:5vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >
+<div style="position:fixed;height:7vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >
 
 behkiana
 
