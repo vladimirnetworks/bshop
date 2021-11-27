@@ -122,7 +122,7 @@ $(this).addClass("col-12");
 
 
 animate(document.body.scrollTop,$(this).offset().top-20,200,function (x) {
-  document.body.scrollTop = x;  
+  window.scrollTo(0, x);
 });
 
 
