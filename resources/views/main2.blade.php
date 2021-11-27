@@ -278,12 +278,12 @@ var vals = JSON.parse($(this).attr("data-me"));
 var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
 var title = $('<div class="p-3 text-dark" style="font-size:150%;font-weight:bold">'+vals.title+'</div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+farsi_price(vals.price)+' تومان </div>');
-var caption = $('<ul>'+vals.caption+'</ul>');
+var caption = $('<ul style="text-align: right;">'+vals.caption+'</ul>');
 cont.append(title);
 cont.append(price);
 cont.append(caption);
 
-var kharid = $('<button class="btn btn-danger bolder">خرید</button>');
+var kharid = $('<button class="btn btn-danger btn-lg">خرید</button>');
 cont.append(kharid);
 
 $(this).append(cont);
