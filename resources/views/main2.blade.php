@@ -57,7 +57,7 @@ var prev_top =  prev_offset.top;
 
 if (me_top == prev_top) {
 myprevs.push(elem);
-back_myprevs.push(elem.clone());
+back_myprevs.push(elem.clone(true, true));
 }
 
 } else {
@@ -69,7 +69,7 @@ back_myprevs.push(elem.clone());
 } while(me_top == prev_top);
 
 for (var i = 0 ; i < myprevs.length ; i++) {
- myprevs[i].hide();
+ myprevs[i].remove();
 
 }
 
