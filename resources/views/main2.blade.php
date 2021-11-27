@@ -57,12 +57,12 @@ back_myprevs.push(elem);
 }
 
 } else {
-  keepon = false;
+  prev_top = -1000;
 }
 
 
 
-} while(keepon && me_top == prev_top);
+} while(me_top == prev_top);
 
 for (var i = 0 ; i < myprevs.length ; i++) {
  // myprevs[i].remove();
