@@ -101,7 +101,7 @@ $(this).addClass("col-12");
 
 
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(this).offset().top
+        scrollTop: $(this).offset().top-20
     }, 200);
 
 
