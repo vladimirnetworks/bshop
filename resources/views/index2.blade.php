@@ -4,7 +4,7 @@
 
 <div class="container-fluid" >
 
-    <div class="row">
+    <div class="row justify-content-center">
     @foreach($products as $product)
 
         @include('productItem')

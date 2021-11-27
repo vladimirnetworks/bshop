@@ -1,4 +1,4 @@
-<div class="col-4 p-2 text-center">
+<div class="col-4 col-sm-3 dev p-5 p-2 text-center">
 
 <div class="border border-secondary h-100 rounded">
          
