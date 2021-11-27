@@ -7,12 +7,13 @@
        
 
 <div style="margin-top:auto">
- <a style="color:#2a2a2a" href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
+ <a style="color:#535353" href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
 </div>
       
 <div  style="margin-top:auto">
        
-         {{number_format($product->price)}} تومان
+         {{number_format($product->price)}} <span style="font-size:.714rem ; color:#232933">تومان
+         </span>
 </div>
 
 </div>
