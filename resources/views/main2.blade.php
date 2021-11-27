@@ -56,6 +56,47 @@ $(".miniproduct").click(function(e) {
     var keepon = true;
    
     do {
+   
+        elem = elem.next();
+
+        if (elem.offset()) {
+
+            var next_offset = elem.offset();
+            var next_top = next_offset.top;
+
+
+            if (me_top == next_top) {
+                mynext.push(elem);
+                back_mynext.push(elem.clone(true, true));
+            }
+
+        } else {
+            next_top = -1000;
+         
+        }
+
+
+
+    } while (me_top == next_top);
+
+
+console.log(mynext[mynext.length-1].html());
+
+ 
+});
+
+
+
+$(".miniproductx").click(function(e) {
+
+    var me_offset = $(this).offset();
+    var me_top = me_offset.top;
+    var elem = $(this);
+    var mynext = [];
+    var back_mynext = [];
+    var keepon = true;
+   
+    do {
 
    
         elem = elem.next();
