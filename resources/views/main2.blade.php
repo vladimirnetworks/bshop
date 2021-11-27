@@ -78,7 +78,7 @@ for (var i = 0 ; i < back_myprevs.length ; i++) {
        console.log("me");
   });
   */
-$(this).after(back_myprevs[i]);
+$(this).after($(back_myprevs[i]));
 }
 
 
