@@ -500,7 +500,7 @@ var mySwipe = new SwiperBox({
 
 var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
 
-var photos = $('<div style="width:50vw;margin-right: auto;margin-left: auto"></div>');
+var photos = $('<div style="width:60vw;margin-right: auto;margin-left: auto;max-widht:300px;"></div>');
 photos.append($(mySwipe.HTMLElement));
 var title = $('<div class="p-1 text-dark" style="font-size:120;">'+vals.title+'</div>');
 var price = $('<div class="p-1 text-success" style="font-size:150%;font-weight:bold">'+farsi_price(vals.price)+' تومان </div>');
