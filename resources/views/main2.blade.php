@@ -43,7 +43,7 @@ var next_top =  next_offset.top;
 
 } while(me_top == next_top);
 
-elem.css({color:"red"});
+elem.css({"color":"red"});
 
 //elem.after($('<div class="col-12">me</div>'));
 
