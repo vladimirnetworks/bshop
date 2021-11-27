@@ -518,6 +518,8 @@ cont.append(kharid);
 
 $(this).append(cont);
 
+$(this).unbind('click');
+
 
 
 
