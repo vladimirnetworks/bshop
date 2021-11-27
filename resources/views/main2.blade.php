@@ -36,9 +36,9 @@ var elem = $(this);
 
 do {
 
-next = elem.next();
+elem = elem.next();
 
-var next_offset =  next.offset();
+var next_offset =  elem.offset();
 var next_top =  next_offset.top;
 
 } while(me_top == next_top);
