@@ -15,7 +15,23 @@
   <script src="/bs4/bootstrap.min.js"></script>
   <script src="/bs4/cook.js?{{time()}}"></script>
 <style>
+@keyframes zoominoutsinglefeatured {
+  0% {
+      transform: scale(1,1);
+  }
+  50% {
+      transform: scale(1.2,1.2);
+  }
+  100% {
+      transform: scale(1,1);
+  }
+}
 
+
+.saving {
+
+  animation: zoominoutsinglefeatured .5s 1 ;
+}
 </style>
 </head>
 
@@ -250,8 +266,11 @@ $(this).css("background-color","#a9a9a9");
 
 $(this).html('');
 
-var cont = $('<div class="p-1 m-1 rounded" style="min-height:70vh;background-color:white"></div>');
-var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">18,000 تومان</div>');
+var vals = JSON.parse($(this).att("data-me"));
+
+var cont = $('<div class="saving p-1 m-1 rounded" style="min-height:70vh;background-color:white"></div>');
+var title = $('<div class="p-3 text-dark" style="font-size:150%;font-weight:bold">'+vals['title']+'</div>');
+var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+vals['price']+'</div>');
 cont.append(price);
 
 
