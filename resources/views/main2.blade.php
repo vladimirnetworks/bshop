@@ -54,10 +54,10 @@ $(".miniproduct").click(function(e) {
     var mynext = [];
     var back_mynext = [];
     var keepon = true;
-    var belem;
+   
     do {
 
-        belem = elem;
+   
         elem = elem.next();
 
         if (elem.offset()) {
@@ -73,7 +73,7 @@ $(".miniproduct").click(function(e) {
 
         } else {
             next_top = -1000;
-            elem = belem;
+         
         }
 
 
@@ -81,13 +81,13 @@ $(".miniproduct").click(function(e) {
     } while (me_top == next_top);
 
 
-var telem = elem.prev();
+
 
 if (false) {
 
 }
 
-console.log(telem.html());
+console.log(back_mynext[back_mynext.length-1]);
 
     for (var i = 0 ; i < mynext.length ; i++) {
       // console.log(mynext[i].html());
