@@ -249,7 +249,7 @@ animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function 
 
 $(this).html('');
 
-var cont = $('<div class="border border-primary p-1 m-1 rounded"></div>');
+var cont = $('<div class="border border-primary p-1 m-1 rounded" style="height:70vh"></div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">18,000 تومان</div>');
 cont.append(price);
 
