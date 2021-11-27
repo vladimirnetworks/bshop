@@ -247,14 +247,17 @@ animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function 
 });
 
 
-$(this).html('<div class="border border-primary p-1 m-1 rounded"></div>')
+$(this).html('');
+
+var cont = $('<div class="border border-primary p-1 m-1 rounded"></div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">18,000 تومان</div>');
-$(this).append(price);
+cont.append(price);
 
 
 var kharid = $('<button class="btn btn-danger bolder">خرید</button>');
-$(this).append(kharid);
+cont.append(kharid);
 
+$(this).append(cont);
 
 
 
