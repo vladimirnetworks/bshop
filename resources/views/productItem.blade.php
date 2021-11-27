@@ -1,4 +1,4 @@
-<div class="col-4 col-sm-3  p-1 text-center"  >
+<div class="col-4 col-sm-3  p-2 text-center"  >
 
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex">
          
