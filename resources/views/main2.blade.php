@@ -42,6 +42,13 @@
 
 
 <script>
+
+function farsi_price(inp) {
+var inpc = inp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+return topersiannumber(inpc);
+}
+
+
 function animate(from,to,time,func) {
    
     var start = new Date().getTime(),
@@ -268,9 +275,9 @@ $(this).html('');
 
 var vals = JSON.parse($(this).attr("data-me"));
 
-var cont = $('<div class="saving p-1 m-1 rounded text-right" style="min-height:70vh;background-color:white"></div>');
+var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
 var title = $('<div class="p-3 text-dark" style="font-size:150%;font-weight:bold">'+vals.title+'</div>');
-var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+vals.price+'</div>');
+var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+farsi_price(vals.price)+' تومان </div>');
 var caption = $('<ul>'+vals.caption+'</ul>');
 cont.append(title);
 cont.append(price);
