@@ -510,6 +510,8 @@ cont.append(photos);
 cont.append(title);
 cont.append(price);
 cont.append(caption);
+cont.append(caption);
+cont.append(caption);
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 cont.append(kharid);
