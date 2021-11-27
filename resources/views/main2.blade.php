@@ -35,9 +35,9 @@ $(".miniproduct").click(function(e) {
 
 if (elemclicked != -1) {
   console.log("ihav");
-elem.clicked.addClass("col-4");
-elem.clicked.addClass("col-sm-3");
-elem.clicked.removeClass("col-12");
+elemclicked.addClass("col-4");
+elemclicked.addClass("col-sm-3");
+elemclicked.removeClass("col-12");
 } else {
     console.log("i dont hav");
 }
