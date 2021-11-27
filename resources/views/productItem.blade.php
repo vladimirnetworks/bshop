@@ -12,7 +12,7 @@
       
 <div  style="margin-top:auto">
        
-         {{number_format($product->price)}} <span style="font-size:.714rem ; color:#232933">تومان
+       <span style="color:#232933">  {{persiannumber(number_format($product->price))}} </span><span style="font-size:.714rem ; color:#232933">تومان
          </span>
 </div>
 
