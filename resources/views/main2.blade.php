@@ -28,6 +28,8 @@
 <script>
 $(".miniproduct").click(function(e) {
 
+$(this).addClass("col-12");
+
 var me_offset =  $(this).offset();
 var me_top = me_offset.top;
 
@@ -47,7 +49,7 @@ var next_top =  next_offset.top;
 //elem.css({"color":"red"});
 
 //setTimeout(function() {
-elem.prev().after($('<div class="col-12">me</div>'));
+//elem.prev().after($('<div class="col-12">me</div>'));
 //},3000);
 //
 
