@@ -47,7 +47,7 @@ class mainPageController extends Controller
             }
 
 
-            $item->jsondata = str_replace('"','\"',json_encode([
+            $item->jsondata = str_replace('','',json_encode([
 
                 "id"=>$item->id,
                 "title"=>$item->title,
