@@ -33,7 +33,7 @@ elem.clicked = null;
 $(".miniproduct").click(function(e) {
 
 
-if (elem.clicked) {
+if (elem.clicked != null) {
   console.log("ihav");
 elem.clicked.addClass("col-4");
 elem.clicked.addClass("col-sm-3");
