@@ -3,7 +3,7 @@
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex">
          
 
-         <a href="product/{{$product->id}}">  <img class="mw-100" src="{{$product->photo}}"/></a>
+         <a href="#product/{{$product->id}}">  <img class="mw-100" src="{{$product->photo}}"/></a>
        
 
 <div style="margin-top:auto">
