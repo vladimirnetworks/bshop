@@ -180,7 +180,7 @@ console.log(back_mynext[back_mynext.length-1].html());
 elemclicked = -1;
 elementbackup = -1
 
-$(".miniproduct").on("click touchstart",function(e) {
+$(".miniproduct").on("click",function(e) {
 
 
 if (elemclicked != -1) {
