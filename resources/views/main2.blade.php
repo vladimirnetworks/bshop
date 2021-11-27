@@ -39,7 +39,7 @@ var elem = $(this);
 
 var myprevs = [];
 var back_myprevs = [];
-var breakme = false;
+var keepon = true;
 
 do {
 
@@ -57,12 +57,12 @@ back_myprevs.push(elem);
 }
 
 } else {
-  breakme = true;
+  keepon = false;
 }
 
 
 
-} while(breakme || me_top == prev_top);
+} while(keepon || me_top == prev_top);
 
 for (var i = 0 ; i < myprevs.length ; i++) {
  // myprevs[i].remove();
