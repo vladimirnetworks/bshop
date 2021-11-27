@@ -252,7 +252,7 @@ var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:b
 $(this).append(price);
 
 
-var kharid = $('<button class="btn btn-danger">خرید</button>');
+var kharid = $('<button class="btn btn-danger bolder">خرید</button>');
 $(this).append(kharid);
 
 
