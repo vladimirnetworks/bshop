@@ -27,10 +27,8 @@
 
 <script>
 
-
-function jabej() {
-  
-}
+elem = {};
+elem.clicked = null;
 
 $(".miniproduct").click(function(e) {
 
@@ -82,9 +80,18 @@ $(this).after($(back_myprevs[i]));
 }
 
 
-//$(this).removeClass("col-4");
-//$(this).removeClass("col-sm-3");
-//$(this).addClass("col-12");
+if (elem.clicked) {
+elem.clicked.addClass("col-4");
+elem.clicked.addClass("col-sm-3");
+elem.clicked.removeClass("col-12");
+}
+
+
+$(this).removeClass("col-4");
+$(this).removeClass("col-sm-3");
+$(this).addClass("col-12");
+
+elem.clicked = $(this);
 
 //console.log(back_myprevs);
 //$(this).fadeOut();
