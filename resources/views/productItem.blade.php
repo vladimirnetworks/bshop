@@ -1,6 +1,6 @@
 <div class="col-4 col-sm-3  p-1 text-center">
 
-<div class="border border-secondary h-100 rounded" style="direction:rtl">
+<div class=" h-100 " style="direction:rtl">
          
 
          <a href="product/{{$product->id}}">  <img class="mw-100" src="{{$product->photo}}"/></a>
