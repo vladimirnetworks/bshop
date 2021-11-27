@@ -43,7 +43,8 @@ var next_top =  next_offset.top;
 
 } while(me_top == next_top);
 
- console.log(elem); 
+
+elem.after($('<div class="col-12">me</div>'));
 
 });
 </script>
