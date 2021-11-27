@@ -40,9 +40,14 @@ var elem = $(this);
 var myprevs = [];
 var back_myprevs = [];
 var breakme = false;
+
 do {
 
 elem = elem.prev();
+
+var prev_offset =  elem.offset();
+var prev_top =  prev_offset.top;
+
 
 if (me_top == prev_top) {
 myprevs.push(elem);
@@ -50,8 +55,7 @@ back_myprevs.push(elem);
 }
 
 
-var prev_offset =  elem.offset();
-var prev_top =  prev_offset.top;
+
 
 
 } while(me_top == prev_top || breakme);
