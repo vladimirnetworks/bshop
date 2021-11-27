@@ -43,10 +43,10 @@ var next_top =  next_offset.top;
 
 } while(me_top == next_top);
 
-//elem.prev().fadeOut();
+elem.prev().fadeOut();
 //elem.css({"color":"red"});
 
-elem.prev().after($('<div class="col-12">me</div>'));
+//elem.prev().after($('<div class="col-12">me</div>'));
 
 });
 </script>
