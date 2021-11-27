@@ -28,9 +28,7 @@
 <script>
 $(".miniproduct").click(function(e) {
 
-$(this).removeClass("col-4");
-$(this).removeClass("col-sm-3");
-$(this).addClass("col-12");
+
 
 var me_offset =  $(this).offset();
 var me_top = me_offset.top;
@@ -75,6 +73,11 @@ for (var i = 0 ; i < back_myprevs.length ; i++) {
   });
 $(this).after(back_myprevs[i]);
 }
+
+
+$(this).removeClass("col-4");
+$(this).removeClass("col-sm-3");
+$(this).addClass("col-12");
 
 //console.log(back_myprevs);
 //$(this).fadeOut();
