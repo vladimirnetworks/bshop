@@ -45,6 +45,8 @@ do {
 
 elem = elem.prev();
 
+if (elem.offset()) {
+
 var prev_offset =  elem.offset();
 var prev_top =  prev_offset.top;
 
@@ -54,7 +56,9 @@ myprevs.push(elem);
 back_myprevs.push(elem);
 }
 
-
+} else {
+  breakme = true;
+}
 
 
 
