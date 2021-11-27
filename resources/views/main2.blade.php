@@ -226,6 +226,8 @@ $(this).after($(back_myprevs[i]));
 
 
 
+$(this).html("i am opened");
+
 
 $(this).removeClass("col-4");
 $(this).removeClass("col-sm-3");
@@ -245,14 +247,7 @@ animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function 
 
 elemclicked = $(this);
 
-//console.log(back_myprevs);
-//$(this).fadeOut();
-//elem.css({"color":"red"});
 
-//setTimeout(function() {
-//elem.prev().after($('<div class="col-12">me</div>'));
-//},3000);
-//
 
 });
 </script>
