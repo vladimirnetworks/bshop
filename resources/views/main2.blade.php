@@ -86,7 +86,7 @@ if (typeof lastt === 'undefined') {
 lastt = $(this);
 }
 
-myprodbox = $('<div class="prodbox col-12 p-1 m-1 border border primary rounded">this is product</div>');
+myprodbox = $('<div class="prodbox col-12 p-2  border border primary rounded">this is product</div>');
 $('.prodbox').remove();
 lastt.after(myprodbox);
 
