@@ -250,7 +250,7 @@ $(this).css("background-color","#a9a9a9");
 
 $(this).html('');
 
-var cont = $('<div class="border border-primary p-1 m-1 rounded" style="height:70vh;background-color:white"></div>');
+var cont = $('<div class="p-1 m-1 rounded" style="height:70vh;background-color:white"></div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">18,000 تومان</div>');
 cont.append(price);
 
