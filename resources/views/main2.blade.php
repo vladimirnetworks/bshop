@@ -47,7 +47,7 @@ elem = elem.prev();
 myprevs.push(elem);
 back_myprevs.push(elem);
 
-var next_offset =  elem.offset();
+var prev_offset =  elem.offset();
 var prev_top =  prev_offset.top;
 
 } while(me_top == next_top);
