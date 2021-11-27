@@ -82,8 +82,8 @@ $(".miniproduct").click(function(e) {
 
 var lastt = mynext[mynext.length-1];
 
-myprodbox = $('<div class="col-12 p-1 m-1 border border primary rounded"></div>');
-myprodbox.remove();
+myprodbox = $('<div class="prodbox col-12 p-1 m-1 border border primary rounded">this is product</div>');
+$('.prodbox').remove();
 lastt.after(myprodbox);
 
  
