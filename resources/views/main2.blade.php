@@ -502,9 +502,9 @@ var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;backgr
 
 var photos = $('<div style="width:60vw;margin-right: auto;margin-left: auto;max-width:300px;"></div>');
 photos.append($(mySwipe.HTMLElement));
-var title = $('<div class="p-1 text-dark" style="font-size:120;">'+vals.title+'</div>');
+var title = $('<div class="p-1 text-dark" style="font-size:120;font-weight:bold">'+vals.title+'</div>');
 var price = $('<div class="p-1 text-success" style="font-size:150%;font-weight:bold">'+farsi_price(vals.price)+' تومان </div>');
-var caption = $('<ul style="text-align: right;">'+vals.caption+'</ul>');
+var caption = $('<ul style="text-align: right;font-size:90%">'+vals.caption+'</ul>');
 
 cont.append(photos);
 cont.append(title);
