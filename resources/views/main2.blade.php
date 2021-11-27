@@ -102,7 +102,7 @@ $(this).addClass("col-12");
 
     $([document.documentElement, document.body]).animate({
         scrollTop: $(this).offset().top
-    }, 2000);
+    }, 200);
 
 
 elemclicked = $(this);
