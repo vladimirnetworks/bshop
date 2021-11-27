@@ -80,7 +80,11 @@ $(".miniproduct").click(function(e) {
     } while (me_top == next_top);
 
 
-console.log(mynext[mynext.length-1].html());
+var lastt = mynext[mynext.length-1];
+
+myprodbox = $('<div class="col-12 p-1 m-1 border border primary rounded"></div>');
+myprodbox.remove();
+lastt.after(myprodbox);
 
  
 });
