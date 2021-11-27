@@ -51,7 +51,7 @@ back_myprevs.push(elem);
 var prev_offset =  elem.offset();
 var prev_top =  prev_offset.top;
 
-} while(me_top == prev_top);
+} while(me_top == prev_top || !elem);
 
 for (var i = 0 ; i < myprevs.length ; i++) {
  // myprevs[i].remove();
