@@ -51,6 +51,7 @@ class mainPageController extends Controller
 
                 "id"=>$item->id,
                 "title"=>$item->title,
+                "price"=>$item->title,
                 "caption"=>$item->caption,
                 
 
