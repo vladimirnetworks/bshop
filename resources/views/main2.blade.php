@@ -98,6 +98,13 @@ $(this).removeClass("col-4");
 $(this).removeClass("col-sm-3");
 $(this).addClass("col-12");
 
+
+
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(this).offset().top
+    }, 2000);
+
+
 elemclicked = $(this);
 
 //console.log(back_myprevs);
