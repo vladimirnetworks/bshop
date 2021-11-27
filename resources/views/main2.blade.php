@@ -28,6 +28,8 @@
 <script>
 $(".miniproduct").click(function(e) {
 
+$(this).removeClass("col-4");
+$(this).removeClass("col-sm-3");
 $(this).addClass("col-12");
 
 var me_offset =  $(this).offset();
