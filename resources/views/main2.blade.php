@@ -491,9 +491,9 @@ var vals = JSON.parse($(this).attr("data-me"));
 var mySwipe = new SwiperBox({
 					items:
 						[
-						'<div class="myitem"><img src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>',
-						'<div class="myitem"><img src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>',
-						'<div class="myitem"><img src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>'
+						'<div class="myitem"><img style="widht:100%" src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>',
+						'<div class="myitem"><img style="widht:100%" src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>',
+						'<div class="myitem"><img style="widht:100%" src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>'
 						]
 						
 					});
