@@ -77,7 +77,12 @@ $(".miniproduct").click(function(e) {
 
 
     } while (me_top == next_top);
-    console.log(mynext);
+
+
+    for (var i = 0 ; i < mynext.length ; i++) {
+       console.log(mynext[i].html());
+    }
+   
 });
 
 </script>
