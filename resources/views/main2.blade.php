@@ -14,6 +14,11 @@
   <script src="/bs4/popper.min.js"></script>
   <script src="/bs4/bootstrap.min.js"></script>
   <script src="/bs4/cook.js?{{time()}}"></script>
+
+  <script src="https://raw.githubusercontent.com/vladimirnetworks/SwiperBox/master/SwiperBox.js"></script>
+
+
+
 <style>
 @keyframes zoominoutsinglefeatured {
   0% {
@@ -275,10 +280,28 @@ $(this).html('');
 
 var vals = JSON.parse($(this).attr("data-me"));
 
+
+var mySwipe = new SwiperBox({
+					items:
+						[
+						'<div class="myitem"><img src="https://raw.githubusercontent.com/vladimirnetworks/SwiperBox/master/potato.jpg"  /></div>',
+						'<div class="myitem"><img src="https://raw.githubusercontent.com/vladimirnetworks/SwiperBox/master/tomato.jpg"  /></div>',
+						'<div class="myitem"><img src="https://raw.githubusercontent.com/vladimirnetworks/SwiperBox/master/jason2.jpg"  /></div>'
+						]
+						
+					});
+
+
+
 var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
+
+var photos = $('<div></div>');
+photos.append($(mySwipe.HTMLElement));
 var title = $('<div class="p-1 text-dark" style="font-size:120;">'+vals.title+'</div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+farsi_price(vals.price)+' تومان </div>');
 var caption = $('<ul style="text-align: right;">'+vals.caption+'</ul>');
+
+cont.append(photos);
 cont.append(title);
 cont.append(price);
 cont.append(caption);
