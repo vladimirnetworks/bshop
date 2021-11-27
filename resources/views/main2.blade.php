@@ -27,13 +27,13 @@
 
 <script>
 
-elem = {};
-elem.clicked = null;
+
+elemclicked = -1;
 
 $(".miniproduct").click(function(e) {
 
 
-if (elem.clicked != null) {
+if (elemclicked != -1) {
   console.log("ihav");
 elem.clicked.addClass("col-4");
 elem.clicked.addClass("col-sm-3");
@@ -98,7 +98,7 @@ $(this).removeClass("col-4");
 $(this).removeClass("col-sm-3");
 $(this).addClass("col-12");
 
-elem.clicked = $(this);
+elemclicked = $(this);
 
 //console.log(back_myprevs);
 //$(this).fadeOut();
