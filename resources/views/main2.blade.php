@@ -90,6 +90,12 @@ myprodbox = $('<div class="prodbox col-12 p-2  border border primary rounded">th
 $('.prodbox').remove();
 lastt.after(myprodbox);
 
+
+animate(document.body.scrollTop,myprodbox.offset().top-50,200,function (x) {
+  window.scrollTo(0, x);
+});
+
+
  
 });
 
