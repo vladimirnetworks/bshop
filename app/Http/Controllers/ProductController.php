@@ -81,7 +81,7 @@ class ProductController extends Controller
 
 
         $newprod = Product::create([
-            'title' => $request['title'],
+            'title' => $request['title'],'tinytitle' => $request['tinytitle'],
              'price' => $request['price'], 
              'photos' =>  $photos,
             "caption"=>$request['caption']
@@ -127,7 +127,7 @@ class ProductController extends Controller
         $Product->title = $request->title;
         $Product->price = $request->price;
         $Product->caption = $request->caption;
-       
+        $Product->tinytitle = $request->tinytitle;
 
         $sgal = [];
         foreach ($request->gal as $gal) {
