@@ -486,16 +486,14 @@ $(this).css("background-color","#a9a9a9");
 $(this).html('');
 
 var vals = JSON.parse($(this).attr("data-me"));
-
+var photoitems = [];
+console.log(vals.photos);
+for (var i=0;i<vals.photos.length;i++) {
+   photoitems.push('<div class="myitem"><img style="width:100%" src="'+vals.photos.medium+'"  /></div>');
+}
 
 var mySwipe = new SwiperBox({
-					items:
-						[
-						'<div class="myitem"><img style="width:100%" src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>',
-						'<div class="myitem"><img style="width:100%" src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>',
-						'<div class="myitem"><img style="width:100%" src="https://www.behkiana.ir/photos/55504679.jpg"  /></div>'
-						]
-						
+					items:photoitems					
 					});
 
 
