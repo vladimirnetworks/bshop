@@ -508,7 +508,7 @@ var title = $('<div class="p-1 text-dark" style="font-size:120;">'+vals.title+'<
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+farsi_price(vals.price)+' تومان </div>');
 var caption = $('<ul style="text-align: right;">'+vals.caption+'</ul>');
 
-cont.append(photos);
+cont.append($(mySwipe.HTMLElement));
 cont.append(title);
 cont.append(price);
 cont.append(caption);
