@@ -162,6 +162,7 @@ console.log(back_mynext[back_mynext.length-1].html());
 
 
 elemclicked = -1;
+elementbackup = -1
 
 $(".miniproduct").click(function(e) {
 
@@ -171,6 +172,9 @@ if (elemclicked != -1) {
 elemclicked.addClass("col-4");
 elemclicked.addClass("col-sm-3");
 elemclicked.removeClass("col-12");
+
+elemclicked.replaceWith(elementbackup);
+
 } else {
     console.log("i dont hav");
 }
@@ -226,8 +230,9 @@ $(this).after($(back_myprevs[i]));
 
 
 
-$(this).html("i am opened");
 
+elemclicked = $(this);
+elementbackup = $(this).clone(true,true);
 
 $(this).removeClass("col-4");
 $(this).removeClass("col-sm-3");
@@ -243,9 +248,9 @@ animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function 
 
 
 
+$(this).html("i am opened");
 
 
-elemclicked = $(this);
 
 
 
