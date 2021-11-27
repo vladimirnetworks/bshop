@@ -489,7 +489,7 @@ var vals = JSON.parse($(this).attr("data-me"));
 var photoitems = [];
 console.log(vals.photos);
 for (var i=0;i<vals.photos.length;i++) {
-   photoitems.push('<div class="myitem"><img style="width:100%" src="'+vals.photos.medium+'"  /></div>');
+   photoitems.push('<div class="myitem"><img style="width:100%" src="'+vals.photos[i].medium+'"  /></div>');
 }
 
 var mySwipe = new SwiperBox({
