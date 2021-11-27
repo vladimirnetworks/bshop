@@ -26,6 +26,12 @@
 
 
 <script>
+
+
+function jabej() {
+  
+}
+
 $(".miniproduct").click(function(e) {
 
 
@@ -51,7 +57,7 @@ var prev_top =  prev_offset.top;
 
 if (me_top == prev_top) {
 myprevs.push(elem);
-back_myprevs.push(elem);
+back_myprevs.push(elem.clone());
 }
 
 } else {
