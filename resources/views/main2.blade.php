@@ -46,10 +46,55 @@ function animate(from,to,time,func) {
 
 <script>
 
+$(".miniproduct").click(function(e) {
+
+  var me_offset =  $(this).offset();
+  var me_top = me_offset.top;
+
+  var elem = $(this);
+
+  var mynext = [];
+  var back_mynext = [];
+  var keepon = true;
+
+
+  do {
+
+elem = elem.next();
+
+if (elem.offset()) {
+
+var next_offset =  elem.offset();
+var next_top =  next_offset.top;
+
+
+if (me_top == next_top) {
+  mynext.push(elem);
+back_mynext.push(elem.clone(true, true));
+}
+
+} else {
+  next_top = -1000;
+}
+
+
+
+} while(me_top == next_top);
+
+
+console.log(elem.html());
+
+
+});
+
+</script>
+
+<script>
+
 
 elemclicked = -1;
 
-$(".miniproduct").click(function(e) {
+$(".miniproductz").click(function(e) {
 
 
 if (elemclicked != -1) {
