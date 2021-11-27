@@ -529,13 +529,8 @@ $(this).unbind('click');
 });
 </script>
 <style>
-.bar:after {
-    content:"";
-    position:absolute;
-    width:100%;
-    bottom:1px;
-    z-index:-1;
-    transform:scale(.9);
+.bar {
+
     box-shadow: 0px 0px 8px 2px #000000;
 }
 
