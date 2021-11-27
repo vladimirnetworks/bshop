@@ -96,6 +96,8 @@ console.log(back_mynext[back_mynext.length-1].html());
      var tdis = $(this).clone(true,true);
      $(this).replaceWith(back_mynext[back_mynext.length-1]);
 
+     mynext[back_mynext.length-1].replaceWith(tdis);
+
    
 });
 
