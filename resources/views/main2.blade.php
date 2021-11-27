@@ -125,7 +125,7 @@ function SwiperBox(fields) {
 	
     this.GoTo = function(gotox) {
         
-        container.style.transition = 'all 0.3s';
+        container.style.transition = 'all 0.1s';
         if (gotox > 0 && gotox <= container.children.length) {
 
             self.numx = gotox - 1;
@@ -170,7 +170,7 @@ function SwiperBox(fields) {
             var dif = e.pageX - self.start;
         }
         self.mainpos = self.mainpos + dif;
-        container.style.transition = 'all 0.3s';
+        container.style.transition = 'all 0.1s';
         var maxallowed = container.children.length - 1;
         var minallowed = 0;
         var elemoffset = 0;
