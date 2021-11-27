@@ -82,7 +82,7 @@ $(".miniproduct").click(function(e) {
 
 var lastt = mynext[mynext.length-1];
 
-if (!lastt.html()) {
+if (typeof lastt.html() === 'undefined') {
 lastt = $(this);
 }
 
