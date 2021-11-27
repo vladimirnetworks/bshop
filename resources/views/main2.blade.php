@@ -44,9 +44,10 @@ do {
 
 elem = elem.prev();
 
+if (me_top == prev_top) {
 myprevs.push(elem);
 back_myprevs.push(elem);
-
+}
 var prev_offset =  elem.offset();
 var prev_top =  prev_offset.top;
 
