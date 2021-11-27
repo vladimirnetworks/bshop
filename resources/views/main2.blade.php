@@ -529,7 +529,7 @@ $(this).unbind('click');
 });
 </script>
 <style>
-.bar:after {
+.barx:after {
     content:"";
     position:absolute;
     width:100%;
@@ -540,7 +540,7 @@ $(this).unbind('click');
 }
 
 </style>
-<div style="position:fixed;height:5vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" class="row bar">
+<div style="position:fixed;height:5vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" class="row barx">
 
 behkiana
 
