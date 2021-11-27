@@ -7,7 +7,7 @@
        
 
 <div style="margin-top:auto">
- <a href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
+ <a style="color:#2a2a2a" href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
 </div>
       
 <div  style="margin-top:auto">
