@@ -32,7 +32,7 @@ function jabej() {
   
 }
 
-$(".miniproduct").click(function(e) {
+$(".miniproduct").live('click',(function(e) {
 
 
 
