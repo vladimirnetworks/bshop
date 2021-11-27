@@ -74,9 +74,10 @@ for (var i = 0 ; i < myprevs.length ; i++) {
 }
 
 for (var i = 0 ; i < back_myprevs.length ; i++) {
-  back_myprevs[i].click(function(e) {
+/*  back_myprevs[i].click(function(e) {
        console.log("me");
   });
+  */
 $(this).after(back_myprevs[i]);
 }
 
