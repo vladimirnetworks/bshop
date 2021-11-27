@@ -87,7 +87,7 @@ lastt = $(this);
 }
 
 myprodbox = $('<div class="prodbox col-12 p-2  border border primary rounded">this is product</div>');
-$('.prodbox').remove();
+//$('.prodbox').remove();
 lastt.after(myprodbox);
 
 
