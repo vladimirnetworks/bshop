@@ -1,13 +1,13 @@
-<div class="col-4 col-sm-3  p-1 text-center"  style="display: flex;">
+<div class="col-4 col-sm-3  p-1 text-center"  style="flex-direction:column;display:flex">
 
-<div class=" h-100 " style="direction:rtl;background-color:red">
+<div class=" h-100 " style="direction:rtl;background-color:red;">
          
 
          <a href="product/{{$product->id}}">  <img class="mw-100" src="{{$product->photo}}"/></a>
        
 
       
-<div  style="align-self: flex-end;">
+<div  style="margin-top:auto">
         <a href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
 
          {{number_format($product->price)}} تومان
