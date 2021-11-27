@@ -267,7 +267,7 @@ $(this).css("background-color","#a9a9a9");
 $(this).html('');
 
 var vals = JSON.parse($(this).attr("data-me"));
-
+console.log(vals);
 var cont = $('<div class="saving p-1 m-1 rounded" style="min-height:70vh;background-color:white"></div>');
 var title = $('<div class="p-3 text-dark" style="font-size:150%;font-weight:bold">'+vals.title+'</div>');
 var price = $('<div class="p-3 text-success" style="font-size:150%;font-weight:bold">'+vals.price+'</div>');
