@@ -37,16 +37,26 @@ var me_top = me_offset.top;
 
 var elem = $(this);
 
+var myprevs = [];
+var back_myprevs = [];
 
 do {
 
-elem = elem.next();
+elem = elem.prev();
+
+myprevs.push(elem);
+back_myprevs.push(elem);
 
 var next_offset =  elem.offset();
-var next_top =  next_offset.top;
+var prev_top =  prev_offset.top;
 
 } while(me_top == next_top);
 
+for (var i = 0 ; i < myprevs.length ; i++) {
+  myprevs[i].remove();
+}
+
+console.log(back_myprevs);
 //$(this).fadeOut();
 //elem.css({"color":"red"});
 
