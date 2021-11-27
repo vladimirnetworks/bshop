@@ -49,12 +49,10 @@ myprevs.push(elem);
 back_myprevs.push(elem);
 }
 
-if (elem.offset()) {
+
 var prev_offset =  elem.offset();
 var prev_top =  prev_offset.top;
-} else {
-  breakme = true;
-}
+
 
 } while(me_top == prev_top || breakme);
 
