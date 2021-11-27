@@ -244,6 +244,10 @@ function SwiperBox(fields) {
 
   animation: zoominoutsinglefeatured .5s 1 ;
 }
+
+body {
+  margin-top:5vh;
+}
 </style>
 </head>
 
@@ -524,5 +528,7 @@ $(this).unbind('click');
 
 });
 </script>
+
+<div style="position:fixed;height:5vh;backgroung-color:white;top:0px;left:0px;">behkiana</div>
 </body>
 </html>
