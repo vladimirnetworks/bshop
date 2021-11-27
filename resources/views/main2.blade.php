@@ -27,7 +27,24 @@
 
 <script>
 $(".miniproduct").click(function(e) {
-   $(this).fadeOut();
+
+var me_offset =  $(this).offset();
+var me_top = me_offset.top;
+
+var elem = $(this);
+
+
+do {
+
+next = elem.next();
+
+var next_offset =  next.offset();
+var next_top =  next_offset.top;
+
+} while(me_top == next_top);
+
+ console.log(next); 
+
 });
 </script>
 </body>
