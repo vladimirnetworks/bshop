@@ -45,8 +45,22 @@ class mainPageController extends Controller
             if (isset($phot[0])) {
                 $item->photo = $phot[0]['medium'];
             }
+
+
+            $item->jsondata = str_replace('"','\"',json_encode([
+
+                "id"=>$item->id,
+                "title"=>$item->title,
+                "caption"=>$item->caption,
+                
+
+            ]));
+
         });
 
+
+
+        
 
 
         return view('index2', ['pageTitle' => "بهکیانا - فروشگاه محصولات بهداشتی", "products" => $prods]);

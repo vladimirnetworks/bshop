@@ -10,6 +10,7 @@ class Product extends Model
     use HasFactory;
 
     public $photo;
+    public $jsondata;
  
     protected $fillable = [
         'title',
