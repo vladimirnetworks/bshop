@@ -9,7 +9,7 @@
 <br>
       
 
-        <a href="product/{{$product->id}}" class="d-block">{{$product->title}}</a>
+        <a href="product/{{$product->id}}" class="d-block">{{$product->tinytitle}}</a>
 
          {{number_format($product->price)}} تومان
 

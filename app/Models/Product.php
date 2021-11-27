@@ -13,10 +13,12 @@ class Product extends Model
  
     protected $fillable = [
         'title',
+        'tinytitle',
         'price',
         'photos',
         'photo',
         'caption'
+
     ];
 
     public function setd($i): void
