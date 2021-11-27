@@ -65,9 +65,8 @@ back_myprevs.push(elem);
 } while(me_top == prev_top);
 
 for (var i = 0 ; i < myprevs.length ; i++) {
- // myprevs[i].remove();
+ myprevs[i].remove();
 
- console.log( myprevs[i].html());
 }
 
 
