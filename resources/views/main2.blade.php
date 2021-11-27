@@ -33,6 +33,17 @@ elem.clicked = null;
 $(".miniproduct").click(function(e) {
 
 
+if (elem.clicked) {
+  console.log("ihav");
+elem.clicked.addClass("col-4");
+elem.clicked.addClass("col-sm-3");
+elem.clicked.removeClass("col-12");
+} else {
+    console.log("i dont hav");
+}
+
+
+
 
 var me_offset =  $(this).offset();
 var me_top = me_offset.top;
@@ -80,11 +91,7 @@ $(this).after($(back_myprevs[i]));
 }
 
 
-if (elem.clicked) {
-elem.clicked.addClass("col-4");
-elem.clicked.addClass("col-sm-3");
-elem.clicked.removeClass("col-12");
-}
+
 
 
 $(this).removeClass("col-4");
