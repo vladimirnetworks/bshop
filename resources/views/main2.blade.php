@@ -82,9 +82,9 @@ $(this).after($(back_myprevs[i]));
 }
 
 
-$(this).removeClass("col-4");
-$(this).removeClass("col-sm-3");
-$(this).addClass("col-12");
+//$(this).removeClass("col-4");
+//$(this).removeClass("col-sm-3");
+//$(this).addClass("col-12");
 
 //console.log(back_myprevs);
 //$(this).fadeOut();
