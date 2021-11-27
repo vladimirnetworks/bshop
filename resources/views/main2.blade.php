@@ -46,9 +46,9 @@ var next_top =  next_offset.top;
 $(this).fadeOut();
 //elem.css({"color":"red"});
 
-setTimeout(3000,function() {
+setTimeout(function() {
 elem.prev().after($('<div class="col-12">me</div>'));
-});
+},3000);
 //
 
 });
