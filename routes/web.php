@@ -48,3 +48,8 @@ Route::post('/login', "App\Http\Controllers\Logincontroller@login2")->middleware
 Route::get('/contact-us', function() {
     return view("contactus",["pageTitle"=>"تماس با ما"]);
 })->middleware('tokin');
+
+
+
+
+Route::get('/index2', "App\Http\Controllers\mainPageController@index2")->middleware('tokin');
