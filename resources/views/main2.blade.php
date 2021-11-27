@@ -43,12 +43,12 @@ var next_top =  next_offset.top;
 
 } while(me_top == next_top);
 
-$(this).fadeOut();
+//$(this).fadeOut();
 //elem.css({"color":"red"});
 
-setTimeout(function() {
+//setTimeout(function() {
 elem.prev().after($('<div class="col-12">me</div>'));
-},3000);
+//},3000);
 //
 
 });
