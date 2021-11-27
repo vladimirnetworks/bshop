@@ -87,7 +87,7 @@ if (false) {
 
 }
 
-console.log(back_mynext[back_mynext.length-1]);
+console.log(back_mynext[back_mynext.length-1].html());
 
     for (var i = 0 ; i < mynext.length ; i++) {
       // console.log(mynext[i].html());
