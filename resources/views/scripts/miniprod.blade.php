@@ -126,13 +126,8 @@ var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:re
 //$('.fly').remove();
 
 
-var leftPos  = photos[0].getBoundingClientRect().left   + $(window)['scrollLeft']();
-var rightPos = photos[0].getBoundingClientRect().right  + $(window)['scrollLeft']();
-var topPos   = photos[0].getBoundingClientRect().top    + $(window)['scrollTop']();
-var bottomPos= photos[0].getBoundingClientRect().bottom + $(window)['scrollTop']();
 
-
-  console.log(topPos);
+  console.log(photos.offset().top - $(window).scrollTop());
 
   var btm = $(window).height()-(xofsset.top)
 
