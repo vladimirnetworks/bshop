@@ -405,7 +405,8 @@ function addtocart(prod) {
 
 xcart.addChangeListener(function() {
 
-   var tot = this.total();
+   var tot = xcart.total();
+   
  $('.cartslider_smallview_text').html(tot.amount)
 });
 
