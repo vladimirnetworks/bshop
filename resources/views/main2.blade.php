@@ -24,10 +24,6 @@
 @keyframes mymove {
   50% {transform: rotate(360deg);}
 }
-
-.anim {
-    transition: transform .2s;
-}
 </style>
 <script>
 
@@ -430,14 +426,6 @@ xcart.addChangeListener(function() {
         $(".cartslider_bigview").append("<div>"+prod.title+"</div>");
    });
 
-
-setTimeout(function() {
-
-$('.cartslider').css('transform','scale(1.2)');
-setTimeout(function() {
-    $('.cartslider').css('transform','scale(1.0)')
-},201)
-},300);
 
 });
 
