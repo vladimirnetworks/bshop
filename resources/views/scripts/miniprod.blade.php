@@ -123,7 +123,7 @@ kharid.click(function(e) {
 
 var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%;left:0px">fly</div>');
 
-//$('.fly').remove();
+$('.fly').remove();
 
 
 
@@ -144,7 +144,9 @@ left:xofsset.left+"px",
 $('body').append(fly);
 
    fly.animate({bottom:"-100%"},1000),function() {
-    //  $('.fly').remove();
+    setTimeout(function() {
+      fly.remove();
+    },200);
    };
    
 
