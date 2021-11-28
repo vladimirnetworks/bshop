@@ -273,6 +273,12 @@ body {
       background-color:yellow;
   }
 
+   70% {
+      transform: scale(2.2,1.2);
+      background-color:yellow;
+  }
+
+
   100% {
       transform: scale(1,1);
       background-color:white;
