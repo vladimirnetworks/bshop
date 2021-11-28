@@ -125,9 +125,11 @@ var fly = $('<div style="width:50vh;height:100px;background-color:red;position:f
 
   var xofsset = photos.offset();
 
+  var btm = $(window).height()-photos.height()+xofsset.top
+
 fly.css({
   width:photos.width()+"px",
-bottom:(photos.height()+xofsset.top)+"px",
+bottom:btm+"px",
 height:photos.height()+"px",
 left:xofsset.left+"px",
 });
