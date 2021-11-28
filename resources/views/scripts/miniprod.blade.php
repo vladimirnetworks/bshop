@@ -162,6 +162,7 @@ left:xofsset.left+"px",
 $('body').append(fly);
 
 
+$('#tr').get(0).play();
 
 fly.css({transition:'all 1.5s'});
 
