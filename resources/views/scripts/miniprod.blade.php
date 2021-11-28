@@ -125,7 +125,7 @@ var fly = $('<div style="width:50vh;height:100px;background-color:red;position:f
 
   var xofsset = photos.offset();
 
-fly.css({width:photos.width()+"px",(bottom:photos.height()+xofsset.top)+"px"});
+fly.css({width:photos.width()+"px",bottom:(photos.height()+xofsset.top)+"px"});
 
    $('body').append(fly);
 
