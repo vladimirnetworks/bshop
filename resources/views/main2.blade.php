@@ -284,9 +284,15 @@ function animate(from,to,time,func) {
 
 
 
+cart = {};
+cart.prods = {};
 
 function addtocart(prod) {
- console.log(prod);
+    if (!cart.prods[prod.id]) {    
+        cart.prods[prod.id] = prod; 
+    }
+
+console.log(cart);    
 }
 
 </script>
