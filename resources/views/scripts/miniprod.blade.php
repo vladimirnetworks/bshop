@@ -125,7 +125,7 @@ var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:re
 
 //$('.fly').remove();
 
-  var xofsset = photos.offset();
+  var xofsset = photos.scrollTop();
 
   console.log(xofsset);
 
