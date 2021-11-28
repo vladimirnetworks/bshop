@@ -132,7 +132,7 @@ cloned_photos.css({width:"100%"});
 var pattern = /jpg/;
 var flyingimage = "";
 for (var i=0;i<photoitems.length;i++) {
-  console.log(photoitems[i]);
+  alert(photoitems[i]);
   if (pattern.test(photoitems[i])) {
     flyingimage = photoitems[i];
     break;
