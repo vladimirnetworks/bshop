@@ -304,17 +304,20 @@ cart.total = function() {
     return tot;
 }
 
-cart.changeListener = function() {};
+cart.changeListeners = [];
 
-cart.onChange = function(e) {
-   this.changeListener = e;
+cart.addChangeListener = function(e) {
+   cart.changeListeners.push(e);
 }
 
 cart.add = function(prod) {
     if (!this.prods[prod.id]) {    
         this.prods[prod.id] = {count:1,...prod}; 
     }
-    this.changeListener();
+     
+     for (i=0 ; i < this.changeListeners.length;i++) {
+           this.changeListeners[i]();
+     }
 }
 
 
@@ -324,7 +327,7 @@ function addtocart(prod) {
 }
 
 
-cart.onChange(function() {
+cart.addChangeListener(function() {
     console.log("cart changed");
 });
 
