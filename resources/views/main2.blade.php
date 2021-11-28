@@ -241,9 +241,7 @@ function SwiperBox(fields) {
   0% {
       transform: scale(0.5,0.5);
   }
-  50% {
-      transform: scale(0.8,0.8);
-  }
+
   100% {
       transform: scale(1,1);
   }
@@ -252,7 +250,7 @@ function SwiperBox(fields) {
 
 .saving {
 
-  animation: zoominoutsinglefeatured .5s 1 ;
+  animation: zoominoutsinglefeatured .1s 1 ;
 }
 
 body {
