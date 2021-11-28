@@ -131,7 +131,7 @@ cloned_photos.css({width:"100%"});
 
 fly.append(cloned_photos);
 
-fly.append(title.clone());
+//fly.append(title.clone());
 
 
 
@@ -156,8 +156,8 @@ $('body').append(fly);
 fly.css({transition:'all 1.5s'});
 
  setTimeout(function() {
-fly.css({bottom:"-100%",width:"2vw"});
-},1000);
+fly.css({bottom:"-100%",width:"1vw"});
+},200);
   /* fly.animate({bottom:"-100%"},1000),function() {
     setTimeout(function() {
       $('.fly').remove();
