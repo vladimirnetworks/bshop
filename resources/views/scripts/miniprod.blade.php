@@ -113,7 +113,7 @@ cont.append(title);
 cont.append(price);
 cont.append(caption);
 
-var fly = $('<div style="width:50vh;height:100px;background-color:red;position:fixed;top:0px">fly</div>');
+var fly = $('<div style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%">fly</div>');
 
 
 
