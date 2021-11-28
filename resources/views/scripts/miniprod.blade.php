@@ -121,7 +121,7 @@ var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
 kharid.click(function(e) {
 
-var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%">fly</div>');
+var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%"></div>');
 
 $('.fly').remove();
 
