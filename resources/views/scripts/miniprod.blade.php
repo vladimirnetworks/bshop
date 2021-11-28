@@ -129,7 +129,16 @@ var cloned_photos = photos.clone();
 
 cloned_photos.css({width:"100%"});
 
-fly.append($(photoitems[0]).clone());
+var pattern = /\.jpg/;
+var flyingimage = "";
+for (var i=0;i<photoitems.length;i++) {
+  if (pattern.test(photoitems[i])) {
+    flyingimage = photoitems[i];
+    break;
+  }
+}
+
+fly.append($(flyingimage).clone());
 
 //fly.append(title.clone());
 
