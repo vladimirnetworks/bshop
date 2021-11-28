@@ -285,8 +285,8 @@ function animate(from,to,time,func) {
 
 
 
-function addtocart(id) {
- console.log(id);
+function addtocart(prod) {
+ console.log(prod);
 }
 
 </script>
