@@ -121,7 +121,7 @@ var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
 kharid.click(function(e) {
 
-var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%;"></div>');
+var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%;background-color:white"></div>');
 
 $('.fly').remove();
 
@@ -148,7 +148,7 @@ $('body').append(fly);
 
 
 
-fly.css({transition:'all 0.3s'});
+fly.css({transition:'all 1.3s'});
 
  setTimeout(function() {
 fly.css({bottom:"-100%"});
