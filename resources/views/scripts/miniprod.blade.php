@@ -124,7 +124,7 @@ kharid.click(function(e) {
 
    $('body').append(fly);
 
-   fly.animate({bottom:-100%},3000);
+   fly.animate({bottom:"-100%"},3000);
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });
