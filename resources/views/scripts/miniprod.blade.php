@@ -148,10 +148,10 @@ $('body').append(fly);
 
 
 
-fly.css({transition:'all 1.3s'});
+fly.css({transition:'all .5s'});
 
  setTimeout(function() {
-fly.css({bottom:"-100%"});
+fly.css({bottom:"-100%",zoom:"20%"});
 },1000);
   /* fly.animate({bottom:"-100%"},1000),function() {
     setTimeout(function() {
