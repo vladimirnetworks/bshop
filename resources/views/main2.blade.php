@@ -24,6 +24,10 @@
 @keyframes mymove {
   50% {transform: rotate(360deg);}
 }
+
+.anim {
+    transition: transform .2s;
+}
 </style>
 <script>
 
@@ -425,6 +429,10 @@ xcart.addChangeListener(function() {
    xcart.eech(function(prod) {
         $(".cartslider_bigview").append("<div>"+prod.title+"</div>");
    });
+
+
+$('.cartslider').css('transform','scale(1.5)');
+
 
 
 });
