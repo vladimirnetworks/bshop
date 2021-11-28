@@ -113,10 +113,15 @@ cont.append(title);
 cont.append(price);
 cont.append(caption);
 
+var fly = $('<div style="width:50vh;height:100px;backgroung-color:red;position:fixed;">fly</div>');
+
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
 kharid.click(function(e) {
+
+   $('body').append(fly);
+
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });
 
