@@ -129,6 +129,7 @@ var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:re
 
 var position_from_top = photos.offset().top - $(window).scrollTop();
 
+xofsset = photos.offset();
 
 
   var btm = $(window).height()-(position_from_top+photos.height());
@@ -140,7 +141,7 @@ height:photos.height()+"px",
 left:xofsset.left+"px",
 });
 
-  // $('body').append(fly);
+$('body').append(fly);
 
    fly.animate({bottom:"-100%"},1000),function() {
     //  $('.fly').remove();
