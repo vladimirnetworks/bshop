@@ -123,6 +123,9 @@ kharid.click(function(e) {
 
 var fly = $('<div style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%">fly</div>');
 
+  var xofsset = photos.offset();
+
+fly.css({width:photos.width()+"px",(bottom:photos.height()+xofsset.top)+"px"});
 
    $('body').append(fly);
 
