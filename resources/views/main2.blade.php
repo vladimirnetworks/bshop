@@ -288,7 +288,7 @@ cart = {};
 cart.prods = {};
 
 cart.eech = function(e) {
-
+console.log(this.prods.length);
  for (var i=0;i<this.prods.length;i++) {
     e(this.prods[i]);
  }
