@@ -287,6 +287,10 @@ function animate(from,to,time,func) {
 cart = {};
 cart.prods = {};
 
+cart.total = function() {
+    console.log(this);
+}
+
 function addtocart(prod) {
     if (!cart.prods[prod.id]) {    
         cart.prods[prod.id] = {count:1,...prod}; 
