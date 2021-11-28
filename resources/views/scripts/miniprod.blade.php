@@ -121,7 +121,7 @@ var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
 kharid.click(function(e) {
 
-var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%;border:2px solid red;border-radius:4px;"></div>');
+var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%;"></div>');
 
 $('.fly').remove();
 
@@ -146,11 +146,15 @@ left:xofsset.left+"px",
 
 $('body').append(fly);
 
-   fly.animate({bottom:"-100%"},1000),function() {
+
+fly.css({transition:'all 0.3s'});
+fly.css({bottom:"-100%"});
+
+  /* fly.animate({bottom:"-100%"},1000),function() {
     setTimeout(function() {
       $('.fly').remove();
     },200);
-   };
+   };*/
    
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
