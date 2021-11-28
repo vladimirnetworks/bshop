@@ -288,9 +288,11 @@ cart = {};
 cart.prods = {};
 
 cart.eech = function(e) {
- for (var i=0;i<this.prods.length,i++) {
+
+ for (var i=0;i<this.prods.length;i++) {
     e(this.prods[i]);
  }
+
 }
 
 cart.total = function() {
