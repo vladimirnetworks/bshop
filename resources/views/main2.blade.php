@@ -268,6 +268,11 @@ body {
       background-color:yellow;
   }
 
+ 50% {
+      transform: scale(0.8,0.8);
+      background-color:yellow;
+  }
+
   100% {
       transform: scale(1,1);
       background-color:white;
