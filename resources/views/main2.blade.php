@@ -383,7 +383,7 @@ function addtocart(prod) {
  xcart.add(prod);  
 
  if (firsttimecartup) {
-    cartup();
+    //cartup();
     firsttimecartup=false;
 
 
