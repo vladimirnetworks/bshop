@@ -296,9 +296,11 @@ Object.keys(this.prods).forEach(function(key) {
 }
 
 cart.total = function() {
+    var tot = {amount:0,count:0}
     this.eech(function(prod) {
-      console.log(prod);
+      tot.amount += prod.price*prod.count;
     });
+    return tot;
 }
 
 function addtocart(prod) {
