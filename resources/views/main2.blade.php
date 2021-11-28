@@ -287,8 +287,16 @@ function animate(from,to,time,func) {
 cart = {};
 cart.prods = {};
 
+cart.eech = function(e) {
+ for (var i=0;i<this.prods.length,i++) {
+    e(this.prods[i]);
+ }
+}
+
 cart.total = function() {
-    console.log(this);
+    this.eech(function(prod) {
+      console.log(prod);
+    });
 }
 
 function addtocart(prod) {
