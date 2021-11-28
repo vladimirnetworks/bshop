@@ -121,7 +121,9 @@ var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
 kharid.click(function(e) {
 
-var fly = $('<div style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%;left:0px">fly</div>');
+var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%;left:0px">fly</div>');
+
+$('body').remove(".fly");
 
   var xofsset = photos.offset();
 
