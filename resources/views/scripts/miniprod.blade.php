@@ -147,9 +147,12 @@ left:xofsset.left+"px",
 $('body').append(fly);
 
 
-fly.css({transition:'all 0.3s'});
-fly.css({bottom:"-100%"});
 
+fly.css({transition:'all 0.3s'});
+
+ setTimeout(function() {
+fly.css({bottom:"-100%"});
+},1000);
   /* fly.animate({bottom:"-100%"},1000),function() {
     setTimeout(function() {
       $('.fly').remove();
