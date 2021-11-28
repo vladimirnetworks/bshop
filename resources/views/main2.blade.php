@@ -304,7 +304,7 @@ cart.total = function() {
     return tot;
 }
 
-cart.add(prod) {
+cart.add = function(prod) {
     if (!this.prods[prod.id]) {    
         this.prods[prod.id] = {count:1,...prod}; 
     }
