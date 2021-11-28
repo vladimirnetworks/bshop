@@ -431,8 +431,10 @@ xcart.addChangeListener(function() {
    });
 
 
-$('.cartslider').css('transform','scale(1.2)').delay(200).css('transform','scale(1)');
-
+$('.cartslider').css('transform','scale(1.2)');
+setTimeout(function() {
+    $('.cartslider').css('transform','scale(1.0)')
+},201)
 
 
 });
