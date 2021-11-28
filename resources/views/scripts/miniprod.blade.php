@@ -134,7 +134,7 @@ left:xofsset.left+"px",
 
    $('body').append(fly);
 
-   fly.animate({bottom:"-100%"},3000),function() {
+   fly.animate({bottom:"-100%"},1000),function() {
       $('body').remove(fly);
    };
 
