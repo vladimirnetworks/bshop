@@ -282,20 +282,21 @@ function animate(from,to,time,func) {
    
 }
 
+function Cart() {
 
-
-cart = {};
-cart.prods = {};
-
-cart.eech = function(e) {
 var self = this;
-Object.keys(this.prods).forEach(function(key) {
+//cart = {};
+this.prods = {};
+
+this.eech = function(e) {
+    var self = this;
+    Object.keys(this.prods).forEach(function(key) {
     e(self.prods[key])
-});
+    });
 
 }
 
-cart.total = function() {
+this.total = function() {
     var tot = {amount:0,count:0}
     this.eech(function(prod) {
       tot.count += prod.count;   
@@ -304,40 +305,44 @@ cart.total = function() {
     return tot;
 }
 
-cart.changeListeners = [];
+this.changeListeners = [];
 
-cart.addChangeListener = function(e) {
-   cart.changeListeners.push(e);
+this.addChangeListener = function(e) {
+   self.changeListeners.push(e);
 }
 
-cart.triggerAllChangeListeners = function() {
-     for (i=0 ; i < this.changeListeners.length;i++) {
-           this.changeListeners[i]();
+this.triggerAllChangeListeners = function() {
+     for (i=0 ; i < self.changeListeners.length;i++) {
+           self.changeListeners[i]();
      }
 }
 
-cart.add = function(prod) {
-    if (!this.prods[prod.id]) {    
-        this.prods[prod.id] = {count:1,...prod}; 
+this.add = function(prod) {
+    if (!self.prods[prod.id]) {    
+        self.prods[prod.id] = {count:1,...prod}; 
     }
      
      this.triggerAllChangeListeners();
 
 }
 
-
-
-function addtocart(prod) {
- cart.add(prod);  
 }
 
 
-cart.addChangeListener(function() {
+xcart = new Cart();
+////////////use///////////
+
+function addtocart(prod) {
+ xcart.add(prod);  
+}
+
+
+xcart.addChangeListener(function() {
     console.log("cart changed");
 });
 
 
-cart.addChangeListener(function() {
+xcart.addChangeListener(function() {
     console.log("22cart changed22");
 });
 
