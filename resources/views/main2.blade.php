@@ -404,7 +404,9 @@ function addtocart(prod) {
 }
 
 xcart.addChangeListener(function() {
-  // $()
+
+   var tot = this.total();
+ $('.cartslider_smallview_text').html(tot.amount)
 });
 
 
