@@ -304,15 +304,17 @@ cart.total = function() {
     return tot;
 }
 
+cart.changeListener = function() {};
+
 cart.onChange = function(e) {
-   e();
+   this.changeListener = e;
 }
 
 cart.add = function(prod) {
     if (!this.prods[prod.id]) {    
         this.prods[prod.id] = {count:1,...prod}; 
     }
-    this.onChange();
+    this.changeListener();
 }
 
 
@@ -321,10 +323,10 @@ function addtocart(prod) {
  cart.add(prod);  
 }
 
-cart.onChange(function() {
-  console.log("cart changed");
-});
 
+cart.onChange(function() {
+    console.log("cart changed");
+});
 
 </script>
 
