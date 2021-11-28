@@ -136,10 +136,10 @@ left:xofsset.left+"px",
 
    $('body').append(fly);
 
-  /* fly.animate({bottom:"-100%"},1000),function() {
+   fly.animate({bottom:"-100%"},1000),function() {
       $('body').remove(fly);
    };
-   */
+   
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });
