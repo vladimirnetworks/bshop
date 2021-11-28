@@ -131,7 +131,7 @@ var position_from_top = photos.offset().top - $(window).scrollTop();
 
 
 
-  var btm = $(window).height()-position_from_top+photos.height();
+  var btm = $(window).height()-(position_from_top+photos.height());
 
 fly.css({
   width:photos.width()+"px",
