@@ -242,7 +242,7 @@ function SwiperBox(fields) {
       transform: scale(1,1);
   }
   50% {
-      transform: scale(1.2,1.2);
+      transform: scale(0.8,0.8);
   }
   100% {
       transform: scale(1,1);
