@@ -377,7 +377,7 @@ function cartdown(speed=100) {
 ////////////use///////////
 xcart = new Cart();
 
-
+firsttimecartup = true;
 
 function addtocart(prod) {
  xcart.add(prod);  
@@ -390,7 +390,13 @@ function addtocart(prod) {
     cartsliderdata.timer = setTimeout(function() {
       if (!cartsliderdata.userwording) {
 
-           cartdown(500);
+            if (firsttimecartup) {
+                cartdown(1000);
+                firsttimecartup=false;
+            } else {
+                 cartdown(200);
+            }
+          
 
       }
     },4000);
