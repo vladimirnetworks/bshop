@@ -180,7 +180,7 @@ fly.css({bottom:"-100%",width:"1vw"});
 
  $('.cartslider').addClass("xshake");
 
- },800);
+ },700);
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });

@@ -264,12 +264,12 @@ body {
 
 @keyframes xshake_anim {
   0% {
-      transform: scale(1.2,1.2);
+      transform: scale(1.0,1.0);
       background-color:yellow;
   }
 
  50% {
-      transform: scale(0.8,0.8);
+      transform: scale(1.2,1.2);
       background-color:yellow;
   }
 
