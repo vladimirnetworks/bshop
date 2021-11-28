@@ -126,6 +126,7 @@ var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%"></d
 $('.fly').remove();
 
 fly.append(photos.clone());
+fly.append(caption.clone());
 
 
 
@@ -145,7 +146,7 @@ left:xofsset.left+"px",
 
 $('body').append(fly);
 
-   fly.animate({bottom:"-100%"},1000),function() {
+   fly.animate({bottom:"-100%",zoom:'20%'},1000),function() {
     setTimeout(function() {
       $('.fly').remove();
     },200);
