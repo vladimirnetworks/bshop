@@ -145,7 +145,7 @@ $('body').append(fly);
 
    fly.animate({bottom:"-100%"},1000),function() {
     setTimeout(function() {
-      fly.remove();
+      $('.fly').remove();
     },200);
    };
    
