@@ -284,68 +284,94 @@ function animate(from,to,time,func) {
 
 function Cart() {
 
-var self = this;
-//cart = {};
-this.prods = {};
-
-this.eech = function(e) {
     var self = this;
-    Object.keys(this.prods).forEach(function(key) {
-    e(self.prods[key])
-    });
+    this.prods = {};
 
-}
+    this.eech = function(e) {
+        var self = this;
+        Object.keys(this.prods).forEach(function(key) {
+            e(self.prods[key])
+        });
 
-this.total = function() {
-    var tot = {amount:0,count:0}
-    this.eech(function(prod) {
-      tot.count += prod.count;   
-      tot.amount += prod.price*prod.count;
-    });
-    return tot;
-}
-
-this.changeListeners = [];
-
-this.addChangeListener = function(e) {
-   self.changeListeners.push(e);
-}
-
-this.triggerAllChangeListeners = function() {
-     for (i=0 ; i < self.changeListeners.length;i++) {
-           self.changeListeners[i]();
-     }
-}
-
-this.add = function(prod) {
-    if (!self.prods[prod.id]) {    
-        self.prods[prod.id] = {count:1,...prod}; 
     }
-     
-     this.triggerAllChangeListeners();
+
+    this.total = function() {
+        var tot = {
+            amount: 0,
+            count: 0
+        }
+        this.eech(function(prod) {
+            tot.count += prod.count;
+            tot.amount += prod.price * prod.count;
+        });
+        return tot;
+    }
+
+    this.changeListeners = [];
+
+    this.addChangeListener = function(e) {
+        self.changeListeners.push(e);
+    }
+
+    this.triggerAllChangeListeners = function() {
+        for (i = 0; i < self.changeListeners.length; i++) {
+            self.changeListeners[i]();
+        }
+    }
+
+    this.add = function(prod) {
+        if (!self.prods[prod.id]) {
+            self.prods[prod.id] = {
+                count: 1,
+                ...prod
+            };
+        }
+
+        this.triggerAllChangeListeners();
+
+    }
+
+    return this;
+}
+
+
+cartsliderdata = {};
+cartsliderdata.isup = false;
+cartsliderdata.userwording = false;
+
+function cartup() {
+
+    cartsliderdata.userwording = false;
+    cartsliderdata.isup = true;
+    $(".cartslider").animate({
+        "height": "80vh"
+    }, 100)
+    $(".cartslider_dim").fadeIn(200);
+
+    $(".cartslider_smallview").hide(200);
+    setTimeout(function() {
+
+        $(".cartslider_bigview").fadeIn(200);
+
+    }, 300);
+
 
 }
 
-return this;
-}
-
-
-xcart = new Cart();
 ////////////use///////////
+xcart = new Cart();
+
+
 
 function addtocart(prod) {
  xcart.add(prod);  
+ cartup();
 }
 
-
 xcart.addChangeListener(function() {
-    console.log("cart changed");
+  // $()
 });
 
-
-xcart.addChangeListener(function() {
-    console.log("22cart changed22");
-});
 
 </script>
 
