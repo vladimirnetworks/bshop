@@ -125,6 +125,8 @@ var fly = $('<div class="fly" style="background-color:red;position:fixed;bottom:
 
 $('.fly').remove();
 
+fly.append(photos.clone());
+
 
 
 var position_from_top = photos.offset().top - $(window).scrollTop();
