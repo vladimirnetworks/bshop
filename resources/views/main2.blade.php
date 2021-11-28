@@ -290,7 +290,7 @@ cart.prods = {};
 cart.eech = function(e) {
 
 Object.keys(this.prods).forEach(function(key) {
-    e(this.prods[key])
+    e(this.prods[parseInt(key)])
 });
 
 }
