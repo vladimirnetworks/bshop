@@ -173,7 +173,9 @@ fly.css({bottom:"-100%",width:"1vw"});
       $('.fly').remove();
     },200);
    };*/
-   
+
+ $('.cartslider').removeClass("xshake");
+ $('.cartslider').addClass("xshake");
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });

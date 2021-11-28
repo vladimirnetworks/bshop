@@ -258,6 +258,29 @@ function SwiperBox(fields) {
 body {
   margin-top:7vh;
 }
+
+
+
+
+@keyframes xshake_anim {
+  0% {
+      transform: scale(1.2,1.2);
+      background-color:yellow;
+  }
+
+  100% {
+      transform: scale(1,1);
+      background-color:white;
+     
+  }
+}
+
+.xshake {
+
+  animation: xshake_anim .2s 2 ;
+}
+
+
 </style>
 </head>
 
