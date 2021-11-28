@@ -129,7 +129,7 @@ fly.css({
   width:photos.width()+"px",
 bottom:(photos.height()+xofsset.top)+"px",
 height:photos.height()+"px",
-left:xofsset.Left+"px",
+left:xofsset.left+"px",
 });
 
    $('body').append(fly);
