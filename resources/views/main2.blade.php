@@ -265,7 +265,7 @@ body {
 @keyframes xshake_anim {
   0% {
       transform: scale(1.0,1.0);
-      background-color:yellow;
+      background-color:white;
   }
 
 
