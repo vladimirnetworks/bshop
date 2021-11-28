@@ -239,18 +239,20 @@ function SwiperBox(fields) {
 <style>
 @keyframes zoominoutsinglefeatured {
   0% {
-      transform: scale(0.5,0.5);
+      transform: scale(0.8,0.8);
+      opacity:0.0;
   }
 
   100% {
       transform: scale(1,1);
+      opacity:1.0;
   }
 }
 
 
 .saving {
 
-  animation: zoominoutsinglefeatured .1s 1 ;
+  animation: zoominoutsinglefeatured .3s 1 ;
 }
 
 body {
