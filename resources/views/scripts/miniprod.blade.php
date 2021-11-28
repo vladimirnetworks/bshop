@@ -138,7 +138,7 @@ for (var i=0;i<photoitems.length;i++) {
   }
 }
 
-fly.append($(flyingimage).clone());
+fly.append($(flyingimage));
 
 //fly.append(title.clone());
 
