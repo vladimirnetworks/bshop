@@ -239,7 +239,7 @@ function SwiperBox(fields) {
 <style>
 @keyframes zoominoutsinglefeatured {
   0% {
-      transform: scale(1,1);
+      transform: scale(0.5,0.5);
   }
   50% {
       transform: scale(0.8,0.8);
