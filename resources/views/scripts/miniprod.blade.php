@@ -135,7 +135,7 @@ left:xofsset.left+"px",
    $('body').append(fly);
 
    fly.animate({bottom:"-100%"},3000),function() {
-     fly.remove();
+      $('body').remove(fly);
    };
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
