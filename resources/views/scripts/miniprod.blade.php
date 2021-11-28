@@ -127,9 +127,11 @@ var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:re
 
 
 
-  console.log(photos.offset().bottom - $(window).scrollBottom());
+var position_from_top = photos.offset().top - $(window).scrollTop();
 
-  var btm = $(window).height()-(xofsset.top)
+
+
+  var btm = $(window).height()-position_from_top+photos.height();
 
 fly.css({
   width:photos.width()+"px",
