@@ -115,6 +115,11 @@ cont.append(caption);
 
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
+
+kharid.click(function(e) {
+  addtocart(vals.id);
+});
+
 cont.append(kharid);
 
 $(this).append(cont);

@@ -281,12 +281,19 @@ function animate(from,to,time,func) {
         },25);
    
 }
+
+
+
+
+function addtocart(id) {
+ console.log(id);
+}
+
 </script>
 
 
 
 @include("scripts.miniprod")
-
 
 
 @include("cartSlider")
