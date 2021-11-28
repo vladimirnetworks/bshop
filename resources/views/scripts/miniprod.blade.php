@@ -126,7 +126,7 @@ var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%"></d
 $('.fly').remove();
 
 fly.append(photos.clone());
-fly.append(caption.clone());
+fly.append(title.clone());
 
 
 
