@@ -288,10 +288,10 @@ cart = {};
 cart.prods = {};
 
 cart.eech = function(e) {
-console.log(this.prods);
- for (var i=0;i<this.prods.length;i++) {
-    e(this.prods[i]);
- }
+
+Object.keys(this.prods).forEach(function(key) {
+    e(this.prods[key])
+});
 
 }
 
