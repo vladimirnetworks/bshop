@@ -15,6 +15,16 @@
   <script src="/bs4/bootstrap.min.js"></script>
   <script src="/bs4/cook.js?{{time()}}"></script>
 
+<style>
+.fly {
+
+  animation: mymove 0.5s infinite;
+}
+
+@keyframes mymove {
+  50% {transform: rotate(360deg);}
+}
+</style>
 <script>
 
 function SwiperBox(fields) {
