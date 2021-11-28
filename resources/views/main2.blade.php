@@ -298,17 +298,22 @@ Object.keys(this.prods).forEach(function(key) {
 cart.total = function() {
     var tot = {amount:0,count:0}
     this.eech(function(prod) {
+      tot.count += prod.count;   
       tot.amount += prod.price*prod.count;
     });
     return tot;
 }
 
-function addtocart(prod) {
-    if (!cart.prods[prod.id]) {    
-        cart.prods[prod.id] = {count:1,...prod}; 
+cart.add(prod) {
+    if (!this.prods[prod.id]) {    
+        this.prods[prod.id] = {count:1,...prod}; 
     }
+}
 
-console.log(cart);    
+
+
+function addtocart(prod) {
+ cart.add(prod);  
 }
 
 </script>
