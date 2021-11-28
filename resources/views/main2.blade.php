@@ -334,11 +334,11 @@ function Cart() {
     return this;
 }
 
-
+/* cartup cardown */
 cartsliderdata = {};
 cartsliderdata.isup = false;
 cartsliderdata.userwording = false;
-
+cartsliderdata.timer = null;
 function cartup() {
 
     cartsliderdata.userwording = false;
@@ -358,6 +358,22 @@ function cartup() {
 
 }
 
+function cartdown(speed=100) {
+    cartsliderdata.userwording = false;
+    cartsliderdata.isup = false;
+
+    $(".cartslider").animate({
+        "height": "10vh"
+    }, speed)
+    $(".cartslider_dim").fadeOut(200);
+
+    $(".cartslider_smallview").fadeIn(200);
+    $(".cartslider_bigview").fadeOut(200);
+
+}
+/**/
+
+
 ////////////use///////////
 xcart = new Cart();
 
@@ -366,6 +382,19 @@ xcart = new Cart();
 function addtocart(prod) {
  xcart.add(prod);  
  cartup();
+
+     if (cartsliderdata.timer) {
+      clearTimeout(cartsliderdata.timer);
+    }
+
+    cartsliderdata.timer = setTimeout(function() {
+      if (!cartsliderdata.userwording) {
+
+           cartdown(500);
+
+      }
+    },4000);
+
 }
 
 xcart.addChangeListener(function() {
