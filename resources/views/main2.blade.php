@@ -268,13 +268,10 @@ body {
       background-color:yellow;
   }
 
- 30% {
-      transform: scale(1.2,1.2);
-      background-color:yellow;
-  }
+
 
    60% {
-      transform: scale(1,2.2);
+      transform: scale(1.5,1.5);
       background-color:yellow;
   }
 
@@ -289,6 +286,7 @@ body {
 .xshake {
 
   animation: xshake_anim .3s 2 ;
+  animation-timing-function: ease-in-out;
 }
 
 
