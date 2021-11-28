@@ -127,7 +127,7 @@ var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:re
 
 
 
-  console.log(photos.offset().top - $(window).scrollTop());
+  console.log(photos.offset().bottom - $(window).scrollBottom());
 
   var btm = $(window).height()-(xofsset.top)
 

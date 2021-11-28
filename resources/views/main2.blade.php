@@ -273,7 +273,7 @@ function animate(from,to,time,func) {
             
             var x = from+step*(to-from);
             
-            console.log(x);
+        
             
             func(x);
             
