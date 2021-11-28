@@ -406,9 +406,21 @@ function addtocart(prod) {
 xcart.addChangeListener(function() {
 
    var tot = xcart.total();
-   
- $('.cartslider_smallview_text').html(tot.amount)
+   $('.cartslider_smallview_text').html(tot.amount);
+
+
+   $(".cartslider_bigview").empty();
+
+   xcart.eech(function(prod) {
+        $(".cartslider_bigview").append("<div>"+prod.title+"</div>");
+   });
+
+
 });
+
+
+
+
 
 
 </script>
