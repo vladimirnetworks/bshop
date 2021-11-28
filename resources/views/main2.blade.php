@@ -289,7 +289,7 @@ cart.prods = {};
 
 function addtocart(prod) {
     if (!cart.prods[prod.id]) {    
-        cart.prods[prod.id] = prod; 
+        cart.prods[prod.id] = {count:1,...prod}; 
     }
 
 console.log(cart);    
