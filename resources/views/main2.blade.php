@@ -326,6 +326,7 @@ this.add = function(prod) {
 
 }
 
+return this;
 }
 
 
