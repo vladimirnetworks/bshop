@@ -113,7 +113,6 @@ cont.append(title);
 cont.append(price);
 cont.append(caption);
 
-var fly = $('<div style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%">fly</div>');
 
 
 
@@ -122,9 +121,14 @@ var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
 kharid.click(function(e) {
 
+var fly = $('<div style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%">fly</div>');
+
+
    $('body').append(fly);
 
-   fly.animate({bottom:"-100%"},3000);
+   fly.animate({bottom:"-100%"},3000),function() {
+     fly.remove();
+   };
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });
