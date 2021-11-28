@@ -151,7 +151,7 @@ $('body').append(fly);
 fly.css({transition:'all 1.5s'});
 
  setTimeout(function() {
-fly.css({bottom:"-100%",zoom:"20%"});
+fly.css({bottom:"-100%",width:"2vw"});
 },1000);
   /* fly.animate({bottom:"-100%"},1000),function() {
     setTimeout(function() {
