@@ -148,7 +148,7 @@ $('body').append(fly);
 
 
 
-fly.css({transition:'all .5s'});
+fly.css({transition:'all 1.5s'});
 
  setTimeout(function() {
 fly.css({bottom:"-100%",zoom:"20%"});
