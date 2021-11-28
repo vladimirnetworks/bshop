@@ -123,7 +123,7 @@ kharid.click(function(e) {
 
 var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%;left:0px">fly</div>');
 
-$('body').remove(".fly");
+$('.fly').remove();
 
   var xofsset = photos.offset();
 
@@ -139,7 +139,7 @@ left:xofsset.left+"px",
    $('body').append(fly);
 
    fly.animate({bottom:"-100%"},1000),function() {
-      $('body').remove(fly);
+      $('.fly').remove();
    };
    
 
