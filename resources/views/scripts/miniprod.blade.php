@@ -164,6 +164,8 @@ $('body').append(fly);
 
 $('#tr').get(0).play();
 
+
+
 fly.css({transition:'all 1.5s'});
 
  setTimeout(function() {
@@ -180,6 +182,7 @@ fly.css({bottom:"-100%",width:"1vw"});
   setTimeout(function() {
 
  $('.cartslider').addClass("xshake");
+ $('#shopp').get(0).play();
 
  },700);
 
