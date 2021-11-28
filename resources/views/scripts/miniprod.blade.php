@@ -123,9 +123,11 @@ kharid.click(function(e) {
 
 var fly = $('<div class="fly" style="width:50vh;height:100px;background-color:red;position:fixed;bottom:50%;left:0px">fly</div>');
 
-$('.fly').remove();
+//$('.fly').remove();
 
   var xofsset = photos.offset();
+
+  console.log(xofsset);
 
   var btm = $(window).height()-(xofsset.top)
 
@@ -136,10 +138,10 @@ height:photos.height()+"px",
 left:xofsset.left+"px",
 });
 
-   $('body').append(fly);
+  // $('body').append(fly);
 
    fly.animate({bottom:"-100%"},1000),function() {
-      $('.fly').remove();
+    //  $('.fly').remove();
    };
    
 
