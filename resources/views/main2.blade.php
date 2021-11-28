@@ -431,11 +431,13 @@ xcart.addChangeListener(function() {
    });
 
 
+setTimeout(function() {
+
 $('.cartslider').css('transform','scale(1.2)');
 setTimeout(function() {
     $('.cartslider').css('transform','scale(1.0)')
 },201)
-
+},300);
 
 });
 
