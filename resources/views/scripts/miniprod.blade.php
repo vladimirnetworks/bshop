@@ -129,7 +129,7 @@ var cloned_photos = photos.clone();
 
 cloned_photos.css({width:"100%"});
 
-fly.append(cloned_photos);
+fly.append($(photoitems[0]));
 
 //fly.append(title.clone());
 
