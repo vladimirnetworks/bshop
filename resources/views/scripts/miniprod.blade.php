@@ -117,7 +117,7 @@ cont.append(caption);
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
 kharid.click(function(e) {
-  addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:vals.price});
+  addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });
 
 cont.append(kharid);
