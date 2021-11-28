@@ -288,9 +288,9 @@ cart = {};
 cart.prods = {};
 
 cart.eech = function(e) {
-
+var self = this;
 Object.keys(this.prods).forEach(function(key) {
-    e(this.prods[parseInt(key)])
+    e(self.prods[key])
 });
 
 }
