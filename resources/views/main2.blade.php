@@ -395,9 +395,9 @@ function cartup() {
 
     cartsliderdata.userwording = false;
     cartsliderdata.isup = true;
-    $(".cartslider").animate({
+    $(".cartslider").css({
         "height": "80vh"
-    }, 100)
+    })
     $(".cartslider_dim").fadeIn(200);
 
     $(".cartslider_smallview").hide(200);
