@@ -388,6 +388,8 @@ cartsliderdata.userwording = false;
 cartsliderdata.timer = null;
 function cartup() {
 
+hpu("cartup");
+
     cartsliderdata.userwording = false;
     cartsliderdata.isup = true;
     $(".cartslider").animate({
@@ -403,7 +405,7 @@ function cartup() {
     }, 300);
 
 
-hpu("cartup");
+
 
 }
 
