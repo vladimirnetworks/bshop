@@ -458,9 +458,6 @@ xcart.addChangeListener(function() {
 
 
 
-$(".showsabad").click(function() {
-   cartup(); 
-});
 
 
 
@@ -478,5 +475,13 @@ $(".showsabad").click(function() {
 
 <audio id="tr" src="https://www.benham.ir/t.mp3" type="audio/mp3"></audio>
 <audio id="shopp" src="https://www.benham.ir/shopp.mp3" type="audio/mp3"></audio>
+
+<script>
+
+$(".showsabad").click(function() {
+   cartup(); 
+});
+
+</script>
 </body>
 </html>
