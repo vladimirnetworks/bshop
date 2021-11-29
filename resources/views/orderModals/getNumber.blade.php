@@ -8,7 +8,7 @@
          </div>
          <!-- Modal body -->
          <div class="modal-body text-center">
-            <div class="enternumber" style="display:none">
+            <div class="enternumber" >
                لطفا شماره تماستون رو وارد کنید 
                <br>
                <div>
