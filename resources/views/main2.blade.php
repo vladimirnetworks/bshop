@@ -331,7 +331,7 @@ function hpu(act) {
     history.pushState({"act":act}, act,"?"+act);
 }
 
-/*
+
 function Cart() {
 
     var self = this;
@@ -383,7 +383,7 @@ function Cart() {
 
     return this;
 }
-*/
+
 
 /* cartup cardown */
 cartsliderdata = {};
