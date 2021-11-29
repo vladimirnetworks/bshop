@@ -431,7 +431,7 @@ function addtocart(prod) {
     cartsliderdata.timer = setTimeout(function() {
       if (!cartsliderdata.userwording) {
 
-            cartdown(1000);
+           // cartdown(1000);
           
 
       }
