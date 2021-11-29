@@ -484,8 +484,6 @@ proc.enterNumber = function(number) {
 @include("orderModals.successOrder")
 
 @include("scripts.miniprod")
-
-
 @include("cartSlider")
 
 
@@ -494,25 +492,6 @@ proc.enterNumber = function(number) {
 <audio id="tr" src="https://www.benham.ir/t.mp3" type="audio/mp3"></audio>
 <audio id="shopp" src="https://www.benham.ir/shopp.mp3" type="audio/mp3"></audio>
 
-<script>
 
-$(".showsabad").click(function() {
-   cartup(); 
-});
-
-$(".cartslider_dim").click(function() {
-   cartdown(); 
-});
-
-
-$(".finishshop").click(function() {
-   cartdown(); 
-   $("#getNumberModal").modal("show");
-
-});
-
-
-
-</script>
 </body>
 </html>

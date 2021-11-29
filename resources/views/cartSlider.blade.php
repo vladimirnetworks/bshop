@@ -21,3 +21,22 @@
  </div>
 
 </div>
+
+
+<script>
+
+$(".showsabad").click(function() {
+   cartup(); 
+});
+
+$(".cartslider_dim").click(function() {
+   cartdown(); 
+});
+
+$(".finishshop").click(function() {
+   cartdown(); 
+   $("#getNumberModal").modal("show");
+
+});
+
+</script>
