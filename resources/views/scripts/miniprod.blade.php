@@ -79,11 +79,11 @@ $(this).addClass("col-12");
 
 
 
-/*
+
 animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function (x) {
   window.scrollTo(0, x);
 });
-*/
+
 
 
 $(this).css("background-color","#a9a9a9");
@@ -104,31 +104,31 @@ var mySwipe = new SwiperBox({
 					items:photoitems					
 					});
 
-alert("a");
+
 
 var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
-alert("b");
+
 var photos = $('<div style="width:60vw;margin-right: auto;margin-left: auto;max-width:300px;"></div>');
 photos.append($(mySwipe.HTMLElement));
-alert("c");
+
 var title = $('<div class="p-1 text-dark" style="font-size:120;font-weight:bold">'+vals.title+'</div>');
-alert("d");
+
 var price = $('<div class="p-1 text-success" style="font-size:150%;font-weight:bold">'+(vals.price)+' تومان </div>');
-alert("e");
+
 var caption = $('<ul style="text-align: right;font-size:90%">'+vals.caption+'</ul>');
 
 cont.append(photos);
 cont.append(title);
 cont.append(price);
 cont.append(caption);
-alert("f");
+
 
 
 
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
-kharid.click(function(e) {/*
+kharid.click(function(e) {
 
 var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%;background-color:white;z-index:99991"></div>');
 $('.fly').remove();
@@ -190,7 +190,7 @@ fly.css({bottom:"-100%",width:"1vw"});
  },700);
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
-*/});
+});
 
 cont.append(kharid);
 
