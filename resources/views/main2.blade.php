@@ -327,7 +327,7 @@ function animate(from,to,time,func) {
 
 function hpu(act) {
     console.log("added "+act);
-    window.history.pushState({"act":act}, "");
+    history.pushState({"act":act}, "");
 }
 
 function Cart() {
