@@ -83,6 +83,7 @@ animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function 
   window.scrollTo(0, x);
 });
 
+alert("ys");
 $(this).css("background-color","#a9a9a9");
 
 $(this).html('');
