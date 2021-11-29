@@ -2,7 +2,7 @@
    <div class="modal-dialog">
       <div class="modal-content">
          <!-- Modal Header -->
-
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
          <!-- Modal body -->
          <div class="modal-body text-center">
             <div class="enternumber" style="display:none">
