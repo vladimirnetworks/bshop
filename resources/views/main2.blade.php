@@ -326,6 +326,7 @@ function animate(from,to,time,func) {
 }
 
 function hpu(act) {
+    console.log("added "+act);
     window.history.pushState({"act":act}, "");
 }
 
@@ -504,8 +505,14 @@ proc.enterNumber = function(number) {
 
 
 <script>
+
+backacts = {};
+
+backacts['cartup'] = function() { cartdown(); }
+
 window.addEventListener('popstate', (event) => {
-  console.log(event.state);
+  //console.log(event.state);
+  //backacts[]
 });
 </script>
 </body>
