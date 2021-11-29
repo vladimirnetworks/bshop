@@ -429,7 +429,7 @@ function cartdown(speed=100) {
 
     $(".cartslider_bigview").css({'display':'none'});
   setTimeout(function() {
-      $(".cartslider_smallview").css({'display':'inline'});
+      $(".cartslider_smallview").css({'display':'flex'});
   
      }, 300);
 
