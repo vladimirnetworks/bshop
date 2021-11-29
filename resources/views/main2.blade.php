@@ -388,6 +388,9 @@ function Cart() {
         if (self.prods[prodid]) {
             self.prods[prodid].count = num;
         }
+        if (num<1) {
+          delete self.prods[prodid];
+        }
 
         this.triggerAllChangeListeners();
 
