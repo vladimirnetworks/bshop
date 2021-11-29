@@ -524,6 +524,11 @@ window.addEventListener('popstate', (event) => {
       cartup();  
    }
 
+   if (event.state.act == 'addednumber') {
+     $( ".modal" ).modal("hide");
+     $("#getNumberModal").modal("show");
+   }
+
   }
 
   console.log(event.state);

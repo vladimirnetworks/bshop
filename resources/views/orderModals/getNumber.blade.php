@@ -44,6 +44,8 @@ $("#reggetnumber").on('submit',function () {
     $( "#getNumberModal" ).modal("hide");
     $("#getAddressModal").modal("show");
 
+     hpu("addednumber");
+
     return false;
 });
 </script>
