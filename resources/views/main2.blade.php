@@ -25,6 +25,12 @@
   50% {transform: rotate(360deg);}
 }
 </style>
+
+<style>
+.modal-header {
+    border-bottom:0px;
+}
+</style>
 <script>
 
 function SwiperBox(fields) {
