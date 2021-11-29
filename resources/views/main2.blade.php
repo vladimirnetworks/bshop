@@ -489,9 +489,9 @@ xcart.addChangeListener(function() {
 
         var num = $('<div></div>');
 
-          num.append('<button class="btn btn-danger " style="float:left">+</button>');
-          num.append('<span style="float:left" >'+prod.count+'</span>');
-          num.append('<button class="btn btn-danger " style="float:left">-</button>');
+          num.append('<button class="btn btn-danger " style="display:inline-block">+</button>');
+          num.append('<span style="display:inline-block" >'+prod.count+'</span>');
+          num.append('<button class="btn btn-danger " style="display:inline-block">-</button>');
         
         cont.append($('<div style="display:inline-block"></div>').append(num));
 
