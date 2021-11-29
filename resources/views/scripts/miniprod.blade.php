@@ -178,7 +178,7 @@ left:xofsset.left+"px",
 $('body').append(fly);
 
 
-$('#tr').get(0).play();
+//$('#tr').get(0).play();
 
 
 
@@ -208,7 +208,7 @@ fly.css({bottom:"-100%",width:"1vw"});
   setTimeout(function() {
 
  $('.cartslider').addClass("xshake");
- $('#shopp').get(0).play();
+ //$('#shopp').get(0).play();
 
  },700);
 
