@@ -535,9 +535,7 @@ window.addEventListener('popstate', (event) => {
    }
 
 
-   if (event.state.act == 'addedaddress') {
-       window.location="index2";
-   }
+
 
 
 
