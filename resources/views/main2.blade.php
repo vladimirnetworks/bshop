@@ -488,7 +488,7 @@ xcart.addChangeListener(function() {
          cont.append('<div class="col">'+prod.tinytitle+"</div>");
          cont.append('<div class="col"><small>'+farsi_price(prod.price)+" تومان</small></div>");
 
-        var num = $('<div class="row"></div>');
+        var num = $('<div></div>');
 
           num.append('<button class="btn btn-danger " style="float:left">+</button>');
           num.append('<span style="float:left" >'+prod.count+'</span>');
