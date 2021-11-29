@@ -302,13 +302,13 @@ body {
 
 <script>
 
-/*
+
 function farsi_price(inp) {
 var inpc = inp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 return topersiannumber(inpc);
 }
-*/
-/*
+
+
 function animate(from,to,time,func) {
    
     var start = new Date().getTime(),
@@ -325,7 +325,7 @@ function animate(from,to,time,func) {
         },25);
    
 }
-*/
+
 function hpu(act) {
     console.log("added "+act);
     history.pushState({"act":act}, act,"?"+act);
@@ -369,6 +369,9 @@ function Cart() {
         }
     }
 
+ this.add = function(prod) {
+
+ }
   /*  this.add = function(prod) {
         if (!self.prods[prod.id]) {
             self.prods[prod.id] = {
@@ -430,12 +433,12 @@ function cartdown(speed=100) {
 
 
 ////////////use///////////
-//xcart = new Cart();
+xcart = new Cart();
 
 firsttimecartup = true;
 
 function addtocart(prod) {
-//xcart.add(prod);  
+xcart.add(prod);  
 /*
  if (firsttimecartup) {
    cartup();
@@ -461,7 +464,7 @@ function addtocart(prod) {
 
 
 
-/*
+
 xcart.addChangeListener(function() {
 
    var tot = xcart.total();
@@ -477,7 +480,7 @@ xcart.addChangeListener(function() {
 
 });
 
-*/
+
 
 
 
