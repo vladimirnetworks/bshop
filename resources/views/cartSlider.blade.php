@@ -3,9 +3,11 @@
 </div>
 
 
-<div style="direction:rtl;position:fixed;bottom:0px;left:0px;height:7vh;width:100%;background-color:white;z-index:1001" id="mcartslider" class="text-center cartslider border-top   ">
+<div style="direction:rtl;position:fixed;bottom:0px;left:0px;height:7vh;width:100%;background-color:white;z-index:1001" id="mcartslider" class="text-left cartslider border-top   ">
  <div class="cartslider_smallview">
- سبد خرید [<span class="cartslider_smallview_text"></span>]
+
+<span class="cartslider_smallview_text"></span><br>
+
  <button class="btn btn-info  showsabad">
 
 مشاهده سبد خرید
