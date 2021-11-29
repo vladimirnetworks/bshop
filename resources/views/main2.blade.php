@@ -482,6 +482,11 @@ $(".showsabad").click(function() {
    cartup(); 
 });
 
+$(".cartslider_dim").click(function() {
+   cartdown(); 
+});
+
+
 </script>
 </body>
 </html>
