@@ -400,10 +400,11 @@ function cartup() {
     cartsliderdata.isup = true;
     $(".cartslider").css({
         "height": "80vh"
-    })
+    });
+
     $(".cartslider_dim").fadeIn(200);
 
-    $(".cartslider_smallview").css({'display:none'});
+    $(".cartslider_smallview").css({'display':'none'});
     setTimeout(function() {
 
         $(".cartslider_bigview").fadeIn(200);
