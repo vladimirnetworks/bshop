@@ -325,6 +325,10 @@ function animate(from,to,time,func) {
    
 }
 
+function hpu(act) {
+    history.pushState({"act":act} "");
+}
+
 function Cart() {
 
     var self = this;
@@ -398,6 +402,8 @@ function cartup() {
 
     }, 300);
 
+
+hpu("cartup");
 
 }
 
@@ -493,5 +499,12 @@ proc.enterNumber = function(number) {
 <audio id="shopp" src="https://www.benham.ir/shopp.mp3" type="audio/mp3"></audio>
 
 
+
+
+<script>
+window.addEventListener('popstate', (event) => {
+  console.log(event.state);
+});
+</script>
 </body>
 </html>
