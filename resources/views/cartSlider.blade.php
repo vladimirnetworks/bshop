@@ -19,7 +19,9 @@
  
  <div class="cartslider_bigview_cart"></div>
  
-  <button class="finishshop">finish</button>
+<div class="w-100 text-center p-2 m-2">
+  <button class="finishshop btn btn-primary">finish</button>
+</div>
 
  </div>
 
