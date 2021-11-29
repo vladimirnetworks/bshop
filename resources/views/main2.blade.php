@@ -511,7 +511,7 @@ backacts = {};
 backacts['cartup'] = function() { cartdown(); }
 
 window.addEventListener('popstate', (event) => {
-  //console.log(event.state);
+  console.log(event.state.act);
   //backacts[]
 });
 </script>
