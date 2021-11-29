@@ -33,6 +33,7 @@
 
 <script>
 $( "#getNumberModal" ).on('shown', function(){
+    console.log("shows");
  $("#getnumber").focus();
 });
 </script>
