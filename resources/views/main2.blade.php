@@ -432,7 +432,7 @@ xcart = new Cart();
 firsttimecartup = true;
 
 function addtocart(prod) {
- xcart.add(prod);  
+ //xcart.add(prod);  
 /*
  if (firsttimecartup) {
    cartup();
