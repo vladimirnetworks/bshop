@@ -516,6 +516,14 @@ window.addEventListener('popstate', (event) => {
   if (event.state == null) {
      cartdown();  
      $( ".modal" ).modal("hide");
+  } else {
+
+   if (event.state.act == null) {
+    
+     $( ".modal" ).modal("hide");
+      cartup();  
+   }
+
   }
 
   console.log(event.state);
