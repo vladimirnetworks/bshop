@@ -3,10 +3,10 @@
 </div>
 
 
-<div style="direction:rtl;position:fixed;bottom:0px;left:0px;height:7vh;width:100%;background-color:white;z-index:1001" id="mcartslider" class="text-center cartslider p-3 border-top  p-3 ">
+<div style="direction:rtl;position:fixed;bottom:0px;left:0px;height:7vh;width:100%;background-color:white;z-index:1001" id="mcartslider" class="text-center cartslider border-top   ">
  <div class="cartslider_smallview">
  سبد خرید [<span class="cartslider_smallview_text"></span>]
- <button class="btn btn-info m-2 showsabad">
+ <button class="btn btn-info  showsabad">
 
 مشاهده سبد خرید
 
