@@ -496,7 +496,7 @@ xcart.addChangeListener(function() {
         cont.append($('<div style="display:inline-block"></div>').append(num));
 
 
-        cont.append('<div style="display:inline-block"><small>'+farsi_price(prod.price)+" تومان</small></div>");
+        cont.append('<div style="display:inline-block;width: 25%"><small>'+farsi_price(prod.price)+" تومان</small></div>");
 
 
       $(".cartslider_bigview_cart").append(cont);
