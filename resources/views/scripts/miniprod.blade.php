@@ -1,5 +1,8 @@
 <script>
 
+function jzert() {
+
+}
 
 elemclicked = -1;
 elementbackup = -1
@@ -198,7 +201,7 @@ fly.css({bottom:"-100%",width:"1vw"});
 
 //var cartxx = {id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)};
 //alert(cartxx);
-//zert();
+jzert();
 alert("add");
 
 });
