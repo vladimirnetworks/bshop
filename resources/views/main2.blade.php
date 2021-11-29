@@ -489,9 +489,9 @@ xcart.addChangeListener(function() {
 
         var num = $('<div></div>');
 
-          num.append('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-right " >+</button>');
+          num.append('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-right btn-sm" >+</button>');
           num.append('<span style="display:inline-block" >'+prod.count+'</span>');
-          num.append('<button style="display:inline-block" class="btn btn-danger rounded-left" >-</button>');
+          num.append('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-left btn-sm" >-</button>');
         
         cont.append($('<div style="display:inline-block"></div>').append(num));
 
