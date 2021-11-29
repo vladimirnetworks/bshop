@@ -369,7 +369,7 @@ function Cart() {
         }
     }
 
-    this.add = function(prod) {
+  /*  this.add = function(prod) {
         if (!self.prods[prod.id]) {
             self.prods[prod.id] = {
                 count: 1,
@@ -380,7 +380,7 @@ function Cart() {
         this.triggerAllChangeListeners();
 
     }
-
+*/
     return this;
 }
 
