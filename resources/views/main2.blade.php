@@ -517,6 +517,8 @@ window.addEventListener('popstate', (event) => {
      cartdown();  
      $( ".modal" ).modal("hide");
   }
+
+  console.log(event.state);
 });
 </script>
 </body>
