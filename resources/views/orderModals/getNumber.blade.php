@@ -32,8 +32,8 @@
 </div>
 
 <script>
-$( "#getNumberModal" ).on('shown', function(){
+$( "#getNumberModal" ).on('shown.bs.modal', function(){
     console.log("shows");
- $("#getnumber").focus();
+ $("#getnumber").trigger('focus');
 });
 </script>
