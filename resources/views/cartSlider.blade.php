@@ -17,7 +17,7 @@
 
  <div class="cartslider_bigview text-center" style="display:none">
  
- <div class="cartslider_bigview_cart row"></div>
+ <div class="cartslider_bigview_cart"></div>
  
   <button class="finishshop">finish</button>
 
