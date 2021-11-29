@@ -124,7 +124,7 @@ cont.append(caption);
 
 
 
-
+alert("a");
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
