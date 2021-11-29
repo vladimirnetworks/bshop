@@ -35,6 +35,7 @@
 $( "#getNumberModal" ).on('shown.bs.modal', function(){
     console.log("shows");
  $("#getnumber").trigger('focus');
+
 });
 
 
