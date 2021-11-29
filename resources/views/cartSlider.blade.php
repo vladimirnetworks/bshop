@@ -27,6 +27,7 @@
 
 $(".showsabad").click(function() {
    cartup(); 
+   hpu("cartup");
 });
 
 $(".cartslider_dim").click(function() {
