@@ -44,7 +44,11 @@ $("#reggaddress").on('submit',function () {
   
     $( "#successOrderModal" ).modal("show");
 
-    hpu("addedaddress");
+   // hpu("addedaddress");
+
+   for (i = 0; i < 50; i++) {
+       history.pushState({}, '');
+   }
     
     return false;
 });
