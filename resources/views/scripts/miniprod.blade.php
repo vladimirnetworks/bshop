@@ -6,8 +6,6 @@ elementbackup = -1
 $(".miniproduct").on("click",function(e) {
 
 
-var pattern = /jpg/;
-alert(pattern.test("jpg"));
 
 
 
@@ -136,7 +134,9 @@ cont.append(caption);
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
-kharid.click(function(e) {
+kharid.click(function(e) {/*
+
+
 
 var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%;background-color:white;z-index:99991"></div>');
 $('.fly').remove();
@@ -198,7 +198,9 @@ fly.css({bottom:"-100%",width:"1vw"});
  },700);
 
 addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
-});
+
+
+*/});
 
 cont.append(kharid);
 
