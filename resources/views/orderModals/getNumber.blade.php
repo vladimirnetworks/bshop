@@ -36,4 +36,10 @@ $( "#getNumberModal" ).on('shown.bs.modal', function(){
     console.log("shows");
  $("#getnumber").trigger('focus');
 });
+
+
+$("#reggetnumber").on('submit',function () {
+
+    return false;
+});
 </script>
