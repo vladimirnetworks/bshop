@@ -518,7 +518,7 @@ window.addEventListener('popstate', (event) => {
      $( ".modal" ).modal("hide");
   } else {
 
-   if (event.state.act == null) {
+   if (event.state.act == 'cartup') {
     
      $( ".modal" ).modal("hide");
       cartup();  
