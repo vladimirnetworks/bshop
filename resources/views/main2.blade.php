@@ -510,6 +510,8 @@ backacts = {};
 
 backacts['cartup'] = function() { cartdown(); }
 
+hpu("start");
+  
 window.addEventListener('popstate', (event) => {
   console.log(event);
   //backacts[]
