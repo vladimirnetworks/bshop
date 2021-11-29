@@ -308,7 +308,7 @@ var inpc = inp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 return topersiannumber(inpc);
 }
 */
-
+/*
 function animate(from,to,time,func) {
    
     var start = new Date().getTime(),
@@ -325,7 +325,7 @@ function animate(from,to,time,func) {
         },25);
    
 }
-
+*/
 function hpu(act) {
     console.log("added "+act);
     history.pushState({"act":act}, act,"?"+act);
