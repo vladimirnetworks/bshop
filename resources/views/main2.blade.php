@@ -433,9 +433,9 @@ firsttimecartup = true;
 
 function addtocart(prod) {
  xcart.add(prod);  
-
+/*
  if (firsttimecartup) {
-    //cartup();
+   cartup();
     firsttimecartup=false;
 
 
@@ -446,14 +446,14 @@ function addtocart(prod) {
     cartsliderdata.timer = setTimeout(function() {
       if (!cartsliderdata.userwording) {
 
-           // cartdown(1000);
+          cartdown(1000);
           
 
       }
     },4000);
 
      }
-
+*/
 }
 
 xcart.addChangeListener(function() {
