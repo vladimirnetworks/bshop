@@ -190,7 +190,7 @@ fly.css({bottom:"-100%",width:"1vw"});
 
  },700);
 
-  addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
+  //addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 });
 
 cont.append(kharid);
