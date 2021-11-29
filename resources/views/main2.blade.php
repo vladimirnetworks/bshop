@@ -407,7 +407,8 @@ function cartup() {
     $(".cartslider_smallview").css({'display':'none'});
     setTimeout(function() {
 
-        $(".cartslider_bigview").fadeIn(200);
+       
+        $(".cartslider_bigview").css({'display':'inline'});
 
     }, 300);
 
