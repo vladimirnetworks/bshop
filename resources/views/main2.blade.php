@@ -383,6 +383,17 @@ function Cart() {
 
     }
 
+
+      this.changeCount = function(prodid,num) {
+        if (self.prods[prod.id]) {
+            self.prods[prod.id].count = num;
+        }
+
+        this.triggerAllChangeListeners();
+
+    }
+
+
     return this;
 }
 
@@ -489,7 +500,12 @@ xcart.addChangeListener(function() {
 
         var num = $('<div></div>');
 
-          num.append('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-right btn-sm" >+</button>');
+          var bez = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-right btn-sm" >+</button>');
+
+          num.append(bez);
+          bez.click(function() {
+              xcart.changeCount(prod.id,prod.count+1);
+          });
           num.append('<span style="display:inline-block" >'+prod.count+'</span>');
           num.append('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-left btn-sm" >-</button>');
         
