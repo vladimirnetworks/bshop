@@ -12,6 +12,12 @@
 
  </button></div>
 
- <div class="cartslider_bigview text-center" style="display:none">this is big view</div>
+ <div class="cartslider_bigview text-center" style="display:none">
+ 
+ <div class="cartslider_bigview_cart"></div>
+ 
+  <button class="finishshop">finish</button>
+
+ </div>
 
 </div>

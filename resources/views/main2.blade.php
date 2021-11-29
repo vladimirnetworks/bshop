@@ -447,10 +447,10 @@ xcart.addChangeListener(function() {
    $('.cartslider_smallview_text').html(tot.amount);
 
 
-   $(".cartslider_bigview").empty();
+   $(".cartslider_bigview_cart").empty();
 
    xcart.eech(function(prod) {
-        $(".cartslider_bigview").append("<div>"+prod.title+"</div>");
+        $(".cartslider_bigview_cart").append("<div>"+prod.title+"</div>");
    });
 
 
@@ -485,6 +485,12 @@ $(".showsabad").click(function() {
 $(".cartslider_dim").click(function() {
    cartdown(); 
 });
+
+
+$(".finishshop").click(function() {
+   cartdown(); 
+});
+
 
 
 </script>
