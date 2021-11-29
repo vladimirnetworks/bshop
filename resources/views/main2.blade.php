@@ -484,14 +484,15 @@ xcart.addChangeListener(function() {
    xcart.eech(function(prod) {
 
         var cont = $('<div class="row m-0"></div>')
-        cont.append('<div class="col">'+prod.tinytitle+"</div>");
-        cont.append('<div class="col"><small>'+farsi_price(prod.price)+" تومان</small></div>");
+
+         cont.append('<div class="col">'+prod.tinytitle+"</div>");
+         cont.append('<div class="col"><small>'+farsi_price(prod.price)+" تومان</small></div>");
 
         var num = $('<div class="row"></div>');
 
-          num.append('<button  class="btn btn-danger col">+</button>');
-          num.append('<span  class="col">'+prod.count+'</span>');
-          num.append('<button class="btn btn-danger col">-</button>');
+          num.append('<button class="btn btn-danger " style="float:left">+</button>');
+          num.append('<span style="float:left" >'+prod.count+'</span>');
+          num.append('<button class="btn btn-danger " style="float:left">-</button>');
         
         cont.append($('<div class="col-3"></div>').append(num));
 
