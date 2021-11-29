@@ -492,7 +492,7 @@ xcart.addChangeListener(function() {
           num.append('<span  class="col">'+prod.count+'</span>');
           num.append('<button class="col">-</button>');
         
-        cont.append(num);
+        cont.append($('<div class="col"></div>').append(num));
 
       $(".cartslider_bigview_cart").append(cont);
    });
