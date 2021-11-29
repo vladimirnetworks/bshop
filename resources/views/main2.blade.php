@@ -482,12 +482,21 @@ xcart.addChangeListener(function() {
 
 
    xcart.eech(function(prod) {
+
         var cont = $('<div class="row"></div>')
         cont.append('<div class="col">'+prod.tinytitle+"</div>");
         cont.append('<div class="col"><small>'+farsi_price(prod.price)+" تومان</small></div>");
 
+        var num = $('<div class="row"></div>');
+          num.append('<button  class="col">+</button>");
+          num.append('<span  class="col">'+prod.count+'</span>");
+          num.append('<button class="col">-</button>");
+        
+        cont.append(num);
+
       $(".cartslider_bigview_cart").append(cont);
    });
+
 
 
 
