@@ -119,7 +119,7 @@ photos.append($(mySwipe.HTMLElement));
 
 
 var title = $('<div class="p-1 text-dark" style="font-size:120;font-weight:bold">'+vals.title+'</div>');
-var price = $('<div class="p-1 text-success" style="font-size:150%;font-weight:bold">'+(vals.price)+' تومان </div>');
+var price = $('<div class="p-1 text-success" style="font-size:150%;font-weight:bold">'+farsi_price(vals.price)+' تومان </div>');
 var caption = $('<ul style="text-align: right;font-size:90%">'+vals.caption+'</ul>');
 
 
