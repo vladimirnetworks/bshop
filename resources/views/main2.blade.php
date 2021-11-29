@@ -498,13 +498,14 @@ xcart.addChangeListener(function() {
 
          cont.append('<div style="display:inline-block;width:50%"><small>'+prod.tinytitle+"</small></div>");
 
-        var num = $('<div></div>');
+          var num = $('<div></div>');
 
           var bez = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-right btn-sm" >+</button>');
 
           num.append(bez);
+          var prd = prod;
           bez.click(function() {
-              xcart.changeCount(prod.id,prod.count+1);
+              xcart.changeCount(prd.id,prd.count+1);
           });
           num.append('<span style="display:inline-block" >'+prod.count+'</span>');
           num.append('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-left btn-sm" >-</button>');
