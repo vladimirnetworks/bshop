@@ -513,8 +513,11 @@ backacts['cartup'] = function() { cartdown(); }
 
   
 window.addEventListener('popstate', (event) => {
-  console.log(event);
-  //backacts[]
+  if (event.state == null) {
+     cartdown();
+   
+     $( ".modal" ).modal("hide");
+  }
 });
 </script>
 </body>
