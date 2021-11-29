@@ -456,8 +456,8 @@ function addtocart(prod) {
 */
 }
 
-function zert() {
-    
+function jzert() {
+
 }
 
 xcart.addChangeListener(function() {
