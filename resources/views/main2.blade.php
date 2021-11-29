@@ -484,12 +484,13 @@ xcart.addChangeListener(function() {
 
 </script>
 
+@include("scripts.miniprod")
 
 @include("orderModals.getNumber")
 @include("orderModals.getAddress")
 @include("orderModals.successOrder")
 
-@include("scripts.miniprod")
+
 @include("cartSlider")
 
 
