@@ -369,21 +369,17 @@ function Cart() {
         }
     }
 
- this.add = function(prod) {
-
- }
-  /*  this.add = function(prod) {
+  this.add = function(prod) {
         if (!self.prods[prod.id]) {
-            self.prods[prod.id] = {
-                count: 1,
-                ...prod
-            };
+            var newprod = prod;
+            newprod.count = 1;
+            self.prods[prod.id] = newprod;
         }
 
         this.triggerAllChangeListeners();
 
     }
-*/
+
     return this;
 }
 
