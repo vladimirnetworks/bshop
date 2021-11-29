@@ -1,6 +1,8 @@
 <script>
 
+function jzert() {
 
+}
 
 elemclicked = -1;
 elementbackup = -1

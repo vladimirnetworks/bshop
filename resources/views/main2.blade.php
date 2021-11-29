@@ -456,9 +456,7 @@ function addtocart(prod) {
 */
 }
 
-function jzert() {
 
-}
 
 /*
 xcart.addChangeListener(function() {
