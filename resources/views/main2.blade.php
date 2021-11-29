@@ -428,8 +428,10 @@ function cartdown(speed=100) {
     $(".cartslider_dim").css({'display':'none'});
 
   
+  setTimeout(function() {
       $(".cartslider_smallview").css({'display':'inline'});
     $(".cartslider_bigview").css({'display':'none'});
+     }, 300);
 
 }
 /**/
