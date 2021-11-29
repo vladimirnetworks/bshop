@@ -331,6 +331,7 @@ function hpu(act) {
     history.pushState({"act":act}, act,"?"+act);
 }
 
+/*
 function Cart() {
 
     var self = this;
@@ -382,6 +383,7 @@ function Cart() {
 
     return this;
 }
+*/
 
 /* cartup cardown */
 cartsliderdata = {};
@@ -428,12 +430,12 @@ function cartdown(speed=100) {
 
 
 ////////////use///////////
-xcart = new Cart();
+//xcart = new Cart();
 
 firsttimecartup = true;
 
 function addtocart(prod) {
-xcart.add(prod);  
+//xcart.add(prod);  
 /*
  if (firsttimecartup) {
    cartup();
