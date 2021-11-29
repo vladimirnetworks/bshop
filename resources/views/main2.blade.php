@@ -499,6 +499,7 @@ $(".cartslider_dim").click(function() {
 $(".finishshop").click(function() {
    cartdown(); 
    $("#getNumberModal").modal("show");
+
 });
 
 
