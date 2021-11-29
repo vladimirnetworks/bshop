@@ -326,7 +326,7 @@ function animate(from,to,time,func) {
 }
 
 function hpu(act) {
-    history.pushState({"act":act}, "");
+    window.history.pushState({"act":act}, "");
 }
 
 function Cart() {
