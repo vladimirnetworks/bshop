@@ -190,8 +190,14 @@ fly.css({transition:'all 1.5s'});
         "height": "30vh"
     });
 
+        $(".cartslider_smallview").css({
+        "align-items": "start"
+    });
 
-    
+
+
+
+
  setTimeout(function() {
 fly.css({bottom:"-100%",width:"1vw"});
 },200);
@@ -212,6 +218,12 @@ fly.css({bottom:"-100%",width:"1vw"});
      $(".cartslider").css({
         "height": "9vh"
      });
+
+
+        $(".cartslider_smallview").css({
+        "align-items": "center"
+    });
+
 
  },900);
 
