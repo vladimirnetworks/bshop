@@ -3,7 +3,7 @@
 </div>
 
 
-<div style="direction:rtl;position:fixed;bottom:0px;left:0px;width:100%;background-color:white;z-index:1001" id="mcartslider" class="text-left cartslider border-top   ">
+<div style="height:6vh;direction:rtl;position:fixed;bottom:0px;left:0px;width:100%;background-color:white;z-index:1001" id="mcartslider" class="text-left cartslider border-top   ">
  <div class="cartslider_smallview">
 
 <span class="cartslider_smallview_text" style="font-size:90%;"></span>
