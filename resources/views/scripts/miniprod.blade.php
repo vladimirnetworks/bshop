@@ -117,6 +117,7 @@ var price = $('<div class="p-1 text-success" style="font-size:150%;font-weight:b
 
 var caption = $('<ul style="text-align: right;font-size:90%">'+vals.caption+'</ul>');
 
+alert("a");
 cont.append(photos);
 cont.append(title);
 cont.append(price);
@@ -124,7 +125,7 @@ cont.append(caption);
 
 
 
-alert("a");
+
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
