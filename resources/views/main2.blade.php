@@ -485,7 +485,7 @@ xcart.addChangeListener(function() {
 
         var cont = $('<div class=" m-0"></div>')
 
-         cont.append('<div style="display:inline-block">'+prod.tinytitle+"</div>");
+         cont.append('<div style="display:inline-block;width:50%"><small>'+prod.tinytitle+"</small></div>");
 
         var num = $('<div></div>');
 
