@@ -92,7 +92,7 @@ $(this).html('');
 
 var vals = JSON.parse($(this).attr("data-me"));
 
-alert(vals);
+
 
 var photoitems = [];
 console.log(vals.photos);
@@ -105,7 +105,7 @@ var mySwipe = new SwiperBox({
 					});
 
 
-
+alert(vals.title);
 var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
 
 var photos = $('<div style="width:60vw;margin-right: auto;margin-left: auto;max-width:300px;"></div>');
