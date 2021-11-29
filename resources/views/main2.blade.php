@@ -456,6 +456,10 @@ function addtocart(prod) {
 */
 }
 
+function zert() {
+    
+}
+
 xcart.addChangeListener(function() {
 
    var tot = xcart.total();
