@@ -478,10 +478,15 @@ xcart.addChangeListener(function() {
 
 
 
+
+
+</script>
+
+
+<script>
 function jzert() {
 
 }
-
 </script>
 
 @include("scripts.miniprod")
