@@ -486,7 +486,6 @@ xcart.addChangeListener(function() {
         var cont = $('<div class=" m-0"></div>')
 
          cont.append('<div style="display:inline-block">'+prod.tinytitle+"</div>");
-         cont.append('<div style="display:inline-block"><small>'+farsi_price(prod.price)+" تومان</small></div>");
 
         var num = $('<div></div>');
 
@@ -495,6 +494,10 @@ xcart.addChangeListener(function() {
           num.append('<button class="btn btn-danger " style="float:left">-</button>');
         
         cont.append($('<div style="display:inline-block"></div>').append(num));
+
+
+        cont.append('<div style="display:inline-block"><small>'+farsi_price(prod.price)+" تومان</small></div>");
+
 
       $(".cartslider_bigview_cart").append(cont);
    });
