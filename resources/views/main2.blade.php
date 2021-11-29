@@ -302,11 +302,12 @@ body {
 
 <script>
 
+/*
 function farsi_price(inp) {
 var inpc = inp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 return topersiannumber(inpc);
 }
-
+*/
 
 function animate(from,to,time,func) {
    
