@@ -432,7 +432,7 @@ xcart = new Cart();
 firsttimecartup = true;
 
 function addtocart(prod) {
- //xcart.add(prod);  
+xcart.add(prod);  
 /*
  if (firsttimecartup) {
    cartup();
@@ -458,7 +458,7 @@ function addtocart(prod) {
 
 
 
-/*
+
 xcart.addChangeListener(function() {
 
    var tot = xcart.total();
@@ -473,21 +473,21 @@ xcart.addChangeListener(function() {
 
 
 });
-*/
 
 
 
 
 
-
-</script>
-
-
-<script>
 function jzert() {
 
 }
+
+
+
 </script>
+
+
+
 
 @include("scripts.miniprod")
 
