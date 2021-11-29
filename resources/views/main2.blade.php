@@ -486,8 +486,10 @@ xcart.addChangeListener(function() {
         cont.append('<div class="col">'+prod.tinytitle+"</div>");
         cont.append('<div class="col"><small>'+farsi_price(prod.price)+" تومان</small></div>");
 
+      $(".cartslider_bigview_cart").append(cont);
    });
- $(".cartslider_bigview_cart").append(cont);
+
+
 
 });
 
