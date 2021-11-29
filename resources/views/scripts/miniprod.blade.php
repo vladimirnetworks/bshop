@@ -7,6 +7,9 @@ elementbackup = -1
 $(".miniproduct").on("click",function(e) {
 
 
+    $(".cartslider").css({
+        "height": "30vh"
+    });
 
 
 
@@ -196,6 +199,19 @@ fly.css({bottom:"-100%",width:"1vw"});
  $('#shopp').get(0).play();
 
  },700);
+
+
+  setTimeout(function() {
+
+     $(".cartslider").css({
+        "height": "9vh"
+     });
+
+ },900);
+
+
+
+
 
 
 addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});

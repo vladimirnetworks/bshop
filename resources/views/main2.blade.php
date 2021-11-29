@@ -421,9 +421,9 @@ function cartdown(speed=100) {
     cartsliderdata.userwording = false;
     cartsliderdata.isup = false;
 
-    $(".cartslider").animate({
-        "height": "6vh"
-    }, speed)
+    $(".cartslider").css({
+        "height": "9vh"
+    })
     
     $(".cartslider_dim").css({'display':'none'});
 
