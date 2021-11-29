@@ -481,7 +481,7 @@ proc.enterNumber = function(number) {
 
 @include("orderModals.getNumber")
 @include("orderModals.getAddress")
-
+@include("orderModals.successOrder")
 
 @include("scripts.miniprod")
 
