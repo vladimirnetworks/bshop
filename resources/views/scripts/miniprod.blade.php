@@ -85,11 +85,11 @@ $(this).addClass("col-12");
 
 
 
-/*
+
 animate(document.documentElement.scrollTop,$(this).offset().top-50,200,function (x) {
   window.scrollTo(0, x);
 });
-*/
+
 
 
 $(this).css("background-color","#a9a9a9");
@@ -199,7 +199,7 @@ fly.css({bottom:"-100%",width:"1vw"});
 
 
 addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
-alert("add");
+
 
 });
 
