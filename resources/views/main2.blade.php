@@ -464,7 +464,7 @@ xcart.add(prod);
 xcart.addChangeListener(function() {
 
    var tot = xcart.total();
-   $('.cartslider_smallview_text').html(tot.amount);
+   $('.cartslider_smallview_text').html(farsi_price(tot.amount)+" تومان");
 
 
    $(".cartslider_bigview_cart").empty();
