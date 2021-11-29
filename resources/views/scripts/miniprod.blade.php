@@ -197,9 +197,8 @@ fly.css({bottom:"-100%",width:"1vw"});
 
  },700);
 
-//var cartxx = {id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)};
-//alert(cartxx);
-jzert();
+
+addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
 alert("add");
 
 });
