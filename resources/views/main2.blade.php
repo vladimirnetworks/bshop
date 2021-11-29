@@ -464,6 +464,9 @@ xcart.addChangeListener(function() {
 </script>
 
 
+@include("orderModals.getNumber")
+
+
 
 @include("scripts.miniprod")
 
@@ -489,6 +492,7 @@ $(".cartslider_dim").click(function() {
 
 $(".finishshop").click(function() {
    cartdown(); 
+   $("#getNumberModal").modal("show");
 });
 
 
