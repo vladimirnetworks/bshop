@@ -119,12 +119,10 @@ cont.append(caption);
 
 var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
-kharid.click(function(e) {
+kharid.click(function(e) {/*
 
 var fly = $('<div class="fly" style="position:fixed;bottom:-100%;left:-100%;background-color:white;z-index:99991"></div>');
-
 $('.fly').remove();
-
 var cloned_photos = photos.clone();
 
 cloned_photos.css({width:"100%"});
@@ -171,11 +169,7 @@ fly.css({transition:'all 1.5s'});
  setTimeout(function() {
 fly.css({bottom:"-100%",width:"1vw"});
 },200);
-  /* fly.animate({bottom:"-100%"},1000),function() {
-    setTimeout(function() {
-      $('.fly').remove();
-    },200);
-   };*/
+
 
  $('.cartslider').removeClass("xshake");
 
@@ -187,7 +181,7 @@ fly.css({bottom:"-100%",width:"1vw"});
  },700);
 
   addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(vals.price)});
-});
+*/});
 
 cont.append(kharid);
 
