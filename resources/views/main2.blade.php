@@ -529,6 +529,12 @@ window.addEventListener('popstate', (event) => {
      $("#getNumberModal").modal("show");
    }
 
+   if (event.state.act == 'addedaddress') {
+     $( ".modal" ).modal("hide");
+     $("#getAddressModal").modal("show");
+   }
+
+
   }
 
   console.log(event.state);

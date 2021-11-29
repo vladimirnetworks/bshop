@@ -43,6 +43,8 @@ $("#reggaddress").on('submit',function () {
     $( "#getAddressModal" ).modal("hide");
   
     $( "#successOrderModal" ).modal("show");
+
+    hpu("addedaddress");
     
     return false;
 });
