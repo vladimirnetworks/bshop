@@ -4,6 +4,13 @@
 elemclicked = -1;
 elementbackup = -1
 $(".miniproduct").on("click",function(e) {
+
+
+var pattern = /jpg/;
+alert(pattern.test("jpg"));
+
+
+
 if (elemclicked != -1) {
   console.log("ihav");
 elemclicked.addClass("col-4");
