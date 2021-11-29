@@ -42,6 +42,7 @@ $("#reggaddress").on('submit',function () {
 
     $( "#getAddressModal" ).modal("hide");
   
+    $( "#successOrderModal" ).modal("show");
     
     return false;
 });
