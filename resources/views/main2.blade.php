@@ -461,7 +461,7 @@ function addtocart(prod) {
 
 
 
-
+/*
 xcart.addChangeListener(function() {
 
    var tot = xcart.total();
@@ -477,7 +477,7 @@ xcart.addChangeListener(function() {
 
 });
 
-
+*/
 
 
 
