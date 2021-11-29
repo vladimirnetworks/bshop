@@ -417,7 +417,7 @@ function cartdown(speed=100) {
     cartsliderdata.isup = false;
 
     $(".cartslider").animate({
-        "height": "10vh"
+        "height": "auto"
     }, speed)
     $(".cartslider_dim").fadeOut(200);
 
