@@ -491,7 +491,7 @@ xcart.addChangeListener(function() {
 
           num.append('<button class="btn btn-danger " style="display:inline-block">+</button>');
           num.append('<span style="display:inline-block" >'+prod.count+'</span>');
-          num.append('<button class="btn btn-danger " style="display:inline-block">-</button>');
+          num.append('<button class="btn btn-danger rounded-left" style="display:inline-block">-</button>');
         
         cont.append($('<div style="display:inline-block"></div>').append(num));
 
