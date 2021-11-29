@@ -485,8 +485,8 @@ xcart.addChangeListener(function() {
 
         var cont = $('<div class="row m-0"></div>')
 
-         cont.append('<div class="col">'+prod.tinytitle+"</div>");
-         cont.append('<div class="col"><small>'+farsi_price(prod.price)+" تومان</small></div>");
+         cont.append('<div style="display:inline-block">'+prod.tinytitle+"</div>");
+         cont.append('<div style="display:inline-block"><small>'+farsi_price(prod.price)+" تومان</small></div>");
 
         var num = $('<div></div>');
 
@@ -494,7 +494,7 @@ xcart.addChangeListener(function() {
           num.append('<span style="float:left" >'+prod.count+'</span>');
           num.append('<button class="btn btn-danger " style="float:left">-</button>');
         
-        cont.append($('<div class="col"></div>').append(num));
+        cont.append($('<div style="display:inline-block"></div>').append(num));
 
       $(".cartslider_bigview_cart").append(cont);
    });
