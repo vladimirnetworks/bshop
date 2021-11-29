@@ -464,6 +464,15 @@ xcart.addChangeListener(function() {
 
 
 
+user = {};
+user.number = "";
+user.address = "";
+
+proc = {};
+
+proc.enterNumber = function(number) {
+   user.number = number;  
+}
 
 
 
