@@ -424,10 +424,12 @@ function cartdown(speed=100) {
     $(".cartslider").animate({
         "height": "6vh"
     }, speed)
-    $(".cartslider_dim").fadeOut(200);
+    
+    $(".cartslider_dim").css({'display':'none'});
 
-    $(".cartslider_smallview").fadeIn(200);
-    $(".cartslider_bigview").fadeOut(200);
+  
+      $(".cartslider_smallview").css({'display':'inline'});
+    $(".cartslider_bigview").css({'display':'none'});
 
 }
 /**/
