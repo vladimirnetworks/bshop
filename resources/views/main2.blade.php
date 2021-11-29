@@ -262,7 +262,7 @@ function SwiperBox(fields) {
 }
 
 body {
-  margin-top:7vh;
+  margin-top:0px;
 }
 
 
