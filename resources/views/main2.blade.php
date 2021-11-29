@@ -483,7 +483,7 @@ xcart.addChangeListener(function() {
 
    xcart.eech(function(prod) {
 
-        var cont = $('<div class="m-0 mt-1 border-bottom  border-secondary"></div>')
+        var cont = $('<div class="m-0 mt-1 border-bottom  border-secondary pb-1"></div>')
 
          cont.append('<div style="display:inline-block;width:50%"><small>'+prod.tinytitle+"</small></div>");
 
