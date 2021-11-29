@@ -7,9 +7,7 @@ elementbackup = -1
 $(".miniproduct").on("click",function(e) {
 
 
-    $(".cartslider").css({
-        "height": "30vh"
-    });
+
 
 
 
@@ -186,6 +184,14 @@ $('#tr').get(0).play();
 
 fly.css({transition:'all 1.5s'});
 
+
+
+    $(".cartslider").css({
+        "height": "30vh"
+    });
+
+
+    
  setTimeout(function() {
 fly.css({bottom:"-100%",width:"1vw"});
 },200);
