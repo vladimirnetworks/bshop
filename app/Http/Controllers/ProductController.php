@@ -26,7 +26,7 @@ class ProductController extends Controller
 
 
             if (isset($phot[0])) {
-                $item->photo = $phot[0]['medium'];
+                $item->photos = $phot[0]['medium'];
             }
 
 
