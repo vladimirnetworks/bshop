@@ -87,7 +87,7 @@ body {
 </style>
 <script src="scripts/swiperbox.js"></script>
 <script src="scripts/util.js"></script>
-<script src="scripts/cart.js"></script>
+<script src="scripts/cart.js?{{time()}}"></script>
 <script src="scripts/cartSlider.js"></script>
 
 
