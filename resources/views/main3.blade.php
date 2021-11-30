@@ -90,6 +90,9 @@ body {
 <script src="scripts/cart.js?{{time()}}"></script>
 <script src="scripts/cartSlider.js"></script>
 
+<script>
+myorder = {};
+</script>
 
 </head>
 
