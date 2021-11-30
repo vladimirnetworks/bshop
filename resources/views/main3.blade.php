@@ -143,7 +143,7 @@ jprod.click(function() {
 });
 
 
-jprod.on("touchstart",function() {
+jprod.on("touchstart click",function() {
  jprod.css({"transform":'scale(0.8)' , "background-color":'#3781f0'});
 
  setTimeout(function() {
