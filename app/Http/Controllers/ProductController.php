@@ -21,7 +21,7 @@ class ProductController extends Controller
 
         $prods->each(function ($item) {
 
-            $item->count = 100;
+          
             $phot = json_decode($item->photos, true);
                
            
