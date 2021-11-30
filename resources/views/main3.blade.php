@@ -123,7 +123,7 @@ apix.get("index",function(item) {
    <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
       <a href="#product/47">  <img class="mw-100" src="photos/21381264.jpg"></a> \
       <div style="margin-top:auto"> \
-         <a style="color:#535353" href="product/47" class="d-block">دستکش آشپزخانه رزمریم</a> ''
+         <a style="color:#535353" href="product/47" class="d-block">دستکش آشپزخانه رزمریم</a> \
       </div> \
       <div style="margin-top:auto"> \
          <span style="color:#232933">  ۱۸,۰۰۰ </span><span style="font-size:.714rem ; color:#232933">تومان \
