@@ -31,4 +31,17 @@ class Product extends Model
         return str_replace('','',json_encode(["id"=>$this->id,"title"=>$this->title,"price"=>$this->price]));
     }
 
+
+
+    public function getReadableCreatedAtAttribute()
+    {
+        return $this->count+10;
+    }
+
+    protected $appends = ['readable_created_at'];
+
+
+
+
+
 }
