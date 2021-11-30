@@ -36,12 +36,12 @@ class OrderController extends Controller
         }
     }
 
-    public function zarinpal_pay($amout, $title, $mob)
+    public function zarinpal_pay($amout, $title, $mob,$orderid)
     {
         $data = array(
             "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
             "amount" => $amout*10,
-            "callback_url" => "https://www.behkiana.ir/zainpalverify",
+            "callback_url" => "https://www.behkiana.ir/zainpalverify/".$orderid,
             "description" => $title,
             "metadata" => ["email" => "alaeebehnam@gmail.com", "mobile" => $mob],
         );
@@ -70,6 +70,7 @@ class OrderController extends Controller
                 if ($result['data']['code'] == 100) {
 
 
+                    dd($result);
 
                     return redirect('https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
                 }
