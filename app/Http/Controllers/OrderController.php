@@ -179,10 +179,10 @@ class OrderController extends Controller
 
   dd($request);
   
-    $order = liteauth::me()->orders()->whereId(decode_id($request->data->orderid))->first();
+    $order = liteauth::me()->orders()->whereId(decode_id($request->data['orderid']))->first();
    
     
-    $order->selected_shipping = $request->data->shipping;
+    $order->selected_shipping = $request->data['shipping'];
     $order->save();
 
     return ["data"=>true];
