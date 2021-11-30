@@ -374,7 +374,8 @@ if (tot.count > 0) {
      });
 } else {
     $(".cartslider").css({
-        "bottom": "-9vh"
+        "bottom": "-9vh",
+        "height": "0px"
      }); 
 }
 
