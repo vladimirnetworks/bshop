@@ -168,6 +168,18 @@ class OrderController extends Controller
     }
 
 
+    public function setshipping($orderid)
+    {
+
+     //   $me = liteauth::me();
+     //  $order = Order::where(["id","=",encode_id($orderid)])->first();
+
+     $order = liteauth::me()->orders->get(decode_id($orderid));
+     dd($order);
+
+
+    }
+
 
     /**
      * Display the specified resource.
