@@ -360,6 +360,15 @@ xcart.add(prod);
 
 xcart.addChangeListener(function() {
 
+
+
+/*
+     $(".cartslider").css({
+        "height": "9vh"
+     });
+*/
+
+
    var tot = xcart.total();
    $('.cartslider_smallview_text').html(farsi_price(tot.amount)+" تومان");
 
