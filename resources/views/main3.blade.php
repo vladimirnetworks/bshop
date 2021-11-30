@@ -118,7 +118,10 @@ $('.loader').empty();
 apix = new api();
 
 apix.get("index",function(item) {
-   console.log(item);
+
+   var item = $('<div class="col-4 col-sm-3  p-2 text-center miniproduct">a</div>');
+
+   $('.loader').append(item);
 });
 
 
