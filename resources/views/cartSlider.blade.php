@@ -40,27 +40,28 @@
       cartdown();
    });
    $(".finishshop").click(function() {
-            cartdown();
-            $("#getNumberModal").modal("show");
-            hpu("finishcart");
-            toyou("preorder", xcart.items(), function(res) {
-               console.log(res);
-               myorder.orderid = res.data.id;
-               myorder.shipping = res.data.shipping;
-            });
-            $("#shippingx").empty();
-            for (var i = 0; i < myorder.shipping.length; i++) {
-               var maindiv = $("<div></div>");
-               var labelx = $('<label></label>');
-               if (i === 0) {
-                  var inputx = $('<input checked type="radio" class="" name="shiptype" value="' + i + '">');
-               } else {
-                  var inputx = $('<input type="radio" class="" name="shiptype" value="' + i + '">');
-               }
-               var textx = $('<span>' + myorder.shipping[i].text + '</span>');
-               labelx.append(inputx);
-               labelx.append(textx);
-               maindiv.append(labelx);
-               $("#shippingx").append(maindiv);
-            });
+      cartdown();
+      $("#getNumberModal").modal("show");
+      hpu("finishcart");
+      toyou("preorder", xcart.items(), function(res) {
+         console.log(res);
+         myorder.orderid = res.data.id;
+         myorder.shipping = res.data.shipping;
+      });
+      $("#shippingx").empty();
+      for (var i = 0; i < myorder.shipping.length; i++) {
+         var maindiv = $("<div></div>");
+         var labelx = $('<label></label>');
+         if (i === 0) {
+            var inputx = $('<input checked type="radio" class="" name="shiptype" value="' + i + '">');
+         } else {
+            var inputx = $('<input type="radio" class="" name="shiptype" value="' + i + '">');
+         }
+         var textx = $('<span>' + myorder.shipping[i].text + '</span>');
+         labelx.append(inputx);
+         labelx.append(textx);
+         maindiv.append(labelx);
+         $("#shippingx").append(maindiv);
+      }
+   });
 </script>

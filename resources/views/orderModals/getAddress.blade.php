@@ -43,7 +43,7 @@
    $("#getAddressModal").on('shown.bs.modal', function() {
       $("#getaddress").trigger('focus');
 
-      }
+     
    });
    $("#reggaddress").on('submit', function() {
       $("#getAddressModal").modal("hide");
