@@ -123,7 +123,7 @@ apix.get("index",function(item) {
      <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
       <span>  <img class="mw-100" src="'+item.photo+'"></span> \
       <div style="margin-top:auto"> \
-      <a style="color:#535353" href="product/47" class="d-block">'+item.tinytitle+'</a> \
+      <span style="color:#535353" href="product/47" class="d-block">'+item.tinytitle+'</span> \
       </div> \
       <div style="margin-top:auto"> \
       <span style="color:#232933">'+item.price+'</span><span style="font-size:.714rem ; color:#232933">تومان \
@@ -136,8 +136,8 @@ apix.get("index",function(item) {
 var jprod = $(xx);
 
 jprod.click(function() {
-
-       $('.bigprod').append($('<div>'+item.title+'</div>'));
+         $('.bigprod').empty();
+         $('.bigprod').append($('<div>'+item.title+'</div>'));
 });
 
 $('.loader').append(jprod);
