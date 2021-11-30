@@ -58,3 +58,7 @@ Route::get('/index3', "App\Http\Controllers\mainPageController@index3")->middlew
 
 
 Route::get('/onlinepay/{orderid}', "App\Http\Controllers\OrderController@onlinepay")->middleware('tokin');
+
+
+
+Route::get('/zainpalverify/{paymentid}', "App\Http\Controllers\Paymentvarify@zarinpal")->middleware('tokin');
