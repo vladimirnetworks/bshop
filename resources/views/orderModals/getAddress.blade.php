@@ -43,8 +43,26 @@ $( "#getAddressModal" ).on('shown.bs.modal', function(){
 
  $("#getaddress").trigger('focus');
 
+$("#shippingx").empty();
 for (var i=0;i<myorder.shipping.length;i++) {
-   $("#shippingx").append('<div>'+myorder.shipping[i].text+'</div>');
+
+var maindiv = $("<div></div>");
+var labelx = $('<label></label>');
+if (i === 0 ) {
+var inputx = $('<input checked type="radio" class="" name="shiptype" value="'+i+'">');
+
+} else {
+var inputx = $('<input type="radio" class="" name="shiptype" value="'+i+'">');
+}
+var textx = $('<span>'+ress.data.shipping[i].text+'</span>');
+
+labelx.append(inputx);
+labelx.append(textx);
+maindiv.append(labelx);
+
+$("#shippingx").append(maindiv);
+
+
 }
 
 
