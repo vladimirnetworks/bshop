@@ -19,29 +19,28 @@ class OrderController extends Controller
      */
 
 
-     function onlinepay($orderid) {
+    function onlinepay($orderid)
+    {
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
 
-       $cart = json_decode($order->data,true);
+        $cart = json_decode($order->data, true);
 
-       $totamount = 0;
+        $totamount = 0;
 
-       foreach ($cart as $item) {
+        foreach ($cart as $item) {
 
-        $prod = Product::whereId($item['id'])->first();
-         $totamount = $totamount+($prod->price*$item['count']);
+            $prod = Product::whereId($item['id'])->first();
+            $totamount = $totamount + ($prod->price * $item['count']);
 
-         return $this->zarinpal_pay($totamount,"سفارش ".$orderid,"09332806144");
+            return $this->zarinpal_pay($totamount, "سفارش " . $orderid, "09332806144");
+        }
+    }
 
-       }
-
-     }
-
-    public function zarinpal_pay($amout,$title,$mob)
+    public function zarinpal_pay($amout, $title, $mob)
     {
         $data = array(
             "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
-            "amount" => $amout,
+            "amount" => $amout*10,
             "callback_url" => "https://www.behkiana.ir/zainpalverify",
             "description" => $title,
             "metadata" => ["email" => "alaeebehnam@gmail.com", "mobile" => $mob],
@@ -61,7 +60,7 @@ class OrderController extends Controller
         $err = curl_error($ch);
         $result = json_decode($result, true, JSON_PRETTY_PRINT);
 
- 
+
         curl_close($ch);
 
         if ($err) {
@@ -70,9 +69,9 @@ class OrderController extends Controller
             if (empty($result['errors'])) {
                 if ($result['data']['code'] == 100) {
 
-                 
 
-                  return redirect('https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
+
+                    return redirect('https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
                 }
             } else {
                 #echo 'Error Code: ' . $result['errors']['code'];
@@ -169,7 +168,7 @@ class OrderController extends Controller
 
 
 
-        
+
         foreach ($request->data as $hitdata) {
             $cartx[] = $hitdata;
         }
@@ -193,21 +192,20 @@ class OrderController extends Controller
     public function setshipping(Request $request)
     {
 
-     //   $me = liteauth::me();
-     // $order = Order::where(["id","=",encode_id($orderid)])->first();
-  //dd(decode_id($orderid));
+        //   $me = liteauth::me();
+        // $order = Order::where(["id","=",encode_id($orderid)])->first();
+        //dd(decode_id($orderid));
 
 
 
-  
-    $order = liteauth::me()->orders()->whereId(decode_id($request->data['orderid']))->first();
-   
-    
-    $order->selected_shipping = $request->data['shipping'];
-    $order->save();
 
-    return ["data"=>true];
+        $order = liteauth::me()->orders()->whereId(decode_id($request->data['orderid']))->first();
 
+
+        $order->selected_shipping = $request->data['shipping'];
+        $order->save();
+
+        return ["data" => true];
     }
 
 
