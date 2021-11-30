@@ -33,12 +33,21 @@ class Product extends Model
 
 
 
-    public function getReadableCreatedAtAttribute()
+    public function getPhoto()
     {
-        return $this->count+10;
+
+        $phot = json_decode($this->photos, true);
+
+        $phott = null;
+        if (isset($phot[0])) {
+            $phott = $phot[0]['medium'];
+        }
+
+
+        return $phott;
     }
 
-    protected $appends = ['readable_created_at'];
+    protected $appends = ['photo'];
 
 
 
