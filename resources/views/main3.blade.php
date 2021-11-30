@@ -120,14 +120,14 @@ apix = new api();
 apix.get("index",function(item) {
 
     var xx = '<div class="col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
-   <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
-      <a href="#product/47">  <img class="mw-100" src="photos/21381264.jpg"></a> \
+     <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
+      <a href="javscript:void(0)">  <img class="mw-100" src="'.item.photo.'"></a> \
       <div style="margin-top:auto"> \
-         <a style="color:#535353" href="product/47" class="d-block">دستکش آشپزخانه رزمریم</a> \
+      <a style="color:#535353" href="product/47" class="d-block">'+item.tinytitle+'</a> \
       </div> \
       <div style="margin-top:auto"> \
-         <span style="color:#232933">  ۱۸,۰۰۰ </span><span style="font-size:.714rem ; color:#232933">تومان \
-         </span> \
+      <span style="color:#232933">'+item.price+'</span><span style="font-size:.714rem ; color:#232933">تومان \
+      </span> \
       </div> \
    </div> \
 </div>';
