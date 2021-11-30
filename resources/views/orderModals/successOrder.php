@@ -3,20 +3,23 @@
       <div class="modal-content">
          <!-- Modal Header -->
          <div class="modal-header">
-       
+
             <button type="button" class="close" data-dismiss="modal">&times;</button>
          </div>
          <!-- Modal body -->
          <div class="modal-body text-center">
-            <div class="enternumber" >
-             سفارش شما با ثبت شد
+            <div class="enternumber">
+               سفارش شما  ثبت شد
+
                <br>
+              <button id="onlinepay" class="btn btn-primary">پرداخت آنلاین</button> 
+              <button id="offlinepay" class="btn btn-primary">پرداخت در محل</button> 
                <div>
-                  <input type="hidden" id="myModal_next" value="address"/> 
+                  <input type="hidden" id="myModal_next" value="address" />
 
                </div>
             </div>
-            <div class="waitinnumber" style="display:none">   
+            <div class="waitinnumber" style="display:none">
                ...
             </div>
          </div>
@@ -26,5 +29,12 @@
 </div>
 
 <script>
+$("#onlinepay").on('click',function () {
+  window.locatio = "onlinepay/"+myorder.orderid;
+});
+
+$("#offlinepay").on('click',function () {
+  window.locatio = "myorders/"+myorder.orderid;
+});
 
 </script>
