@@ -24,22 +24,27 @@ class OrderController extends Controller
 
        $cart = json_decode($order->data,true);
 
+       $totamount = 0;
+
        foreach ($cart as $item) {
 
         $prod = Product::whereId($item['id'])->first();
-         echo ($prod->price*$item['count'])."<br>";
+         $totamount = $totamount+($prod->price*$item['count']);
+
+         return $this->zarinpal_pay($totamount,"سفارش ".$orderid,"09332806144");
+
        }
 
      }
 
-    public function onlinepayment()
+    public function zarinpal_pay($amout,$title,$mob)
     {
         $data = array(
             "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
-            "amount" => 99999999,
+            "amount" => $amout,
             "callback_url" => "https://www.behkiana.ir/zainpalverify",
-            "description" => "خرید تست",
-            "metadata" => ["email" => "info@email.com", "mobile" => "09332806144"],
+            "description" => $title,
+            "metadata" => ["email" => "alaeebehnam@gmail.com", "mobile" => $mob],
         );
         $jsonData = json_encode($data);
         $ch = curl_init('https://api.zarinpal.com/pg/v4/payment/request.json');
@@ -60,7 +65,7 @@ class OrderController extends Controller
         curl_close($ch);
 
         if ($err) {
-            echo "cURL Error #:" . $err;
+            return "error";
         } else {
             if (empty($result['errors'])) {
                 if ($result['data']['code'] == 100) {
@@ -70,8 +75,10 @@ class OrderController extends Controller
                   return redirect('https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
                 }
             } else {
-                echo 'Error Code: ' . $result['errors']['code'];
-                echo 'message: ' .  $result['errors']['message'];
+                #echo 'Error Code: ' . $result['errors']['code'];
+                #echo 'message: ' .  $result['errors']['message'];
+
+                return "error";
             }
         }
     }
