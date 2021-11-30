@@ -12,23 +12,32 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function indexx(Request $request)
+    {
+        return [
+            "data" => [
+                ["title" => "1"],
+                ["title" => "2"]
+            ]
+        ];
+    }
+
+
     public function index(Request $request)
     {
         //
-   //header('Access-Control-Allow-Origin: *');
-  // header('Access-Control-Allow-Methods: *');
-   //header('Access-Control-Allow-Headers: *');
+        //header('Access-Control-Allow-Origin: *');
+        // header('Access-Control-Allow-Methods: *');
+        //header('Access-Control-Allow-Headers: *');
 
         $targets = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
 
-        
+
 
 
 
         return response($targets);
-
-      
-
     }
 
     /**
@@ -39,41 +48,39 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-       # header('Access-Control-Allow-Methods: *');
-       # header('Access-Control-Allow-Headers: *');
+        # header('Access-Control-Allow-Methods: *');
+        # header('Access-Control-Allow-Headers: *');
 
 
 
-       $sgal = [];
+        $sgal = [];
         foreach ($request->gal as $gal) {
 
-              if ( strtolower(substr($gal['small'],0,10)) == 'data:image') {
+            if (strtolower(substr($gal['small'], 0, 10)) == 'data:image') {
 
                 do {
 
-                    $fname = "photos/".rand(0,99999999).'.jpg';
-
-                } while(file_exists($fname));
-             
-         
-
-                $ifp = fopen( $fname, 'wb' ); 
-
-                $data = explode( ',', $gal['small'] );
-                fwrite( $ifp, base64_decode( $data[ 1 ] ) );
-                fclose( $ifp ); 
+                    $fname = "photos/" . rand(0, 99999999) . '.jpg';
+                } while (file_exists($fname));
 
 
-                $sgal[]=[
-                    "big"=>$fname,
-                    "medium"=>$fname,
-                    "small"=>$fname
+
+                $ifp = fopen($fname, 'wb');
+
+                $data = explode(',', $gal['small']);
+                fwrite($ifp, base64_decode($data[1]));
+                fclose($ifp);
+
+
+                $sgal[] = [
+                    "big" => $fname,
+                    "medium" => $fname,
+                    "small" => $fname
                 ];
-              } else {
+            } else {
 
-                $sgal[]=$gal;
-              }
-
+                $sgal[] = $gal;
+            }
         }
 
         $photos = json_encode($sgal);
@@ -81,15 +88,13 @@ class ProductController extends Controller
 
 
         $newprod = Product::create([
-            'title' => $request['title'],'tinytitle' => $request['tinytitle'],
-             'price' => $request['price'], 
-             'photos' =>  $photos,
-            "caption"=>$request['caption']
+            'title' => $request['title'], 'tinytitle' => $request['tinytitle'],
+            'price' => $request['price'],
+            'photos' =>  $photos,
+            "caption" => $request['caption']
         ]);
 
         return ["data" => $newprod];
-
-
     }
 
     /**
@@ -100,15 +105,15 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        $photo  = json_decode($product->photos,true);
+        $photo  = json_decode($product->photos, true);
 
         if (isset($photo[0])) {
             $photo = $photo[0]['medium'];
         } else {
             $photo = "";
         }
-        
-        return view("singleProduct",["pageTitle"=>$product->title,"product"=>$product,"photo"=> $photo]);
+
+        return view("singleProduct", ["pageTitle" => $product->title, "product" => $product, "photo" => $photo]);
     }
 
     /**
@@ -132,33 +137,31 @@ class ProductController extends Controller
         $sgal = [];
         foreach ($request->gal as $gal) {
 
-              if ( strtolower(substr($gal['small'],0,10)) == 'data:image') {
+            if (strtolower(substr($gal['small'], 0, 10)) == 'data:image') {
 
                 do {
 
-                    $fname = "photos/".rand(0,99999999).'.jpg';
-
-                } while(file_exists($fname));
-             
-         
-
-                $ifp = fopen( $fname, 'wb' ); 
-
-                $data = explode( ',', $gal['small'] );
-                fwrite( $ifp, base64_decode( $data[ 1 ] ) );
-                fclose( $ifp ); 
+                    $fname = "photos/" . rand(0, 99999999) . '.jpg';
+                } while (file_exists($fname));
 
 
-                $sgal[]=[
-                    "big"=>$fname,
-                    "medium"=>$fname,
-                    "small"=>$fname
+
+                $ifp = fopen($fname, 'wb');
+
+                $data = explode(',', $gal['small']);
+                fwrite($ifp, base64_decode($data[1]));
+                fclose($ifp);
+
+
+                $sgal[] = [
+                    "big" => $fname,
+                    "medium" => $fname,
+                    "small" => $fname
                 ];
-              } else {
+            } else {
 
-                $sgal[]=$gal;
-              }
-
+                $sgal[] = $gal;
+            }
         }
 
         $Product->photos = json_encode($sgal);

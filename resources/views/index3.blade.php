@@ -4,6 +4,6 @@
 
 <div>big prodloader</div>
 
-<div>foot</div>
+<div class="loader"></div>
 
 @stop

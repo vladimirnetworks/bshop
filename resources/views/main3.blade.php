@@ -98,6 +98,30 @@ body {
 
 <script>
 
+function api() {
+    self = this;
+    this.api = "/api/";
+
+    this.get = function(path,doin) {
+        $.getJSON(this.api+path, function(data){ 
+             for (var i=0;i<data.data.length;i++) {
+                doin(data.data[i]);
+             }
+        });
+    }
+
+    return this;
+}
+
+$('.loader').empty();
+
+apix = new api();
+
+apix.get("index",function(item) {
+   console.log(item);
+});
+
+
 
 
 ////////////use///////////
