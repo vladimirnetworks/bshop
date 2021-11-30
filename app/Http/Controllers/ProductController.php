@@ -15,12 +15,19 @@ class ProductController extends Controller
 
     public function indexx(Request $request)
     {
+
+        $prods = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+
+
+        return  $prods;
+        /*
         return [
             "data" => [
                 ["title" => "1"],
                 ["title" => "2"]
             ]
         ];
+        */
     }
 
 
