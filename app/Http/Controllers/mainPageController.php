@@ -67,6 +67,9 @@ class mainPageController extends Controller
 
 
         return view('index2', ['pageTitle' => "بهکیانا - فروشگاه محصولات بهداشتی", "products" => $prods]);
+
+        return view('index3', ['pageTitle' => "بهکیانا - فروشگاه محصولات بهداشتی", "products" => $prods]);
+
     }
 
 }
