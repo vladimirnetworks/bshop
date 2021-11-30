@@ -19,11 +19,18 @@
                         <input class="form-control col-12" style="font-size:24px;text-align:right;direction:rtl" type="text" id="getaddress" placeholder="آدرس"> 
                         <button type="submit" class="btn btn-success col-2">ثبت</button>
                      </div>
+
+
+<div id="shippingx"></div>
+
+
                   </form>
                </div>
             </div>
             <div class="waitinnumber" style="display:none">   
-               ...
+              
+
+              
             </div>
          </div>
          <!-- Modal footer -->
@@ -35,6 +42,14 @@
 $( "#getAddressModal" ).on('shown.bs.modal', function(){
 
  $("#getaddress").trigger('focus');
+
+for (var i=0;i<myorder.shipping.length;i++) {
+   $("#shippingx").append('<div>'+myorder.shipping[i].text+'</div>');
+}
+
+
+
+
 });
 
 
