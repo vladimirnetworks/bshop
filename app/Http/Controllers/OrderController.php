@@ -146,7 +146,7 @@ class OrderController extends Controller
 
         $me = liteauth::me();
 
-        dd($me->id);
+
 
         
         foreach ($request->data as $hitdata) {
