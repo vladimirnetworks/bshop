@@ -28,4 +28,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('index', 'App\Http\Controllers\ProductController@indexxv');
 
-Route::get('setshipping/{orderid}', 'App\Http\Controllers\OrderController@setshipping');
+Route::get('setshipping/{orderid}/{shipping}', 'App\Http\Controllers\OrderController@setshipping');

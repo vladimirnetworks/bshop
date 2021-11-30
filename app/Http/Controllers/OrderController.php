@@ -169,7 +169,7 @@ class OrderController extends Controller
     }
 
 
-    public function setshipping($orderid)
+    public function setshipping($orderid,$shipping)
     {
 
      //   $me = liteauth::me();
@@ -179,8 +179,10 @@ class OrderController extends Controller
   $xwhere = ["id",decode_id($orderid)];
   
     $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
-     dd($order->id);
-
+   
+    
+    $order->selected_shipping = $shipping;
+    $order->save();
 
     }
 
