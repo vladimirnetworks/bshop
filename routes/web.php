@@ -55,3 +55,6 @@ Route::get('/contact-us', function() {
 Route::get('/index2', "App\Http\Controllers\mainPageController@index2")->middleware('tokin');
 
 Route::get('/index3', "App\Http\Controllers\mainPageController@index3")->middleware('tokin');
+
+
+Route::get('/onlinepay/{orderid}', "App\Http\Controllers\OrderController@onlinepay")->middleware('tokin');
