@@ -50,7 +50,7 @@
       $("#successOrderModal").modal("show");
       hpu("addedaddress");
 
-      toyou("api/setshipping",{orderid:myorder.orderid,shipping:0});
+      toyou("setshipping",{orderid:myorder.orderid,shipping:$('input[name=shiptype]:checked').val()});
 
       return false;
    });
