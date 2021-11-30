@@ -154,7 +154,7 @@ class OrderController extends Controller
 
         $xshiping = $this::shipping();
 
-        $ret = Order::Create(["data" => json_encode($cartx), "liteauth_id" => $me->id, "shiping" => json_encode($xshiping)]);
+        $ret = Order::Create(["data" => json_encode($cartx), "liteauth_id" => $me->id, "shipping" => json_encode($xshiping)]);
 
 
 
