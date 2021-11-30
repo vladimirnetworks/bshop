@@ -40,7 +40,7 @@ class OrderController extends Controller
         ]);
 
 
-        $paymnt = $this->zarinpal_pay($totamount, "سفارش " . $orderid, "09332806144", $ipayment->id);
+        $paymnt = $this->zarinpal_pay($totamount, "سفارش " . $orderid, "09332806144", encode_id($ipayment->id));
 
         if ($paymnt != 'error') {
 
