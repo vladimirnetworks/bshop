@@ -79,7 +79,13 @@ body {
   animation-timing-function: ease-in-out;
 }
 
+.wooip {
+  transition: transform .2s;
+}
 
+.wooip:active ,.wooip:hover {
+  transform: scale(1.5); 
+}
 
 </style>
 <script src="scripts/swiperbox.js"></script>
