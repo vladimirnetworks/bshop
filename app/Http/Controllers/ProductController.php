@@ -13,7 +13,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function indexx(Request $request)
+    public function indexxv(Request $request)
     {
 
         $prods = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
@@ -27,8 +27,11 @@ class ProductController extends Controller
             if (isset($phot[0])) {
                 $item->photo = $phot[0]['medium'];
             }
+
+
         });
-        
+
+        dd($prods);
 
         return  $prods;
         /*
