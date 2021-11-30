@@ -26,7 +26,7 @@ class OrderController extends Controller
 
        foreach ($cart as $item) {
 
-        $prod = Product::whereId($item['id']);
+        $prod = Product::whereId($item['id'])->first();
          echo $prod->price."<br>";
        }
 
