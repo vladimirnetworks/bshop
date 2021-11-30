@@ -6,6 +6,7 @@ use App\Models\Notif;
 use App\Models\Order;
 use App\Models\TG;
 use App\Models\liteauth;
+use App\Models\Payment;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Telegram;
@@ -19,7 +20,7 @@ class OrderController extends Controller
      */
 
 
-    function onlinepay($orderid)
+    public function onlinepay($orderid)
     {
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
 
@@ -28,20 +29,37 @@ class OrderController extends Controller
         $totamount = 0;
 
         foreach ($cart as $item) {
-
             $prod = Product::whereId($item['id'])->first();
             $totamount = $totamount + ($prod->price * $item['count']);
+        }
 
-            return $this->zarinpal_pay($totamount, "سفارش " . $orderid, "09332806144",$orderid);
+
+       
+        $ipayment = Payment::Create([
+            "orderid" => $orderid
+        ]);
+
+
+        $paymnt = $this->zarinpal_pay($totamount, "سفارش " . $orderid, "09332806144", $ipayment->id);
+
+        if ($paymnt != 'error') {
+
+
+            $ipayment->type = 'zarinpal';
+            $ipayment->authority = $paymnt['authority'];
+            $ipayment->save();
+
+
+            return redirect($paymnt['redirecturl']);
         }
     }
 
-    public function zarinpal_pay($amout, $title, $mob,$orderid)
+    public function zarinpal_pay($amout, $title, $mob, $orderid)
     {
         $data = array(
             "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
-            "amount" => $amout*10,
-            "callback_url" => "https://www.behkiana.ir/zainpalverify/".$orderid,
+            "amount" => $amout * 10,
+            "callback_url" => "https://www.behkiana.ir/zainpalverify/" . $orderid,
             "description" => $title,
             "metadata" => ["email" => "alaeebehnam@gmail.com", "mobile" => $mob],
         );
@@ -70,9 +88,10 @@ class OrderController extends Controller
                 if ($result['data']['code'] == 100) {
 
 
-                    dd($result);
-
-                    return redirect('https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"]);
+                    return [
+                        'redirecturl' => 'https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"],
+                        'authority' => $result['data']["authority"]
+                    ];
                 }
             } else {
                 #echo 'Error Code: ' . $result['errors']['code'];
