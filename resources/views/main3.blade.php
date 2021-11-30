@@ -147,10 +147,13 @@ jprod.click(function() {
 
 jprod.on("touchstart",function() {
  jprod.css({"transform":'scale(1.5)'});
-});
-setTimeout(function() {
+
+ setTimeout(function() {
  jprod.css({"transform":'scale(1.0)'});
 },500);
+
+
+});
 
 $('.loader').append(jprod);
 
