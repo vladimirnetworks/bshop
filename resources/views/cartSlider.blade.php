@@ -44,6 +44,10 @@ $(".finishshop").click(function() {
    $("#getNumberModal").modal("show");
     hpu("finishcart");
 
+    toyou("preorder",xcart.prods,function(res) {
+       console.log(res);
+    });
+
 });
 
 </script>
