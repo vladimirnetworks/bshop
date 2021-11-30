@@ -24,9 +24,11 @@ class ProductController extends Controller
             $item->count = 100;
             $phot = json_decode($item->photos, true);
                
-            dd( $phot);
+           
 
             if (isset($phot[0])) {
+
+                dd( $phot);
                 $item->photo = $phot[0]['medium'];
             }
 
