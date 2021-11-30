@@ -169,20 +169,22 @@ class OrderController extends Controller
     }
 
 
-    public function setshipping($orderid,$shipping)
+    public function setshipping(Request $request)
     {
 
      //   $me = liteauth::me();
      // $order = Order::where(["id","=",encode_id($orderid)])->first();
   //dd(decode_id($orderid));
 
-  $xwhere = ["id",decode_id($orderid)];
+
   
-    $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
+    $order = liteauth::me()->orders()->whereId(decode_id($request->data->orderid))->first();
    
     
-    $order->selected_shipping = $shipping;
+    $order->selected_shipping = $request->data->shipping;
     $order->save();
+
+    return ["data"=>true];
 
     }
 

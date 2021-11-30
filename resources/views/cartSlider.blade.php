@@ -58,6 +58,9 @@
             }
             var textx = $('<span>' + myorder.shipping[i].text + '</span>');
             labelx.append(inputx);
+
+
+            
             labelx.append(textx);
             maindiv.append(labelx);
             $("#shippingx").append(maindiv);

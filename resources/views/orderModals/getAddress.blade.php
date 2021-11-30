@@ -49,6 +49,9 @@
       $("#getAddressModal").modal("hide");
       $("#successOrderModal").modal("show");
       hpu("addedaddress");
+
+      toyou("api/setshipping",{orderid:myorder.orderid,shipping:0});
+
       return false;
    });
 </script>
