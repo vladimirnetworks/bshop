@@ -81,12 +81,9 @@ body {
 
 .wooip {
   transition: transform .2s;
-  transform: scale(1.5); 
 }
 
-.wooipz:active ,.wooipz:hover {
-  transform: scale(1.5); 
-}
+
 
 </style>
 <script src="scripts/swiperbox.js"></script>
@@ -126,7 +123,7 @@ apix = new api();
 
 apix.get("index",function(item) {
 
-    var xx = '<div class="col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
+    var xx = '<div class="col-4 col-sm-3  p-2 text-center miniproduct wooip" data-me=""> \
      <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
       <span>  <img class="mw-100" src="'+item.photo+'"></span> \
       <div style="margin-top:auto"> \
@@ -149,10 +146,10 @@ jprod.click(function() {
 
 
 jprod.on("touchstart",function() {
-jprod.addClass("wooip");
+ jprod.css({"transform":'scale(1.5)'});
 });
 setTimeout(function() {
-jprod.removeClass("wooip");
+ jprod.css({"transform":'scale(1.0)'});
 },500);
 
 $('.loader').append(jprod);
