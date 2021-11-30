@@ -4,6 +4,6 @@
 
 <div>big prodloader</div>
 
-<div class="loader row justify-content-center"></div>
+<div class="loader row "></div>
 
 @stop
