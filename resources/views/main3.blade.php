@@ -121,7 +121,7 @@ apix.get("index",function(item) {
 
     var xx = '<div class="col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
      <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
-      <a href="javscript:void(0)">  <img class="mw-100" src="'.item.photo.'"></a> \
+      <a href="javscript:void(0)">  <img class="mw-100" src="'+item.photo+'"></a> \
       <div style="margin-top:auto"> \
       <a style="color:#535353" href="product/47" class="d-block">'+item.tinytitle+'</a> \
       </div> \
