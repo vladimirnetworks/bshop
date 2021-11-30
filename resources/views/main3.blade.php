@@ -121,7 +121,7 @@ apix = new api();
 
 apix.get("index",function(item) {
 
-    var xx = '<div style="transition: transform .2s" class="col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
+    var xx = '<div style="transition: transform .150s" class="col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
      <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
       <span>  <img class="mw-100" src="'+item.photo+'"></span> \
       <div style="margin-top:auto"> \
@@ -148,7 +148,7 @@ jprod.on("touchstart",function() {
 
  setTimeout(function() {
  jprod.css({"transform":'scale(1.0)'});
-},201);
+},151);
 
 
 });
