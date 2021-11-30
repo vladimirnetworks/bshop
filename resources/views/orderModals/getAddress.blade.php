@@ -17,7 +17,7 @@
                      <input readonly class="ordernumber" style="font-size:24px;" type="hidden"
                         placeholder="شماره سفارش">
                      <div class="row p-3">
-                        <input class="form-control col-12" style="font-size:24px;text-align:right;direction:rtl"
+                        <input class="form-control col-10" style="font-size:24px;text-align:right;direction:rtl"
                            type="text" id="getaddress" placeholder="آدرس">
                         <button type="submit" class="btn btn-success col-2">ثبت</button>
                      </div>
