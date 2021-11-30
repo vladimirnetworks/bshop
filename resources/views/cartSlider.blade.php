@@ -46,8 +46,8 @@ $(".finishshop").click(function() {
 
     toyou("preorder",xcart.items(),function(res) {
        console.log(res);
-       myorder.orderid = res.id;
-       myorder.shipping = res.shipping;
+       myorder.orderid = res.data.id;
+       myorder.shipping = res.data.shipping;
     });
 
 });
