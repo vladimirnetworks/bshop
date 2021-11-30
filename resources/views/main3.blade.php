@@ -132,11 +132,9 @@ apix.get("index",function(item) {
    </div> \
 </div>';
 
-   var item = $(xx);
-       
-      //  item.append('<div class="h-100" style="direction:rtl;flex-direction:column;display:flex"></div>');
+       console.log(item);
 
-   $('.loader').append(item);
+   $('.loader').append($(xx));
 });
 
 
