@@ -47,7 +47,17 @@ class Product extends Model
         return $phott;
     }
 
-    protected $appends = ['photo'];
+
+
+    public function getLicaptionAttribute()
+    {
+
+
+        return lize($this->caption);
+    }
+
+
+    protected $appends = ['photo','licaption'];
 
 
 
