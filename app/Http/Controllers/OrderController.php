@@ -6,6 +6,7 @@ use App\Models\Notif;
 use App\Models\Order;
 use App\Models\TG;
 use App\Models\liteauth;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Telegram;
 
@@ -24,7 +25,9 @@ class OrderController extends Controller
        $cart = json_decode($order->data,true);
 
        foreach ($cart as $item) {
-         echo $item['id']."<br>";
+
+        $prod = Product::whereId($item['id']);
+         echo $prod->price."<br>";
        }
 
      }
