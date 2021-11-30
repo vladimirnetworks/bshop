@@ -36,7 +36,7 @@ class OrderController extends Controller
 
        
         $ipayment = Payment::Create([
-            "orderid" => $orderid
+            "order_id" => $orderid
         ]);
 
 
