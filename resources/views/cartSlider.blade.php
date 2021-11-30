@@ -44,7 +44,7 @@ $(".finishshop").click(function() {
    $("#getNumberModal").modal("show");
     hpu("finishcart");
 
-    toyou("preorder",{data:xcart.items(}),function(res) {
+    toyou("preorder",{data:xcart.items()},function(res) {
        console.log(res);
     });
 
