@@ -173,8 +173,8 @@ class OrderController extends Controller
 
      //   $me = liteauth::me();
      //  $order = Order::where(["id","=",encode_id($orderid)])->first();
-  dd(decode_id($orderid));
-     $order = liteauth::me()->orders->get(decode_id($orderid));
+  //dd(decode_id($orderid));
+     $order = liteauth::me()->orders;
      dd($order);
 
 
