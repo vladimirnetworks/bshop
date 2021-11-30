@@ -160,12 +160,12 @@ jprod.on("click",function(e) {
 
 
 
-
+var photgals = JSON.parse(vals.photos);
 
 var photoitems = [];
-console.log(vals.photos);
-for (var i=0;i<vals.photos.length;i++) {
-   photoitems.push('<div class="myitem"><img style="width:100%" src="'+vals.photos[i].medium+'"  /></div>');
+console.log(photgals);
+for (var i=0;i<photgals.length;i++) {
+   photoitems.push('<div class="myitem"><img style="width:100%" src="'+photgals[i].medium+'"  /></div>');
 }
 
 var mySwipe = new SwiperBox({
