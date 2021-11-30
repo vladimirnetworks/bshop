@@ -27,7 +27,7 @@ class OrderController extends Controller
        foreach ($cart as $item) {
 
         $prod = Product::whereId($item['id'])->first();
-         echo $prod->price."<br>";
+         echo ($prod->price*$item['count'])."<br>";
        }
 
      }
