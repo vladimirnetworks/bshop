@@ -87,6 +87,7 @@ class OrderController extends Controller
             if (empty($result['errors'])) {
                 if ($result['data']['code'] == 100) {
 
+                    print_r($result);exit;
 
                     return [
                         'redirecturl' => 'https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"],
