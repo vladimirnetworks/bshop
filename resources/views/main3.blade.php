@@ -362,11 +362,11 @@ xcart.addChangeListener(function() {
 
 
 
-/*
+
      $(".cartslider").css({
-        "height": "9vh"
+        "bottom": "0px"
      });
-*/
+
 
 
    var tot = xcart.total();
