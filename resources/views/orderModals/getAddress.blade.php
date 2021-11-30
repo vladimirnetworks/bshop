@@ -54,7 +54,7 @@ var inputx = $('<input checked type="radio" class="" name="shiptype" value="'+i+
 } else {
 var inputx = $('<input type="radio" class="" name="shiptype" value="'+i+'">');
 }
-var textx = $('<span>'+ress.data.shipping[i].text+'</span>');
+var textx = $('<span>'+myorder.shipping[i].text+'</span>');
 
 labelx.append(inputx);
 labelx.append(textx);
