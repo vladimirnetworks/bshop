@@ -156,7 +156,8 @@ jprod.on("touchstart click",function() {
 jprod.on("click",function(e) {
 
 
-
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; 
 
 
 
