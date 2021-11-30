@@ -363,13 +363,24 @@ xcart.addChangeListener(function() {
 
 
 
-     $(".cartslider").css({
-        "bottom": "0px"
-     });
 
 
 
    var tot = xcart.total();
+
+if (tot.count > 0) {
+     $(".cartslider").css({
+        "bottom": "0px"
+     });
+} else {
+    $(".cartslider").css({
+        "bottom": "-9vh"
+     }); 
+}
+
+
+
+
    $('.cartslider_smallview_text').html(farsi_price(tot.amount)+" تومان");
 
 
