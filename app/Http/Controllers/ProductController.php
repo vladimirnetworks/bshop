@@ -19,6 +19,17 @@ class ProductController extends Controller
         $prods = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
 
 
+        $prods->each(function ($item) {
+
+            $phot = json_decode($item->photos, true);
+
+
+            if (isset($phot[0])) {
+                $item->photo = $phot[0]['medium'];
+            }
+        });
+        
+
         return  $prods;
         /*
         return [
