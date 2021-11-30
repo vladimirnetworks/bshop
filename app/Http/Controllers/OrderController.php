@@ -21,7 +21,12 @@ class OrderController extends Controller
      function onlinepay($orderid) {
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
 
-        dd($order->id);
+       $cart = json_decode($order->data,true);
+
+       foreach ($cart as $item) {
+         echo $item['id']."<br>";
+       }
+
      }
 
     public function onlinepayment()
