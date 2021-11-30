@@ -79,9 +79,7 @@ body {
   animation-timing-function: ease-in-out;
 }
 
-.wooip {
-  transition: transform .2s;
-}
+
 
 
 
@@ -123,7 +121,7 @@ apix = new api();
 
 apix.get("index",function(item) {
 
-    var xx = '<div class="col-4 col-sm-3  p-2 text-center miniproduct wooip" data-me=""> \
+    var xx = '<div style="transition: transform .1s" class="col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
      <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
       <span>  <img class="mw-100" src="'+item.photo+'"></span> \
       <div style="margin-top:auto"> \
@@ -146,7 +144,7 @@ jprod.click(function() {
 
 
 jprod.on("touchstart",function() {
- jprod.css({"transform":'scale(1.5)'});
+ jprod.css({"transform":'scale(0.8)'});
 
  setTimeout(function() {
  jprod.css({"transform":'scale(1.0)'});
