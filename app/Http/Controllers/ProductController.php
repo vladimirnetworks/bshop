@@ -31,7 +31,7 @@ class ProductController extends Controller
 
         });
 
-        dd($prods);
+   
 
         return  $prods;
         /*
