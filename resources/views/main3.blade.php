@@ -373,9 +373,10 @@ if (tot.count > 0) {
         "bottom": "0px"
      });
 } else {
+
+    cartdown();
     $(".cartslider").css({
-        "bottom": "-9vh",
-        "height": "0px"
+        "bottom": "-9vh"
      }); 
 }
 
