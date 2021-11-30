@@ -2,15 +2,8 @@
 
 @section('main')
 
-<div class="container-fluid" >
+<div>big prodloader</div>
 
-    <div class="row justify-content-center">
-    @foreach($products as $product)
+<div>foot</div>
 
-        @include('productItem')
-
-    @endforeach
-    </div>
-
-</div>
 @stop

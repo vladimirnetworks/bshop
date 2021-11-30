@@ -32,6 +32,14 @@
 }
 
 
+
+</style>
+<script src="scripts/swiperbox.js"></script>
+<script src="scripts/util.js"></script>
+<script src="scripts/cart.js"></script>
+<script src="scripts/cartSlider.js"></script>
+
+<style>
 @keyframes zoominoutsinglefeatured {
   0% {
       transform: scale(0.8,0.8);
@@ -80,14 +88,7 @@ body {
 }
 
 
-
 </style>
-<script src="scripts/swiperbox.js"></script>
-<script src="scripts/util.js"></script>
-<script src="scripts/cart.js"></script>
-<script src="scripts/cartSlider.js"></script>
-
-
 </head>
 
 
@@ -97,6 +98,11 @@ body {
 
 
 <script>
+
+
+
+
+
 
 
 
