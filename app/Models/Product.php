@@ -33,7 +33,7 @@ class Product extends Model
 
 
 
-    public function getReadableCreatedAtAttribute()
+    public function getReadablePhotoAttribute()
     {
 
         $phot = json_decode($this->photos, true);
@@ -47,7 +47,7 @@ class Product extends Model
         return $phott;
     }
 
-    protected $appends = ['readable_created_at'];
+    protected $appends = ['readable_photo'];
 
 
 
