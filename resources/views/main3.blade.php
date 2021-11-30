@@ -303,8 +303,10 @@ addtocart({id:vals.id,title:vals.title,tinytitle:vals.tinytitle,price:parseInt(v
 cont.append(kharid);
 
 $('.bigprod').empty();
-$('.bigprod').append(cont);
 
+
+$('.bigprod').append(cont);
+$('.bigprod').append($('<hr>'));
 
 
 
