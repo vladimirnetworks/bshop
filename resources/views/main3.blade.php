@@ -81,9 +81,10 @@ body {
 
 .wooip {
   transition: transform .2s;
+  transform: scale(0,8); 
 }
 
-.wooip:active ,.wooip:hover {
+.wooipz:active ,.wooipz:hover {
   transform: scale(1.5); 
 }
 
@@ -148,10 +149,10 @@ jprod.click(function() {
 
 
 jprod.on("touchstart",function() {
- //jprod.addClass("wooip");
+jprod.addClass("wooip");
 });
 setTimeout(function() {
- //jprod.removeClass("wooip");
+jprod.removeClass("wooip");
 },500);
 
 $('.loader').append(jprod);
