@@ -32,7 +32,7 @@ class OrderController extends Controller
             $prod = Product::whereId($item['id'])->first();
             $totamount = $totamount + ($prod->price * $item['count']);
 
-            return $this->zarinpal_pay($totamount, "سفارش " . $orderid, "09332806144");
+            return $this->zarinpal_pay($totamount, "سفارش " . $orderid, "09332806144",$orderid);
         }
     }
 
