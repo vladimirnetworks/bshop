@@ -33,7 +33,7 @@ class Product extends Model
 
 
 
-    public function getPhoto()
+    public function getJphoto()
     {
 
         $phot = json_decode($this->photos, true);
@@ -47,7 +47,7 @@ class Product extends Model
         return $phott;
     }
 
-    protected $appends = ['photo'];
+    protected $appends = ['jphoto'];
 
 
 
