@@ -176,7 +176,7 @@ var mySwipe = new SwiperBox({
 
 
 
-var cont = $('<div class="saving p-1 m-1 rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
+var cont = $('<div class="saving  rounded " style="min-height:70vh;background-color:white;direction:rtl"></div>');
 
 var photos = $('<div style="width:50vw;margin-right: auto;margin-left: auto;max-width:300px;"></div>');
 photos.append($(mySwipe.HTMLElement));
