@@ -147,8 +147,8 @@ class OrderController extends Controller
         $me = liteauth::me();
 
 
-        dd($request->data);
-        foreach (json_decode($request->data, true) as $hitdata) {
+        
+        foreach ($request->data as $hitdata) {
             $cartx[] = $hitdata;
         }
 
