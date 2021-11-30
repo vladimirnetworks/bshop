@@ -1,5 +1,3 @@
-
-
 function Cart() {
 
     var self = this;
@@ -11,6 +9,14 @@ function Cart() {
             e(self.prods[key])
         });
 
+    }
+
+    this.items = function() {
+        var x = [];
+        self.eech(function(i) {
+            x.push(i);
+        });
+        return x;
     }
 
     this.total = function() {
@@ -37,7 +43,7 @@ function Cart() {
         }
     }
 
-  this.add = function(prod) {
+    this.add = function(prod) {
         if (!self.prods[prod.id]) {
             var newprod = prod;
             newprod.count = 1;
@@ -49,12 +55,12 @@ function Cart() {
     }
 
 
-      this.changeCount = function(prodid,num) {
+    this.changeCount = function(prodid, num) {
         if (self.prods[prodid]) {
             self.prods[prodid].count = num;
         }
-        if (num<1) {
-          delete self.prods[prodid];
+        if (num < 1) {
+            delete self.prods[prodid];
         }
 
         this.triggerAllChangeListeners();
