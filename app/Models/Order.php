@@ -31,7 +31,7 @@ class Order extends Model
         return ['cart' => $cart_with_amount, "amount" => $totamount];
     }
 
-    public function getShippingAttribute()
+    public function getShowShippingAttribute()
     {
         $shippingx = json_decode($this->shipping, true);
         return $shippingx[$this->selected_shipping];
