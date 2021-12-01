@@ -25,7 +25,7 @@ class OrderController extends Controller
 
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
 
-        dd(decode_id($orderid));
+        
 
         $payment = Payment::whereDecodedOrderId($order->id)->first();
 

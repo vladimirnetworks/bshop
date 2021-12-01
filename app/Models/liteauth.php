@@ -22,6 +22,8 @@ class liteauth extends Model
           $xaddress = $rx[1];
         }
         $id =  base_convert($baseaddress,33,10);
+
+        dd($id);
         $whoiam = liteauth::where([["id",'=',$id],['hash','=',$xaddress]]);
 
        
