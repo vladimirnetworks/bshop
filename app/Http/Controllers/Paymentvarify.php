@@ -45,6 +45,8 @@ class Paymentvarify extends Controller
         curl_close($ch);
         $result = json_decode($result, true);
 
+        $payment->payment_data = $result;
+        $payment->save();
         
 
 
