@@ -10,7 +10,14 @@
     {{$cartItem['title']}} ( {{$cartItem['count']}} عدد ) {{$cartItem['amount']}} تومان  <br>
     @endforeach
 
-   مجموع فاکتور شما : {{$order->cart['amount']}} <br>
+
+
+    {{$order->cart['shipping']['text']}}
+
+    <hr>
+
+    
+   مجموع فاکتور شما : {{$order->cart['amount']+cart['shipping']['cost']}} <br>
 
    @if(isset($payment->id))
 
