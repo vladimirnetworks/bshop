@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $fillable = ['data','liteauth_id','shipping_status','payment_status','shipping','selected_shipping'];
+    protected $fillable = ['data','liteauth_id','shipping_status','payment_status','shipping','selected_shipping','encoded_id'];
 
 
     public function getTotalAmountAttribute()

@@ -5,7 +5,9 @@
 
 <div class="" style="text-align:center">
 
-   مجموع فاکتور شما : {{$order->total_amount}}
+   مجموع فاکتور شما : {{$order->total_amount}} <br>
+
+  
 
 </div>
 

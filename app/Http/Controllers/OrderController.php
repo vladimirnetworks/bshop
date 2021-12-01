@@ -24,6 +24,8 @@ class OrderController extends Controller
      {
 
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
+
+
         
         return view("singleorder",["pageTitle"=>"سفارش ".$orderid,"order"=>$order]);
      }
@@ -209,6 +211,7 @@ class OrderController extends Controller
         $ret = Order::Create(["data" => json_encode($cartx), "liteauth_id" => $me->id, "shipping" => json_encode($xshiping)]);
 
 
+        
 
 
         $tg = new TG();
@@ -216,7 +219,12 @@ class OrderController extends Controller
         Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
-        return ["data" => ["id" => encode_id($ret->id), "shipping" => $xshiping]];
+        $encodedid = encode_id($ret->id);
+
+        $ret->encoded_id = $encodedid;
+        $ret->save();
+
+        return ["data" => ["id" =>  $encodedid, "shipping" => $xshiping]];
     }
 
 
