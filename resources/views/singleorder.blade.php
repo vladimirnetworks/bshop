@@ -29,7 +29,7 @@
    </div>
 
 
-   <div class="row p-2 m-1 rounded" style="background-color:white;border:1px solid grey;text-align:right">
+   <div class=" p-2 m-1 rounded" style="background-color:white;border:1px solid grey;text-align:right">
     
 
       {{$order->address}} <button class="btn btn-info btn-sm">تغییر</button>
