@@ -42,7 +42,7 @@
     @endif
 
    @else
-   پرداخت نشده <a class="btn btn-primary" href="/onlinepayment/{{$order->encoded_id}}">پراخت آنلاین</a>
+   پرداخت نشده <a class="btn btn-primary" href="/onlinepay/{{$order->encoded_id}}">پراخت آنلاین</a>
    @endif
 
 
