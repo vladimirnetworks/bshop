@@ -43,9 +43,20 @@ class Paymentvarify extends Controller
 
         $result = curl_exec($ch);
         curl_close($ch);
+
+
         $result = json_decode($result, true);
 
-        $payment->payment_data = $result;
+
+        $pdata = json_decode($payment->payment_data);
+
+        date_default_timezone_set("Asia/Tehran");
+        $pdata[] = [
+            "time"=>date("Y-m-d h:i:s"),
+            "res"=>$result
+        ];
+
+        $payment->payment_data = json_encode($pdata);
         $payment->save();
         
 
