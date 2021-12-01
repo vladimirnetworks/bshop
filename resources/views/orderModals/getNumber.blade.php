@@ -46,7 +46,7 @@ $("#reggetnumber").on('submit',function () {
 
      hpu("addednumber");
 
-     toyou("reguserdata",{phone:$("#ordernumber").val()});
+     toyou("reguserdata",{orderid:myorder.orderid,phone:$('#getnumber').val()});
      
 
     return false;
