@@ -12,12 +12,12 @@
 
 
 
-    {{$order->cart['shipping']['text']}}
+    {{$order->shipping['cost']}}
 
     <hr>
 
-    
-   مجموع فاکتور شما : {{$order->cart['amount']+cart['shipping']['cost']}} <br>
+
+   مجموع فاکتور شما : {{$order->cart['amount']+{$order->shipping['cost']}} <br>
 
    @if(isset($payment->id))
 
