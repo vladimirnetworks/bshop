@@ -25,7 +25,7 @@ class OrderController extends Controller
 
        // print_r($_SERVER);exit;
 
-       echo '<script> alert(document.cookie) ;</script>';exit;
+
       
         
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
