@@ -48,7 +48,8 @@ class OrderController extends Controller
         
        
         $ipayment = Payment::Create([
-            "order_id" => $orderid
+            "order_id" => $orderid,
+            "decoded_order_id" => decode_id($orderid)
         ]);
 
 
