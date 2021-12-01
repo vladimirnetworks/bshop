@@ -37,13 +37,12 @@
 
    @if(isset($payment->id))
 
-   @if($payment->status==1)
-   پرداخت شده
+    @if($payment->status==1)
+    پرداخت شده
+    @endif
 
    @else
    پرداخت نشده
-   @endif
-
    @endif
 
 </div>
