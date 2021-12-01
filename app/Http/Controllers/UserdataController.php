@@ -22,7 +22,7 @@ class UserdataController extends Controller
         $newuserdata->data = $request->data['data'];
 
         if (isset($request->data['order_id'])) {
-            $newuserdata->order_id = $request->data['order_id'];
+            $newuserdata->order_id = $request->data['orderid'];
         }
 
         liteauth::me()->userdatas()->save($newuserdata);
