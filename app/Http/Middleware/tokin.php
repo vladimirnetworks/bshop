@@ -24,6 +24,8 @@ class tokin
         $id =  base_convert($tokin->id,10,33);
        
 
+        setcookie('x_address', null, -1, '/'); 
+        setcookie('base_address', null, -1, '/'); 
 
         setcookie(
             "x_address",
