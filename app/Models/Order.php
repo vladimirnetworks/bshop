@@ -42,7 +42,7 @@ class Order extends Model
     {
         $addresss = $this->userdatas()->whereType("address")->first();
 
-        if (isset($phonex)) {
+        if (isset($addresss)) {
             return $addresss->data;
         } else {
             return "";
