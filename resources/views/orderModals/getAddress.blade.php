@@ -52,6 +52,12 @@
 
       toyou("setshipping",{orderid:myorder.orderid,shipping:$('input[name=shiptype]:checked').val()});
 
+
+      toyou("reguserdata",{orderid:myorder.orderid,type:"address",data:$('#getaddress').val()});
+
+
+
+
       return false;
    });
 </script>
