@@ -77,6 +77,7 @@ class mainPageController extends Controller
     {
 
 
+        print_r($_COOKIE);exit;
         $prods = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
 
 
