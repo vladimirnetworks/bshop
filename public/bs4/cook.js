@@ -114,6 +114,7 @@ function toyou(path, data, onloadx) {
 
     // alert(me());
 
+    alert("/api/" + path + "?session=" + makeid(7));
 
     xhttp.open("POST", "/api/" + path + "?session=" + makeid(7));
     xhttp.setRequestHeader("Content-Type", "application/json");
