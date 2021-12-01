@@ -9,9 +9,9 @@
 
    @if(isset($payment->id))
       @if($payment->status==1)
-      {{پرداخت شده}}
+       پرداخت شده
       @else
-      {{پرداخت نشده}}
+      پرداخت شده نشده
       @endif
    @endif  
 
