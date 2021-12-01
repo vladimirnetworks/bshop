@@ -3,7 +3,7 @@
 @section('main')
 
 
-<div class="" style="text-align:center">
+<div class="" style="text-align:center;direction:rtl">
 
 
     @foreach($order->cart['cart'] as $cartItem)
