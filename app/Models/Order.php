@@ -37,6 +37,19 @@ class Order extends Model
         return $shippingx[$this->selected_shipping];
     }
 
+
+    public function getAddressAttribute()
+    {
+        return "آدرس";
+    }
+
+
+    public function getPhoneAttribute()
+    {
+        return "09332806144";
+    }
+
+
     public function getTotalAmountAttribute()
     {
 

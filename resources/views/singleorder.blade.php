@@ -28,6 +28,16 @@
 
    </div>
 
+
+   <div class="row p-1 m-1 rounded" style="background-color:white">
+    
+
+      {{$order->address}}
+         <br>
+      {{$order->phone}}
+
+   </div>
+
    
 <div class="p-1">
    مجموع فاکتور : {{$order->cart['amount']+$order->show_shipping['cost']}} <br>
