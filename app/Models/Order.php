@@ -13,7 +13,20 @@ class Order extends Model
 
     public function getTotalAmountAttribute()
     {
-        return $this->liteauth_id;
+
+        $cart = json_decode($this->data, true);
+
+        $totamount = 0;
+
+        
+
+        foreach ($cart as $item) {
+            $prod = Product::whereId($item['id'])->first();
+            $totamount = $totamount + ($prod->price * $item['count']);
+        }
+
+
+        return $totamount;
     }
 
 
