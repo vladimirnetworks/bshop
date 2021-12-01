@@ -13,6 +13,7 @@ class Userdata extends Model
         'liteauth_id',
         'type',
         'data',
+        'order_id'
     ];
 
 

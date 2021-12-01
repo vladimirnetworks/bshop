@@ -18,8 +18,12 @@ class UserdataController extends Controller
      {
         $newuserdata = new Userdata();
 
-        $newuserdata->type = $request->type;
-        $newuserdata->data = $request->data;
+        $newuserdata->type = $request->data['type'];
+        $newuserdata->data = $request->data['data'];
+
+        if (isset($request->data['order_id'])) {
+            $newuserdata->order_id = $request->data['order_id'];
+        }
 
         liteauth::me()->userdatas()->save($newuserdata);
 
