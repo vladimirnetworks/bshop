@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class Paymentvarify extends Controller
 {
-    public function zarinpal($paymentid): void
+    public function zarinpal($paymentid)
     {
 
 
@@ -68,7 +68,7 @@ class Paymentvarify extends Controller
             }
         }
 
-        print_r($result );exit;
+        return redirect("myorders/".$payment->order_id);
 
 
     }
