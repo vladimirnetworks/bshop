@@ -45,13 +45,18 @@ class Paymentvarify extends Controller
         curl_close($ch);
         $result = json_decode($result, true);
 
+        
+
+
+        if (isset($result['data']) && isset($result['data']['code'])) {
+            if ($result['data']['code'] == 100 || $result['data']['code'] == 101) {
+                $ordi->status = 1;
+                $ordi->save();
+            }
+        }
+
         print_r($result );exit;
 
-        if ($result['data']['code'] == 100) {
-            echo 'Transation success. RefID:' . $result['data']['ref_id'];
-        } else {
-            echo 'code: ' . $result['errors']['code'];
-            echo 'message: ' .  $result['errors']['message'];
-        }
+
     }
 }
