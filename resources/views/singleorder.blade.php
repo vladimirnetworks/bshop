@@ -3,7 +3,11 @@
 @section('main')
 
 
-<div class="" style="text-align:center">order !</div>
+<div class="" style="text-align:center">
+
+   مجموع فاکتور شما : {{$order->total_amount}}
+
+</div>
 
 <div class="bigprod" style="text-align:center"></div>
 
