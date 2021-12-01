@@ -21,6 +21,7 @@ Route::get('/cat/{cat}', "App\Http\Controllers\mainPageController@index")->middl
 
 Route::get('/myorders', "App\Http\Controllers\OrderController@index")->middleware('tokin');
 
+Route::get('/myorders/{orderid}', "App\Http\Controllers\OrderController@showorder")->middleware('tokin');
 
 Route::get('/product/{product}', "App\Http\Controllers\ProductController@show")->middleware('tokin');
 
