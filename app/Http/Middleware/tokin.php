@@ -47,7 +47,7 @@ class tokin
             
             $id =  base_convert($_COOKIE['base_address'],33,10);
 
-            dd($id);
+          
             $whoiam = liteauth::where([["id",'=',$id],['hash','=',$_COOKIE['x_address']]]);
 
             if (!isset($whoiam->get()[0]['id'])) {
