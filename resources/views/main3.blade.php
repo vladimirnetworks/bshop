@@ -85,10 +85,10 @@ body {
 
 
 </style>
-<script src="scripts/swiperbox.js"></script>
-<script src="scripts/util.js"></script>
-<script src="scripts/cart.js?{{time()}}"></script>
-<script src="scripts/cartSlider.js"></script>
+<script src="/scripts/swiperbox.js"></script>
+<script src="/scripts/util.js"></script>
+<script src="/scripts/cart.js?{{time()}}"></script>
+<script src="/scripts/cartSlider.js"></script>
 
 <script>
 myorder = {};
@@ -127,7 +127,7 @@ apix.get("index",function(vals) {
 
     var xx = '<div style="transition: all .150s" class="rounded col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
      <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
-      <span>  <img class="mw-100" src="'+vals.photo+'"></span> \
+      <span>  <img class="mw-100" src="/'+vals.photo+'"></span> \
       <div style="margin-top:auto"> \
       <span style="color:#535353" href="product/47" class="d-block">'+vals.tinytitle+'</span> \
       </div> \
@@ -170,7 +170,7 @@ var photgals = JSON.parse(vals.photos);
 var photoitems = [];
 console.log(photgals);
 for (var i=0;i<photgals.length;i++) {
-   photoitems.push('<div class="myitem"><img style="width:100%" src="'+photgals[i].medium+'"  /></div>');
+   photoitems.push('<div class="myitem"><img style="width:100%" src="/'+photgals[i].medium+'"  /></div>');
 }
 
 var mySwipe = new SwiperBox({
