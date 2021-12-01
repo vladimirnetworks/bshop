@@ -41,15 +41,24 @@ class Order extends Model
     public function getAddressAttribute()
     {
         $addresss = $this->userdatas()->whereType("address")->first();
-        return $addresss->data;
+
+        if (isset($phonex)) {
+            return $addresss->data;
+        } else {
+            return "";
+        }
     }
 
 
     public function getPhoneAttribute()
     {
         $phonex = $this->userdatas()->whereType("phone")->first();
-        dd($phonex);
-        return $phonex->data;
+
+        if (isset($phonex)) {
+            return $phonex->data;
+        } else {
+            return "";
+        }
     }
 
 
@@ -83,11 +92,6 @@ class Order extends Model
 
     public function userdatas()
     {
-        return $this->hasMany('App\Models\Userdata')->orderBy('id','desc');
+        return $this->hasMany('App\Models\Userdata')->orderBy('id', 'desc');
     }
-
-
- 
-
-
 }
