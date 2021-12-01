@@ -24,7 +24,7 @@ class OrderController extends Controller
     {
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
 
-        $cart = json_decode($order->data, true);
+        /*$cart = json_decode($order->data, true);
 
         $totamount = 0;
 
@@ -32,8 +32,10 @@ class OrderController extends Controller
             $prod = Product::whereId($item['id'])->first();
             $totamount = $totamount + ($prod->price * $item['count']);
         }
+        */
 
-
+        $totamount = $order->total_amount;
+        
        
         $ipayment = Payment::Create([
             "order_id" => $orderid
