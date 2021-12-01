@@ -29,12 +29,12 @@
    </div>
 
 
-   <div class="row p-1 m-1 rounded" style="background-color:white">
+   <div class="row p-2 m-1 rounded" style="background-color:white;border:1px solid grey;text-align:right">
     
 
-      {{$order->address}}
+      {{$order->address}} <button class="btn btn-info btn-sm">تغییر</button>
          <br>
-      {{$order->phone}}
+      {{$order->phone}}   <button class="btn btn-info btn-sm">تغییر</button>
 
    </div>
 
