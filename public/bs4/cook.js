@@ -108,7 +108,7 @@ function toyou(path, data, onloadx) {
     xhttp.onload = function() {
         if (onloadx != null) {
 
-            alert(this.responseText);
+
             onloadx(JSON.parse(this.responseText))
         }
     }

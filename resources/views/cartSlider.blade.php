@@ -45,7 +45,7 @@
       hpu("finishcart");
       toyou("preorder", xcart.items(), function(res) {
          console.log(res);
-         alert(res.data.id);
+      
          myorder.orderid = res.data.id;
          myorder.shipping = res.data.shipping;
          $("#shippingx").empty();
