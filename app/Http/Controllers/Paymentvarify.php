@@ -68,7 +68,7 @@ class Paymentvarify extends Controller
             }
         }
 
-        return redirect("myorders/".$payment->order_id);
+        return redirect("https://www.behkiana.ir/myorders/".$payment->order_id);
 
 
     }
