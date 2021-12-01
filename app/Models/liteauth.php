@@ -23,7 +23,8 @@ class liteauth extends Model
         }
         $id =  base_convert($baseaddress,33,10);
 
-        dd($_SERVER);
+  
+        echo $id ;
         $whoiam = liteauth::where([["id",'=',$id],['hash','=',$xaddress]]);
 
        
