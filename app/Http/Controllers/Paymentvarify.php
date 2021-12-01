@@ -26,6 +26,8 @@ class Paymentvarify extends Controller
         $data = array("merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d", "authority" => $Authority, "amount" => $amount);
         
  
+        print_r($data);
+
         $jsonData = json_encode($data);
         $ch = curl_init('https://api.zarinpal.com/pg/v4/payment/verify.json');
         curl_setopt($ch, CURLOPT_USERAGENT, 'ZarinPal Rest Api v4');
