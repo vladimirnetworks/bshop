@@ -32,9 +32,9 @@
    <div class=" p-2 m-1 rounded" style="background-color:white;border:1px solid grey;text-align:right">
     
 
-      {{$order->address}} <button class="btn btn-info btn-sm">تغییر</button>
+      {{$order->address}} @if($order->shipping_status != 3) <button class="btn btn-info btn-sm">تغییر</button> @endif
          <br>
-      {{$order->phone}}   <button class="btn btn-info btn-sm">تغییر</button>
+      {{$order->phone}}   @if($order->shipping_status != 3)<button class="btn btn-info btn-sm">تغییر</button> @endif
 
    </div>
 
