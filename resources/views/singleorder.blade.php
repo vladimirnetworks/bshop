@@ -14,6 +14,9 @@
 
       @if($payment->status==1)
        پرداخت شده
+
+      @else
+      ...
       @endif
 
    @endif  
