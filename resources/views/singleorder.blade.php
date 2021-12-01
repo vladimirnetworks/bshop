@@ -33,7 +33,7 @@
    مجموع فاکتور : {{$order->cart['amount']+$order->show_shipping['cost']}} <br>
 
 
-   <hr>
+   
 
    @if(isset($payment->id))
 
@@ -42,9 +42,11 @@
     @endif
 
    @else
-   پرداخت نشده
+   پرداخت نشده <a class="btn btn-primary" href="/onlinepayment/{{$order->encoded_id}}">پراخت آنلاین</a>
    @endif
 
+
+   <hr>
 </div>
 
 <div class="bigprod" style="text-align:center"></div>
