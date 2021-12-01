@@ -40,13 +40,15 @@ class Order extends Model
 
     public function getAddressAttribute()
     {
-        return "آدرس";
+        $addresss = $this->userdatas()->whereType("address")->first();
+        return $addresss->data;
     }
 
 
     public function getPhoneAttribute()
     {
-        return "09332806144";
+        $phonex = $this->userdatas()->whereType("phone")->first();
+        return $phonex->data;
     }
 
 
@@ -72,4 +74,19 @@ class Order extends Model
 
         return $totamount + $shipping[$this->selected_shipping]['cost'];
     }
+
+
+
+
+
+
+    public function userdatas()
+    {
+        return $this->hasMany('App\Models\Userdata')->orderBy('id','desc');
+    }
+
+
+ 
+
+
 }
