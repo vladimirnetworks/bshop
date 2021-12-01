@@ -38,7 +38,9 @@
    @if(isset($payment->id) && $payment->status==1)
 
  
-    پرداخت شده
+
+
+<span class="btn btn-success">پرداخت شده</a>
 
 
    @else
