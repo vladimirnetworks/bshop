@@ -7,7 +7,7 @@
 
 
     @foreach($order->cart['cart'] as $cartItem)
-    {{$cartItem['title']}} <br>
+    {{$cartItem['title']}} ( {{$cartItem['count']}} عدد ) {{$cartItem['amount']}} تومان  <br>
     @endforeach
 
    مجموع فاکتور شما : {{$order->cart['amount']}} <br>
