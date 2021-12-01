@@ -8,8 +8,34 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $fillable = ['data','liteauth_id','shipping_status','payment_status','shipping','selected_shipping','encoded_id'];
+    protected $fillable = ['data', 'liteauth_id', 'shipping_status', 'payment_status', 'shipping', 'selected_shipping', 'encoded_id'];
 
+
+    public function getCartAttribute()
+    {
+        $cart = json_decode($this->data, true);
+        $cart_with_amount = [];
+
+        $totamount = 0;
+
+        foreach ($cart as $item) {
+
+            $hitmount = $item['price'] * $item['count'];
+
+            $totamount = $totamount + $hitmount;
+            $item['amount'] = $hitmount;
+
+            $cart_with_amount[] = $item;
+        }
+
+        return ['cart' => $cart_with_amount, "amount" => $totamount];
+    }
+
+    public function getShippingAttribute()
+    {
+        $shippingx = json_decode($this->shipping, true);
+        return $shippingx[$this->selected_shipping];
+    }
 
     public function getTotalAmountAttribute()
     {
@@ -18,7 +44,7 @@ class Order extends Model
 
         $totamount = 0;
 
-        
+
 
         foreach ($cart as $item) {
             $prod = Product::whereId($item['id'])->first();
@@ -28,11 +54,9 @@ class Order extends Model
 
         $shipping = json_decode($this->shipping, true);
 
-        
 
 
-        return $totamount+$shipping[$this->selected_shipping]['cost'];
+
+        return $totamount + $shipping[$this->selected_shipping]['cost'];
     }
-
-
 }

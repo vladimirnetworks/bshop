@@ -5,7 +5,9 @@
 
 <div class="" style="text-align:center">
 
-   مجموع فاکتور شما : {{$order->total_amount}} <br>
+
+
+   مجموع فاکتور شما : {{$order->cart['amount']}} <br>
 
    @if(isset($payment->id))
 
