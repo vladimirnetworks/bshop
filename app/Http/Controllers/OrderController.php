@@ -23,7 +23,7 @@ class OrderController extends Controller
      public function showorder($orderid)
      {
 
-
+        print_r($_SERVER);exit;
       
         
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
