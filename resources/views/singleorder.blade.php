@@ -8,11 +8,13 @@
    مجموع فاکتور شما : {{$order->total_amount}} <br>
 
    @if(isset($payment->id))
+
       @if($payment->status==1)
        پرداخت شده
       @else
       پرداخت شده نشده
       @endif
+      
    @endif  
 
 </div>
