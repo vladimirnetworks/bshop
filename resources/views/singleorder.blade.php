@@ -6,6 +6,9 @@
 <div class="" style="text-align:center">
 
 
+    @foreach($order->cart->cart as $cartItem)
+    {{$cartItem->title}} <br>
+    @endforeach
 
    مجموع فاکتور شما : {{$order->cart['amount']}} <br>
 
