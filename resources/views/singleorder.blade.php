@@ -28,9 +28,12 @@
 
    </div>
 
-   <hr>
+   
 
-   مجموع فاکتور شما : {{$order->cart['amount']+$order->show_shipping['cost']}} <br>
+   مجموع فاکتور : {{$order->cart['amount']+$order->show_shipping['cost']}} <br>
+
+
+   <hr>
 
    @if(isset($payment->id))
 
