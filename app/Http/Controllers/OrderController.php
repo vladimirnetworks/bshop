@@ -22,7 +22,8 @@ class OrderController extends Controller
 
      public function showorder($orderid)
      {
-        return view("singleorder");
+         
+        return view("singleorder",["pageTitle"=>"سفارش "]);
      }
 
     public function onlinepay($orderid)
