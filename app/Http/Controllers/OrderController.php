@@ -24,7 +24,7 @@ class OrderController extends Controller
      {
 
 
-        print_r($_COOKIE);exit;
+      
         
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
 
