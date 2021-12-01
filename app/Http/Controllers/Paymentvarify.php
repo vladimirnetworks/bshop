@@ -50,8 +50,8 @@ class Paymentvarify extends Controller
 
         if (isset($result['data']) && isset($result['data']['code'])) {
             if ($result['data']['code'] == 100 || $result['data']['code'] == 101) {
-                $ordi->status = 1;
-                $ordi->save();
+                $payment->status = 1;
+                $payment->save();
             }
         }
 
