@@ -41,6 +41,7 @@ class Paymentvarify extends Controller
         curl_close($ch);
         $result = json_decode($result, true);
 
+        print_r($result );exit;
 
         if ($result['data']['code'] == 100) {
             echo 'Transation success. RefID:' . $result['data']['ref_id'];
