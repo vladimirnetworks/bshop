@@ -112,6 +112,7 @@ function toyou(path, data, onloadx) {
     }
 
 
+    alert(me());
 
 
     xhttp.open("POST", "/api/" + path + "?session=" + makeid(7));
