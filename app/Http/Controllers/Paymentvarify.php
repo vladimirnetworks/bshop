@@ -19,7 +19,7 @@ class Paymentvarify extends Controller
 
         
 
-        $Authority = $payment->authority; //$_GET['Authority'];
+        $Authority = '0'.$payment->authority; //$_GET['Authority'];
         $amount = $ordi->total_amount;
 
        
