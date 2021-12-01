@@ -89,6 +89,18 @@ function me() {
     return readCookie('base_address') + ":" + readCookie('x_address');
 }
 
+function makeid(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() *
+            charactersLength));
+    }
+    return result;
+}
+
+
 function toyou(path, data, onloadx) {
     var xhttp = new XMLHttpRequest();
 
@@ -102,7 +114,7 @@ function toyou(path, data, onloadx) {
 
 
 
-    xhttp.open("POST", "/api/" + path + "?" + Math.random());
+    xhttp.open("POST", "/api/" + path + "?session=" + makeid(7));
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({ "me": me(), "data": data }));
 }
