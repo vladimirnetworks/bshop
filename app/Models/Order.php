@@ -9,4 +9,12 @@ class Order extends Model
 {
     use HasFactory;
     protected $fillable = ['data','liteauth_id','shipping_status','payment_status','shipping','selected_shipping'];
+
+
+    public function getTotalAmountAttribute()
+    {
+        return $this->liteauth_id;
+    }
+
+
 }

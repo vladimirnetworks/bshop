@@ -2,19 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 
 class Paymentvarify extends Controller
 {
     public function zarinpal($paymentid): void
     {
-        echo decode_id($paymentid);
 
 
-        $Authority = 0;//$_GET['Authority'];
-        $amount = 0;//
 
-            $data = array("merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d", "authority" => $Authority, "amount" => $amount);
+        $payment = Payment::whereId(decode_id($paymentid))->first();
+
+        $ordi =  Order::whereId(decode_id($payment->order_id))->first();
+
+        dd($ordi->total_amount);
+
+        $Authority = $payment->authority; //$_GET['Authority'];
+
+
+        $amount = 0; //
+
+        $data = array("merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d", "authority" => $Authority, "amount" => $amount);
         $jsonData = json_encode($data);
         $ch = curl_init('https://api.zarinpal.com/pg/v4/payment/verify.json');
         curl_setopt($ch, CURLOPT_USERAGENT, 'ZarinPal Rest Api v4');
