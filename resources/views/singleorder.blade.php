@@ -10,13 +10,13 @@
    @if(isset($payment->id))
 
 
-   {{$payment->status}}
+  
 
       @if($payment->status==1)
        پرداخت شده
 
       @else
-      ...
+       پرداخت نشده
       @endif
 
    @endif  
