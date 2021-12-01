@@ -28,9 +28,9 @@ class OrderController extends Controller
 
         $payment = Payment::whereDecodedOrderId($order->id)->first();
 
-        dd($payment->id);
         
-        return view("singleorder",["pageTitle"=>"سفارش ".$orderid,"order"=>$order]);
+        
+        return view("singleorder",["pageTitle"=>"سفارش ".$orderid,"order"=>$order,"payment"=>$payment]);
      }
 
     public function onlinepay($orderid)
