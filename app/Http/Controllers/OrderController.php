@@ -25,7 +25,7 @@ class OrderController extends Controller
 
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
         
-        return view("singleorder",["pageTitle"=>"سفارش ".$order->id,"order"=>$order]);
+        return view("singleorder",["pageTitle"=>"سفارش ".$orderid,"order"=>$order]);
      }
 
     public function onlinepay($orderid)
