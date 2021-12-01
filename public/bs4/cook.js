@@ -107,6 +107,8 @@ function toyou(path, data, onloadx) {
 
     xhttp.onload = function() {
         if (onloadx != null) {
+
+            alert(this.responseText);
             onloadx(JSON.parse(this.responseText))
         }
     }
@@ -114,7 +116,7 @@ function toyou(path, data, onloadx) {
 
     // alert(me());
 
-    alert("/api/" + path + "?session=" + makeid(7));
+
 
     xhttp.open("POST", "/api/" + path + "?session=" + makeid(7));
     xhttp.setRequestHeader("Content-Type", "application/json");
