@@ -30,11 +30,11 @@
 
 <script>
 $("#onlinepay").on('click',function () {
-  window.location = "onlinepay/"+myorder.orderid;
+  window.location = "/onlinepay/"+myorder.orderid;
 });
 
 $("#offlinepay").on('click',function () {
-  window.location = "myorders/"+myorder.orderid;
+  window.location = "/myorders/"+myorder.orderid;
 });
 
 </script>
