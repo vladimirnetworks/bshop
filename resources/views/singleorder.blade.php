@@ -3,7 +3,7 @@
 @section('main')
 
 
-<div class="bigprod" style="text-align:center">order !</div>
+<div class="" style="text-align:center">order !</div>
 
 <div class="bigprod" style="text-align:center"></div>
 
