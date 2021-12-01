@@ -48,6 +48,7 @@ class Order extends Model
     public function getPhoneAttribute()
     {
         $phonex = $this->userdatas()->whereType("phone")->first();
+        dd($phonex);
         return $phonex->data;
     }
 
