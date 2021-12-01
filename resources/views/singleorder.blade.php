@@ -29,10 +29,10 @@
    </div>
 
    
-
+<div class="p-1">
    مجموع فاکتور : {{$order->cart['amount']+$order->show_shipping['cost']}} <br>
 
-
+</div>
    
 
    @if(isset($payment->id) && $payment->status==1)
