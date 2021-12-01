@@ -6,8 +6,19 @@
 <div class="" style="text-align:center;direction:rtl">
 
 
+    کد سفارش : {{$order->encoded_id}}
+
     @foreach($order->cart['cart'] as $cartItem)
-    {{$cartItem['title']}} ( {{$cartItem['count']}} عدد ) {{$cartItem['amount']}} تومان  <br>
+    <div class="row p-1 m-1 rounded" style="background-color:#fcd1a9">
+       <div class="col">
+        {{$cartItem['title']}} 
+       </div>
+
+       <div class="col">
+        ( {{$cartItem['count']}} عدد ) {{$cartItem['amount']}} تومان  
+       </div>
+
+    </div>
     @endforeach
 
 
