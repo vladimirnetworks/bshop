@@ -26,7 +26,12 @@ class Order extends Model
         }
 
 
-        return $totamount;
+        $shipping = json_decode($this->shipping, true);
+
+        
+
+
+        return $totamount+$shipping[$this->selected_shipping]['cost'];
     }
 
 
