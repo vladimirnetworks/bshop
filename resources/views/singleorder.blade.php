@@ -40,7 +40,7 @@
  
 
 
-<span class="btn btn-success">پرداخت شده</a>
+<span class="btn btn-success">پرداخت شده</span>
 
 
    @else
