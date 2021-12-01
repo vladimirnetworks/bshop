@@ -35,14 +35,17 @@
 
    
 
-   @if(isset($payment->id))
+   @if(isset($payment->id) && $payment->status==1)
 
-    @if($payment->status==1)
+ 
     پرداخت شده
-    @endif
+
 
    @else
+
    پرداخت نشده <a class="btn btn-primary" href="/onlinepay/{{$order->encoded_id}}">پراخت آنلاین</a>
+ 
+ 
    @endif
 
 
