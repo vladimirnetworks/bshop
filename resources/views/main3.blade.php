@@ -364,7 +364,7 @@ $(".catmain").empty();
 
 apix.get("maincat",function(vals) {
 
-var catelem = $('<span class="m-2 p-2" style="transition:all 1.5s">'+vals.title+'</span>');
+var catelem = $('<div class="m-2 p-2" style="background-color:red;transition:all 1.5s">'+vals.title+'</div>');
 
 catelem.on("touchstart click",function() {
 
