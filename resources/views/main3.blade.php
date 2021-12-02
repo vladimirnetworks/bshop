@@ -364,7 +364,7 @@ $(".catmain").empty();
 
 apix.get("maincat",function(vals) {
 
-var catelem = $('<div class="bg-primary rounded-pill m-2 p-2" style="transition:all 1s">'+vals.title+'</div>');
+var catelem = $('<div class="bg-warning rounded-pill m-2 p-2" style="transition:all 1s;display:inline-block">'+vals.title+'</div>');
 
 catelem.on("touchstart click",function() {
 
