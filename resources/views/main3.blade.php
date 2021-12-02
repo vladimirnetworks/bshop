@@ -332,7 +332,7 @@ $(".catmain").empty();
 
 apix.get("maincat",function(vals) {
 
-  var catelem = $('<span class="bg-warning rounded-pill  m-1 p-1">'+vals.title+'</span>');
+  var catelem = $('<span class="bg-warning rounded-pill  m-2 p-2">'+vals.title+'</span>');
   $(".catmain").append(catelem);
 
 });
