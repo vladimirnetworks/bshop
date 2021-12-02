@@ -368,6 +368,8 @@ var catelem = $('<span class="bg-warning rounded-pill  m-2 p-2" style="all 1.5s"
 
 catelem.on("touchstart click",function() {
 
+    console.log("touchstart");
+
     $(this).css({"transform":'scale(0.8)' , "background-color":'#3781f0'});
 
     setTimeout(function() {
