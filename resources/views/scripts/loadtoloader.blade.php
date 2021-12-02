@@ -213,7 +213,7 @@ $(target).empty();
 
       console.log(jprod);
 
-      $(path).append(jprod);
+      $(".loader").append(jprod);
 
 
 
