@@ -15,96 +15,128 @@
   <script src="/bs4/bootstrap.min.js"></script>
   <script src="/bs4/cook.js?{{time()}}"></script>
 
-<style>
-.fly {
+  <style>
+    .fly {
 
-  animation: mymove 0.5s infinite;
-}
+      animation: mymove 0.5s infinite;
+    }
 
-@keyframes mymove {
-  50% {transform: rotate(360deg);}
-}
-</style>
+    @keyframes mymove {
+      50% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 
-<style>
-.modal-header {
-    border-bottom:0px;
-}
-
-
-@keyframes zoominoutsinglefeatured {
-  0% {
-      transform: scale(0.8,0.8);
-      opacity:0.0;
-  }
-
-  100% {
-      transform: scale(1,1);
-      opacity:1.0;
-  }
-}
+  <style>
+    .modal-header {
+      border-bottom: 0px;
+    }
 
 
-.saving {
+    @keyframes zoominoutsinglefeatured {
+      0% {
+        transform: scale(0.8, 0.8);
+        opacity: 0.0;
+      }
 
-  animation: zoominoutsinglefeatured .3s 1 ;
-}
-
-body {
-  margin-top:0px;
-  margin-bottom:50vh;
-}
+      100% {
+        transform: scale(1, 1);
+        opacity: 1.0;
+      }
+    }
 
 
+    .saving {
 
+      animation: zoominoutsinglefeatured .3s 1;
+    }
 
-@keyframes xshake_anim {
-
-  0% { transform: translate(1px, 1px) rotate(0deg);  background-color:white}
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); background-color:#00fb59}
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); background-color:#00e7ff}
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); background-color:white}
-
-}
-
-.xshake {
-
-  animation: xshake_anim .3s 2 ;
-  animation-timing-function: ease-in-out;
-}
+    body {
+      margin-top: 0px;
+      margin-bottom: 50vh;
+    }
 
 
 
 
+    @keyframes xshake_anim {
 
-</style>
-<script src="/scripts/swiperbox.js"></script>
-<script src="/scripts/util.js"></script>
-<script src="/scripts/cart.js?{{time()}}"></script>
-<script src="/scripts/cartSlider.js"></script>
+      0% {
+        transform: translate(1px, 1px) rotate(0deg);
+        background-color: white
+      }
 
-<script>
-myorder = {};
-</script>
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+        background-color: #00fb59
+      }
+
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+        background-color: #00e7ff
+      }
+
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+        background-color: white
+      }
+
+    }
+
+    .xshake {
+
+      animation: xshake_anim .3s 2;
+      animation-timing-function: ease-in-out;
+    }
+  </style>
+  <script src="/scripts/swiperbox.js"></script>
+  <script src="/scripts/util.js"></script>
+  <script src="/scripts/cart.js?{{time()}}"></script>
+  <script src="/scripts/cartSlider.js"></script>
+
+  <script>
+    myorder = {};
+  </script>
 
 </head>
 
 
 <body>
 
-@yield('main')  
+  @yield('main')
 
 
-<script>
-
-function api() {
+  <script>
+    function api() {
     self = this;
     this.api = "/api/";
 
@@ -332,8 +364,18 @@ $(".catmain").empty();
 
 apix.get("maincat",function(vals) {
 
-  var catelem = $('<span class="bg-warning rounded-pill  m-2 p-2">'+vals.title+'</span>');
-  $(".catmain").append(catelem);
+var catelem = $('<span class="bg-warning rounded-pill  m-2 p-2" style="all 1.5s">'+vals.title+'</span>');
+
+catelem.on("touchstart click",function() {
+catelem.css({"transform":'scale(0.8)' , "background-color":'#3781f0'});
+
+setTimeout(function() {
+catelem.css({"transform":'scale(1.0)', "background-color":'white'});
+},151);
+
+});
+
+$(".catmain").append(catelem);
 
 });
 
@@ -456,36 +498,31 @@ if (tot.count > 0) {
 
 
 
-</script>
+  </script>
 
 
 
 
-@include("scripts.miniprod")
+  @include("scripts.miniprod")
 
-@include("orderModals.getNumber")
-@include("orderModals.getAddress")
-@include("orderModals.successOrder")
-
-
-@include("cartSlider")
+  @include("orderModals.getNumber")
+  @include("orderModals.getAddress")
+  @include("orderModals.successOrder")
 
 
-
-
-<audio id="tr" src="https://www.benham.ir/t.mp3" type="audio/mp3"></audio>
-<audio id="shopp" src="https://www.benham.ir/shopp.mp3" type="audio/mp3"></audio>
+  @include("cartSlider")
 
 
 
 
-<script>
+  <audio id="tr" src="https://www.benham.ir/t.mp3" type="audio/mp3"></audio>
+  <audio id="shopp" src="https://www.benham.ir/shopp.mp3" type="audio/mp3"></audio>
 
 
 
 
-  
-window.addEventListener('popstate', (event) => {
+  <script>
+    window.addEventListener('popstate', (event) => {
   if (event.state == null) {
      cartdown();  
      $( ".modal" ).modal("hide");
@@ -516,6 +553,7 @@ window.addEventListener('popstate', (event) => {
 
 
 });
-</script>
+  </script>
 </body>
+
 </html>
