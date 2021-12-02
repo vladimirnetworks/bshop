@@ -194,6 +194,13 @@ catelem.on("touchstart click",function() {
 
 });
 
+
+catelem.click(function() {
+  loadtoloader(".loader","fromcat/"+vals.catid);
+});
+
+
+
 $(".catmain").append(catelem);
 
 });
