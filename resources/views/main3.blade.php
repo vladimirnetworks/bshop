@@ -196,6 +196,7 @@ catelem.on("touchstart click",function() {
 
 
 catelem.click(function() {
+  $('.bigprod').empty();
   loadtoloader(".loader","fromcat/"+vals.catid);
 });
 
