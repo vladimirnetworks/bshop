@@ -364,13 +364,13 @@ $(".catmain").empty();
 
 apix.get("maincat",function(vals) {
 
-var catelem = $('<div class="bg-warning rounded-pill m-2 p-2" style="transition:all 1s;display:inline-block">'+vals.title+'</div>');
+var catelem = $('<div class="bg-warning rounded-pill m-2 p-2" style="transition:all 0.4s;display:inline-block">'+vals.title+'</div>');
 
 catelem.on("touchstart click",function() {
 
     console.log("touchstart");
 
-    $(this).css({"transform":'scale(0.5)'  });
+    $(this).css({"transform":'scale(0.3)'  });
 
     $(this).removeClass("bg-warning");
     $(this).addClass("bg-danger");
@@ -378,8 +378,8 @@ catelem.on("touchstart click",function() {
     setTimeout(function() {
       catelem.css({"transform":'scale(1.0)'});
 
-      $(this).removeClass("bg-danger");
-      $(this).addClass("bg-warning");
+      catelem.removeClass("bg-danger");
+      catelem.addClass("bg-warning");
 
     },151);
 
