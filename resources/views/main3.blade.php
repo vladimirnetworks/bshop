@@ -326,6 +326,18 @@ $('.loader').append(jprod);
 });
 
 
+//////cat
+
+$(".catmain").empty();
+
+apix.get("maincat",function(vals) {
+
+  var catelem = $('<span class="badge badge-pill badge-warning m-1 p-1">'+vals.title+'</span>');
+  $(".catmain").append(catelem);
+
+});
+
+//////catend
 
 
 ////////////use///////////
