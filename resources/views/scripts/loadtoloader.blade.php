@@ -211,9 +211,9 @@ $(target).empty();
       /**/
 
 
-      console.log(jprod);
+    
 
-      $(".loader").append(jprod);
+      $(target).append(jprod);
 
 
 
