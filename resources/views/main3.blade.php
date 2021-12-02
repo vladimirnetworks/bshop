@@ -367,11 +367,12 @@ apix.get("maincat",function(vals) {
 var catelem = $('<span class="bg-warning rounded-pill  m-2 p-2" style="all 1.5s">'+vals.title+'</span>');
 
 catelem.on("touchstart click",function() {
-catelem.css({"transform":'scale(0.8)' , "background-color":'#3781f0'});
 
-setTimeout(function() {
-catelem.css({"transform":'scale(1.0)', "background-color":'white'});
-},151);
+    $(this).css({"transform":'scale(0.8)' , "background-color":'#3781f0'});
+
+    setTimeout(function() {
+      catelem.css({"transform":'scale(1.0)', "background-color":'white'});
+    },151);
 
 });
 
