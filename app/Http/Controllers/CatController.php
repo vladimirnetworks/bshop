@@ -21,9 +21,17 @@ class CatController extends Controller
     {
        return ["data"=>[
 
-        ["title"=>"a"],
-        ["title"=>"b"],
-        ["title"=>"c"]
+        ["title"=>"دستمال"],
+        ["title"=>"مواد شوینده"],
+        ["title"=>"شامپو"],
+        ["title"=>"صابون"],
+        ["title"=>"صابون"],
+        ["title"=>"صابون"],
+        ["title"=>"صابون"],
+        ["title"=>"صابون"],
+        ["title"=>"صابون"],
+        ["title"=>"صابون"],
+        ["title"=>"صابون"],
 
        ]];
     }
