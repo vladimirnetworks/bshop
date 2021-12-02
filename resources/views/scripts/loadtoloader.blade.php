@@ -211,6 +211,8 @@ $(target).empty();
       /**/
 
 
+      console.log(jprod);
+
       $(path).append(jprod);
 
 
