@@ -364,13 +364,13 @@ $(".catmain").empty();
 
 apix.get("maincat",function(vals) {
 
-var catelem = $('<div class="m-2 p-2" style="background-color:red;transition:all 1.5s">'+vals.title+'</div>');
+var catelem = $('<div class="bg-primary rounded-pill m-2 p-2" style="transition:all 1s">'+vals.title+'</div>');
 
 catelem.on("touchstart click",function() {
 
     console.log("touchstart");
 
-    $(this).css({"transform":'scale(0.8)' , "background-color":'#3781f0'});
+    $(this).css({"transform":'scale(0.5)' , "background-color":'#3781f0'});
 
     setTimeout(function() {
       catelem.css({"transform":'scale(1.0)', "background-color":'white'});
