@@ -370,10 +370,17 @@ catelem.on("touchstart click",function() {
 
     console.log("touchstart");
 
-    $(this).css({"transform":'scale(0.5)' , "background-color":'#3781f0'});
+    $(this).css({"transform":'scale(0.5)'  });
+
+    $(this).removeClass("bg-warning");
+    $(this).addClass("bg-danger");
 
     setTimeout(function() {
-      catelem.css({"transform":'scale(1.0)', "background-color":'white'});
+      catelem.css({"transform":'scale(1.0)'});
+
+      $(this).removeClass("bg-danger");
+      $(this).addClass("bg-warning");
+
     },151);
 
 });
