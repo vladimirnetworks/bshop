@@ -128,7 +128,7 @@ function api() {
 
 
     this.post = function(path, data, doin) {
-        $.post(this.api + path, data, function(data) {
+        $.post(this.api + path, JSON.stringify(data), function(data) {
             for (var i = 0; i < data.data.length; i++) {
                 doin(data.data[i]);
             }
