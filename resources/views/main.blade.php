@@ -94,7 +94,7 @@ loadcat();
        }
 
        if (event.state.act == 'product') {
-         console.log(event.state.prod);
+         console.log(event.state.productid);
         cartdown();
        }
 

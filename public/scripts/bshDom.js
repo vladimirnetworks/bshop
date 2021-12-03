@@ -45,7 +45,7 @@
             jprod.on("click", function(e) {
 
 
-                hpu({ act: "product", prod: jprod });
+                hpu({ act: "product", productid: vals.id });
 
 
                 document.body.scrollTop = 0; // For Safari
