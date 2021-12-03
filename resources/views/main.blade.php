@@ -94,7 +94,9 @@ loadcat();
        }
 
        if (event.state.act == 'product') {
-         console.log(event.state.productid);
+        
+
+         openprod(event.state.prod);
         cartdown();
        }
 

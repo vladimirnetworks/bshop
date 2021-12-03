@@ -214,7 +214,7 @@ function loadtoloader(target, path) {
         jprod.on("click", function(e) {
 
 
-            hpu({ act: "product", productid: vals.id });
+            hpu({ act: "product", prod: vals });
 
             openprod(vals);
 
