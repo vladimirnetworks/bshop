@@ -12,9 +12,10 @@ class CatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $cats = Cat::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+        return response($cats);
     }
 
     public function maincat()
