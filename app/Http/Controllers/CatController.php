@@ -90,7 +90,7 @@ class CatController extends Controller
      */
     public function update($catid , Request $request)
     {
-        $cat = Cat::whereId($catid);
+        $cat = Cat::whereId($catid)->get();
         $cat->title = $request->title;
         $cat->save();
     }
