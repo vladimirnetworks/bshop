@@ -10,10 +10,12 @@
 
 
   <link rel="stylesheet" href="/bs4/bootstrap.min.css">
-  <script src="/bs4/jquery.min.js"></script>
+
+
+  <script src="/jquery/jquery.min.js"></script>
   <script src="/bs4/popper.min.js"></script>
   <script src="/bs4/bootstrap.min.js"></script>
-  <script src="/bs4/cook.js?{{time()}}"></script>
+  <script src="/scripts/bsh.js?{{time()}}"></script>
 
   <style>
     .fly {
