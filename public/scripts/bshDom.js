@@ -275,7 +275,7 @@ function loadcat() {
 
         catelem.click(function() {
             $('.bigprod').empty();
-            loadtoloader(".loader", "fromcat/" + vals.catid);
+            loadtoloader(".loader", "fromcat/" + vals.id);
         });
 
 
