@@ -76,6 +76,7 @@ loadcat();
      if (event.state == null) {
        cartdown();
        $(".modal").modal("hide");
+       $('.bigprod').empty();
      } else {
 
 
