@@ -27,6 +27,12 @@ Route::post('categories/{parentid}', 'App\Http\Controllers\CatController@store')
 Route::put('categories/{parentid}/{Cat}', 'App\Http\Controllers\CatController@update');
 Route::delete('categories/{parentid}/{Cat}', 'App\Http\Controllers\CatController@destroy');
 
+
+
+
+Route::test('test/{parents}', 'App\Http\Controllers\CatController@getAllchilds2');
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

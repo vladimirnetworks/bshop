@@ -12,7 +12,7 @@ class CatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($parentid,Request $request)
+    public function index($parentid, Request $request)
     {
         $cats = Cat::whereParent($parentid)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
         return response($cats);
@@ -48,12 +48,12 @@ class CatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($parentid,Request $request)
+    public function store($parentid, Request $request)
     {
 
         $newcat = Cat::create([
             'title' => $request['title'],
-            'parent'=>$parentid
+            'parent' => $parentid
         ]);
 
         return ["data" => $newcat];
@@ -88,15 +88,15 @@ class CatController extends Controller
      * @param  \App\Models\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function update($parentid , Cat $Cat, Request $request)
+    public function update($parentid, Cat $Cat, Request $request)
     {
 
-       
-        
-      $Cat->title = $request->title;
-      
 
-      return ["data"=>$Cat->save()];
+
+        $Cat->title = $request->title;
+
+
+        return ["data" => $Cat->save()];
     }
 
     /**
@@ -107,13 +107,51 @@ class CatController extends Controller
      */
     public function destroy($parentid, Cat $Cat)
     {
-        
-         $allsubs = Cat::whereParent($Cat->id)->get();
 
-         foreach ($allsubs as $itemsub) {
+        $allsubs = Cat::whereParent($Cat->id)->get();
+
+        foreach ($allsubs as $itemsub) {
             $itemsub->delete();
-         }
+        }
 
-        return ["data"=>$Cat->delete()];
+        return ["data" => $Cat->delete()];
+    }
+
+
+    function getAllchilds($parent)
+    {
+
+
+        $allsubs = Cat::whereParent($parent)->get();
+
+        $ret = [];
+        foreach ($allsubs as $itemsub) {
+            $ret[] = $itemsub->id;
+        }
+        return $ret;
+    }
+
+
+
+    function getAllchilds2($parents)
+    {
+
+        if (!is_array($parents)) {
+            $parents = [$parents];
+        }
+
+        $ret = [];
+        foreach ($parents as $parent) {
+
+
+            $allsubs = Cat::whereParent($parent)->get();
+
+
+            foreach ($allsubs as $itemsub) {
+                $ret[] = $itemsub->id;
+            }
+        }
+
+        return $this->getAllchilds2($ret);
     }
 }
