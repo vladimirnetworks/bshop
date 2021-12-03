@@ -100,6 +100,16 @@ loadcat();
         cartdown();
        }
 
+
+
+       if (event.state.act == 'loadtoloader') {
+        
+      
+            $('.bigprod').empty();
+            loadtoloader(".loader", event.state.path);
+      }
+
+
      }
    });
  </script>

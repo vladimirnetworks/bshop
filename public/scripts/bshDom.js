@@ -274,8 +274,16 @@ function loadcat() {
 
 
         catelem.click(function() {
+
+
+
+            hpu({ act: "loadtoloader", "path": "fromcat/" + vals.id });
+
             $('.bigprod').empty();
             loadtoloader(".loader", "fromcat/" + vals.id);
+
+
+
         });
 
 
