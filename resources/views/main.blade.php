@@ -70,10 +70,15 @@ loadcat();
 
   <script>
    window.addEventListener('popstate', (event) => {
+
+    console.log(event.state);
+
      if (event.state == null) {
        cartdown();
        $(".modal").modal("hide");
      } else {
+
+
        if (event.state.act == 'cartup') {
          $(".modal").modal("hide");
          cartup();
@@ -82,7 +87,7 @@ loadcat();
          $(".modal").modal("hide");
          $("#getNumberModal").modal("show");
        }
-       
+
        if (event.state.act == 'addednumber') {
          $(".modal").modal("hide");
          $("#getAddressModal").modal("show");
