@@ -93,8 +93,8 @@ loadcat();
          $("#getAddressModal").modal("show");
        }
 
-       if (event.state.act == 'addednumber') {
-
+       if (event.state.act == 'product') {
+        cartdown();
        }
 
      }
