@@ -75,9 +75,6 @@ class ProductController extends Controller
         $targets = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
 
 
-
-
-
         return response($targets);
     }
 

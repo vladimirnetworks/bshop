@@ -12,24 +12,24 @@ class CatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index($parentid,Request $request)
     {
-        $cats = Cat::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+        $cats = Cat::whereParent($parentid)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
         return response($cats);
     }
 
     public function maincat()
     {
-       return ["data"=>[
+        return ["data" => [
 
-        ["title"=>"دستمال" ,"id"=>1],
-        ["title"=>"مواد شوینده","id"=>2],
-        ["title"=>"شامپو","id"=>3],
-        ["title"=>"نوار بهداشتی","id"=>4],
-        ["title"=>"خمیر دندان","id"=>5]
+            ["title" => "دستمال", "id" => 1],
+            ["title" => "مواد شوینده", "id" => 2],
+            ["title" => "شامپو", "id" => 3],
+            ["title" => "نوار بهداشتی", "id" => 4],
+            ["title" => "خمیر دندان", "id" => 5]
 
 
-       ]];
+        ]];
     }
 
     /**
@@ -50,7 +50,12 @@ class CatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $newcat = Cat::create([
+            'title' => $request['title'],
+        ]);
+
+        return ["data" => $newcat];
     }
 
     /**
