@@ -88,7 +88,7 @@ class CatController extends Controller
      * @param  \App\Models\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function update($Cat , Request $request)
+    public function update($parentid , Cat $Cat, Request $request)
     {
 
         dd($Cat);
