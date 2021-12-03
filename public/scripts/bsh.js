@@ -128,3 +128,116 @@ function api() {
 
     return this;
 }
+
+
+
+
+
+
+xcart = new Cart();
+
+firsttimecartup = true;
+
+function addtocart(prod) {
+    xcart.add(prod);
+    /*
+     if (firsttimecartup) {
+       cartup();
+        firsttimecartup=false;
+
+
+         if (cartsliderdata.timer) {
+          clearTimeout(cartsliderdata.timer);
+        }
+
+        cartsliderdata.timer = setTimeout(function() {
+          if (!cartsliderdata.userwording) {
+
+              cartdown(1000);
+              
+
+          }
+        },4000);
+
+         }
+    */
+}
+
+
+
+
+xcart.addChangeListener(function() {
+
+
+
+
+
+
+
+    var tot = xcart.total();
+
+    if (tot.count > 0) {
+        $(".cartslider").css({
+            "bottom": "0px"
+        });
+    } else {
+
+        cartdown();
+        $(".cartslider").css({
+            "bottom": "-9vh"
+        });
+    }
+
+
+
+
+    $('.cartslider_smallview_text').html(farsi_price(tot.amount) + " تومان");
+
+
+    $(".cartslider_bigview_cart").empty();
+
+
+
+
+    xcart.eech(function(prod) {
+
+
+
+        var cont = $('<div class="m-0 mt-1 border-bottom  border-secondary pb-1"></div>')
+
+        cont.append('<div style="display:inline-block;width:50%"><small>' + prod.tinytitle + "</small></div>");
+
+        var num = $('<div></div>');
+
+        var bez = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-right btn-sm" >+</button>');
+
+        num.append(bez);
+
+        bez.click(function() {
+            xcart.changeCount(prod.id, prod.count + 1);
+        });
+        num.append('<span style="display:inline-block" >' + prod.count + '</span>');
+
+        var men = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-left btn-sm" >-</button>');
+
+        men.click(function() {
+            xcart.changeCount(prod.id, prod.count - 1);
+        });
+
+        num.append(men);
+
+        cont.append($('<div style="display:inline-block"></div>').append(num));
+
+
+        cont.append('<div style="display:inline-block;width: 25%"><small>' + farsi_price(prod.price * prod.count) + " تومان</small></div>");
+
+
+        $(".cartslider_bigview_cart").append(cont);
+
+
+    });
+
+
+
+
+});
