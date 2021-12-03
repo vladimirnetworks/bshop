@@ -88,9 +88,11 @@ class CatController extends Controller
      * @param  \App\Models\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cat $cat)
+    public function update($catid , Request $request)
     {
-        //
+        $cat = Cat::whereId($catid);
+        $cat->title = $request->title;
+        $cat->save();
     }
 
     /**
