@@ -25,6 +25,7 @@ Route::apiResource('products', 'App\Http\Controllers\ProductController');
 Route::get('categories/{parentid}', 'App\Http\Controllers\CatController@index');
 Route::post('categories/{parentid}', 'App\Http\Controllers\CatController@store');
 Route::put('categories/{parentid}/{Cat}', 'App\Http\Controllers\CatController@update');
+Route::delete('categories/{parentid}/{Cat}', 'App\Http\Controllers\CatController@destroy');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

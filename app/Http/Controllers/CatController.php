@@ -94,7 +94,9 @@ class CatController extends Controller
        
         
       $Cat->title = $request->title;
-       $Cat->save();
+      
+
+      return ["data"=>$Cat->save()];
     }
 
     /**
@@ -103,8 +105,9 @@ class CatController extends Controller
      * @param  \App\Models\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cat $cat)
+    public function destroy(Cat $Cat)
     {
-        //
+        
+        return ["data"=>$Cat->delete()];
     }
 }
