@@ -91,10 +91,10 @@ class CatController extends Controller
     public function update($parentid , Cat $Cat, Request $request)
     {
 
-        dd($Cat);
+       
         
-       // $cat->title = "d";
-       // $cat->save();
+      $Cat->title = $request->title;
+       $Cat->save();
     }
 
     /**
