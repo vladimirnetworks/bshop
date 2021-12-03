@@ -105,8 +105,8 @@ var delimiter = " و ",
         for (var s = prepareNumber(i), a = [], o = 0; o < s.length; o += 1) { var l = tinyNumToWord(s[o]); "" !== l && a.push(l + letters[4][s.length - (o + 1)]) }
         return n.length > 0 && (n = convertDecimalPart(n)), (t ? negative : "") + a.join(delimiter) + n
     };
-    
-    
+
+
 String.prototype.toPersianLetter = function() { return Num2persian(this) }, Number.prototype.toPersianLetter = function() { return Num2persian(parseFloat(this).toString()) }, String.prototype.num2persian = function() { return Num2persian(this) }, Number.prototype.num2persian = function() { return Num2persian(parseFloat(this).toString()) };
 
 
@@ -114,3 +114,17 @@ String.prototype.toPersianLetter = function() { return Num2persian(this) }, Numb
 
 
 
+function api() {
+    self = this;
+    this.api = "/api/";
+
+    this.get = function(path, doin) {
+        $.getJSON(this.api + path, function(data) {
+            for (var i = 0; i < data.data.length; i++) {
+                doin(data.data[i]);
+            }
+        });
+    }
+
+    return this;
+}
