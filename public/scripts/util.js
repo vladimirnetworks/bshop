@@ -21,7 +21,7 @@ function animate(from, to, time, func) {
 
 }
 
-function hpu(act) {
-    console.log("added " + act);
-    history.pushState({ "act": act }, act, "?" + act);
+function hpu(xact) {
+    console.log("added " + xact.act);
+    history.pushState(xact, xact.act, "?" + xact.act);
 }

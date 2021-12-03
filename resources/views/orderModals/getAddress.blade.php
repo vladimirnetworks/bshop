@@ -48,7 +48,9 @@
    $("#reggaddress").on('submit', function() {
       $("#getAddressModal").modal("hide");
       $("#successOrderModal").modal("show");
-      hpu("addedaddress");
+    
+
+      hpu({ act: "addedaddress"});
 
       toyou("setshipping",{orderid:myorder.orderid,shipping:$('input[name=shiptype]:checked').val()});
 

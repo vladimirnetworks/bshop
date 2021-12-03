@@ -34,7 +34,13 @@
 <script>
    $(".showsabad").click(function() {
       cartup();
-      hpu("cartup");
+
+      
+    
+
+      hpu({ act: "cartup"});
+
+
    });
    $(".cartslider_dim").click(function() {
       cartdown();
@@ -42,7 +48,8 @@
    $(".finishshop").click(function() {
       cartdown();
       $("#getNumberModal").modal("show");
-      hpu("finishcart");
+    
+      hpu({ act: "finishcart"});
       toyou("preorder", xcart.items(), function(res) {
          console.log(res);
       

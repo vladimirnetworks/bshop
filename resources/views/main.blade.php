@@ -86,6 +86,11 @@ loadcat();
          $(".modal").modal("hide");
          $("#getAddressModal").modal("show");
        }
+
+       if (event.state.act == 'addednumber') {
+
+       }
+
      }
    });
  </script>
