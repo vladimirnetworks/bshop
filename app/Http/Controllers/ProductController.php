@@ -60,6 +60,11 @@ class ProductController extends Controller
     }
 
 
+    public function indecat(Request $request)
+    {
+       return $this->indexxv($request);
+    }
+
     public function index(Request $request)
     {
         //

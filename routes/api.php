@@ -27,6 +27,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('index', 'App\Http\Controllers\ProductController@indexxv');
+Route::get('fromcat', 'App\Http\Controllers\ProductController@indecat');
 Route::get('maincat', 'App\Http\Controllers\CatController@maincat');
 
 
