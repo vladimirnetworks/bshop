@@ -16,6 +16,7 @@
   <script src="/bs4/popper.min.js"></script>
   <script src="/bs4/bootstrap.min.js"></script>
 
+  <script src="/scripts/cart.js?{{time()}}"></script>
   <script src="/scripts/bsh.js?{{time()}}"></script>
   <script src="/scripts/bshDom.js?{{time()}}"></script>
 
@@ -24,7 +25,7 @@
 
   <script src="/scripts/swiperbox.js"></script>
   <script src="/scripts/util.js"></script>
-  <script src="/scripts/cart.js?{{time()}}"></script>
+
   <script src="/scripts/cartSlider.js"></script>
 
   <script>
