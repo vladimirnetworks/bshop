@@ -48,11 +48,12 @@ class CatController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($parentid,Request $request)
     {
 
         $newcat = Cat::create([
             'title' => $request['title'],
+            'parent'=>$parentid
         ]);
 
         return ["data" => $newcat];
