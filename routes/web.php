@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', "App\Http\Controllers\mainPageController@index3")->middleware('tokin');
+Route::get('/', "App\Http\Controllers\mainPageController@index")->middleware('tokin');
 
 Route::get('/cat/{cat}', "App\Http\Controllers\mainPageController@index")->middleware('tokin');
 

@@ -2,15 +2,12 @@
 
 @section('main')
 
-<div class="container-fluid" >
+<div class="bigprod" style="text-align:center"></div>
 
-    <div class="row">
-    @foreach($products as $product)
+<div class="catmain text-center p-1 m-1" style="white-space: nowrap;overflow: auto;direction: rtl;
+"></div>
 
-        @include('productItem')
+<div class="loader row justify-content-center" style="margin-left:0px;margin-right:0px"></div>
 
-    @endforeach
-    </div>
 
-</div>
 @stop
