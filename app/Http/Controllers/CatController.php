@@ -90,6 +90,8 @@ class CatController extends Controller
      */
     public function update(Cat $cat , Request $request)
     {
+
+        dd($cat);
         
         $cat->title = "d";
         $cat->save();
