@@ -30,7 +30,7 @@ Route::delete('categories/{parentid}/{Cat}', 'App\Http\Controllers\CatController
 
 
 
-Route::test('test/{parents}', 'App\Http\Controllers\CatController@getAllchilds2');
+Route::get('test/{parents}', 'App\Http\Controllers\CatController@getAllchilds2');
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
