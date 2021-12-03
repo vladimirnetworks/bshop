@@ -37,29 +37,16 @@
 
 <body>
 
-  @yield('main')
-
+@yield('main')
 
 <script>
-
 apix = new api();
-
-
 loadtoloader(".loader","index");
-
 loadcat();
 </script>
 
 
-<script>
 
-
-
-
-
-
-
-  </script>
 
 
 
@@ -82,38 +69,28 @@ loadcat();
 
 
   <script>
-    window.addEventListener('popstate', (event) => {
-  if (event.state == null) {
-     cartdown();  
-     $( ".modal" ).modal("hide");
-  } else {
-
-   if (event.state.act == 'cartup') {
-    
-     $( ".modal" ).modal("hide");
-      cartup();  
-   }
-
-   if (event.state.act == 'finishcart') {
-     $( ".modal" ).modal("hide");
-     $("#getNumberModal").modal("show");
-   }
-
-   if (event.state.act == 'addednumber') {
-     $( ".modal" ).modal("hide");
-     $("#getAddressModal").modal("show");
-   }
-
+   window.addEventListener('popstate', (event) => {
+     if (event.state == null) {
+       cartdown();
+       $(".modal").modal("hide");
+     } else {
+       if (event.state.act == 'cartup') {
+         $(".modal").modal("hide");
+         cartup();
+       }
+       if (event.state.act == 'finishcart') {
+         $(".modal").modal("hide");
+         $("#getNumberModal").modal("show");
+       }
+       if (event.state.act == 'addednumber') {
+         $(".modal").modal("hide");
+         $("#getAddressModal").modal("show");
+       }
+     }
+   });
+ </script>
 
 
-
-
-
-  }
-
-
-});
-  </script>
 </body>
 
 </html>
