@@ -10,7 +10,7 @@ function openprod(vals) {
     setTimeout(function() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0;
-    }, 200);
+    }, 30);
 
 
     var photgals = JSON.parse(vals.photos);
