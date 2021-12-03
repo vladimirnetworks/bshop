@@ -108,50 +108,35 @@ class CatController extends Controller
     public function destroy($parentid, Cat $Cat)
     {
 
-        $allsubs = Cat::whereParent($Cat->id)->get();
+        $rootid = $Cat->id;
 
-        foreach ($allsubs as $itemsub) {
-            $itemsub->delete();
-        }
+        $this->eachChild($rootid, function ($item) {
+            $item->delete();
+        });
 
         return ["data" => $Cat->delete()];
     }
 
 
-    function getAllchilds($parent)
+
+
+    function eachChild($root, $act)
     {
 
+        $ret = array();
+        $allsubs = Cat::whereParent($root)->get();
 
-        $allsubs = Cat::whereParent($parent)->get();
 
-        $ret = [];
         foreach ($allsubs as $itemsub) {
-            $ret[] = $itemsub->id;
+
+            $act($itemsub);
+            $ret[] = [
+                'title' => $itemsub->title,
+                'id' => $itemsub->id,
+                "children" => $this->eachChild($itemsub->id, $act)
+            ];
         }
+
         return $ret;
-    }
-
-
-
-    function getAllchilds2($parents)
-    {
-
-        if (!is_array($parents)) {
-            $parents = [$parents];
-        }
-
-        $ret = [];
-        foreach ($parents as $parent) {
-
-
-            $allsubs = Cat::whereParent($parent)->get();
-
-
-            foreach ($allsubs as $itemsub) {
-                $ret[] = $itemsub->id;
-            }
-        }
-
-        return $this->getAllchilds2($ret);
     }
 }
