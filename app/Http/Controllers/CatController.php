@@ -105,7 +105,7 @@ class CatController extends Controller
      * @param  \App\Models\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cat $Cat)
+    public function destroy($parentid, Cat $Cat)
     {
         
         return ["data"=>$Cat->delete()];
