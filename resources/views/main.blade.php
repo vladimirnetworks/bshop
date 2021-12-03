@@ -64,8 +64,7 @@ loadcat();
 
 
 
-  @include("scripts.miniprod")
-
+  
   @include("orderModals.getNumber")
   @include("orderModals.getAddress")
   @include("orderModals.successOrder")
