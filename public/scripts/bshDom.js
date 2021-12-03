@@ -5,9 +5,12 @@ function openprod(vals) {
 
 
 
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0;
 
+
+    setTimeout(function() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0;
+    }, 200);
 
 
     var photgals = JSON.parse(vals.photos);
