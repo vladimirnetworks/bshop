@@ -108,6 +108,12 @@ class CatController extends Controller
     public function destroy($parentid, Cat $Cat)
     {
         
+         $allsubs = Cat::whereParent($Cat->id)->get();
+
+         foreach ($allsubs as $itemsub) {
+            $itemsub->delete();
+         }
+
         return ["data"=>$Cat->delete()];
     }
 }
