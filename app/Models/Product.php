@@ -73,7 +73,7 @@ class Product extends Model
     }
 
 
-    protected $appends = ['photo','licaption'];
+    protected $appends = ['photo','licaption','cat'];
 
 
 
