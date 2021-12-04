@@ -78,6 +78,11 @@ loadcat(".catmain","catload",{"type":"index"});
        cartdown();
        $(".modal").modal("hide");
        $('.bigprod').empty();
+
+       loadtoloader(".loader","index");
+      loadcat(".catmain","catload",{"type":"index"});
+
+
      } else {
 
 
