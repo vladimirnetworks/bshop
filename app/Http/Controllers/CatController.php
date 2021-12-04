@@ -125,6 +125,13 @@ class CatController extends Controller
     }
 
 
+    public function oneLevelChild($rootid , Request $request)
+    {
+
+        $allsubs = Cat::whereParent($rootid)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+        return  $allsubs;
+      
+    }
 
 
     function eachChild($root, $act)

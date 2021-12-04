@@ -44,7 +44,7 @@ Route::get('maincat', 'App\Http\Controllers\CatController@maincat');
 
 Route::post('catload', 'App\Http\Controllers\CatController@load');
 
-
+Route::get('onelevelchild/{rootid}', 'App\Http\Controllers\CatController@oneLevelChild');
 
 Route::post('setshipping', 'App\Http\Controllers\OrderController@setshipping');
 
