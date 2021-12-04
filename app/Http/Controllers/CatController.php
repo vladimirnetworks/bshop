@@ -25,25 +25,24 @@ class CatController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function load(Request $request)
-     {
+    public function load(Request $request)
+    {
 
         $ret = array();
 
         if ($request->type == 'index') {
             $cats = Cat::whereParent(0)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', 0);
-      
-      
+
+
             foreach ($cats as $cat) {
                 $ret[] = ["title" => $cat->title, "id" => $cat->id];
-              }
-
+            }
         }
 
 
 
         return ["data" => $ret];
-     }
+    }
 
     public function create()
     {
@@ -146,5 +145,28 @@ class CatController extends Controller
         }
 
         return $ret;
+    }
+
+
+    public function allParents($catid)
+    {
+
+        $parents = array();
+        $parent = $catid;
+
+       
+        do {
+            $cat = Cat::whereId($parent)->first();
+
+            $parent = $cat->parent;
+
+            if ($parent > 0) {
+                $parents[] = $parent;
+            }
+            
+     
+        } while ($parent != 0);
+
+        return $parents;
     }
 }

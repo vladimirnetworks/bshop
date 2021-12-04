@@ -45,6 +45,7 @@ Route::get('maincat', 'App\Http\Controllers\CatController@maincat');
 Route::post('catload', 'App\Http\Controllers\CatController@load');
 
 
+
 Route::post('setshipping', 'App\Http\Controllers\OrderController@setshipping');
 
 Route::post('reguserdata', 'App\Http\Controllers\UserdataController@setuserdata');
