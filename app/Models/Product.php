@@ -51,16 +51,16 @@ class Product extends Model
     public function getCatAttribute()
     {
        
-       /* $cats = Relish::whereProductId($this->id);
+       $cats = Relish::whereProductId($this->id);
        
        $ct = [];
        foreach ($cats as $cat) {
         $ct[] = $cat->cat_id;
        }
        return $ct;
-       */
+       
 
-       return [2,3,4];
+       
     }
    
 
