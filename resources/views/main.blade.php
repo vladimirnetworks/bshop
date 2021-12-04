@@ -37,6 +37,10 @@
 
 <body>
 
+  <div style="position:fixed;height:7vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >behkiana</div>
+
+
+
 @yield('main')
 
 <script>
@@ -80,7 +84,8 @@ loadcat(".catmain","catload",{"type":"index"});
        $('.bigprod').empty();
 
        loadtoloader(".loader","index");
-      loadcat(".catmain","catload",{"type":"index"});
+
+       loadcat(".catmain","catload",{"type":"index"});
 
 
      } else {
