@@ -37,11 +37,11 @@
 
 <body>
 
-  <div style="position:fixed;height:10vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >
+  <div style="z-index:99999;position:fixed;height:10vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >
    <form style="display: flex;
    height: 100%;
    justify-content: center;
-   align-items: center;">
+   align-items: center;" class="px-2">
      <input type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
    </form>
   </div>
