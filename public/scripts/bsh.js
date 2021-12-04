@@ -144,7 +144,13 @@ function api() {
             contentType: 'application/json',
             data: JSON.stringify(data),
             dataType: 'json',
-            success: doin
+            success: function(data) {
+
+                for (var i = 0; i < data.data.length; i++) {
+                    doin(data.data[i]);
+                }
+
+            }
         });
 
 
