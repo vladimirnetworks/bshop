@@ -28,7 +28,7 @@ class CatController extends Controller
      public function load(Request $request)
      {
 
-        dd($request);exit;
+        dd($request->type);exit;
 
         if ($request->type == 'index') {
             $cats = Cat::whereParent(0)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', 0);
