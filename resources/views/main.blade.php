@@ -42,7 +42,7 @@
 <script>
 apix = new api();
 loadtoloader(".loader","index");
-loadcat2(".catmain","catload",{"type":"index"});
+loadcat(".catmain","catload",{"type":"index"});
 
 </script>
 

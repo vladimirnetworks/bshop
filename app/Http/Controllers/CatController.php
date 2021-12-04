@@ -18,19 +18,6 @@ class CatController extends Controller
         return response($cats);
     }
 
-    public function maincat()
-    {
-        return ["data" => [
-
-            ["title" => "دستمال", "id" => 1],
-            ["title" => "مواد شوینده", "id" => 2],
-            ["title" => "شامپو", "id" => 3],
-            ["title" => "نوار بهداشتی", "id" => 4],
-            ["title" => "خمیر دندان", "id" => 5]
-
-
-        ]];
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -40,16 +27,16 @@ class CatController extends Controller
 
      public function load(Request $request)
      {
-        return ["data" => [
 
-            ["title" => "دستمال", "id" => 1],
-            ["title" => "مواد شوینده", "id" => 2],
-            ["title" => "شامپو", "id" => 3],
-            ["title" => "نوار بهداشتی", "id" => 4],
-            ["title" => "خمیر دندان", "id" => 5]
+        if ($request->type == 'index') {
+            $cats = Cat::whereParent(0)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', 0);
+        }
 
+        foreach ($cats as $cat) {
+          $ret[] = ["title" => "دستمال", "id" => 1];
+        }
 
-        ]];
+        return ["data" => $ret];
      }
 
     public function create()
