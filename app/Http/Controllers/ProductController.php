@@ -72,7 +72,7 @@ class ProductController extends Controller
           $prdid[] = $rl['product_id'];
      }
 
-     return Product::findMany($prdid);;
+     return ["data"=>Product::findMany($prdid)];
 
     }
 
