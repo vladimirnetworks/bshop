@@ -15,4 +15,27 @@ class Cat extends Model
     ];
 
 
+    public static function AllParent($catid)
+    {
+
+        $parents = array();
+        $parent = $catid;
+
+       
+        do {
+            $cat = Cat::whereId($parent)->first();
+
+            $parent = $cat->parent;
+
+            if ($parent > 0) {
+                $parents[] = $parent;
+            }
+            
+     
+        } while ($parent != 0);
+
+        return $parents;
+    }
+
+
 }

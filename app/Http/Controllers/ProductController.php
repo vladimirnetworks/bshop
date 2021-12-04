@@ -208,11 +208,15 @@ class ProductController extends Controller
 
         Relish::whereProductId($Product->id)->delete();
 
-       // foreach ($request->cat as $cat) {
-           
-       // }
 
-        return ["data" => $Product->save()];
+        $cats = [];
+
+        foreach ($request->cat as $cat) {
+            $cats[] = $cat;        
+            $cats = array_merge($cats,Relish::AllParent($cat));
+        }
+
+        return ["data" => $Product->save(),"test"=>$cats];
     }
 
     /**
