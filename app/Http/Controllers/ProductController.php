@@ -65,7 +65,7 @@ class ProductController extends Controller
     public function indecat($catid, Request $request)
     {
 
-     $prods = Relish::whereCatId($catid)->orderBy('product_id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+     $prods = Relish::with('product')->whereCatId($catid)->orderBy('product_id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
      return $prods;
 
     }
