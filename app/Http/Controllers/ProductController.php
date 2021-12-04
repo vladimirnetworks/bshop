@@ -218,6 +218,15 @@ class ProductController extends Controller
             $cats = array_merge($cats,Cat::AllParent($cat));
         }
 
+        $cats = array_unique($cats);
+
+        foreach ($cats as $cat) {
+            Relish::create([
+                "product_id"=>$Product->id,
+                "cat_id"=>$cat
+            ]);
+        }
+
         return ["data" => $Product->save(),"test"=>$cats];
     }
 
