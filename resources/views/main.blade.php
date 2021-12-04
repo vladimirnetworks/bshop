@@ -39,7 +39,7 @@
 
   <div  style="position:fixed;height:7vh;background-color:red;top:0px;left:0px;text-align:center;width:100%" >
    <form class="p-3">
-     <input type="text" class="form-control mt-1" style="direction:rtl;" placeholder="جستجو در محصولات">
+     <input type="text" class="form-control " style="direction:rtl;" placeholder="جستجو در محصولات">
    </form>
   </div>
 
