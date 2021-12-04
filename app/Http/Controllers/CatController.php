@@ -35,7 +35,7 @@ class CatController extends Controller
       
       
             foreach ($cats as $cat) {
-                $ret[] = ["title" => "دستمال", "id" => 1];
+                $ret[] = ["title" => $cat->title, "id" => $cat->id];
               }
 
         }
