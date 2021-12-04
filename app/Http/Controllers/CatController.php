@@ -28,15 +28,19 @@ class CatController extends Controller
      public function load(Request $request)
      {
 
-        dd($request->type);exit;
+        $ret = array();
 
         if ($request->type == 'index') {
             $cats = Cat::whereParent(0)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', 0);
+      
+      
+            foreach ($cats as $cat) {
+                $ret[] = ["title" => "دستمال", "id" => 1];
+              }
+
         }
 
-        foreach ($cats as $cat) {
-          $ret[] = ["title" => "دستمال", "id" => 1];
-        }
+
 
         return ["data" => $ret];
      }
