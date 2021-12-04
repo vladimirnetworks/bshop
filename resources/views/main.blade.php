@@ -37,7 +37,7 @@
 
 <body>
 
-  <div class="p-1" style="position:fixed;height:7vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >
+  <div class="p-3" style="position:fixed;height:7vh;background-color:white;top:0px;left:0px;text-align:center;width:100%" >
    <form>
      <input type="text" class="form-control mt-1" style="direction:rtl;" placeholder="جستجو در محصولات">
    </form>
