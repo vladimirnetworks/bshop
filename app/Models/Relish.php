@@ -14,4 +14,6 @@ class Relish extends Model
         'cat_id',
     ];
 
+
+
 }

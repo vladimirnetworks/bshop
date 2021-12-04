@@ -62,9 +62,12 @@ class ProductController extends Controller
     }
 
 
-    public function indecat(Request $request)
+    public function indecat($catid, Request $request)
     {
-       return $this->indexxv($request);
+
+     $prods = Relish::whereCatId($catid)->orderBy('product_id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+     return $prods;
+
     }
 
     public function index(Request $request)
