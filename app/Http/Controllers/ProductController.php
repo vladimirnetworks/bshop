@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Relish;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -203,6 +204,13 @@ class ProductController extends Controller
         }
 
         $Product->photos = json_encode($sgal);
+
+
+        Relish::whereProductId($Product->id)->delete();
+
+       // foreach ($request->cat as $cat) {
+           
+       // }
 
         return ["data" => $Product->save()];
     }
