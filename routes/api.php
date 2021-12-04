@@ -42,6 +42,8 @@ Route::get('index', 'App\Http\Controllers\ProductController@indexxv');
 Route::get('fromcat/{catid}', 'App\Http\Controllers\ProductController@indecat');
 Route::get('maincat', 'App\Http\Controllers\CatController@maincat');
 
+Route::post('catload', 'App\Http\Controllers\CatController@load');
+
 
 Route::post('setshipping', 'App\Http\Controllers\OrderController@setshipping');
 

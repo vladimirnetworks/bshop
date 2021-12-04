@@ -37,6 +37,21 @@ class CatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function load(Request $request)
+     {
+        return ["data" => [
+
+            ["title" => "دستمال", "id" => 1],
+            ["title" => "مواد شوینده", "id" => 2],
+            ["title" => "شامپو", "id" => 3],
+            ["title" => "نوار بهداشتی", "id" => 4],
+            ["title" => "خمیر دندان", "id" => 5]
+
+
+        ]];
+     }
+
     public function create()
     {
         //
