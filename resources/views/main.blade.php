@@ -38,7 +38,10 @@
 <body>
 
   <div style="position:fixed;height:7vh;background-color:red;top:0px;left:0px;text-align:center;width:100%" >
-   <form style="padding-top:1vh">
+   <form style="display: flex;
+   height: 100%;
+   justify-content: center;
+   align-items: center;">
      <input type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
    </form>
   </div>
