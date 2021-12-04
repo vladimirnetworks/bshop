@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cat;
+use App\Models\Relish;
 use Illuminate\Http\Request;
 
 class CatController extends Controller
@@ -117,7 +118,13 @@ class CatController extends Controller
 
         $rootid = $Cat->id;
 
+
+     
+        Relish::whereCatId($Cat->id)->delete();
+
         $this->eachChild($rootid, function ($item) {
+
+            Relish::whereCatId($item->id)->delete();
             $item->delete();
         });
 
