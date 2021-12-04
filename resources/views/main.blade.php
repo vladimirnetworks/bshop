@@ -37,8 +37,8 @@
 
 <body>
 
-  <div class="py-2" style="position:fixed;height:7vh;background-color:red;top:0px;left:0px;text-align:center;width:100%" >
-   <form class="px-2" style="line-height: 7vh">
+  <div style="position:fixed;height:7vh;background-color:red;top:0px;left:0px;text-align:center;width:100%" >
+   <form >
      <input type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
    </form>
   </div>
