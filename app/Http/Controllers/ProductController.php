@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cat;
 use App\Models\Product;
 use App\Models\Relish;
 use Illuminate\Http\Request;
@@ -208,12 +209,13 @@ class ProductController extends Controller
 
         Relish::whereProductId($Product->id)->delete();
 
+       
 
         $cats = [];
 
         foreach ($request->cat as $cat) {
             $cats[] = $cat;        
-            $cats = array_merge($cats,Relish::AllParent($cat));
+            $cats = array_merge($cats,Cat::AllParent($cat));
         }
 
         return ["data" => $Product->save(),"test"=>$cats];
