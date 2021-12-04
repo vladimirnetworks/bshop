@@ -38,7 +38,7 @@
 <body>
 
   <div  style="position:fixed;height:7vh;background-color:red;top:0px;left:0px;text-align:center;width:100%" >
-   <form class="p-3" style="line-height: 7vh">
+   <form class="" style="line-height: 7vh">
      <input type="text" class="form-control " style="direction:rtl;" placeholder="جستجو در محصولات">
    </form>
   </div>
