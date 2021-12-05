@@ -180,7 +180,8 @@ loadcat(".catmain","catload",{"type":"index"});
        cartdown();
        $(".modal").modal("hide");
        
-       closeprod();
+       $('.bigprod').empty();
+       showtop();
 
        loadtoloader(".loader","index");
 
@@ -195,19 +196,23 @@ loadcat(".catmain","catload",{"type":"index"});
        if (event.state.act == 'cartup') {
          $(".modal").modal("hide");
          cartup();
+         showtop();
        }
        if (event.state.act == 'finishcart') {
          $(".modal").modal("hide");
          $("#getNumberModal").modal("show");
+
        }
 
        if (event.state.act == 'addednumber') {
          $(".modal").modal("hide");
          $("#getAddressModal").modal("show");
+
        }
 
        if (event.state.act == 'searchboxshow') {
-          window.history.back();  
+          window.history.back();
+          showtop();  
        }
 
 
@@ -215,7 +220,8 @@ loadcat(".catmain","catload",{"type":"index"});
         
 
          openprod(event.state.prod,"noanim");
-        cartdown();
+         hidetop();
+         
        }
 
 

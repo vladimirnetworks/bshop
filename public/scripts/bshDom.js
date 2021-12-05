@@ -11,6 +11,16 @@ function closeprod(from = null) {
 
 }
 
+showtop() {
+    $('.whitetopbar').css({ "display": "inline" });
+    $('body').css({ "margin-top": "10vh" });
+}
+
+hidetop() {
+    $('.whitetopbar').css({ "display": "none" });
+    $('body').css({ "margin-top": "0px" });
+}
+
 function openprod(vals, noanim = null) {
 
 
@@ -186,6 +196,7 @@ function openprod(vals, noanim = null) {
 
     $('.bigprod').empty();
     $('.bigprod').append(cont);
+    showtop();
     $('.bigprod').append($('<hr>'));
 
 
@@ -304,6 +315,7 @@ function loadcat(target, path, val) {
             hpu({ act: "loadtoloader", "path": "fromcat/" + vals.id });
 
             $('.bigprod').empty();
+            showtop();
             loadtoloader(".loader", "fromcat/" + vals.id);
 
 
