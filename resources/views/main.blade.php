@@ -82,8 +82,9 @@
     
      $("#search_box").show();
 
+     if ($("#search_input").val() == '') {
      $("#search_box").empty();
-
+     }
       hpu({ act: "searchboxshow"});
     });
 
