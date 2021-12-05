@@ -65,7 +65,7 @@
    </div>
 
    <div style="z-index:99999;position:absolute;top: 2%;right: 2%;width: 9vw;display:none" class="prodtopbar" >
-    <img src="/icons/mag.png" style="width: 100%" />
+    <img src="/icons/menu.png" style="width: 100%" />
    </div>   
 
   <style>
