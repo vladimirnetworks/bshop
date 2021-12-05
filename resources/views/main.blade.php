@@ -43,11 +43,11 @@
     
     </script>
 
-  <div style="z-index:99999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="p-2" >
+  <div style="z-index:99999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="p-2 whitetopbar" >
    <form style="display: flex;
    height: 100%;
    justify-content: center;
-   align-items: center;flex-direction: column;" class="whitetopbar px-2">
+   align-items: center;flex-direction: column;" class="px-2">
 
      <input autocomplete="off" id="search_input" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
      
@@ -105,7 +105,7 @@
         if (item) {
 
           $("#search_box").show();
-          
+
           var xitem = $('<div style="direction:rtl" class="p-2 m-2 text-right border border-primary rounded">'+item.title+'</div>');
                xitem.click(function() {
                 hpu({ act: "product", prod: item });
