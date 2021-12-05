@@ -41,11 +41,11 @@
    <form style="display: flex;
    height: 100%;
    justify-content: center;
-   align-items: center;position:relative" class="px-2">
+   align-items: center;position:relative;flex-direction: column;" class="px-2">
 
      <input autocomplete="off" id="seachbox" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
      
-     <div style="width:100%;height:5px"></div>
+     <div style="width:100%;height:5px;position:relative"></div>
       <div style="display:none;z-index:99999;position:fixed;background-color:white;bottom:0px;height:100vh"></div>
     </form>
   </div>
