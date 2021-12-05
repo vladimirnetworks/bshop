@@ -13,6 +13,12 @@
 
 
 
+<div style="margin-left: auto">
+         <img src="/icons/mag.png" style="height:100%"/>
+</div>
+
+
+
          <div>
             <div class="cartslider_smallview_text" style="font-size:90%;"></div>
              
@@ -24,9 +30,7 @@
 
          </div>
 
-         <div style="margin-left: auto">
-                  <img src="/icons/mag.png" style="height:100%"/>
-         </div>
+
 
 
 
