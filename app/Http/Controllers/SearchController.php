@@ -14,7 +14,7 @@ class SearchController extends Controller
         // $prods = Product::orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
 
 
-        $searchTerms = explode(' ', $request->q);
+        $searchTerms = explode(' ', arabicToPersian($request->q));
         $query = Product::query();
 
 
