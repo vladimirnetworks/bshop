@@ -69,7 +69,7 @@
       <div class="cartslider_bigview_cart"></div>
 
       <div class="w-100 text-center p-2 m-2">
-         <button class="finishshop btn btn-primary">finish</button>
+         <button class="finishshop btn btn-primary">تایید و ثبت سفارش</button>
       </div>
 
    </div>
