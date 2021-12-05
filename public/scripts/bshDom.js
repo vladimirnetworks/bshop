@@ -11,12 +11,12 @@ function closeprod(from = null) {
 
 }
 
-showtop() {
+function showtop() {
     $('.whitetopbar').css({ "display": "inline" });
     $('body').css({ "margin-top": "10vh" });
 }
 
-hidetop() {
+function hidetop() {
     $('.whitetopbar').css({ "display": "none" });
     $('body').css({ "margin-top": "0px" });
 }
