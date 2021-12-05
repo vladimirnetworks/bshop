@@ -37,7 +37,7 @@
 
 <body>
 
-  <div style="z-index:99999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="px-2" >
+  <div style="z-index:99999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="p-2" >
    <form style="display: flex;
    height: 100%;
    justify-content: center;
