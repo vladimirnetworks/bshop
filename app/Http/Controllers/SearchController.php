@@ -8,10 +8,10 @@ class SearchController extends Controller
 {
     public function search()
     {
-        return ["data"=>[
+        return ["data"=>
 
             ["notfound"=>true]
 
-        ]];
+        ];
     }
 }
