@@ -218,7 +218,9 @@ function loadtoloader(target, path) {
 
 
 
-        jprod.on("touchstart click", function() {
+        /*jprod.on("touchstart click", function() {
+
+
             jprod.css({
                 "transform": 'scale(0.8)',
                 "background-color": '#3781f0'
@@ -233,7 +235,7 @@ function loadtoloader(target, path) {
 
 
         });
-
+*/
 
         /**/
 
@@ -248,6 +250,8 @@ function loadtoloader(target, path) {
 
 
         });
+
+        setTransFormAnim(jprod);
         /**/
 
 
@@ -284,10 +288,11 @@ function loadcat(target, path, val) {
 
 
 
+
         catelem.click(function() {
 
 
-            TransFormAnim($(this));
+
 
             hpu({ act: "loadtoloader", "path": "fromcat/" + vals.id });
 
@@ -299,6 +304,8 @@ function loadcat(target, path, val) {
 
         });
 
+
+        setTransFormAnim(catelem);
 
 
         $(target).append(catelem);
