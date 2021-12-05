@@ -55,6 +55,10 @@
     $(this).css({"background-color":"white"});
     });
 
+    $( "#seachbox" ).keypress(function() {
+      $(this).css({"background-color":"green"});
+});
+
     </script>
 
 
