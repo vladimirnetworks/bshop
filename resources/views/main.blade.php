@@ -42,7 +42,7 @@
    height: 100%;
    justify-content: center;
    align-items: center;" class="px-2">
-     <input type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
+     <input type="text" class="zform-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
    </form>
   </div>
 
