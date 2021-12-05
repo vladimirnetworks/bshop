@@ -181,9 +181,10 @@ function openprod(vals, noanim = null) {
 
     cont.append(kharid);
 
-    closeprod("prod");
 
 
+
+    $('.bigprod').empty();
     $('.bigprod').append(cont);
     $('.bigprod').append($('<hr>'));
 
@@ -302,7 +303,7 @@ function loadcat(target, path, val) {
 
             hpu({ act: "loadtoloader", "path": "fromcat/" + vals.id });
 
-            closeprod();
+            $('.bigprod').empty();
             loadtoloader(".loader", "fromcat/" + vals.id);
 
 
