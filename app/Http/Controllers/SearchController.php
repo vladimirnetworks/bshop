@@ -23,7 +23,7 @@ class SearchController extends Controller
         foreach ($searchTerms as $k => $searchTerm) {
 
             if ($k > 0) {
-                $query->orWhere('searchkey', 'like', '%' . $searchTerms[0] . '%');
+                $query->where('searchkey', 'like', '%' . $searchTerms[0] . '%');
             }
         }
 
