@@ -101,11 +101,16 @@
       $("#search_box").append($('<div class="presearch m-2">...</div>'));
 
       apix.post("search",{"q":$("#search_input").val()},function(item) {
-        if (item.t=="notfound") {
-          $("#search_box").append($('<div style="direction:rtl" class=" m-2">هیچی پیدا نشد ☹</div>'));
+        if (item) {
+          $("#search_box").append($('<div style="direction:rtl" class=" m-2">1</div>'));
         }
       },function(res) {
-        console.log(res);
+
+        $("#search_box").empty();
+
+        if (res.notfound) {
+          $("#search_box").append($('<div style="direction:rtl" class=" m-2">هیچی پیدا نشد ☹</div>'));
+        }
       });
 
 
