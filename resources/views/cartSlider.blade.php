@@ -13,7 +13,7 @@
 
 
 
-<div style="text-align: center;
+<div class="TransFormAnim" style="text-align: center;
 height: 100%;
 max-height:9vh;
 display: flex;
@@ -23,7 +23,7 @@ justify-content: center" class="mr-1">
          <img src="/icons/menu.png" style="height:60%"/><small>صفحه‌اول</small>
 </div>
 
-<div style="text-align: center;
+<div class="TransFormAnim" style="text-align: center;
 height: 100%;
 max-height:9vh;
 display: flex;
