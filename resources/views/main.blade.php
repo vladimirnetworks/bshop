@@ -37,6 +37,12 @@
 
 <body>
 
+  <script>
+    apix = new api();
+
+    
+    </script>
+
   <div style="z-index:99999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="p-2" >
    <form style="display: flex;
    height: 100%;
@@ -94,6 +100,11 @@
       $("#search_box").append($('<div class="presearch m-2">...</div>'));
       $("#search_box").append($('<div class="presearch m-2">...</div>'));
 
+      apix.post("search",{"q":$("#search_box").val},function() {
+        $("#search_box").empty();
+      });
+
+
     });
 
     </script>
@@ -102,7 +113,7 @@
 @yield('main')
 
 <script>
-apix = new api();
+
 loadtoloader(".loader","index");
 loadcat(".catmain","catload",{"type":"index"});
 

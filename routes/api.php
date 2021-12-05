@@ -42,6 +42,9 @@ Route::get('index', 'App\Http\Controllers\ProductController@indexxv');
 Route::get('fromcat/{catid}', 'App\Http\Controllers\ProductController@indecat');
 Route::get('maincat', 'App\Http\Controllers\CatController@maincat');
 
+Route::post('search', 'App\Http\Controllers\SearchController@search');
+
+
 Route::post('catload', 'App\Http\Controllers\CatController@load');
 
 Route::get('onelevelchild/{rootid}', 'App\Http\Controllers\CatController@oneLevelChild');
