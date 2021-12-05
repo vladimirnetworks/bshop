@@ -10,13 +10,18 @@
    <div class="cartslider_smallview"
       style="transition:all 0.3s;display:flex;height:100%;justify-content: center;align-items: center">
 
-      <span class="cartslider_smallview_text" style="font-size:90%;"></span>
 
-      <button style="font-size:90%;" class="btn btn-info  showsabad">
+      <div style="width: 100%">
+       <span class="cartslider_smallview_text" style="font-size:90%;"></span>
+
+       <button style="font-size:90%;" class="btn btn-info  showsabad">
 
          سبد خرید
+ 
+       </button>
+      </div>
 
-      </button>
+
    </div>
 
    <div class="cartslider_bigview text-center" style="display:none">
