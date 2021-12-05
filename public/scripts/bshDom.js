@@ -1,7 +1,14 @@
 function closeprod() {
+
+    if ($('.bigprod').html() == '') {
+
+        $('.whitetopbar').css({ "display": "inline" });
+        $('body').css({ "margin-top": "10vh" });
+
+    }
+
     $('.bigprod').empty();
-    $('.whitetopbar').css({ "display": "inline" });
-    $('body').css({ "margin-top": "10vh" });
+
 }
 
 function openprod(vals, noanim = null) {
