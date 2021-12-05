@@ -280,29 +280,14 @@ function loadcat(target, path, val) {
 
         var catelem = $('<div class="bg-warning rounded-pill m-2 p-2" style="transition:all 0.1s;display:inline-block">' + vals.title + '</div>');
 
-        catelem.on("touchstart click", function() {
 
-            console.log("touchstart");
 
-            $(this).css({ "transform": 'scale(0.3)' });
-
-            $(this).removeClass("rounded-pill");
-            $(this).addClass("rounded");
-
-            setTimeout(function() {
-                catelem.css({ "transform": 'scale(1.0)' });
-
-                catelem.removeClass("rounded");
-                catelem.addClass("rounded-pill");
-
-            }, 151);
-
-        });
 
 
         catelem.click(function() {
 
 
+            TransFormAnim($(this));
 
             hpu({ act: "loadtoloader", "path": "fromcat/" + vals.id });
 
