@@ -42,10 +42,15 @@
    height: 100%;
    justify-content: center;
    align-items: center;" class="px-2">
-     <input type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
+     <input id="seachbox" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
    </form>
   </div>
 
+  <script>
+    $("#seachbox").focus(function() {
+  alert( "" );
+});
+    </script>
 
 
 @yield('main')
