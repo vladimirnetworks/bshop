@@ -18,14 +18,21 @@ class SearchController extends Controller
         $query = Product::query();
 
 
+        foreach ($searchTerms as $k => $searchTerm) {
+              $whre[] = ['searchkey', 'like', '%' . $searchTerms[0] . '%'];
+        }
 
-        $query->where('searchkey', 'like', '%' . $searchTerms[0] . '%');
+        $query->where($whre);
+
+       /* $query->where('searchkey', 'like', '%' . $searchTerms[0] . '%');
         foreach ($searchTerms as $k => $searchTerm) {
 
             if ($k > 0) {
                 $query->where('searchkey', 'like', '%' . $searchTerms[0] . '%');
             }
         }
+       */
+
 
 
         $results = $query->get();
