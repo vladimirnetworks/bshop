@@ -14,7 +14,7 @@
 
 
 <div>
-         <img src="/icons/menu.png" style="height:100%"/>
+         <img src="/icons/menu.png" style="height:100%"/><div>menu</div>
 </div>
 
 <div style="margin-left: auto">
