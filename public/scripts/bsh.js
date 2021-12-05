@@ -123,7 +123,7 @@ function api() {
     this.get = function(path, doin, onload = null) {
         $.getJSON(this.api + path, function(data) {
 
-            this.xcache[this.api + path] = data;
+            self.xcache[this.api + path] = data;
 
             if (onload) {
                 onload(data.data);
