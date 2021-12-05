@@ -211,6 +211,7 @@ loadcat(".catmain","catload",{"type":"index"});
        }
 
        if (event.state.act == 'searchboxshow') {
+          cartdown();
           window.history.back();
           showtop();  
        }
@@ -218,7 +219,7 @@ loadcat(".catmain","catload",{"type":"index"});
 
        if (event.state.act == 'product') {
         
-
+        cartdown();
          openprod(event.state.prod,"noanim");
          hidetop();
          
@@ -228,7 +229,7 @@ loadcat(".catmain","catload",{"type":"index"});
 
        if (event.state.act == 'loadtoloader') {
         
-      
+            cartdown();
             closeprod();
             loadtoloader(".loader", event.state.path);
       }
