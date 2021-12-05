@@ -15,7 +15,7 @@ function Cart() {
         this.prods = JSON.parse(jsonx);
 
         $(document).ready(function() {
-            this.triggerAllChangeListeners();
+            self.triggerAllChangeListeners();
         });
 
     }
