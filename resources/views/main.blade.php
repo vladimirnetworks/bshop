@@ -55,9 +55,9 @@
 
   <script>
     $("#search_input").focus(function() {
-     $(this).css({"background-color":"red"});
+    
      $("#search_box").show();
-     hpu({ act: "searchbox"});
+     hpu({ act: "searchboxshow"});
     });
 
     $("#search_input").focusout(function() {
@@ -132,6 +132,11 @@ loadcat(".catmain","catload",{"type":"index"});
          $(".modal").modal("hide");
          $("#getAddressModal").modal("show");
        }
+
+       if (event.state.act == 'searchboxshow') {
+         $("#search_box").hide();   
+       }
+
 
        if (event.state.act == 'product') {
         
