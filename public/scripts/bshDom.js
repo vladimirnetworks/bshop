@@ -320,3 +320,26 @@ function loadcat(target, path, val) {
 
     });
 }
+
+
+
+function TransFormAnim(elem) {
+    elem.css({ "transform": 'scale(0.3)' });
+    setTimeout(function() {
+        elem.css({ "transform": 'scale(1.0)' });
+    }, 151);
+}
+
+function setTransFormAnim(elem) {
+    elem.on("click touchstart", function() {
+
+        TransFormAnim(elem);
+
+    });
+}
+
+$(".TransFormAnim").on("click touchstart", function() {
+
+    TransFormAnim($(this));
+
+});
