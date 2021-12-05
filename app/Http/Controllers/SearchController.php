@@ -42,9 +42,8 @@ class SearchController extends Controller
         if (count($results)) {
 
             return [
-                "data" =>
-
-                $results
+                "data" =>$results,
+                "q" =>$whre
 
             ];
         } else {
