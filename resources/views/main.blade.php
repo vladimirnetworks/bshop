@@ -102,7 +102,14 @@
 
       apix.post("search",{"q":$("#search_input").val()},function(item) {
         if (item) {
-          $("#search_box").append($('<div style="direction:rtl" class=" m-2">'+item.title+'</div>'));
+
+          var xitem = $('<div style="direction:rtl" class=" m-2">'+item.title+'</div>');
+               xitem.click(function() {
+                hpu({ act: "product", prod: item.vals });
+
+                openprod(item.vals);
+               });
+          $("#search_box").append(xitem);
         }
       },function(res) {
 
