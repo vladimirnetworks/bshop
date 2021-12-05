@@ -13,23 +13,11 @@
 
 
 
-<div class="TransFormAnim" style="text-align: center;
-height: 100%;
-max-height:9vh;
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center" class="mr-1">
+<div  style="" class="bottommenuitem mr-1 TransFormAnim">
          <img src="/icons/menu.png" style="height:60%"/><small>صفحه‌اول</small>
 </div>
 
-<div class="button" style="text-align: center;
-height: 100%;
-max-height:9vh;
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;margin-left: auto;" class="mr-3">
+<div  style="margin-left: auto;" class="bottommenuitem mr-3 TransFormAnim">
 
         <img src="/icons/menu.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
