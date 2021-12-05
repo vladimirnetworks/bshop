@@ -64,7 +64,10 @@
 
 @if($_COOKIE['zcart'])
 <script>
-  cartup();
+
+  $(document).ready(function() {
+    cartup();
+   });
 </script>
 @endif
 
