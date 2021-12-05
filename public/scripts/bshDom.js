@@ -1,11 +1,16 @@
 function showtop() {
     $('.whitetopbar').css({ "display": "inline" });
     $('body').css({ "margin-top": "10vh" });
+
+    $('.prodtopbar').css({ "display": "none" });
 }
 
 function hidetop() {
     $('.whitetopbar').css({ "display": "none" });
     $('body').css({ "margin-top": "0px" });
+
+    $('.prodtopbar').css({ "display": "inline" });
+
 }
 
 function openprod(vals, noanim = null) {

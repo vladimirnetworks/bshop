@@ -60,11 +60,11 @@
   </div>
 
 
-   <div style="z-index:99999;position:absolute;top: 2%;left: 2%" class="prodtopbar" >
+   <div style="z-index:99999;position:absolute;top: 2%;left: 2%;width: 9vw; display:none" class="prodtopbar" >
         <img src="/icons/mag.png" >
    </div>
 
-   <div style="z-index:99999;position:absolute;top: 2%;right: 2%" class="prodtopbar" >
+   <div style="z-index:99999;position:absolute;top: 2%;right: 2%;width: 9vw;display:none" class="prodtopbar" >
     <img src="/icons/mag.png" >
    </div>   
 
