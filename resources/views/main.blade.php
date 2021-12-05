@@ -229,6 +229,7 @@ loadcat(".catmain","catload",{"type":"index"});
 
        if (event.state.act == 'loadtoloader') {
         
+           $('.bigprod').empty();
             cartdown();
             showtop();  
             loadtoloader(".loader", event.state.path);
