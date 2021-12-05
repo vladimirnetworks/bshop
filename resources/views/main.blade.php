@@ -100,7 +100,7 @@
       $("#search_box").append($('<div class="presearch m-2">...</div>'));
       $("#search_box").append($('<div class="presearch m-2">...</div>'));
 
-      apix.post("search",{"q":$("#search_box").val},function() {
+      apix.post("search",{"q":$("#search_input").val},function() {
         $("#search_box").empty();
       });
 
