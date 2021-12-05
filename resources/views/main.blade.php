@@ -57,7 +57,7 @@
     $("#search_input").focus(function() {
     
      $("#search_box").show();
-     hpu({ act: "searchboxshow"});
+     //hpu({ act: "searchboxshow"});
     });
 
     $("#search_input").focusout(function() {
@@ -106,6 +106,8 @@ loadcat(".catmain","catload",{"type":"index"});
 
     console.log(event.state);
 
+    $("#search_box").hide();   
+
      if (event.state == null) {
        cartdown();
        $(".modal").modal("hide");
@@ -136,7 +138,7 @@ loadcat(".catmain","catload",{"type":"index"});
        }
 
        if (event.state.act == 'searchboxshow') {
-         $("#search_box").hide();   
+         //$("#search_box").hide();   
        }
 
 
