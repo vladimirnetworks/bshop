@@ -18,6 +18,10 @@
 </div>
 <script>
    $("#gotomain").click(function() {
+
+      window.location = "/";
+
+      /*
        cartdown();
        $(".modal").modal("hide");   
        $('.bigprod').empty();
@@ -25,6 +29,7 @@
        loadtoloader(".loader","index");
        loadcat(".catmain","catload",{"type":"index"});
        hpu({act: "gotomain"});
+       */
    });
    </script>
 
