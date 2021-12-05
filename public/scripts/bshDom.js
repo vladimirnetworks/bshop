@@ -196,7 +196,7 @@ function openprod(vals, noanim = null) {
 
     $('.bigprod').empty();
     $('.bigprod').append(cont);
-    showtop();
+    hidetop();
     $('.bigprod').append($('<hr>'));
 
 
