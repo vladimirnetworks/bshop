@@ -105,9 +105,11 @@
 
           var xitem = $('<div style="direction:rtl" class=" m-2">'+item.title+'</div>');
                xitem.click(function() {
-                hpu({ act: "product", prod: item.vals });
+                hpu({ act: "product", prod: item });
+                $("#search_box").hide();
+                $("#search_input").val("");
+                openprod(item);
 
-                openprod(item.vals);
                });
           $("#search_box").append(xitem);
         }
