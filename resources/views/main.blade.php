@@ -112,6 +112,7 @@ loadcat(".catmain","catload",{"type":"index"});
      
 
     $("#search_box").hide();
+    $("#search_input").val("");
 
      if (event.state == null) {
        cartdown();
