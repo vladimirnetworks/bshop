@@ -41,9 +41,12 @@
    <form style="display: flex;
    height: 100%;
    justify-content: center;
-   align-items: center;" class="px-2">
-     <input id="seachbox" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
-   </form>
+   align-items: center;position:relative" class="px-2">
+     <input autocomplete="off" id="seachbox" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
+  
+     <div style="z-index:99999;position:fixed;background-color:white;bottom:0px;height:100vh"></div>
+
+    </form>
   </div>
 
   <script>
@@ -55,9 +58,7 @@
     $(this).css({"background-color":"white"});
     });
 
-    $( "#seachbox" ).keypress(function() {
-      $(this).css({"background-color":"green"});
-});
+
 
     </script>
 
