@@ -241,13 +241,13 @@ xcart.addChangeListener(function() {
         $(".cartslider").css({
             "bottom": "0px"
         });
-        $("khalie").hide();
-        $("finishshop").show();
+        $(".khalie").hide();
+        $(".finishshop").show();
     } else {
 
 
-        $("khalie").show();
-        $("finishshop").hide();
+        $(".khalie").show();
+        $(".finishshop").hide();
 
 
         cartdown();
