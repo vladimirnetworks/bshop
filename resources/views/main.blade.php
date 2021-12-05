@@ -86,7 +86,7 @@
 
     $("#search_input").keyup(function() {
     
-      var presearch = $('<div class="presearch"></div>'')
+      var presearch = $('<div class="presearch"></div>');
 
       $("#search_box").append(presearch);
 
