@@ -13,9 +13,19 @@
 
 
 
-<div  style="" class="bottommenuitem mr-1 TransFormAnim">
+<div id="gotomain" class="bottommenuitem mr-1 TransFormAnim">
          <img src="/icons/menu.png" style="height:60%"/><small>صفحه‌اول</small>
 </div>
+<script>
+   $("#gotomain").click(function() {
+       cartdown();
+       $(".modal").modal("hide");   
+       $('.bigprod').empty();
+       showtop();
+       loadtoloader(".loader","index");
+       loadcat(".catmain","catload",{"type":"index"});
+   });
+   </script>
 
 <div  style="margin-left: auto;" class="bottommenuitem mr-3 TransFormAnim">
 
