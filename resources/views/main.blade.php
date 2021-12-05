@@ -66,6 +66,7 @@
     border-radius: 5px;
     background-size: 200% 100%;
     animation: 1.5s shine linear infinite;
+    height:50px;
     }
   </style>
 
@@ -85,10 +86,12 @@
 
 
     $("#search_input").keyup(function() {
-    
-      var presearch = $('<div class="presearch"></div>');
 
-      $("#search_box").append(presearch);
+
+      $("#search_box").empty();
+      $("#search_box").append($('<div class="presearch"></div>'));
+      $("#search_box").append($('<div class="presearch"></div>'));
+      $("#search_box").append($('<div class="presearch"></div>'));
 
     });
 
