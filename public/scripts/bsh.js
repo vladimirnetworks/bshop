@@ -243,8 +243,17 @@ xcart.addChangeListener(function() {
         });
         $(".khalie").hide();
         $(".finishshop").show();
+
+        $(".showsabad").html("اتمام خرید");
+
+        $('.cartslider_smallview_text').html(farsi_price(tot.amount) + " تومان");
+
     } else {
 
+
+        $('.cartslider_smallview_text').html("");
+
+        $(".showsabad").html("سبد خرید");
 
         $(".khalie").show();
         $(".finishshop").hide();
@@ -260,7 +269,7 @@ xcart.addChangeListener(function() {
 
 
 
-    $('.cartslider_smallview_text').html(farsi_price(tot.amount) + " تومان");
+
 
 
     $(".cartslider_bigview_cart").empty();
