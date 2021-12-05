@@ -10,7 +10,7 @@ class SearchController extends Controller
     {
         return ["data"=>[
 
-            ["t"=>"notfound"]
+            ["notfound"=>true]
 
         ]];
     }
