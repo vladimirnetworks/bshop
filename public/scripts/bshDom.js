@@ -1,6 +1,7 @@
 function closeprod() {
     $('.bigprod').empty();
     $('.whitetopbar').show();
+    $('body').css({ "margin-top": "10vh" });
 }
 
 function openprod(vals, noanim = null) {
@@ -17,6 +18,7 @@ function openprod(vals, noanim = null) {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0;
         $('.whitetopbar').hide();
+        $('body').css({ "margin-top": "0px" });
     }, 30);
 
 
