@@ -108,6 +108,8 @@ loadcat(".catmain","catload",{"type":"index"});
 
      
 
+    $("#search_box").hide();
+
      if (event.state == null) {
        cartdown();
        $(".modal").modal("hide");
@@ -117,7 +119,7 @@ loadcat(".catmain","catload",{"type":"index"});
 
        loadcat(".catmain","catload",{"type":"index"});
 
-       $("#search_box").hide();   
+        
 
 
      } else {
@@ -138,7 +140,7 @@ loadcat(".catmain","catload",{"type":"index"});
        }
 
        if (event.state.act == 'searchboxshow') {
-         //$("#search_box").hide();   
+          window.history.back();  
        }
 
 
