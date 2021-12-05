@@ -48,11 +48,11 @@
 
   <script>
     $("#seachbox").focus(function() {
-    $(this).css("background-color":"red");
+    $(this).css({"background-color":"red"});
     });
 
     $("#seachbox").focusout(function() {
-    $(this).css("background-color":"white");
+    $(this).css({"background-color":"white"});
     });
 
     </script>
