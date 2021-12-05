@@ -8,6 +8,6 @@ class SearchController extends Controller
 {
     public function search()
     {
-        return "yes";
+        return ["data"=>"yes"];
     }
 }
