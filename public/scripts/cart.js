@@ -11,6 +11,11 @@ function Cart() {
 
     }
 
+    this.loadfromjson = function(jsonx) {
+        this.prods = JSON.parse(jsonx);
+        this.triggerAllChangeListeners();
+    }
+
     this.items = function() {
         var x = [];
         self.eech(function(i) {

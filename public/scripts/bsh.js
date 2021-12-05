@@ -222,7 +222,9 @@ function addtocart(prod) {
     */
 }
 
-
+if (readCookie('zcart')) {
+    xcart.loadfromjson(readCookie('zcart'));
+}
 
 
 xcart.addChangeListener(function() {
