@@ -87,7 +87,7 @@
   </style>
 
   <script>
-    $("#search_input #mag").on('focus click',function() {
+    $("#search_input , #mag").on('focus click',function() {
     
      $("#search_box").show();
 
