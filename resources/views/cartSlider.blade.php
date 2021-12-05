@@ -20,7 +20,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 justify-content: center">
-         <img src="/icons/menu.png" style="height:60%"/><div>menu</div>
+         <img src="/icons/menu.png" style="height:60%"/><div>صفحه‌اول</div>
 </div>
 
 <div style="text-align: center;
@@ -31,7 +31,7 @@ align-items: center;
 flex-direction: column;
 justify-content: center;margin-left: auto">
 
-        <img src="/icons/menu.png" style="height:60%"/><div>menu</div>
+        <img src="/icons/menu.png" style="height:60%"/><div>سفارشات‌من</div>
 </div>
 
 
