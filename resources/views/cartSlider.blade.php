@@ -8,11 +8,12 @@
    style="box-shadow:rgb(136 136 136) 0px 0px 10px;transition:height 0.3s;height:9vh;direction:rtl;position:fixed;bottom:0px;left:0px;width:100%;background-color:white;z-index:1001"
    id="mcartslider" class="text-left cartslider border-top ">
    <div class="cartslider_smallview"
-      style="transition:all 0.3s;display:flex;height:100%;justify-content: center;align-items: center">
+      style="transition:all 0.3s;display:flex;height:100%;align-items: center">
 
 
-      <div style="width: 100%;direction:rtl">
-         <div style="display: inline-block">
+
+
+         <div>
             <div class="cartslider_smallview_text" style="font-size:90%;"></div>
              
             <button style="font-size:90%;" class="w-100 btn btn-info  showsabad">
@@ -23,11 +24,11 @@
 
          </div>
 
-         <div style="display: inline-block">
+         <div style="margin-left: auto">
                   <img src="/icons/mag.png" style="height:100%"/>
          </div>
 
-      </div>
+
 
 
    </div>
