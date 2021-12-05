@@ -121,18 +121,34 @@ function api() {
     this.xcache = {};
 
     this.get = function(path, doin, onload = null) {
-        $.getJSON(this.api + path, function(data) {
 
-            self.xcache[this.api + path] = data;
+        if (self.xcache[self.api + path]) {
 
             if (onload) {
-                onload(data.data);
+                onload(self.xcache[self.api + path].data);
             }
 
-            for (var i = 0; i < data.data.length; i++) {
-                doin(data.data[i]);
+            for (var i = 0; i < self.xcache[self.api + path].data.length; i++) {
+                doin(self.xcache[self.api + path].data[i]);
             }
-        });
+
+        } else {
+
+            $.getJSON(this.api + path, function(data) {
+
+                self.xcache[self.api + path] = data;
+
+                if (onload) {
+                    onload(data.data);
+                }
+
+                for (var i = 0; i < data.data.length; i++) {
+                    doin(data.data[i]);
+                }
+            });
+        }
+
+
     }
 
 
