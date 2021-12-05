@@ -13,7 +13,11 @@ function Cart() {
 
     this.loadfromjson = function(jsonx) {
         this.prods = JSON.parse(jsonx);
-        this.triggerAllChangeListeners();
+
+        $(document).ready(function() {
+            this.triggerAllChangeListeners();
+        });
+
     }
 
     this.items = function() {
