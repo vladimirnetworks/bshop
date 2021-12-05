@@ -57,7 +57,7 @@
     $("#search_input").focus(function() {
     
      $("#search_box").show();
-     //hpu({ act: "searchboxshow"});
+      hpu({ act: "searchboxshow"});
     });
 
     $("#search_input").focusout(function() {
@@ -106,7 +106,7 @@ loadcat(".catmain","catload",{"type":"index"});
 
     console.log(event.state);
 
-    $("#search_box").hide();   
+     
 
      if (event.state == null) {
        cartdown();
