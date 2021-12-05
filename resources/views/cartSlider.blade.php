@@ -24,6 +24,7 @@
        showtop();
        loadtoloader(".loader","index");
        loadcat(".catmain","catload",{"type":"index"});
+       hpu({act: "gotomain"});
    });
    </script>
 

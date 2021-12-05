@@ -182,7 +182,7 @@ loadcat(".catmain","catload",{"type":"index"});
     $("#search_box").hide();
     $("#search_input").val("");
 
-     if (event.state == null) {
+     if (event.state == null || event.state.act == 'gotomain') {
        cartdown();
        $(".modal").modal("hide");
        
