@@ -28,11 +28,17 @@
    });
    </script>
 
-<div  style="margin-left: auto;" class="bottommenuitem mr-3 TransFormAnim">
+<div id="totoorders" style="margin-left: auto;" class="bottommenuitem mr-3 TransFormAnim">
 
         <img src="/icons/menu.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
 
+
+<script>
+   $("#totoorders").click(function() {
+      window.location = "/myorders";
+   });
+   </script>
 
 
          <div class="ml-2">
