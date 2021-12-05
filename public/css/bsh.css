@@ -27,10 +27,6 @@
     animation: zoominoutsinglefeatured .3s 1;
 }
 
-.TransFormAnim {
-    animation: zoominoutsinglefeatured .150s 1;
-}
-
 body {
     margin-top: 10vh;
     margin-bottom: 50vh;
