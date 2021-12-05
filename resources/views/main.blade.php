@@ -104,6 +104,8 @@
       apix.post("search",{"q":$("#search_input").val()},function(item) {
         if (item) {
 
+          $("#search_box").show();
+          
           var xitem = $('<div style="direction:rtl" class="p-2 m-2 text-right border border-primary rounded">'+item.title+'</div>');
                xitem.click(function() {
                 hpu({ act: "product", prod: item });
@@ -111,10 +113,13 @@
                 $("#search_input").val("");
                 openprod(item);
 
+
                });
           $("#search_box").append(xitem);
         }
       },function(res) {
+
+        $("#search_box").show();
 
         $("#search_box").empty();
 
