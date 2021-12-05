@@ -19,7 +19,7 @@ class SearchController extends Controller
 
 
         foreach ($searchTerms as $k => $searchTerm) {
-              $whre[] = ['searchkey', 'like', '%' . $searchTerms[0] . '%'];
+              $whre[] = ['searchkey', 'like', '%' . $searchTerm . '%'];
         }
 
         $query->where($whre);
