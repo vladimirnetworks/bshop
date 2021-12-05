@@ -1,16 +1,3 @@
-function closeprod(from = null) {
-
-    // if (from == null) {
-
-    $('.whitetopbar').css({ "display": "inline" });
-    $('body').css({ "margin-top": "10vh" });
-
-    //   }
-
-    $('.bigprod').empty();
-
-}
-
 function showtop() {
     $('.whitetopbar').css({ "display": "inline" });
     $('body').css({ "margin-top": "10vh" });
@@ -25,7 +12,7 @@ function openprod(vals, noanim = null) {
 
 
     console.log("openprod");
-    //  $('.whitetopbar').hide();
+
 
 
 
@@ -34,7 +21,7 @@ function openprod(vals, noanim = null) {
     setTimeout(function() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0;
-        $('.whitetopbar').css({ "display": "none" });
+
         $('body').css({ "margin-top": "0px" });
     }, 30);
 
