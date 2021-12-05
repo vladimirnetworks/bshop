@@ -62,7 +62,11 @@
 </div>
 
 
-
+@if($_COOKIE['zcart'])
+<script>
+  cartup();
+</script>
+@endif
 
 
 
