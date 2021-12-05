@@ -70,6 +70,7 @@
 
       <div class="w-100 text-center p-2 m-2">
          <button class="finishshop btn btn-primary">تایید و ثبت سفارش</button>
+         <div class="khalie">خالیه 🖐</div>
       </div>
 
    </div>
