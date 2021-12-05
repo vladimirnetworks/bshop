@@ -6,6 +6,7 @@ function closeprod() {
 function openprod(vals, noanim = null) {
 
 
+    console.log("openprod");
     $('.whitetopbar').hide();
 
 
