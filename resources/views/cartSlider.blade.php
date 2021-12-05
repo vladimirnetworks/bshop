@@ -29,14 +29,14 @@ max-height:9vh;
 display: flex;
 align-items: center;
 flex-direction: column;
-justify-content: center;margin-left: auto;" class="mr-2">
+justify-content: center;margin-left: auto;" class="mr-3">
 
         <img src="/icons/menu.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
 
 
 
-         <div>
+         <div class="ml-2">
             <div class="cartslider_smallview_text" style="font-size:90%;"></div>
              
             <button style="font-size:90%;" class="w-100 btn btn-info  showsabad">
