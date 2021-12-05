@@ -115,6 +115,8 @@ loadcat(".catmain","catload",{"type":"index"});
 
        loadcat(".catmain","catload",{"type":"index"});
 
+       $("#search_box").hide();   
+
 
      } else {
 
