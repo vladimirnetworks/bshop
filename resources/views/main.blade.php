@@ -53,10 +53,29 @@
     </form>
   </div>
 
+  <style>
+    @keyframes shine {
+      to {
+        background-position-x: -200%;
+      }
+    }
+
+    .presearch {
+      background: #eee;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+    }
+  </style>
+
   <script>
     $("#search_input").on('focus click',function() {
     
      $("#search_box").show();
+
+     $("#search_box").empty();
+
       hpu({ act: "searchboxshow"});
     });
 
@@ -66,7 +85,11 @@
 
 
     $("#search_input").keyup(function() {
-      $("#search_box").html($(this).val());
+    
+      var presearch = $('<div class="presearch"></div>'')
+
+      $("#search_box").append();
+
     });
 
     </script>
