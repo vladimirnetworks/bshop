@@ -12,14 +12,19 @@
 
 
       <div style="width: 100%">
-         <div>
-            <span class="cartslider_smallview_text" style="font-size:90%;"></span>
-             <br>
-            <button style="font-size:90%;" class="btn btn-info  showsabad">
+         <div style="display: inline-block">
+            <div class="cartslider_smallview_text" style="font-size:90%;"></div>
+             
+            <button style="font-size:90%;" class="w-100 btn btn-info  showsabad">
 
                سبد خرید
 
             </button>
+
+         </div>
+
+         <div style="display: inline-block">
+
          </div>
 
       </div>
