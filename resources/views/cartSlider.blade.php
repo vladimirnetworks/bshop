@@ -15,6 +15,7 @@
 
 <div style="text-align: center;
 height: 100%;
+max-height:9vh;
 display: flex;
 align-items: center;
 flex-direction: column;
@@ -24,6 +25,7 @@ justify-content: center">
 
 <div style="text-align: center;
 height: 100%;
+max-height:9vh;
 display: flex;
 align-items: center;
 flex-direction: column;
