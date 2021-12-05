@@ -28,7 +28,7 @@ class SearchController extends Controller
 
         }
 
-        dd($query);
+        
         $results = $query->get();
 
 
