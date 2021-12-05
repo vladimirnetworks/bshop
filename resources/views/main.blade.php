@@ -88,7 +88,7 @@
     
       var presearch = $('<div class="presearch"></div>'')
 
-      $("#search_box").append();
+      $("#search_box").append(presearch);
 
     });
 
