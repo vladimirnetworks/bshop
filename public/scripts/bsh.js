@@ -242,9 +242,10 @@ xcart.addChangeListener(function() {
     } else {
 
         cartdown();
-        $(".cartslider").css({
-            "bottom": "-9vh"
-        });
+        /* $(".cartslider").css({
+             "bottom": "-9vh"
+         });
+         */
     }
 
 
