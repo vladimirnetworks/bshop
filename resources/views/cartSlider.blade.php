@@ -29,7 +29,7 @@ max-height:9vh;
 display: flex;
 align-items: center;
 flex-direction: column;
-justify-content: center;margin-left: auto;" class="mr-1">
+justify-content: center;margin-left: auto;" class="mr-2">
 
         <img src="/icons/menu.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
