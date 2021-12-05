@@ -230,7 +230,7 @@ loadcat(".catmain","catload",{"type":"index"});
        if (event.state.act == 'loadtoloader') {
         
             cartdown();
-            closeprod();
+            showtop();  
             loadtoloader(".loader", event.state.path);
       }
 
