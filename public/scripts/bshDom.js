@@ -1,11 +1,11 @@
 function closeprod(from = null) {
 
-    if (from == null) {
+    // if (from == null) {
 
-        $('.whitetopbar').css({ "display": "inline" });
-        $('body').css({ "margin-top": "10vh" });
+    $('.whitetopbar').css({ "display": "inline" });
+    $('body').css({ "margin-top": "10vh" });
 
-    }
+    //   }
 
     $('.bigprod').empty();
 
