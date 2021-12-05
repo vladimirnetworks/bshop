@@ -48,8 +48,13 @@
 
   <script>
     $("#seachbox").focus(function() {
-  alert( "" );
-});
+    $(this).css("background-color":"red");
+    });
+
+    $("#seachbox").focusout(function() {
+    $(this).css("background-color":"white");
+    });
+
     </script>
 
 
