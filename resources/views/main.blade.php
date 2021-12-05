@@ -47,7 +47,7 @@
    <form style="display: flex;
    height: 100%;
    justify-content: center;
-   align-items: center;flex-direction: column;" class="px-2">
+   align-items: center;flex-direction: column;" class="whitetopbar px-2">
 
      <input autocomplete="off" id="search_input" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
      
@@ -174,7 +174,8 @@ loadcat(".catmain","catload",{"type":"index"});
      if (event.state == null) {
        cartdown();
        $(".modal").modal("hide");
-       $('.bigprod').empty();
+       
+       closeprod();
 
        loadtoloader(".loader","index");
 
@@ -217,7 +218,7 @@ loadcat(".catmain","catload",{"type":"index"});
        if (event.state.act == 'loadtoloader') {
         
       
-            $('.bigprod').empty();
+            closeprod();
             loadtoloader(".loader", event.state.path);
       }
 

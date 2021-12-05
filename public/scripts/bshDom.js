@@ -1,7 +1,12 @@
+function closeprod() {
+    $('.bigprod').empty();
+    $('.whitetopbar').show();
+}
+
 function openprod(vals, noanim = null) {
 
 
-
+    $('.whitetopbar').hide();
 
 
 
@@ -165,7 +170,7 @@ function openprod(vals, noanim = null) {
 
     cont.append(kharid);
 
-    $('.bigprod').empty();
+    closeprod();
 
 
     $('.bigprod').append(cont);
@@ -286,7 +291,7 @@ function loadcat(target, path, val) {
 
             hpu({ act: "loadtoloader", "path": "fromcat/" + vals.id });
 
-            $('.bigprod').empty();
+            closeprod();
             loadtoloader(".loader", "fromcat/" + vals.id);
 
 
