@@ -100,8 +100,10 @@
       $("#search_box").append($('<div class="presearch m-2">...</div>'));
       $("#search_box").append($('<div class="presearch m-2">...</div>'));
 
-      apix.post("search",{"q":$("#search_input").val()},function() {
-        $("#search_box").empty();
+      apix.post("search",{"q":$("#search_input").val()},function(item) {
+        if (item.t=="notfound") {
+          $("#search_box").append($('<div class=" m-2">هیچی پیدا نشد ☹</div>'));
+        }
       });
 
 
