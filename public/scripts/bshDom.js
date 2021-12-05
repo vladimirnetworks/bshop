@@ -337,9 +337,3 @@ function setTransFormAnim(elem) {
 
     });
 }
-
-$(".TransFormAnim").on("click touchstart", function() {
-
-    TransFormAnim($(this));
-
-});

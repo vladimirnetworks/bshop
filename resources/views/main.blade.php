@@ -263,6 +263,14 @@ loadcat(".catmain","catload",{"type":"index"});
  </script>
 
 
+<script>
+$(".TransFormAnim").on("click touchstart", function() {
+
+  TransFormAnim($(this));
+
+});
+</script>
+
 </body>
 
 </html>
