@@ -309,10 +309,10 @@ function loadcat(target, path, val) {
 
 
 function TransFormAnim(elem) {
-    elem.css({ "transition": "all 0.150s", "transform": 'scale(0.8)' });
+    elem.css({ "transition": "all 0.100s", "transform": 'scale(0.8)' });
     setTimeout(function() {
         elem.css({ "transform": 'scale(1.0)' });
-    }, 151);
+    }, 101);
 }
 
 function setTransFormAnim(elem) {
