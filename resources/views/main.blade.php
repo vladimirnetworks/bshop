@@ -90,8 +90,14 @@
     $("#search_input , #mag").on('focus click',function() {
     
       showtop();
+     
 
      $("#search_box").show();
+
+     setTimeout(function() {
+      $("#search_input").focus();
+     },50);
+     
 
      if ($("#search_input").val() == '') {
      $("#search_box").empty();
