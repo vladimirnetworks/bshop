@@ -43,23 +43,25 @@
    justify-content: center;
    align-items: center;flex-direction: column;" class="px-2">
 
-     <input autocomplete="off" id="seachbox" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
+     <input autocomplete="off" id="search_input" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
      
   
 
-     <div style="width:100%;z-index:99999;position:absolute;background-color:white;top: 100%;height:100vh"></div>
+     <div id="search_box" style="display:none;width:100%;z-index:99999;position:absolute;background-color:white;top: 100%;height:100vh"></div>
 
 
     </form>
   </div>
 
   <script>
-    $("#seachbox").focus(function() {
-    $(this).css({"background-color":"red"});
+    $("#search_input").focus(function() {
+     $(this).css({"background-color":"red"});
+     $("#search_box").show();
+     hpu({ act: "searchbox"});
     });
 
-    $("#seachbox").focusout(function() {
-    $(this).css({"background-color":"white"});
+    $("#search_input").focusout(function() {
+     //$(this).css({"background-color":"white"});
     });
 
 
