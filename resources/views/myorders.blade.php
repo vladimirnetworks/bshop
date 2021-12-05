@@ -2,13 +2,13 @@
 
 @section('main')
 
-<h1>سفارشات من</h1>
 
 
 
-<div class="container-fluid" style="direction:rtl" >
 
+<div class="container-fluid text-right" style="direction:rtl" >
 
+  <h1>سفارشات من</h1>
 
     
      @foreach($orders as $order)
