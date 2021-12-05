@@ -39,7 +39,9 @@ function Cart() {
 
     this.triggerAllChangeListeners = function() {
 
-        console.log(JSON.stringify(this.prods));
+
+
+        document.cookie = "zcart=" + JSON.stringify(this.prods);
 
         for (i = 0; i < self.changeListeners.length; i++) {
             self.changeListeners[i]();
