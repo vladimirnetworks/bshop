@@ -59,6 +59,11 @@
     </form>
   </div>
 
+
+   <div style="z-index:99999;position:absolute;top:0px;left:0px" class="prodtopbar" >
+        <img src="/icons/mag.png" >
+   </div>
+
   <style>
     @keyframes shine {
       to {
