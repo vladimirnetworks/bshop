@@ -19,8 +19,8 @@ max-height:9vh;
 display: flex;
 align-items: center;
 flex-direction: column;
-justify-content: center">
-         <img src="/icons/menu.png" style="height:60%"/><div>صفحه‌اول</div>
+justify-content: center" class="mr-1">
+         <img src="/icons/menu.png" style="height:60%"/><small>صفحه‌اول</small>
 </div>
 
 <div style="text-align: center;
@@ -29,9 +29,9 @@ max-height:9vh;
 display: flex;
 align-items: center;
 flex-direction: column;
-justify-content: center;margin-left: auto">
+justify-content: center;margin-left: auto;" class="mr-1">
 
-        <img src="/icons/menu.png" style="height:60%"/><div>سفارشات‌من</div>
+        <img src="/icons/menu.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
 
 
