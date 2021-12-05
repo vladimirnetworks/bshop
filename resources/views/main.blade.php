@@ -207,7 +207,7 @@ loadcat(".catmain","catload",{"type":"index"});
        if (event.state.act == 'product') {
         
 
-         openprod(event.state.prod);
+         openprod(event.state.prod,"noanim");
         cartdown();
        }
 

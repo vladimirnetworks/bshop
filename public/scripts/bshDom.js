@@ -1,4 +1,4 @@
-function openprod(vals) {
+function openprod(vals, noanim = null) {
 
 
 
@@ -28,6 +28,10 @@ function openprod(vals) {
 
 
     var cont = $('<div class="saving  rounded " style="background-color:white;direction:rtl"></div>');
+
+    if (noanim) {
+        cont.removeClass("saving");
+    }
 
     var photos = $('<div style="width:50vw;margin-right: auto;margin-left: auto;max-width:300px;"></div>');
     photos.append($(mySwipe.HTMLElement));
