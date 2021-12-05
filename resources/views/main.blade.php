@@ -65,6 +65,9 @@
     });
 
 
+    $("#search_input").keypress(function() {
+      $("#search_box").html($(this).val());
+    });
 
     </script>
 
