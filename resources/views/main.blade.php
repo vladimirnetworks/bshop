@@ -67,6 +67,7 @@
     background-size: 200% 100%;
     animation: 1.5s shine linear infinite;
     height:50px;
+
     }
   </style>
 
@@ -89,9 +90,9 @@
 
 
       $("#search_box").empty();
-      $("#search_box").append($('<div class="presearch"></div>'));
-      $("#search_box").append($('<div class="presearch"></div>'));
-      $("#search_box").append($('<div class="presearch"></div>'));
+      $("#search_box").append($('<div class="presearch m-2">...</div>'));
+      $("#search_box").append($('<div class="presearch m-2">...</div>'));
+      $("#search_box").append($('<div class="presearch m-2">...</div>'));
 
     });
 
