@@ -11,7 +11,7 @@
       style="transition:all 0.3s;display:flex;height:100%;justify-content: center;align-items: center">
 
 
-      <div style="width: 100%">
+      <div style="width: 100%;direction:rtl">
          <div style="display: inline-block">
             <div class="cartslider_smallview_text" style="font-size:90%;"></div>
              
@@ -24,7 +24,7 @@
          </div>
 
          <div style="display: inline-block">
-
+                  <img src="/icons/mag.png" style="height:100%"/>
          </div>
 
       </div>
