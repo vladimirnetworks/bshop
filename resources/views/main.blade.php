@@ -102,8 +102,10 @@
 
       apix.post("search",{"q":$("#search_input").val()},function(item) {
         if (item.t=="notfound") {
-          $("#search_box").append($('<div class=" m-2">هیچی پیدا نشد ☹</div>'));
+          $("#search_box").append($('<div style="direction:rtl" class=" m-2">هیچی پیدا نشد ☹</div>'));
         }
+      },function(res) {
+        console.log(res);
       });
 
 
