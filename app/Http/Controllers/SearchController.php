@@ -32,7 +32,7 @@ class SearchController extends Controller
 
 
 
-        if ($results->count) {
+        if (count($results)) {
 
             return [
                 "data" =>
