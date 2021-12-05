@@ -13,6 +13,10 @@
 
 
 
+<div>
+         <img src="/icons/menu.png" style="height:100%"/>
+</div>
+
 <div style="margin-left: auto">
          <img src="/icons/mag.png" style="height:100%"/>
 </div>
