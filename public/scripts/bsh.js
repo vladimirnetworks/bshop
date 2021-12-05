@@ -121,7 +121,9 @@ function api() {
     this.get = function(path, doin, onload = null) {
         $.getJSON(this.api + path, function(data) {
 
-            onload(data.data);
+            if (onload) {
+                onload(data.data);
+            }
 
             for (var i = 0; i < data.data.length; i++) {
                 doin(data.data[i]);
@@ -148,7 +150,9 @@ function api() {
             data: JSON.stringify(data),
             dataType: 'json',
             success: function(data) {
-                onload(data.data);
+                if (onload) {
+                    onload(data.data);
+                }
                 for (var i = 0; i < data.data.length; i++) {
                     doin(data.data[i]);
                 }
