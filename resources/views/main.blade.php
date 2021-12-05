@@ -54,7 +54,7 @@
   </div>
 
   <script>
-    $("#search_input").focus(function() {
+    $("#search_input").on('focus',function() {
     
      $("#search_box").show();
       hpu({ act: "searchboxshow"});
