@@ -103,7 +103,7 @@
       apix.post("search",{"q":$("#search_input").val()},function(item) {
         if (item) {
 
-          var xitem = $('<div style="direction:rtl" class=" m-2">'+item.title+'</div>');
+          var xitem = $('<div style="direction:rtl" class=" m-2 text-right border border-primary rounded">'+item.title+'</div>');
                xitem.click(function() {
                 hpu({ act: "product", prod: item });
                 $("#search_box").hide();
