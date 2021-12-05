@@ -7,7 +7,7 @@ function openprod(vals, noanim = null) {
 
 
     console.log("openprod");
-    $('.whitetopbar').hide();
+    //  $('.whitetopbar').hide();
 
 
 
@@ -16,6 +16,7 @@ function openprod(vals, noanim = null) {
     setTimeout(function() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0;
+        $('.whitetopbar').hide();
     }, 30);
 
 
