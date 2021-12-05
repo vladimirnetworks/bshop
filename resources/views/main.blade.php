@@ -89,6 +89,8 @@
   <script>
     $("#search_input , #mag").on('focus click',function() {
     
+      showtop();
+
      $("#search_box").show();
 
      if ($("#search_input").val() == '') {
