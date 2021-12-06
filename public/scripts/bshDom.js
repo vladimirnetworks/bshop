@@ -198,6 +198,16 @@ function openprod(vals, noanim = null) {
     var bez = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-top btn-sm" >+</button>');
     var men = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-bottom btn-sm" >-</button>');
 
+
+    bez.click(function() {
+        xcart.changeCount(vals.id, vals.count + 1);
+    });
+
+    men.click(function() {
+        xcart.changeCount(vals.id, vals.count - 1);
+    });
+
+
     added.append(bez);
     added.append(count_added);
     added.append(men);
