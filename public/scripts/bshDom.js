@@ -191,6 +191,9 @@ function openprod(vals, noanim = null) {
     var added = $('<div class="border border-pirmary"></div>');
     var count_added = $('<span></span>');
 
+    added.append(count_added);
+
+
     added.hide(count_added);
 
     var itemincart = xcart.getItem(vals.id);
