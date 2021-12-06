@@ -61,7 +61,7 @@
 
       var selectedshipping = $('input[name=shiptype]:checked').val();
 
-      toyou("setshipping",{orderid:myorder.orderid,shipping:});
+      toyou("setshipping",{orderid:myorder.orderid,shipping:selectedshipping});
       toyou("reguserdata",{orderid:myorder.orderid,type:"address",data:$('#getaddress').val()});
 
 
