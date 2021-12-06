@@ -72,7 +72,7 @@ $( document ).ready(function() {
 </div>
 
 
-@if(isset($_COOKIE['zcart'] && count($orders) < 1))
+@if(isset($_COOKIE['zcart']) && count($orders) < 1))
 
 <script>
 
