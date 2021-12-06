@@ -194,30 +194,9 @@ function openprod(vals, noanim = null) {
     added.append(count_added);
 
 
-    added.hide(count_added);
 
-    var itemincart = xcart.getItem(vals.id);
-
-    if (itemincart) {
-        count_added.html(itemincart.count);
-        added.show();
-    }
 
     cont.append(added);
-
-    xcart.addChangeListener(function() {
-
-        var itemincart = xcart.getItem(vals.id);
-
-        if (itemincart) {
-            count_added.html(itemincart.count);
-            added.show();
-        } else {
-            added.hide();
-        }
-
-    });
-
 
 
     $('.bigprod').empty();
