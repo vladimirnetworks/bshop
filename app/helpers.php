@@ -19,6 +19,8 @@ function encode_id($inp)
     return $xr;
 }
 
+
+
 function decode_id($inp)
 {
     $begin = substr($inp, 0, 1);
