@@ -184,8 +184,12 @@ function openprod(vals, noanim = null) {
 
     });
 
-    cont.append(kharid);
 
+    var kharidsection = $("<div></div>");
+
+    kharidsection.append(kharid);
+
+    cont.append(kharidsection);
 
 
     var added = $('<div style="display: flex;flex-direction: column"></div>');
@@ -223,7 +227,9 @@ function openprod(vals, noanim = null) {
     });
 
 
-    cont.append(added);
+    kharidsection.append(added);
+
+    cont.append(kharidsection);
 
 
     $('.bigprod').empty();
