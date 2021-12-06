@@ -20,9 +20,11 @@ $( document ).ready(function() {
      <div class="row border justify-content-center align-items-center">
        
        <div class="col">
+        <a href="/myorders/{{$order['encoded_id']}}">
           @foreach($order['items'] as $item)
-           <small><a href="/myorder/{{$order['encoded_id']}}">{{$item['text']}} ( {{$item['count']}} عدد ) </a></small><br>
+           <small>{{$item['text']}} ( {{$item['count']}} عدد ) </a><br>
           @endforeach
+           </small>
        </div>
 
        <div class="col">
