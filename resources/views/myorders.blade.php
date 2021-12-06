@@ -21,8 +21,9 @@ $( document ).ready(function() {
        
        <div class="col">
         <a href="/myorders/{{$order['encoded_id']}}">
+          <small>
           @foreach($order['items'] as $item)
-           <small>{{$item['text']}} ( {{$item['count']}} عدد ) <br>
+           {{$item['text']}} ( {{$item['count']}} عدد ) <br>
           @endforeach
            </small>
           </a>
