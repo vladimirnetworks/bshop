@@ -405,3 +405,10 @@ function shakeAnim(elem) {
         elem.focus();
     }, 201 * 2);
 }
+
+
+function cleanMjax() {
+    $(".mjax div").each(function(mjaxitem) {
+        $(mjaxitem).empty();
+    });
+}
