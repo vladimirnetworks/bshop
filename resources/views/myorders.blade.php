@@ -22,9 +22,10 @@ $( document ).ready(function() {
        <div class="col">
         <a href="/myorders/{{$order['encoded_id']}}">
           @foreach($order['items'] as $item)
-           <small>{{$item['text']}} ( {{$item['count']}} عدد ) </a><br>
+           <small>{{$item['text']}} ( {{$item['count']}} عدد ) <br>
           @endforeach
            </small>
+          </a>
        </div>
 
        <div class="col">
