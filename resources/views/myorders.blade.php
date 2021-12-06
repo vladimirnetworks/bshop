@@ -78,7 +78,7 @@ $( document ).ready(function() {
   $(document).ready(function() {
 
     var totx = xcart.total();
-    if (totx.total > 0) {
+    if (totx.count > 0) {
       cartup();
     }
     
