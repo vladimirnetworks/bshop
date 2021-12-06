@@ -9,7 +9,7 @@
          <!-- Modal body -->
          <div class="modal-body text-center">
             <div class="enternumber" >
-               <h3>
+               <h3 class="text-secondary">
                لطفا شماره تماستون رو وارد کنید 
                </h3>
                
