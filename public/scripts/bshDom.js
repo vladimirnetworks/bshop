@@ -185,7 +185,7 @@ function openprod(vals, noanim = null) {
     });
 
 
-    var kharidsection = $("<div></div>");
+    var kharidsection = $('<div style="display: flex;align-items: center;justify-content: center"></div>');
 
     kharidsection.append(kharid);
 
