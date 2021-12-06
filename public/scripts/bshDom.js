@@ -202,12 +202,12 @@ function openprod(vals, noanim = null) {
     bez.click(function() {
 
         var itm = xcart.getItem(vals.id);
-        xcart.changeCount(vals.id, itm.count + 1);
+        xcart.changeCount(vals.id, parseInt(itm.count) + 1);
     });
 
     men.click(function() {
         var itm = xcart.getItem(vals.id);
-        xcart.changeCount(vals.id, itm.count - 1);
+        xcart.changeCount(vals.id, parseInt(itm.count) - 1);
     });
 
 
