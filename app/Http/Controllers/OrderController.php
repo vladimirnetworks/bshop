@@ -157,6 +157,7 @@ class OrderController extends Controller
                 'total' => $orderTot,
                 'shipping_status' => $order->shipping_status,
                 'payment_status' => $order->payment_status,
+                'encoded_id' => $order->encoded_id,
             ];
         }
 
