@@ -174,12 +174,21 @@ function openprod(vals, noanim = null) {
 
 
 
-        addtocart({
-            id: vals.id,
-            title: vals.title,
-            tinytitle: vals.tinytitle,
-            price: parseInt(vals.price)
-        });
+        var itm = xcart.getItem(vals.id);
+
+
+        if (!itm) {
+            addtocart({
+                id: vals.id,
+                title: vals.title,
+                tinytitle: vals.tinytitle,
+                price: parseInt(vals.price)
+            });
+        } else {
+            xcart.changeCount(vals.id, parseInt(itm.count) + 1);
+        }
+
+
 
 
     });
