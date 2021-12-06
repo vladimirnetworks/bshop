@@ -53,17 +53,19 @@
          shakeAnim($('#getaddress'));
       } else {
       
-
       $("#getAddressModal").modal("hide");
       $("#successOrderModal").modal("show");
-    
-
+ 
       hpu({ act: "addedaddress"});
-
       toyou("setshipping",{orderid:myorder.orderid,shipping:$('input[name=shiptype]:checked').val()});
-
-
       toyou("reguserdata",{orderid:myorder.orderid,type:"address",data:$('#getaddress').val()});
+
+
+      $("#orderfinalx").empty();
+
+      $("#orderfinalx").append('<div class=""> کد سفارش : '+myorder.orderid+'</div>'); 
+
+      $("#orderfinalx").append('<div class="">مبلغ فاکتور : '+xcart.total()+'</div>'); 
 
       }
 
