@@ -21,7 +21,7 @@ $( document ).ready(function() {
        
        <div class="col">
           @foreach($order['items'] as $item)
-           {{$item['text']}} ( {{$item['count']}} عدد ) <br>
+           <small><a href="/myorder/{{$item['encoded_id']}}">{{$item['text']}} ( {{$item['count']}} عدد ) </a></small><br>
           @endforeach
        </div>
 
@@ -30,7 +30,7 @@ $( document ).ready(function() {
        </div>
 
        <div class="col">
-       وضعیت : 
+   
 
        @if($order['shipping_status'] === 0)
           در حال بررسی
@@ -50,11 +50,12 @@ $( document ).ready(function() {
 
      <div class="col">
        @if($order['payment_status'] === 0)
-        پرداخت نشده
+        <a href="/onlinepay/{{$item['encoded_id']}}" class="btn btn-primary">پرداخت</a>
        @endif
 
        @if($order['payment_status'] === 1)
-       پرداخت شده
+       <button class="btn btn-success">پرداخت شده</button>
+       
        @endif
      </div>
 
@@ -71,6 +72,7 @@ $( document ).ready(function() {
 <script>
 
   $(document).ready(function() {
+
     cartup();
    });
 </script>
