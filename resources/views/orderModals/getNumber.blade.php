@@ -9,9 +9,9 @@
          <!-- Modal body -->
          <div class="modal-body text-center">
             <div class="enternumber" >
-               <h2>
+               <h3>
                لطفا شماره تماستون رو وارد کنید 
-               <h2>
+               </h3>
                
                <div>
                   <input type="hidden" id="myModal_next" value="address"/> 
