@@ -408,7 +408,5 @@ function shakeAnim(elem) {
 
 
 function cleanMjax() {
-    $(".mjax div").each(function(mjaxitem) {
-        $(mjaxitem).empty();
-    });
+    $(".mjax").children("div").empty();
 }
