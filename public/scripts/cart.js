@@ -40,6 +40,11 @@ function Cart() {
         return tot;
     }
 
+
+    this.getItem = function(id) {
+        return self.prods[id];
+    }
+
     this.changeListeners = [];
 
     this.addChangeListener = function(e) {

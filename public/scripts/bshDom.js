@@ -192,10 +192,10 @@ function openprod(vals, noanim = null) {
 
     xcart.addChangeListener(function() {
 
-        var tot = xcart.total();
-        added.html(tot['amount']);
+        var itemincart = xcart.getItem(vals.id);
+        added.html(itemincart.count);
 
-        console.log("amount" + tot['amount']);
+        console.log("amount" + itemincart.count);
 
     });
 
