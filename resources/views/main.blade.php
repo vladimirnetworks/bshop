@@ -75,12 +75,14 @@
 $("#mag").click(function() {
   setTimeout(function() {
       $("#search_input").focus();
+      cartdown();
      },50);
      
 });
 
     $("#search_input , #mag").on('focus click',function() {
     
+      cartdown();
       showtop();
      
 
