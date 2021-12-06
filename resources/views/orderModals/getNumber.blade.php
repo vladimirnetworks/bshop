@@ -56,7 +56,7 @@ $("#reggetnumber").on('submit',function () {
 
       $( "#getNumberModal" ).modal("hide");
       $("#getAddressModal").modal("show");
-      
+
      hpu({ act: "addednumber"});
 
      toyou("reguserdata",{orderid:myorder.orderid,type:"phone",data:$('#getnumber').val()});

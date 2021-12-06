@@ -22,8 +22,8 @@
                         <button type="submit" class="btn btn-success col-2">ثبت</button>
                      </div>
 
-
-                     <div id="shippingx"></div>
+                     <h4> زمان ارسال </h4>
+                     <div id="shippingx" style="direction: rtl;"></div>
 
 
                   </form>
