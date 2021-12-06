@@ -189,12 +189,14 @@ function openprod(vals, noanim = null) {
 
 
     var added = $('<div class="border border-pirmary"></div>');
-    added.hide();
+    var count_added = $('<span></span>');
+
+    added.hide(count_added);
 
     var itemincart = xcart.getItem(vals.id);
 
     if (itemincart) {
-        added.html(itemincart.count);
+        count_added.html(itemincart.count);
         added.show();
     }
 
@@ -205,7 +207,7 @@ function openprod(vals, noanim = null) {
         var itemincart = xcart.getItem(vals.id);
 
         if (itemincart) {
-            added.html(itemincart.count);
+            count_added.html(itemincart.count);
             added.show();
         } else {
             added.hide();
