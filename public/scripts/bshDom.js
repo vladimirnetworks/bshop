@@ -206,6 +206,7 @@ function openprod(vals, noanim = null) {
 
         if (itemincart) {
             added.html(itemincart.count);
+            added.show();
         } else {
             added.hide();
         }
