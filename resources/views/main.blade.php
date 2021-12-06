@@ -75,14 +75,14 @@
 $("#mag").click(function() {
   setTimeout(function() {
       $("#search_input").focus();
-      cartdown();
+      
      },50);
      
 });
 
     $("#search_input , #mag").on('focus click',function() {
     
-      cartdown();
+     
       showtop();
      
 
@@ -94,6 +94,7 @@ $("#mag").click(function() {
      $("#search_box").empty();
      }
       hpu({ act: "searchboxshow"});
+      cartdown();
     });
 
     $("#search_input").focusout(function() {
