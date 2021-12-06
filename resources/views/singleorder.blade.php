@@ -5,7 +5,7 @@
 <script>
 
 
-
+$('.whitetopbar').hide();
 $( document ).ready(function() {
     $('.whitetopbar').hide();
 });

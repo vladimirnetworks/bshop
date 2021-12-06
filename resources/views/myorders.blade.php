@@ -3,7 +3,12 @@
 @section('main')
 
 
-
+<script>
+  $('.whitetopbar').hide();
+$( document ).ready(function() {
+    $('.whitetopbar').hide();
+});
+  </script>
 
 
 <div class="container-fluid text-right" style="direction:rtl" >
