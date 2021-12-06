@@ -188,6 +188,10 @@ function openprod(vals, noanim = null) {
 
     var added = $('<div class="border border-pirmary"></div>');
 
+
+    var itemincart = xcart.getItem(vals.id);
+    added.html(itemincart.count);
+
     cont.append(added);
 
     xcart.addChangeListener(function() {
@@ -195,7 +199,6 @@ function openprod(vals, noanim = null) {
         var itemincart = xcart.getItem(vals.id);
         added.html(itemincart.count);
 
-        console.log("amount" + itemincart.count);
 
     });
 
