@@ -191,8 +191,12 @@ function openprod(vals, noanim = null) {
     var added = $('<div class="border border-pirmary"></div>');
     var count_added = $('<span></span>');
 
-    added.append(count_added);
+    var bez = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-right btn-sm" >+</button>');
+    var men = $('<button style="display:inline-block;border-radius: 0;" class="btn btn-danger rounded-left btn-sm" >-</button>');
 
+    added.append(bez);
+    added.append(count_added);
+    added.append(men);
 
     added.hide();
 
