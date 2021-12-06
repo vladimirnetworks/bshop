@@ -65,7 +65,8 @@
 
       $("#orderfinalx").append('<div class=""> کد سفارش : '+myorder.orderid+'</div>'); 
 
-      $("#orderfinalx").append('<div class="">مبلغ فاکتور : '+xcart.total()+'</div>'); 
+      var tot = xcart.total();
+      $("#orderfinalx").append('<div class="">مبلغ فاکتور : '+farsi_price(tot.amount)+' تومان <br> ('+Num2persian(tot.amount)+')</div>'); 
 
       }
 
