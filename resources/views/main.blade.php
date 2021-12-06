@@ -82,6 +82,9 @@ $("#mag").click(function() {
 
     $("#search_input , #mag").on('focus click',function() {
     
+      if (cartsliderdata.isup) {
+        window.history.back();
+      }
      
       showtop();
      
