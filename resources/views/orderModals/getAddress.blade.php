@@ -57,16 +57,22 @@
       $("#successOrderModal").modal("show");
  
       hpu({ act: "addedaddress"});
-      toyou("setshipping",{orderid:myorder.orderid,shipping:$('input[name=shiptype]:checked').val()});
+
+
+      var selectedshipping = $('input[name=shiptype]:checked').val();
+
+      toyou("setshipping",{orderid:myorder.orderid,shipping:});
       toyou("reguserdata",{orderid:myorder.orderid,type:"address",data:$('#getaddress').val()});
 
+
+     var shippingcost = myorder.shipping[selectedshipping].cost;
 
       $("#orderfinalx").empty();
 
       $("#orderfinalx").append('<div class=""> کد سفارش : '+myorder.orderid+'</div>'); 
 
       var tot = xcart.total();
-      $("#orderfinalx").append('<div class="mb-2">مبلغ فاکتور : '+farsi_price(tot.amount)+' تومان <br> ('+Num2persian(tot.amount)+')</div>'); 
+      $("#orderfinalx").append('<div class="mb-2">مبلغ فاکتور : '+farsi_price(tot.amount+shippingcost)+' تومان <br> ('+Num2persian(tot.amount+shippingcost)+')</div>'); 
 
       }
 
