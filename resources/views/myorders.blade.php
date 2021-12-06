@@ -62,7 +62,7 @@
 </div>
 
 
-@if($_COOKIE['zcart'])
+@if(isset($_COOKIE['zcart']))
 <script>
 
   $(document).ready(function() {
