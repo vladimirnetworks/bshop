@@ -190,15 +190,20 @@ function openprod(vals, noanim = null) {
 
 
     var itemincart = xcart.getItem(vals.id);
-    added.html(itemincart.count);
+
+    if (itemincart) {
+        added.html(itemincart.count);
+    }
 
     cont.append(added);
 
     xcart.addChangeListener(function() {
 
         var itemincart = xcart.getItem(vals.id);
-        added.html(itemincart.count);
 
+        if (itemincart) {
+            added.html(itemincart.count);
+        }
 
     });
 

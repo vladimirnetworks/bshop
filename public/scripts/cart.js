@@ -42,7 +42,12 @@ function Cart() {
 
 
     this.getItem = function(id) {
-        return self.prods[id];
+        if (self.prods.hasOwnProperty(id)) {
+            return self.prods[id];
+        } else {
+            return null;
+        }
+
     }
 
     this.changeListeners = [];
