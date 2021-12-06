@@ -186,13 +186,16 @@ function openprod(vals, noanim = null) {
 
     cont.append(kharid);
 
-    var added = $('<div class="border border-pirmary"></div>');
 
+
+    var added = $('<div class="border border-pirmary"></div>');
+    added.hide();
 
     var itemincart = xcart.getItem(vals.id);
 
     if (itemincart) {
         added.html(itemincart.count);
+        added.show();
     }
 
     cont.append(added);
@@ -203,6 +206,8 @@ function openprod(vals, noanim = null) {
 
         if (itemincart) {
             added.html(itemincart.count);
+        } else {
+            added.hide();
         }
 
     });
