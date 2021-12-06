@@ -14,7 +14,7 @@
 
 
 <div id="gotomain" class="bottommenuitem mr-1 TransFormAnim">
-         <img src="/icons/menu.png" style="height:60%"/><small>صفحه‌اول</small>
+         <img src="/icons/home.png" style="height:60%"/><small>صفحه‌اول</small>
 </div>
 <script>
    $("#gotomain").click(function() {
