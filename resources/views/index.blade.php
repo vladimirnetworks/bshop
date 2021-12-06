@@ -9,7 +9,7 @@
 
 <div class="loader row justify-content-center" style="margin-left:0px;margin-right:0px"></div>
 
-<div class="myorders">myorders</div>
+<div class="myorders"></div>
 </div>
 
 @stop
