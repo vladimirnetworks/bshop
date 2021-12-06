@@ -74,6 +74,8 @@
       var tot = xcart.total();
       $("#orderfinalx").append('<div class="mb-2">مبلغ فاکتور : '+farsi_price(tot.amount+shippingcost)+' تومان <br> <small class="text-secondary">( '+Num2persian(tot.amount+shippingcost)+' )</small></div>'); 
 
+
+      xcart.empty();
       }
 
 

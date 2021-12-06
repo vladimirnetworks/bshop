@@ -11,6 +11,13 @@ function Cart() {
 
     }
 
+
+    this.empty = function() {
+
+        self.prods = {};
+        self.triggerAllChangeListeners();
+    }
+
     this.loadfromjson = function(jsonx) {
         this.prods = JSON.parse(jsonx);
 
