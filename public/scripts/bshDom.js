@@ -397,3 +397,10 @@ function setTransFormAnim(elem) {
 
     });
 }
+
+function shakeAnim(elem) {
+    elem.addClass("shakeAnim");
+    setTimeout(function() {
+        elem.removeClass("shakeAnim");
+    }, 201);
+}
