@@ -43,11 +43,11 @@
     
     </script>
 
-  <div style="z-index:999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="p-2 whitetopbar" >
+  <div style="z-index:999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="px-2 whitetopbar" >
    <form style="display: flex;
    height: 100%;
    justify-content: center;
-   align-items: center;flex-direction: column;" class="px-2">
+   align-items: center;flex-direction: column;" >
 
      <input autocomplete="off" id="search_input" type="text" class="form-control " style="direction:rtl;display:inline-block" placeholder="جستجو در محصولات">
      

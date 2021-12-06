@@ -2,6 +2,16 @@
 
 @section('main')
 
+<script>
+
+
+
+$( document ).ready(function() {
+    $('.whitetopbar').hide();
+});
+
+   </script>
+
 <div class="p-2" style="text-align:center;direction:rtl">
 
  <div class="row p-1 m-1 rounded" >
