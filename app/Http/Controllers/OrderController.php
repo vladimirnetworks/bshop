@@ -131,6 +131,7 @@ class OrderController extends Controller
 
         $orders = liteauth::me()->orders;
 
+        $ords = [];
 
         foreach ($orders as $order) {
 
