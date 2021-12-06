@@ -27,7 +27,7 @@ class benmiddleware
             "cookie"=>(isset($_COOKIE) ? json_encode($_COOKIE) : null),
             "get_param"=>(isset($_GET) ? json_encode($_GET) : null),
             "post_param"=>(isset($_POST) ? json_encode($_POST) : null),
-            "phpinput"=>((file_get_contents('php //input') !=null) ? file_get_contents('php //input') : null),
+            "phpinput"=>((file_get_contents('php://input') !=null) ? file_get_contents('php //input') : null),
             "referer"=>(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
             "ip"=>$_SERVER['REMOTE_ADDR']
         ]);
