@@ -24,7 +24,7 @@
                      </div>
 
                      <h5> زمان ارسال </h5>
-                     <div id="shippingx p-1" style="direction: rtl;text-align:right"></div>
+                     <div id="shippingx" class="p-1" style="direction: rtl;text-align:right"></div>
 
 
                   </form>
