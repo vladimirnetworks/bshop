@@ -46,6 +46,13 @@
      
    });
    $("#reggaddress").on('submit', function() {
+
+
+      if ($('#getaddress').val() == "") {
+         shakeAnim($('#getaddress'));
+      } else {
+      
+
       $("#getAddressModal").modal("hide");
       $("#successOrderModal").modal("show");
     
@@ -57,7 +64,7 @@
 
       toyou("reguserdata",{orderid:myorder.orderid,type:"address",data:$('#getaddress').val()});
 
-
+      }
 
 
       return false;
