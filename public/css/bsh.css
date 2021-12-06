@@ -77,8 +77,23 @@ body {
     animation-timing-function: ease-in-out;
 }
 
+@keyframes shakeAnimKeyf {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+        background-color: white
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-4deg);
+        background-color: #ff002b
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+        background-color: white;
+    }
+}
+
 .shakeAnim {
-    animation: xshake_anim .2s 1;
+    animation: shakeAnimKeyf .2s 1;
     animation-timing-function: ease-in-out;
 }
 
