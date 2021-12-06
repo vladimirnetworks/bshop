@@ -195,6 +195,11 @@ function api() {
 
 xcart = new Cart();
 
+$(document).ready(function() {
+    xcart.triggerAllChangeListeners();
+});
+
+
 firsttimecartup = true;
 
 function addtocart(prod) {
