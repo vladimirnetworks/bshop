@@ -32,9 +32,9 @@
    <div class=" p-2 m-1 rounded" style="background-color:white;border:1px solid grey;text-align:right">
     
 
-      {{$order->address}} @if($order->shipping_status != 3) <button class="btn btn-info btn-sm">تغییر</button> @endif
+      {{$order->address}} @if($order->shipping_status != 3) <button style="display:none" class="btn btn-info btn-sm">تغییر</button> @endif
          <br>
-      {{$order->phone}}   @if($order->shipping_status != 3)<button class="btn btn-info btn-sm">تغییر</button> @endif
+      {{$order->phone}}   @if($order->shipping_status != 3)<button style="display:none" class="btn btn-info btn-sm">تغییر</button> @endif
 
    </div>
 
@@ -64,8 +64,6 @@
    <hr>
 </div>
 
-<div class="bigprod" style="text-align:center"></div>
 
-<div class="loader row justify-content-center" style="margin-left:0px;margin-right:0px"></div>
 
 @stop
