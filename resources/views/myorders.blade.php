@@ -72,7 +72,8 @@ $( document ).ready(function() {
 </div>
 
 
-@if(isset($_COOKIE['zcart']))
+@if(isset($_COOKIE['zcart'] && count($orders) < 1))
+
 <script>
 
   $(document).ready(function() {
@@ -86,6 +87,8 @@ $( document ).ready(function() {
 
    });
 </script>
+
+
 @endif
 
 
