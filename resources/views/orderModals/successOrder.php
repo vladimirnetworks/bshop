@@ -10,8 +10,9 @@
          <div class="modal-body text-center">
             <div class="enternumber">
                سفارش شما  ثبت شد
-
-               <br>
+                  
+               <div id="orderfinalx"> </div>
+              
               <button id="onlinepay" class="btn btn-primary">پرداخت آنلاین</button> 
               <button id="offlinepay" class="btn btn-primary">پرداخت در محل</button> 
                <div>
@@ -36,5 +37,9 @@ $("#onlinepay").on('click',function () {
 $("#offlinepay").on('click',function () {
   window.location = "/myorders/"+myorder.orderid;
 });
+
+
+
+
 
 </script>
