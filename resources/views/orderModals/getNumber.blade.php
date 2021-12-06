@@ -47,7 +47,7 @@ $("#reggetnumber").on('submit',function () {
     $("#getAddressModal").modal("show");
 
     if ($('#getnumber').val() == 0) {
-      shakeAnim($('#getnumber').val());
+      shakeAnim($('#getnumber'));
     } else {
     
 
