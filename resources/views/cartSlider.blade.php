@@ -89,7 +89,7 @@
 
    });
    $(".cartslider_dim").click(function() {
-      cartdown();
+      window.history.back();
    });
    $(".finishshop").click(function() {
       cartdown();
