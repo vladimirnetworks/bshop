@@ -24,10 +24,10 @@ class benmiddleware
         monitor::create([
             "url"=>$_SERVER['REQUEST_URI'],
             "useragent"=>$_SERVER['HTTP_USER_AGENT'],
-            "cookie"=>json_encode($_COOKIE),
-            "get_param"=>json_encode($_GET),
-            "post_param"=>json_encode($_POST),
-            "referer"=>$_SERVER['HTTP_REFERER'],
+            "cookie"=>(isset($_COOKIE) ? json_encode($_COOKIE) : null),
+            "get_param"=>(isset($_GET) ? json_encode($_GET) : null),
+            "post_param"=>(isset($_POST) ? json_encode($_POST) : null),
+            "referer"=>(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
             "ip"=>$_SERVER['REMOTE_ADDR']
         ]);
         return $next($request);
