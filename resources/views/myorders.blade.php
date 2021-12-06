@@ -21,7 +21,7 @@ $( document ).ready(function() {
        
        <div class="col">
           @foreach($order['items'] as $item)
-           <small><a href="/myorder/{{$order->encoded_id}}">{{$item['text']}} ( {{$item['count']}} عدد ) </a></small><br>
+           <small><a href="/myorder/{{$order['encoded_id']}}">{{$item['text']}} ( {{$item['count']}} عدد ) </a></small><br>
           @endforeach
        </div>
 
@@ -50,7 +50,7 @@ $( document ).ready(function() {
 
      <div class="col">
        @if($order['payment_status'] === 0)
-        <a href="/onlinepay/{{$order->encoded_id}}" class="btn btn-primary">پرداخت</a>
+        <a href="/onlinepay/{{$order['encoded_id']}}" class="btn btn-primary">پرداخت</a>
        @endif
 
        @if($order['payment_status'] === 1)
