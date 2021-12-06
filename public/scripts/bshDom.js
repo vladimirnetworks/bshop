@@ -200,11 +200,14 @@ function openprod(vals, noanim = null) {
 
 
     bez.click(function() {
-        xcart.changeCount(vals.id, vals.count + 1);
+
+        var itm = xcart.getItem(vals.id);
+        xcart.changeCount(vals.id, itm.count + 1);
     });
 
     men.click(function() {
-        xcart.changeCount(vals.id, vals.count - 1);
+        var itm = xcart.getItem(vals.id);
+        xcart.changeCount(vals.id, itm.count - 1);
     });
 
 
