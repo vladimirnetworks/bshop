@@ -50,7 +50,7 @@ $( document ).ready(function() {
 
    
 <div class="p-1">
-   مجموع فاکتور : {{$order->cart['amount']+$order->show_shipping['cost']}} <br>
+   مجموع فاکتور : {{number_format($order->cart['amount']+$order->show_shipping['cost'])}} تومان <br>
 
 </div>
    
