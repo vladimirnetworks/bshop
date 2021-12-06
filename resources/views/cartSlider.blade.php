@@ -107,9 +107,9 @@
             var maindiv = $("<div></div>");
             var labelx = $('<label ></label>');
             if (i === 0) {
-               var inputx = $('<input checked type="radio" class="m-1" name="shiptype" value="' + i + '">');
+               var inputx = $('<input checked type="radio" class="m-2" name="shiptype" value="' + i + '">');
             } else {
-               var inputx = $('<input type="radio" class="m-1" name="shiptype" value="' + i + '">');
+               var inputx = $('<input type="radio" class="m-2" name="shiptype" value="' + i + '">');
             }
             var textx = $('<span>' + myorder.shipping[i].text + '</span>');
             labelx.append(inputx);

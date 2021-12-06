@@ -9,8 +9,9 @@
          <!-- Modal body -->
          <div class="modal-body text-center">
             <div class="enternumber">
+               <h5>
                آدرستو رو وارد کنید
-               <br>
+               </h5>
                <div>
                   <input type="hidden" id="myModal_next" value="address" />
                   <form id="reggaddress" name="reggaddressform" action="/" method="post">
@@ -22,8 +23,8 @@
                         <button type="submit" class="btn btn-success col-2">ثبت</button>
                      </div>
 
-                     <h4> زمان ارسال </h4>
-                     <div id="shippingx" style="direction: rtl;"></div>
+                     <h5> زمان ارسال </h5>
+                     <div id="shippingx p-1" style="direction: rtl;text-align:right"></div>
 
 
                   </form>
