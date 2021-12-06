@@ -63,3 +63,9 @@ Route::get('/onlinepay/{orderid}', "App\Http\Controllers\OrderController@onlinep
 
 
 Route::get('/zainpalverify/{paymentid}', "App\Http\Controllers\Paymentvarify@zarinpal")->middleware('tokin');
+
+
+
+Route::get('/testben', function() {
+    return "321";
+});
