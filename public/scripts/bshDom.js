@@ -70,6 +70,9 @@ function openprod(vals, noanim = null) {
 
     var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
 
+
+
+
     kharid.click(function(e) {
 
 
@@ -183,6 +186,14 @@ function openprod(vals, noanim = null) {
 
     cont.append(kharid);
 
+    var added = $('<div class="border border-pirmary"></div>');
+
+    cont.append(added);
+
+    xcart.addChangeListener(function() {
+        var tot = xcart.total();
+        added.html(tot['amount']);
+    });
 
 
 
