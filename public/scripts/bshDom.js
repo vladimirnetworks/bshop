@@ -402,5 +402,6 @@ function shakeAnim(elem) {
     elem.addClass("shakeAnim");
     setTimeout(function() {
         elem.removeClass("shakeAnim");
+        elem.focus();
     }, 201 * 2);
 }
