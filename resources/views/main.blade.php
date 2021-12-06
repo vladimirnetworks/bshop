@@ -94,7 +94,7 @@ $("#mag").click(function() {
      $("#search_box").empty();
      }
       hpu({ act: "searchboxshow"});
-      cartdown();
+     
     });
 
     $("#search_input").focusout(function() {
