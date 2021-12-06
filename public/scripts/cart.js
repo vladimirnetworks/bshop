@@ -67,7 +67,7 @@ function Cart() {
 
 
 
-        document.cookie = "zcart=" + JSON.stringify(this.prods);
+        document.cookie = "zcart=" + JSON.stringify(this.prods) + '; path=/';
 
         for (i = 0; i < self.changeListeners.length; i++) {
             self.changeListeners[i]();

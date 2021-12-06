@@ -77,7 +77,13 @@ $( document ).ready(function() {
 
   $(document).ready(function() {
 
-    cartup();
+    var totx = xcart.total();
+    if (totx.total > 0) {
+      cartup();
+    }
+    
+
+
    });
 </script>
 @endif
