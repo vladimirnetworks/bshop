@@ -13,7 +13,7 @@
 
 
 
-<div id="gotomain" class="bottommenuitem mr-1 TransFormAnim">
+<div id="gotomain" class="bottommenuitem mr-3 TransFormAnim">
          <img src="/icons/home.png" style="height:60%"/><small>صفحه‌اول</small>
 </div>
 <script>
@@ -33,9 +33,9 @@
    });
    </script>
 
-<div id="totoorders" style="margin-left: auto;" class="bottommenuitem mr-3 TransFormAnim">
+<div id="totoorders" style="margin-left: auto;" class="bottommenuitem mr-4 TransFormAnim">
 
-        <img src="/icons/menu.png" style="height:60%"/><small>سفارشات‌من</small>
+        <img src="/icons/orders.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
 
 
