@@ -9,8 +9,10 @@
          <!-- Modal body -->
          <div class="modal-body text-center">
             <div class="enternumber" >
+               <h2>
                لطفا شماره تماستون رو وارد کنید 
-               <br>
+               <h2>
+               
                <div>
                   <input type="hidden" id="myModal_next" value="address"/> 
                   <form id="reggetnumber" name="reggetnumberform"  action="/" method="post">
