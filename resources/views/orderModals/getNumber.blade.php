@@ -46,12 +46,15 @@ $("#reggetnumber").on('submit',function () {
     $( "#getNumberModal" ).modal("hide");
     $("#getAddressModal").modal("show");
 
+    if ($('#getnumber').val() == 0) {
+      shakeAnim($('#getnumber').val());
+    } else {
     
 
      hpu({ act: "addednumber"});
 
      toyou("reguserdata",{orderid:myorder.orderid,type:"phone",data:$('#getnumber').val()});
-     
+    }
 
     return false;
 });

@@ -82,8 +82,12 @@ body {
         transform: translate(0px, 0px) rotate(0deg);
         background-color: white
     }
+    25% {
+        transform: translate(-1px, 2px) rotate(-10deg);
+        background-color: #ff002b
+    }
     50% {
-        transform: translate(-1px, 2px) rotate(-4deg);
+        transform: translate(-1px, 2px) rotate(10deg);
         background-color: #ff002b
     }
     100% {
