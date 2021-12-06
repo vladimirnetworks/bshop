@@ -83,11 +83,11 @@ body {
         background-color: white
     }
     25% {
-        transform: translate(-1px, 2px) rotate(-10deg);
+        transform: translate(-1px, 2px) rotate(-5deg);
         background-color: #ff002b
     }
     50% {
-        transform: translate(-1px, 2px) rotate(10deg);
+        transform: translate(-1px, 2px) rotate(5deg);
         background-color: #ff002b
     }
     100% {
@@ -97,7 +97,7 @@ body {
 }
 
 .shakeAnim {
-    animation: shakeAnimKeyf .2s 1;
+    animation: shakeAnimKeyf .2s 2;
     animation-timing-function: ease-in-out;
 }
 
