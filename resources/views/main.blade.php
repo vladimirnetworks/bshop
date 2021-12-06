@@ -43,7 +43,7 @@
     
     </script>
 
-  <div style="z-index:99999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="p-2 whitetopbar" >
+  <div style="z-index:999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="p-2 whitetopbar" >
    <form style="display: flex;
    height: 100%;
    justify-content: center;
@@ -53,18 +53,18 @@
      
   
 
-     <div id="search_box" style="display:none;width:100%;z-index:99999;position:absolute;background-color:white;top: 100%;height:100vh"></div>
+     <div id="search_box" style="display:none;width:100%;z-index:999;position:absolute;background-color:white;top: 100%;height:100vh"></div>
 
 
     </form>
   </div>
 
 
-   <div  style="z-index:99999;position:absolute;top: 3%;left: 6%;width: 9vw; display:none;opacity:0.8;max-width: 51px;" class="prodtopbar" id="mag" >
+   <div  style="z-index:999;position:absolute;top: 3%;left: 6%;width: 9vw; display:none;opacity:0.8;max-width: 51px;" class="prodtopbar" id="mag" >
         <img src="/icons/mag.png" style="width: 100%" />
    </div>
 
-   <div  style="z-index:99999;position:absolute;top: 3%;right: 6%;width: 9vw;display:none;opacity:0.8;max-width: 51px;" class="prodtopbar"  id="menu" >
+   <div  style="z-index:999;position:absolute;top: 3%;right: 6%;width: 9vw;display:none;opacity:0.8;max-width: 51px;" class="prodtopbar"  id="menu" >
     <img src="/icons/menu.png" style="width: 100%" />
    </div>   
 
