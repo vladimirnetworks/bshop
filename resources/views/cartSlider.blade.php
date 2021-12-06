@@ -33,7 +33,7 @@
    });
    </script>
 
-<div id="totoorders" style="margin-left: auto;" class="bottommenuitem mr-4 TransFormAnim">
+<div id="totoorders" style="margin-left: auto;" class="bottommenuitem mr-3 TransFormAnim">
 
         <img src="/icons/orders.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
