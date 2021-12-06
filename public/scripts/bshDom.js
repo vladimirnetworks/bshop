@@ -275,7 +275,7 @@ function loadtoloader(target, path) {
 <span style="color:#535353" href="product/47" class="d-block">' + vals.tinytitle + '</span> \
 </div> \
 <div style="margin-top:auto"> \
-<span style="color:#232933">' + vals.price + '</span><span style="font-size:.714rem ; color:#232933">تومان \
+<span style="color:#232933">' + farsi_price(vals.price) + '</span><span style="font-size:.714rem ; color:#232933">تومان \
 </span> \
 </div> \
 </div> \
