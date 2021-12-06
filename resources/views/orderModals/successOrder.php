@@ -11,7 +11,7 @@
             <div class="enternumber">
                سفارش شما  ثبت شد
                   
-               <div id="orderfinalx"> </div>
+               <div id="orderfinalx" style="line-height: 250%"> </div>
               
               <button id="onlinepay" class="btn btn-primary">پرداخت آنلاین</button> 
               <button id="offlinepay" class="btn btn-primary">پرداخت در محل</button> 
