@@ -20,6 +20,7 @@ Route::apiResource('orders', 'App\Http\Controllers\OrderController');
 Route::post('preorder', 'App\Http\Controllers\OrderController@store2');
 
 Route::apiResource('products', 'App\Http\Controllers\ProductController');
+Route::apiResource('fastprice', 'App\Http\Controllers\fastprice');
 #Route::apiResource('categories', 'App\Http\Controllers\CatController');
 
 Route::get('categories/{parentid}', 'App\Http\Controllers\CatController@index');
