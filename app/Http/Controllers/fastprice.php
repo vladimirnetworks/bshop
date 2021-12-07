@@ -55,7 +55,7 @@ class fastprice extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(Request $request, Product $Product)
+    public function update(Request $request, Product $fastprice)
     {
         //header('Access-Control-Allow-Origin: *');
         //header('Access-Control-Allow-Methods: *');
