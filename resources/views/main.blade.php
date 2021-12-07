@@ -13,7 +13,7 @@
 
 
   <script src="/jquery/jquery.min.js"></script>
-  <script src="/bs4/popper.min.js"></script>
+  <!-- <script src="/bs4/popper.min.js"></script> -->
   <script src="/bs4/bootstrap.min.js"></script>
 
   <script src="/scripts/cart.js?{{time()}}"></script>
