@@ -64,7 +64,7 @@ class fastprice extends Controller
         // dd($Product);
       //  $Product->price = $request->price;
 
-        return ["data" => $Product->price];
+        return ["data" => $fastprice->price];
 
        // return ["data" => $Product->save()];
     }
