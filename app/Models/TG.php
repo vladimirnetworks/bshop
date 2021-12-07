@@ -14,9 +14,9 @@ class TG extends Model
      function __construct()
     {
     
-        $this->telegram = new Telegram("526089126:AAFiI4Kbe-kSaIF4SLducdVyI6FSJtesFZM",false,["type"=>CURLPROXY_SOCKS5,
+        $this->telegram = new Telegram("526089126:AAFiI4Kbe-kSaIF4SLducdVyI6FSJtesFZM",false/*,["type"=>CURLPROXY_SOCKS5,
         "url"=>"127.0.0.1",
-        "port"=>"1080"]);
+    "port"=>"1080"]*/);
 
     }
 
