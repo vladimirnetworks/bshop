@@ -18,7 +18,8 @@ class Product extends Model
         'price',
         'photos',
         'photo',
-        'caption'
+        'caption',
+        'searchkey'
 
     ];
 
