@@ -66,7 +66,7 @@ class fastprice extends Controller
 
 
 
-        return ["data" => $Product->save()];
+        return ["data" => ""];
     }
 
 
