@@ -230,7 +230,7 @@ class OrderController extends Controller
 
 
         $tg = new TG();
-        $sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi));
+        $sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi)."\n\nend");
         Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
