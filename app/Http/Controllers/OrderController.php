@@ -217,6 +217,8 @@ class OrderController extends Controller
 
         foreach ($request->data as $hitdata) {
             $cartx[] = $hitdata;
+
+            $notifi[] = $hitdata['title']." , (".$hitdata['count']."x)";
         }
 
         $xshiping = $this::shipping();
@@ -228,7 +230,7 @@ class OrderController extends Controller
 
 
         $tg = new TG();
-        $sendt = $tg->sendTextToGroup("new order -> " . $request->me);
+        $sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi));
         Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
