@@ -87,4 +87,12 @@ function arabicToPersian($string)
         return str_replace(array_keys($characters), array_values($characters),$string);
     }
 
+    function real_ip() {
+        if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+           return $_SERVER['HTTP_CF_CONNECTING_IP'];
+        } else {
+           return $_SERVER['REMOTE_ADDR'];
+        }
+    }
+
 ?>

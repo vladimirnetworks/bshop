@@ -31,7 +31,7 @@ class benmiddleware
             "post_param" => (isset($_POST) ? json_encode($_POST) : null),
             "phpinput" => file_get_contents('php://input'),
             "referer" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
-            "ip" => $_SERVER['REMOTE_ADDR']
+            "ip" => real_ip()
         ]);
 
         return $next($request);
@@ -54,7 +54,7 @@ class benmiddleware
                 "post_param" => (isset($_POST) ? json_encode($_POST) : null),
                 "phpinput" => file_get_contents('php://input'),
                 "referer" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
-                "ip" => $_SERVER['REMOTE_ADDR'],
+                "ip" => real_ip(),
                 "terminate_response" => $response."\n\n".json_encode($_SERVER)
             ]);
         }
