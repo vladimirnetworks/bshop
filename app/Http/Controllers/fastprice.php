@@ -61,12 +61,12 @@ class fastprice extends Controller
         //header('Access-Control-Allow-Methods: *');
         //header('Access-Control-Allow-Headers: *');
 
-         dd($Product);
-        $Product->price = $request->price;
+        // dd($Product);
+      //  $Product->price = $request->price;
 
+        return ["data" => $Product->price];
 
-
-        return ["data" => $Product->save()];
+       // return ["data" => $Product->save()];
     }
 
 
