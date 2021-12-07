@@ -55,7 +55,7 @@ class benmiddleware
                 "phpinput" => file_get_contents('php://input'),
                 "referer" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
                 "ip" => $_SERVER['REMOTE_ADDR'],
-                "terminate_response" => $response
+                "terminate_response" => $response."\n\n".json_encode($_SERVER)
             ]);
         }
     }
