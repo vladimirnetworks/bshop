@@ -330,6 +330,6 @@ xcart.addChangeListener(function() {
     });
 
 
-    $(".cartslider_bigview_cart_total").append('<div>0</div>');
+    $(".cartslider_bigview_cart_total").html('<div>0</div>');
 
 });
