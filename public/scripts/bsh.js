@@ -331,7 +331,7 @@ xcart.addChangeListener(function() {
 
 
     var tot2 = xcart.total();
-    if (tot2 > 0) {
+    if (tot2.count > 0) {
         $(".cartslider_bigview_cart_total").html('<div>مچموع : ' + farsi_price(tot2.amount) + '</div>');
 
     } else {
