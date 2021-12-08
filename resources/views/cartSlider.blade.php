@@ -59,7 +59,7 @@
 
       </span>
 
-      <span style="
+      <span class="showsabadcount" style="
       position: absolute;
       right:-1px;
       top:-14%;
@@ -67,7 +67,7 @@
       padding: 1px;
       border-radius: 50%;
       font-size: 0.7em;
-  ">1</span>
+  "></span>
 
       <span class="showsabadtxt">سبد خرید</span>
 
