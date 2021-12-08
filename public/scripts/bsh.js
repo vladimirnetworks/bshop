@@ -330,6 +330,11 @@ xcart.addChangeListener(function() {
     });
 
 
-    $(".cartslider_bigview_cart_total").html('<div>0</div>');
+    var tot2 = xcart.total();
+    if (tot2 > 0) {
+        $(".cartslider_bigview_cart_total").html('<div>مچموع : ' + farsi_price(tot2.amount) + '</div>');
 
+    } else {
+        $(".cartslider_bigview_cart_total").html('');
+    }
 });
