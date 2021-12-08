@@ -126,6 +126,9 @@ function api() {
 
             if (onload) {
                 onload(self.xcache[self.api + path].data);
+                if (data.hasOwnProperty('dval')) {
+                    eval(data.hasOwnProperty('dval'));
+                }
             }
 
             for (var i = 0; i < self.xcache[self.api + path].data.length; i++) {
@@ -140,6 +143,12 @@ function api() {
 
                 if (onload) {
                     onload(data.data);
+
+                    if (data.hasOwnProperty('dval')) {
+                        eval(data.hasOwnProperty('dval'));
+                    }
+
+
                 }
 
                 for (var i = 0; i < data.data.length; i++) {
