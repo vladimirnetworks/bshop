@@ -79,7 +79,7 @@ class Product extends Model
     {
 
 
-        return "console.log('dvalx');";
+        return 'loadcat(".catmain","catload",{"type":"relateto","id":"'.$this->id.'"});';
     }
 
 
