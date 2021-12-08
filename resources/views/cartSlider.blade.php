@@ -46,7 +46,7 @@
    </script>
 
 
-         <div class="ml-2 text-center" style="height:100%">
+         <div class="ml-2 text-center" style="height:100%;display:flex;flex-direction: column;align-items: center;justify-content: center">
             <div class="cartslider_smallview_text" style=""></div>
              
             <button style="line-height: 1.1;height:50%;max-height:5vh" class="font-weight-bold w-100 btn btn-danger  showsabad">
