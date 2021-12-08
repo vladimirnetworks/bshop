@@ -50,20 +50,27 @@
             <div class="cartslider_smallview_text" style=""></div>
              
             <button style="line-height: 1.1;height:50%;max-height:5vh" class="font-weight-bold w-100 btn btn-danger  showsabad">
-                <img src="/icons/cart.png" style="height:100%;" />
+            
+               <span style="position: relative;height:100%;">
+               <img src="/icons/cart.png" style="height:100%;" />
+
+               <span style="
+               position: absolute;
+               top: 1%;
+               right: 14%;
+               background-color: red;
+               padding: 1px;
+               border-radius: 10px;
+               font-size: 0.7em;
+           ">1</span>
+
+
+               <span>
 
                 <span class="showsabadtxt">سبد خرید</span>
                
 
-                <span style="
-    position: absolute;
-    top: 1%;
-    right: 14%;
-    background-color: red;
-    padding: 1px;
-    border-radius: 10px;
-    font-size: 0.7em;
-">1</span>
+
 
 
 
