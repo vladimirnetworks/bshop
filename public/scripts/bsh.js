@@ -250,6 +250,7 @@ xcart.addChangeListener(function() {
         $(".finishshop").show();
 
         $(".showsabadtxt").html("اتمام خرید");
+        $('.showsabadcount').show();
         $('.showsabadcount').html(tot.count);
 
         $('.cartslider_smallview_text').html(farsi_price(tot.amount) + " تومان");
