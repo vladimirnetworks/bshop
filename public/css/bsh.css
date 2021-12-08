@@ -151,3 +151,15 @@ body {
     animation: 1.5s shine linear infinite;
     height: 50px;
 }
+
+@media screen and (orientation:landscape) {
+    .cartslider {
+        height: 18vh;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    .cartslider {
+        height: 9vh;
+    }
+}
