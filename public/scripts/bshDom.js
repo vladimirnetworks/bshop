@@ -269,9 +269,9 @@ function loadtoloader(target, path) {
     apix.get(path, function(vals) {
 
 
-        var incart = $("<div></div>");
+        var incart = $('<div style="width: 100%;"></div>');
 
-        var check = '<img src="/icons/check.png" />';
+        var check = '<img style="width: 100%;" src="/icons/check.png" />';
 
         if (xcart.getItem(vals.id)) {
             incart.html(check);
@@ -288,7 +288,7 @@ function loadtoloader(target, path) {
         var xx = '<div style="transition: all .150s" class="rounded col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
 <span>  <img class="mw-100" src="/' + vals.photo + '"></span> \
-<div class="incart" style="position: absolute;right: 10%;top: 10%;"></div>\
+<div class="incart" style="style="width: 30%;"position: absolute;right: 10%;top: 10%;"></div>\
 <div style="margin-top:auto"> \
 <span style="color:#535353" href="product/47" class="d-block">' + vals.tinytitle + '</span> \
 </div> \
