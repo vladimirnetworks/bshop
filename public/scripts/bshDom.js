@@ -227,12 +227,14 @@ function openprod(vals, noanim = null) {
     added.append(men);
 
     added.hide();
+    checked.hide();
 
     var itemincart = xcart.getItem(vals.id);
 
     if (itemincart) {
         count_added.html(itemincart.count);
         added.show();
+        checked.show();
     }
 
 
