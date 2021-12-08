@@ -57,8 +57,7 @@
 
          <span style="
                position: absolute;
-               top: 1%;
-               right: 14%;
+
                background-color: red;
                padding: 1px;
                border-radius: 10px;
