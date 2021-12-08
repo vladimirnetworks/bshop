@@ -65,7 +65,7 @@
       top:-14%;
       background-color: red;
       padding: 1px;
-      border-radius: 10px;
+      border-radius: 50%;
       font-size: 0.7em;
   ">1</span>
 
