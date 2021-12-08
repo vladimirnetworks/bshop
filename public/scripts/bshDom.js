@@ -269,7 +269,7 @@ function loadtoloader(target, path) {
     apix.get(path, function(vals) {
 
 
-        var incart = $("");
+        var incart = $("<div></div>");
 
         if (xcart.getItem(vals.id)) {
             incart.html("ys");
