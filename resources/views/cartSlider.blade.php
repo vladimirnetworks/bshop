@@ -61,14 +61,13 @@
 
       <span style="
       position: absolute;
-      right:0px;
-      top:-20%;
+      right:-1px;
+      top:-14%;
       background-color: red;
       padding: 1px;
       border-radius: 10px;
       font-size: 0.7em;
   ">1</span>
-  
 
       <span class="showsabadtxt">سبد خرید</span>
 
