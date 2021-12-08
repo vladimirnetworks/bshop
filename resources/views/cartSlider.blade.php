@@ -49,8 +49,8 @@
          <div class="ml-2">
             <div class="cartslider_smallview_text" style="font-size:90%;"></div>
              
-            <button style="font-size:90%;" class="w-100 btn btn-info  showsabad">
-
+            <button style="font-size:90%;" class="font-weight-bold w-100 btn btn-danger  showsabad">
+                <img src="/icons/cart.png" style="height:60%" />
                سبد خرید
 
             </button>
