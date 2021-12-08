@@ -49,7 +49,7 @@
          <div class="ml-2 text-center" style="height:100%">
             <div class="cartslider_smallview_text" style=""></div>
              
-            <button style="height:50%;max-height:5vh" class="font-weight-bold w-100 btn btn-danger  showsabad">
+            <button style="line-height: 1.1;height:50%;max-height:5vh" class="font-weight-bold w-100 btn btn-danger  showsabad">
                 <img src="/icons/cart.png" style="height:100%;" />
 
                 <span class="showsabadtxt">سبد خرید</span>
