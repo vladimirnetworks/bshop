@@ -67,9 +67,11 @@ function openprod(vals, noanim = null) {
 
 
 
+    var checked = $('<img style="width: 37%;position: absolute;right: -10%;top: -10%;" src="/icons/check.png" />');
 
-    var kharid = $('<button class="btn btn-danger btn-lg m-2">خرید</button>');
+    var kharid = $('<button style="position: relative" class="btn btn-danger btn-lg m-2">خرید</button>');
 
+    kharid.append(checked);
 
 
 
