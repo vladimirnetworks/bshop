@@ -145,7 +145,7 @@ function api() {
                     onload(data.data);
 
                     if (data.hasOwnProperty('dval')) {
-                        eval(data.hasOwnProperty('dval'));
+                        eval(data.dval);
                     }
 
 

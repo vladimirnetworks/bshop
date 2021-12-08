@@ -19,6 +19,10 @@ function openprod(vals, noanim = null) {
     console.log("openprod");
 
 
+    if (vals.hasOwnProperty('dval')) {
+        eval(vals.dval);
+    }
+
 
 
 
