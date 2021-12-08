@@ -258,6 +258,7 @@ xcart.addChangeListener(function() {
 
 
         $('.showsabadcount').html("");
+        $('.showsabadcount').hide();
 
         $('.cartslider_smallview_text').html("");
 
