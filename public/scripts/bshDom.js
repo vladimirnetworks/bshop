@@ -67,7 +67,7 @@ function openprod(vals, noanim = null) {
 
 
 
-    var checked = $('<img style="width: 37%;position: absolute;right: -10%;top: -10%;" src="/icons/check.png" />');
+    var checked = $('<img style="display:none;width: 37%;position: absolute;right: -10%;top: -10%;" src="/icons/check.png" />');
 
     var kharid = $('<button style="position: relative" class="btn btn-danger btn-lg m-2">خرید</button>');
 
@@ -244,8 +244,10 @@ function openprod(vals, noanim = null) {
         if (itemincart) {
             count_added.html(itemincart.count);
             added.show();
+            checked.show();
         } else {
             added.hide();
+            checked.hide();
         }
 
     });
