@@ -271,7 +271,7 @@ function loadtoloader(target, path) {
 
         var incart = "";
 
-        if (catrx.getItem(vals.id)) {
+        if (xcart.getItem(vals.id)) {
             incart = "<div>ys</div>";
         }
 
