@@ -5,7 +5,7 @@
 </div>
 
 <div
-   style="box-shadow:rgb(136 136 136) 0px 0px 10px;transition:height 0.3s;height:9vh;direction:rtl;position:fixed;bottom:0px;left:0px;width:100%;background-color:white;z-index:1001"
+   style="box-shadow:rgb(136 136 136) 0px 0px 10px;transition:height 0.3s;direction:rtl;position:fixed;bottom:0px;left:0px;width:100%;background-color:white;z-index:1001"
    id="mcartslider" class="text-left cartslider border-top ">
    <div class="cartslider_smallview"
       style="transition:all 0.3s;display:flex;height:100%;align-items: center">
