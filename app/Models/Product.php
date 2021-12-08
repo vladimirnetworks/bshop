@@ -74,6 +74,16 @@ class Product extends Model
     }
 
 
+
+    public function getDvalAttribute()
+    {
+
+
+        return "console.log('dvalx');";
+    }
+
+
+
     protected $appends = ['photo','licaption','cat'];
 
 
