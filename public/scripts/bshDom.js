@@ -288,7 +288,7 @@ function loadtoloader(target, path) {
         var xx = '<div style="transition: all .150s" class="rounded col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
 <span>  <img class="mw-100" src="/' + vals.photo + '"></span> \
-<div class="incart" style="width:100%;position: absolute;right: 10%;top: 10%;"></div>\
+<div class="incart" style="width:30%;position: absolute;right: 10%;top: 10%;"></div>\
 <div style="margin-top:auto"> \
 <span style="color:#535353" href="product/47" class="d-block">' + vals.tinytitle + '</span> \
 </div> \
