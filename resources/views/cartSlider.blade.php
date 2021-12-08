@@ -85,9 +85,12 @@
    <div class="cartslider_bigview text-center" style="display:none">
 
       <div class="cartslider_bigview_cart"></div>
-
+       <div class="cartslider_bigview_cart_total"></div>
       <div class="w-100 text-center p-2 m-2">
          <button style="display:none" class="finishshop btn btn-primary">تایید و ثبت سفارش</button>
+        
+         
+        
          <div style="display:none" class="khalie">سبد خریدتون خالیه 🖐<br>  </div>
       </div>
 

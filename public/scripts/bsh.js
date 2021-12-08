@@ -320,12 +320,16 @@ xcart.addChangeListener(function() {
         cont.append('<div style="display:inline-block;width: 25%"><small>' + farsi_price(prod.price * prod.count) + " تومان</small></div>");
 
 
+
+
+
+
         $(".cartslider_bigview_cart").append(cont);
 
 
     });
 
 
-
+    $(".cartslider_bigview_cart_total").append('<div>0</div>');
 
 });
