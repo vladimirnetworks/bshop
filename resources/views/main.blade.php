@@ -60,17 +60,24 @@
   </div>
 
 
-   <div  style="z-index:999;position:absolute;top: 3%;left: 6%;width: 9vw; display:none;opacity:0.8;max-width: 51px;" class="TransFormAnim prodtopbar" id="mag" >
-        <img src="/icons/mag.png" style="width: 100%" />
+   <div  style="z-index:999;position:absolute;top: 3%;left: 6%;width: 9vw; display:none;opacity:0.8;max-width: 51px;" class="TransFormAnim prodtopbar" id="backk" >
+        <img src="/icons/back.png" style="width: 100%" />
    </div>
 
-   <div  style="z-index:999;position:absolute;top: 3%;right: 6%;width: 9vw;display:none;opacity:0.8;max-width: 51px;" class="TransFormAnim prodtopbar"  id="menu" >
-    <img src="/icons/menu.png" style="width: 100%" />
+   <div  style="z-index:999;position:absolute;top: 3%;right: 6%;width: 9vw;display:none;opacity:0.8;max-width: 51px;" class="TransFormAnim prodtopbar"  id="mag" >
+    <img src="/icons/mag.png" style="width: 100%" />
    </div>   
 
 
 
   <script>
+
+
+$("#backk").click(function() {
+  window.history.back();
+});
+
+
 
 $("#mag").click(function() {
   setTimeout(function() {
