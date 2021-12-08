@@ -51,7 +51,9 @@
              
             <button style="font-size:90%;" class="font-weight-bold w-100 btn btn-danger  showsabad">
                 <img src="/icons/cart.png" style="height:60%" />
-               سبد خرید
+
+                <span class="showsabadtxt">سبد خرید</span>
+               
 
             </button>
 

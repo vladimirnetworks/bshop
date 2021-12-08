@@ -249,7 +249,7 @@ xcart.addChangeListener(function() {
         $(".khalie").hide();
         $(".finishshop").show();
 
-        $(".showsabad").html("اتمام خرید");
+        $(".showsabadtxt").html("اتمام خرید");
 
         $('.cartslider_smallview_text').html(farsi_price(tot.amount) + " تومان");
 
@@ -258,7 +258,7 @@ xcart.addChangeListener(function() {
 
         $('.cartslider_smallview_text').html("");
 
-        $(".showsabad").html("سبد خرید");
+        $(".showsabadtxt").html("سبد خرید");
 
         $(".khalie").show();
         $(".finishshop").hide();
