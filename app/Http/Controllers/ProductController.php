@@ -6,6 +6,8 @@ use App\Models\Cat;
 use App\Models\Product;
 use App\Models\Relish;
 use Illuminate\Http\Request;
+use \Gumlet\ImageResize;
+
 
 class ProductController extends Controller
 {
@@ -243,22 +245,64 @@ class ProductController extends Controller
                 } while (file_exists($fname));
 
 
+                $data = explode(',', $gal['small']);
 
-                $ifp = fopen($fname, 'wb');
+
+                /*$ifp = fopen($fname, 'wb');
 
                 $data = explode(',', $gal['small']);
                 fwrite($ifp, base64_decode($data[1]));
                 fclose($ifp);
+*/
+
+                $image = ImageResize::createFromString(base64_decode($data[1]));
+                $image->save($fname);
+
+                $image = ImageResize::createFromString(base64_decode($data[1]));
+                $image->scale(50);
+                $image->save("medium_".$fname);
+                
+                $image = ImageResize::createFromString(base64_decode($data[1]));
+                $image->scale(25);
+                $image->save("small_".$fname);
+
+           
+             
+
 
 
                 $sgal[] = [
                     "big" => $fname,
-                    "medium" => $fname,
-                    "small" => $fname
+                    "medium" => "medium_".$fname,
+                    "small" => "small_".$fname
                 ];
             } else {
 
+
+
+                if ($gal['big'] == $gal['medium']) {
+
+                    $image = new ImageResize($gal['big']);
+                    $image->scale(50);
+                    $image->save("medium_".$gal['big']);
+
+                    $image = new ImageResize($gal['big']);
+                    $image->scale(25);
+                    $image->save("small_".$gal['big']);
+
+                    $gal['medium'] = "medium_".$gal['medium'];
+                    $gal['small'] = "small_".$gal['small'];
+
+
+                } else {
                 $sgal[] = $gal;
+                }
+
+
+
+
+
+
             }
         }
 
