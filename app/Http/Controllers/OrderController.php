@@ -197,7 +197,7 @@ class OrderController extends Controller
 
         $ship[] = ["text" => "امروز قبل از ظهر", "cost" => 0];
         $ship[] = ["text" => "امروز بعد از ظهر", "cost" => 0];
-        $ship[] = ["text" => "همین الان +۵۰۰۰", "cost" => 5000];
+        $ship[] = ["text" => "همین الان (۵۰۰۰ تومان)", "cost" => 5000];
         // $ship[] = ["text"=>"همین الان (۴۰۰۰+ تومان هزینه)","cost"=>4000];
         return $ship;
     }
@@ -230,8 +230,8 @@ class OrderController extends Controller
 
 
         $tg = new TG();
-       // $sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi)."\n\nend");
-       // Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
+       $sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi)."\n\nend");
+        Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
         $encodedid = encode_id($ret->id);
