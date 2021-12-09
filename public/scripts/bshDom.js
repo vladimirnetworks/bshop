@@ -295,7 +295,7 @@ function loadtoloader(target, path) {
             }
         });
 
-        var tm = rnd(400, 900);
+        var tm = rnd(300, 500);
         var xx = '<div style="transform:scale(0,0);transition: all .' + tm + 's cubic-bezier(0.175, 0.885, 0.32, 1.275)" class="rounded col-4 col-sm-3  pb-2 px-2 text-center miniproduct" data-me=""> \
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
 <span>  <img class="mw-100" src="/' + vals.photo + '"></span> \
@@ -369,7 +369,7 @@ function loadtoloader(target, path) {
         setTimeout(function() {
 
             jprod.css({ "transform": "scale(1.0)" });
-        }, rnd(100, 300));
+        }, tm + 100);
 
 
 
