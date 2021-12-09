@@ -19,7 +19,7 @@
 
 
 <div id="enamd" class="bottommenuitem mr-3 TransFormAnim">
-   <a href="https://trustseal.enamad.ir/?id=244136&Code=NAYvp5VDiHI1pstposy1" target="_blank"><img src="/icons/enamad.png" style="height:60%"/><small>نماد اعتماد</small></a>
+   <a href="https://trustseal.enamad.ir/?id=244136&Code=NAYvp5VDiHI1pstposy1" target="_blank"><img src="/icons/enamad.png" style="height:60%"/></a><small>نماد اعتماد</small>
 </div>
 
 <script>
