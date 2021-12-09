@@ -102,10 +102,10 @@ class ProductController extends Controller
        }
 
 
-       $rels = Relish::whereCatIdIn($cats)->get();
+       $rels = Relish::whereIn('cat_id',$cats)->get();
 
       
-          dd($rels);
+         dd($cats);
 
     }
 
