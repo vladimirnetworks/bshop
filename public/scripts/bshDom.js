@@ -365,7 +365,7 @@ function loadtoloader(target, path) {
         setTimeout(function() {
 
             jprod.css({ "transform": "scale(1.0)" });
-        }, tm + 50);
+        }, tm + 1);
 
 
 
