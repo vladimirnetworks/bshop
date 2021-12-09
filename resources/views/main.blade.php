@@ -43,7 +43,7 @@
     
     </script>
 
-  <div style="z-index:999;position:fixed;background-color:white;top:0px;left:0px;text-align:center;width:100%;" class="px-2 whitetopbar" >
+  <div style="z-index:999;position:fixed;background-color:white;top:3px;left:0px;text-align:center;width:100%;" class="px-2 whitetopbar" >
    <form style="display: flex;
    height: 100%;
    justify-content: center;
