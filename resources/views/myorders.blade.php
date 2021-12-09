@@ -21,11 +21,16 @@ $( document ).ready(function() {
        
        <div class="col">
         <a href="/myorders/{{$order['encoded_id']}}">
+
+          #{{$order['encoded_id']}}
+          <!-- 
           <small>
           @foreach($order['items'] as $item)
            {{$item['text']}} ( {{$item['count']}} عدد ) <br>
           @endforeach
            </small>
+          -->
+
           </a>
        </div>
 
