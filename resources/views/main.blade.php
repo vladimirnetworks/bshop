@@ -158,7 +158,7 @@ $("#mag").click(function() {
 <script>
 
 loadtoloader(".loader","index");
-loadcat(".catmain","catload",{"type":"index"});
+//loadcat(".catmain","catload",{"type":"index"});
 
 </script>
 
