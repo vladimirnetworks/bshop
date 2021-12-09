@@ -300,7 +300,7 @@ function loadtoloader(target, path) {
 <span>  <img class="mw-100" src="/' + vals.photo + '"></span> \
 <div class="incart" style="width:30%;position: absolute;right: 10%;top: 10%;"></div>\
 <div style="margin-top:auto"> \
-<span style="color:#535353" href="product/47" class="d-block">' + vals.tinytitle + '</span> \
+<small style="color:#535353" href="product/47" class="d-block">' + vals.tinytitle + '</small> \
 </div> \
 <div style="margin-top:auto"> \
 <span style="color:#232933">' + farsi_price(vals.price) + '</span><span style="font-size:.714rem ; color:#232933">تومان \
