@@ -41,7 +41,7 @@ class Product extends Model
 
         $phott = null;
         if (isset($phot[0])) {
-            $phott = $phot[0]['medium'];
+            $phott = ["small"=>$phot[0]['small']];
         }
 
 

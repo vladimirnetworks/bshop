@@ -298,7 +298,7 @@ function loadtoloader(target, path) {
         var tm = rnd(100, 300);
         var xx = '<div style="transform:scale(0,0);transition: all .' + tm + 's cubic-bezier(0.175, 0.885, 0.32, 1.275)" class="rounded col-4 col-sm-3  pb-2 px-2 text-center miniproduct" data-me=""> \
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
-<span>  <img class="mw-100" src="/' + vals.photo + '"></span> \
+<span>  <img class="mw-100" src="/' + vals.photo.small + '"></span> \
 <div class="incart" style="width:30%;position: absolute;right: 10%;top: 10%;"></div>\
 <div style="margin-top:auto"> \
 <small style="color:#535353" href="product/47" class="d-block">' + vals.tinytitle + '</small> \
