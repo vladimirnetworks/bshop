@@ -49,7 +49,10 @@ class CatController extends Controller
 
           // $catt = Cat::whereId($rels->cat_id)->first();
 
-           $cats = Cat::whereParent($rels->cat_id)->orderBy('id', 'DESC')->get();
+          if (isset($rels->cat_id)) {
+            $cats = Cat::whereParent($rels->cat_id)->orderBy('id', 'DESC')->get();
+          }
+         
          
 
           /*  $catsid = array();
