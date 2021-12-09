@@ -159,23 +159,45 @@ class ProductController extends Controller
 
                 do {
 
-                    $fname = "photos/" . rand(0, 99999999) . '.jpg';
+                    $basefname = rand(0, 99999999) . '.jpg';
+                    $fname = "photos/" . $basefname;
+
+
                 } while (file_exists($fname));
 
 
+                $data = explode(',', $gal['small']);
 
-                $ifp = fopen($fname, 'wb');
+
+                $image = ImageResize::createFromString(base64_decode($data[1]));
+                $image->save("photos/" . $basefname);
+
+                $image = ImageResize::createFromString(base64_decode($data[1]));
+                $image->scale(50);
+                $image->save("photos/medium_".$basefname);
+                
+                $image = ImageResize::createFromString(base64_decode($data[1]));
+                $image->scale(25);
+                $image->save("photos/small_".$basefname);
+                
+
+                /*$ifp = fopen($fname, 'wb');
 
                 $data = explode(',', $gal['small']);
                 fwrite($ifp, base64_decode($data[1]));
                 fclose($ifp);
+                */
 
 
                 $sgal[] = [
                     "big" => $fname,
-                    "medium" => $fname,
-                    "small" => $fname
+                    "medium" => "photos/medium_".$basefname,
+                    "small" => "photos/small_".$basefname
                 ];
+
+
+
+
             } else {
 
                 $sgal[] = $gal;
