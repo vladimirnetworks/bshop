@@ -20,29 +20,13 @@ class CatController extends Controller
     }
 
 
-    public function catload($parentid, Request $request)
-    {
-
-        if ($request->type == 'relateto') {
-           $rels = Relish::whereProductId($request->id);
-
-           foreach ($rels as $rel) {
-               $cats[] = $rels->id;
-           }
-
-        }
-        //$cats = Cat::whereParent($parentid)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
-        return response($cats);
-    }
-
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
 
-    public function load(Request $request)
+    public function catload(Request $request)
     {
 
         $ret = array();
@@ -54,6 +38,21 @@ class CatController extends Controller
             foreach ($cats as $cat) {
                 $ret[] = ["title" => $cat->title, "id" => $cat->id];
             }
+        }
+
+
+        if ($request->type == 'relateto') {
+
+            $rels = Relish::whereProductId($request->id);
+
+            foreach ($rels as $rel) {
+                $cats[] = $rel->id;
+            }
+
+            foreach ($cats as $cat) {
+                $ret[] = ["title" =>$cat, "id" => $cat];
+            }
+
         }
 
 
