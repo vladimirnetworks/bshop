@@ -104,8 +104,12 @@ class ProductController extends Controller
 
        $rels = Relish::whereIn('cat_id',$cats)->get(['product_id']);
 
-       foreach ($rels as $prodid) {
-         $prd[] = $prodid->product_id;
+       
+       foreach ($rels as $hprodid) {
+           if ($hprodid != $prdid) {
+            $prd[] = $prodid->product_id;
+           }
+        
        }
       
        return ["data"=>Product::findMany($prd)];
