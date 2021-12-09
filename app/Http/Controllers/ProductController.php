@@ -87,7 +87,7 @@ class ProductController extends Controller
            $cats[] = $rel->cat_id;
         }
 
-        dd($cats);
+       
 
       /* $cats = array();
        if (isset($rels->cat_id)) {
@@ -110,8 +110,6 @@ class ProductController extends Controller
        
        foreach ($rels as $hprodid) {
           // if ($hprodid->product_id != $prdid) {
-
-        
 
             if ($hprodid->product_id != $prodid) {
                 $prd[] = $hprodid->product_id;
