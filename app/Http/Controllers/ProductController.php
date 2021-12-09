@@ -276,8 +276,8 @@ class ProductController extends Controller
 
                 $sgal[] = [
                     "big" => $fname,
-                    "medium" => "medium_".$basefname,
-                    "small" => "small_".$basefname
+                    "medium" => "photos/medium_".$basefname,
+                    "small" => "photos/small_".$basefname
                 ];
             } else {
 
