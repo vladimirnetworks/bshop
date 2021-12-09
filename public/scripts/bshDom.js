@@ -295,7 +295,8 @@ function loadtoloader(target, path) {
             }
         });
 
-        var xx = '<div style="transition: all .250s cubic-bezier(0.175, 0.885, 0.32, 1.275)" class="rounded col-4 col-sm-3  pb-2 px-2 text-center miniproduct" data-me=""> \
+        var tm = rnd(200, 900);
+        var xx = '<div style="transition: all .' + tm + 's cubic-bezier(0.175, 0.885, 0.32, 1.275)" class="rounded col-4 col-sm-3  pb-2 px-2 text-center miniproduct" data-me=""> \
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
 <span>  <img class="mw-100" src="/' + vals.photo + '"></span> \
 <div class="incart" style="width:30%;position: absolute;right: 10%;top: 10%;"></div>\
@@ -362,25 +363,15 @@ function loadtoloader(target, path) {
 
             jprod.css({ "transform": "scale(0." + rnd(2, 9) + ")" });
 
-        }, 100);
-
-        setTimeout(function() {
-
-            jprod.css({ "transform": "translate(" + rnd(-10, 10) + "px, " + rnd(-10, 10) + "px)" });
-
-        }, 200);
-
+        }, tm + 100);
 
 
         setTimeout(function() {
 
             jprod.css({ "transform": "scale(1.0)" });
-        }, 300);
+        }, tm + 200);
 
-        setTimeout(function() {
 
-            jprod.css({ "transform": "translate(0px, 0px)" });
-        }, 310);
 
 
 
