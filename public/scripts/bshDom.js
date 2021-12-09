@@ -295,7 +295,7 @@ function loadtoloader(target, path) {
             }
         });
 
-        var xx = '<div style="transition: all .150s" class="rounded col-4 col-sm-3  p-2 text-center miniproduct" data-me=""> \
+        var xx = '<div style="transition: all .150s" class="rounded col-4 col-sm-3  pb-2 px-2 text-center miniproduct" data-me=""> \
 <div class=" h-100 " style="direction:rtl;flex-direction:column;display:flex"> \
 <span>  <img class="mw-100" src="/' + vals.photo + '"></span> \
 <div class="incart" style="width:30%;position: absolute;right: 10%;top: 10%;"></div>\
