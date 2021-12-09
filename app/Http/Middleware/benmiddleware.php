@@ -21,7 +21,9 @@ class benmiddleware
 
 
 
+if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == 'https://gadmin.behkiana.ir/') {
 
+} else {
 
         monitor::create([
             "url" => $_SERVER['REQUEST_URI'],
@@ -33,7 +35,7 @@ class benmiddleware
             "referer" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
             "ip" => real_ip()
         ]);
-
+    }
         return $next($request);
     }
 
