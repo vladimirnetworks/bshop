@@ -155,6 +155,7 @@ class ProductController extends Controller
         $sgal = [];
         foreach ($request->gal as $gal) {
 
+            dd($gal);
             if (strtolower(substr($gal['small'], 0, 10)) == 'data:image') {
 
                 do {
