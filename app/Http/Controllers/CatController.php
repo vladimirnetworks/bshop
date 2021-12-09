@@ -52,8 +52,10 @@ class CatController extends Controller
                 $cats[] = $rel->id;
             }
 
+            $cats = Cat::whereIn('id', $cats)->get();
+
             foreach ($cats as $cat) {
-                $ret[] = ["title" =>$cat, "id" => $cat];
+                $ret[] = ["title" => $cat->title, "id" => $cat->id];
             }
 
         }
