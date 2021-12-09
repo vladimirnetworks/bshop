@@ -297,6 +297,7 @@ class ProductController extends Controller
                     $gal['medium'] = str_replace("photos/","photos/medium_",$gal['medium']);
                     $gal['small'] = str_replace("photos/","photos/small_",$gal['small']);
 
+                    $sgal[] = $gal;
 
                 } else {
                 $sgal[] = $gal;
