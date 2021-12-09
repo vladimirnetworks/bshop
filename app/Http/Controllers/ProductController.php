@@ -81,10 +81,6 @@ class ProductController extends Controller
     {
         $rels = Relish::whereProductId($prodid)->orderBy('cat_id','ASC')->first();
 
-        // dd($rels);
-
-       // $catt = Cat::whereId($rels->cat_id)->first();
-
 
 
        $cats = array();
@@ -97,9 +93,9 @@ class ProductController extends Controller
 
        }
 
-       if (!count($cats)) {
+       //if (!count($cats)) {
          $cats[] = $rels->cat_id;
-       }
+       //}
 
 
        $rels = Relish::whereIn('cat_id',$cats)->get(['product_id']);
