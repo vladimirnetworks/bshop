@@ -274,7 +274,7 @@ $(".TransFormAnim").on("click touchstart", function() {
 
 </div>
 
-
+<hr>
 
 <div class="mt-4 p-4 bg-dark text-white text-right" >
  تماس با فروشگاه :
