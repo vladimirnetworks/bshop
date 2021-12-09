@@ -241,7 +241,10 @@ class ProductController extends Controller
 
                 do {
 
-                    $fname = "photos/" . rand(0, 99999999) . '.jpg';
+                    $basefname = rand(0, 99999999) . '.jpg';
+                    $fname = "photos/" . $basefname;
+
+
                 } while (file_exists($fname));
 
 
@@ -256,15 +259,15 @@ class ProductController extends Controller
 */
 
                 $image = ImageResize::createFromString(base64_decode($data[1]));
-                $image->save($fname);
+                $image->save("photos/" . $basefname);
 
                 $image = ImageResize::createFromString(base64_decode($data[1]));
                 $image->scale(50);
-                $image->save("medium_".$fname);
+                $image->save("photos/medium_".$basefname);
                 
                 $image = ImageResize::createFromString(base64_decode($data[1]));
                 $image->scale(25);
-                $image->save("small_".$fname);
+                $image->save("photos/small_".$basefname);
 
            
              
@@ -284,14 +287,15 @@ class ProductController extends Controller
 
                     $image = new ImageResize($gal['big']);
                     $image->scale(50);
-                    $image->save("medium_".$gal['big']);
+                    $image->save(str_replace("photos/","photos/medium_",$gal['big']));
+                    
 
                     $image = new ImageResize($gal['big']);
                     $image->scale(25);
-                    $image->save("small_".$gal['big']);
+                    $image->save(str_replace("photos/","photos/small_",$gal['big']));
 
-                    $gal['medium'] = "medium_".$gal['medium'];
-                    $gal['small'] = "small_".$gal['small'];
+                    $gal['medium'] = str_replace("photos/","photos/medium_",$gal['medium']);
+                    $gal['small'] = str_replace("photos/","photos/small_",$gal['small']);
 
 
                 } else {
