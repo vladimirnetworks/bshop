@@ -106,8 +106,8 @@ class ProductController extends Controller
 
        
        foreach ($rels as $hprodid) {
-           if ($hprodid != $prdid) {
-            $prd[] = $prodid->product_id;
+           if ($hprodid->product_id != $prdid) {
+            $prd[] = $hprodid->product_id;
            }
         
        }
