@@ -15,7 +15,16 @@ class CatController extends Controller
      */
     public function index($parentid, Request $request)
     {
-        $cats = Cat::whereParent($parentid)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
+
+        if ($request->type == 'relateto') {
+           $rels = Relish::whereProductId($request->id);
+
+           foreach ($rels as $rel) {
+               $cats[] = $rels->id;
+           }
+
+        }
+        //$cats = Cat::whereParent($parentid)->orderBy('id', 'DESC')->paginate(10, ['*'], 'page', $request->page);
         return response($cats);
     }
 
