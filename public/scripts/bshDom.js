@@ -358,8 +358,10 @@ function loadtoloader(target, path) {
         $(target).append(jprod);
 
         setTimeout(function() {
+            console.log(jprod);
             jprod.css({ "transform": "scaleX(1.0);" });
         }, 100);
+
 
 
 
