@@ -45,6 +45,7 @@ class CatController extends Controller
 
             $rels = Relish::whereProductId($request->id);
 
+            $cats = array();
             foreach ($rels as $rel) {
                 $cats[] = $rel->id;
             }
