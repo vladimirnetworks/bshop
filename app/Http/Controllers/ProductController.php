@@ -151,11 +151,13 @@ class ProductController extends Controller
         # header('Access-Control-Allow-Headers: *');
 
 
+        dd($request);
+
 
         $sgal = [];
         foreach ($request->gal as $gal) {
 
-            dd($gal);
+          
             if (strtolower(substr($gal['small'], 0, 10)) == 'data:image') {
 
                 do {
