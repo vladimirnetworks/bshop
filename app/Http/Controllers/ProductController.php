@@ -151,7 +151,7 @@ class ProductController extends Controller
         # header('Access-Control-Allow-Headers: *');
 
 
-        dd($request);
+
 
 
         $sgal = [];
