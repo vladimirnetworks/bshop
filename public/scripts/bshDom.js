@@ -61,7 +61,7 @@ function openprod(vals, noanim = null) {
 
     var title = $('<div class="text-dark p-2" style="font-size:120%;font-weight:bold">' + vals.title + '</div>');
     var price = $('<div class="pt-1 text-success" style="font-size:150%;font-weight:bold">' + farsi_price(vals.price) + ' تومان </div>');
-    var caption = $('<ul style="text-align: right;font-size:90%">' + vals.licaption + '</ul>');
+    var caption = $('<ul style="text-align: right;font-size:80%">' + vals.licaption + '</ul>');
 
 
     cont.append(photos);
@@ -73,7 +73,7 @@ function openprod(vals, noanim = null) {
 
     var checked = $('<img style="display:none;width: 37%;position: absolute;right: -10%;top: -10%;" src="/icons/check.png" />');
 
-    var kharid = $('<button style="position: relative" class="btn btn-danger btn-lg m-2">خرید</button>');
+    var kharid = $('<button style="position: relative" class="btn btn-danger btn-lg mt-1">خرید</button>');
 
     kharid.append(checked);
 
