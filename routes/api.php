@@ -46,7 +46,7 @@ Route::get('maincat', 'App\Http\Controllers\CatController@maincat');
 Route::post('search', 'App\Http\Controllers\SearchController@search');
 
 
-Route::post('catload', 'App\Http\Controllers\CatController@load');
+Route::post('catload', 'App\Http\Controllers\CatController@catload');
 
 Route::get('onelevelchild/{rootid}', 'App\Http\Controllers\CatController@oneLevelChild');
 
