@@ -81,7 +81,7 @@ class Product extends Model
 
       //  return 'loadcat(".catmain","catload",{"type":"relateto","id":"'.$this->id.'"});';
 
-        return 'loadtoloader(".loader","relateto/'+$this->id+'");';
+        return 'loadtoloader(".loader","relateto/'.$this->id.'");';
 
     }
 
