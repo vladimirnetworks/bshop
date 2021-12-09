@@ -197,7 +197,7 @@ class OrderController extends Controller
 
         date_default_timezone_set("Asia/Tehran");
         $saat = date("H");
-        $saat = $_GET['saat'];
+      
         $rayg = ' (ارسال رایگان)';
         
          if ( $saat == 22 || $saat == 23 || ($saat >= 0 && $saat <= 4) ) {
