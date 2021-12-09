@@ -54,6 +54,10 @@ class CatController extends Controller
           if (isset($rels->cat_id)) {
             $cats = Cat::whereParent($rels->cat_id)->orderBy('id', 'DESC')->get();
           }
+
+          if (count($cats)) {
+            $cats = Cat::whereId($rels->cat_id)->orderBy('id', 'DESC')->get();
+          }
          
          
 
