@@ -79,7 +79,7 @@ class ProductController extends Controller
 
     public function relateto($prodid)
     {
-        $rels = Relish::whereProductId($prodid)->orderBy('cat_id','DESC')->get(['cat_id']);
+        $rels = Relish::whereProductId($prodid)->orderBy('cat_id','ASC')->get(['cat_id']);
 
 
         $cats = array();
