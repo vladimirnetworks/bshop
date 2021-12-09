@@ -23,6 +23,15 @@
 </div>
 
 <script>
+
+
+$("#enamd").click(function() {
+
+window.location = "https://trustseal.enamad.ir/?id=244136&Code=NAYvp5VDiHI1pstposy1";
+
+});
+
+
    $("#gotomain").click(function() {
 
       window.location = "/";
