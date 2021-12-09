@@ -47,12 +47,14 @@ class CatController extends Controller
 
            // dd($rels);
 
-            $cats = array();
+            $catsid = array();
             foreach ($rels as $rel) {
-                $cats[] = $rel->id;
+                $catsid[] = $rel->id;
             }
 
-            $cats = Cat::whereIn('id', $cats)->get();
+            dd($catsid);
+            
+            $cats = Cat::whereIn('id', $catsid)->get();
 
             foreach ($cats as $cat) {
                 $ret[] = ["title" => $cat->title, "id" => $cat->id];
