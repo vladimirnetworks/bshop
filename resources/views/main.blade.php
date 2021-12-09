@@ -268,7 +268,7 @@ $(".TransFormAnim").on("click touchstart", function() {
 });
 </script>
 
-<div class="p-2 m-2 text-center">
+<div style="display:none"class="p-2 m-2 text-center">
 
 <a referrerpolicy="origin"  target="_blank" href="https://trustseal.enamad.ir/?id=244136&Code=NAYvp5VDiHI1pstposy1"><img referrerpolicy="origin" src="https://s4.uupload.ir/files/star0_22zf.png" alt="" class="rounded" style="cursor:pointer" id="NAYvp5VDiHI1pstposy1"></a>
 
