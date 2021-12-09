@@ -360,13 +360,13 @@ function loadtoloader(target, path) {
 
         setTimeout(function() {
 
-            jprod.css({ "transform": "scale(0.2)" });
+            jprod.css({ "transform": "scale(0." + rnd(2, 9) + ")" });
 
         }, 100);
 
         setTimeout(function() {
 
-            jprod.css({ "transform": "translate(-3px, 10px)" });
+            jprod.css({ "transform": "translate(" + rnd(-10, 10) + "px, " + rnd(-10, 10) + "px)" });
 
         }, 200);
 
