@@ -361,13 +361,26 @@ function loadtoloader(target, path) {
         setTimeout(function() {
 
             jprod.css({ "transform": "scale(0.2)" });
+
         }, 100);
+
+        setTimeout(function() {
+
+            jprod.css({ "transform": "translate(-3px, 10px)" });
+
+        }, 200);
+
 
 
         setTimeout(function() {
 
             jprod.css({ "transform": "scale(1.0)" });
-        }, 200);
+        }, 300);
+
+        setTimeout(function() {
+
+            jprod.css({ "transform": "translate(0px, 0px)" });
+        }, 310);
 
 
 
