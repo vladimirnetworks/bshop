@@ -53,7 +53,7 @@
      
   
 
-     <div id="search_box" style="display:none;width:100%;z-index:999;position:absolute;background-color:white;top: 100%;height:100vh"></div>
+     <div id="search_box" style="display:none;width:100%;z-index:1003;position:absolute;background-color:white;top: 100%;height:100vh"></div>
 
 
     </form>
