@@ -58,3 +58,12 @@ Route::get('onelevelchild/{rootid}', 'App\Http\Controllers\CatController@oneLeve
 Route::post('setshipping', 'App\Http\Controllers\OrderController@setshipping');
 
 Route::post('reguserdata', 'App\Http\Controllers\UserdataController@setuserdata');
+
+
+
+
+Route::get('test', function() {
+
+
+
+});

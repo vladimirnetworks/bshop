@@ -195,10 +195,44 @@ class OrderController extends Controller
     public static function shipping()
     {
 
-        $ship[] = ["text" => "امروز قبل از ظهر", "cost" => 0];
-        $ship[] = ["text" => "امروز بعد از ظهر", "cost" => 0];
-        $ship[] = ["text" => "همین الان (۵۰۰۰ تومان)", "cost" => 5000];
-        // $ship[] = ["text"=>"همین الان (۴۰۰۰+ تومان هزینه)","cost"=>4000];
+        date_default_timezone_set("Asia/Tehran");
+        $saat = date("H");
+        $saat = $_GET['saat'];
+        $rayg = ' (ارسال رایگان)';
+        
+         if ( $saat == 22 || $saat == 23 || ($saat >= 0 && $saat <= 4) ) {
+        $ship[] = ["text" => "فردا قبل از ظهر".$rayg, "cost" => 0];
+        $ship[] = ["text" => "فردا بعد از ظهر".$rayg, "cost" => 0];
+         }   
+        
+         if ( $saat > 4 && $saat < 6) {
+            $ship[] = ["text" => "امروز قبل از ظهر".$rayg, "cost" => 0];
+            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
+        }  
+        
+        if ( $saat >= 6 && $saat < 8)  {
+            $ship[] = ["text" => "امروز قبل از ظهر".$rayg, "cost" => 0];
+            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
+            $ship[] = ["text" => "همین الان (۱۰۰۰۰ تومان هزینه)", "cost" => 10000];
+        }  
+        
+        
+        if ( $saat >= 8 && $saat < 12)  {
+            $ship[] = ["text" => "امروز قبل از ظهر".$rayg, "cost" => 0];
+            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
+            $ship[] = ["text" => "همین الان (۵۰۰۰ تومان هزینه)", "cost" => 5000];
+        } 
+        
+        if ( $saat >= 12 && $saat < 19)  {
+            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
+            $ship[] = ["text" => "همین الان (۵۰۰۰ تومان هزینه)", "cost" => 5000];
+        }  
+        
+        if ( $saat >= 19 && $saat < 22)  {
+            $ship[] = ["text" => "تا آخر امشب".$rayg, "cost" => 0];
+            $ship[] = ["text" => "همین الان (۶۰۰۰ تومان هزینه)", "cost" => 6000];
+        }  
+      
         return $ship;
     }
 
@@ -230,8 +264,8 @@ class OrderController extends Controller
 
 
         $tg = new TG();
-       $sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi)."\n\nend");
-        Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
+       //$sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi)."\n\nend");
+       // Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
         $encodedid = encode_id($ret->id);

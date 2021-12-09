@@ -21,7 +21,8 @@ class benmiddleware
 
 
 
-if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == 'https://gadmin.behkiana.ir/') {
+
+if (($_SERVER['REMOTE_ADDR']) == '127.0.0.1' || (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == 'https://gadmin.behkiana.ir/')) {
 
 } else {
 
