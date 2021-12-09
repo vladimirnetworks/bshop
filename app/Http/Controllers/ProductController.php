@@ -100,8 +100,12 @@ class ProductController extends Controller
        if (!count($cats)) {
          $cats[] = $rels->cat_id;
        }
+
+
+       $rels = Relish::whereCatIdIn($cats)->get();
+
       
-          dd($cats);
+          dd($rels);
 
     }
 
