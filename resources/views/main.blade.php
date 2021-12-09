@@ -278,6 +278,14 @@ $(".TransFormAnim").on("click touchstart", function() {
 
 <div class="p-4 bg-dark text-white text-right" style="direction:rtl">
  تماس با فروشگاه : 06642448787
+
+<br>
+
+آدرس فروشگاه : 
+
+<br>
+
+لرستان بروجرد خیابان جعفری بن بست ((شهبازی))، پلاک: 251.0، طبقه: همکف،
 </div>
 
 </body>
