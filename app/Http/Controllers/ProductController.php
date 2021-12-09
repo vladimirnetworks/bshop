@@ -76,6 +76,35 @@ class ProductController extends Controller
 
     }
 
+
+    public function relateto($prodid): void
+    {
+        $rels = Relish::whereProductId($prodid)->orderBy('cat_id','ASC')->first();
+
+        // dd($rels);
+
+       // $catt = Cat::whereId($rels->cat_id)->first();
+
+
+
+       $cats = array();
+       if (isset($rels->cat_id)) {
+         $cats = Cat::whereParent($rels->cat_id)->orderBy('id', 'DESC')->get();
+
+          foreach ($cats as $catt) {
+            $cats[] = $catt->id;
+          }
+
+       }
+
+       if (!count($cats)) {
+         $cats[] = $rels->cat_id;
+       }
+      
+          dd($cats);
+
+    }
+
     public function index(Request $request)
     {
         //
