@@ -87,6 +87,8 @@ class ProductController extends Controller
            $cats[] = $rel->cat_id;
         }
 
+        dd($cats);
+
       /* $cats = array();
        if (isset($rels->cat_id)) {
          $xcats = Cat::whereParent($rels->cat_id)->orderBy('id', 'DESC')->get();
