@@ -49,11 +49,11 @@ class CatController extends Controller
 
             $catsid = array();
             foreach ($rels as $rel) {
-                $catsid[] = $rel->id;
+                $catsid[] = $rel->cat_id;
             }
 
-            dd($catsid);
-            
+        
+
             $cats = Cat::whereIn('id', $catsid)->get();
 
             foreach ($cats as $cat) {
