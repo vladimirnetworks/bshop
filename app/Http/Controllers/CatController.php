@@ -43,9 +43,9 @@ class CatController extends Controller
 
         if ($request->type == 'relateto') {
 
-            $rels = Relish::whereProductId($request->id);
+            $rels = Relish::whereProductId($request->id)->get();
 
-            dd($rels);
+           // dd($rels);
 
             $cats = array();
             foreach ($rels as $rel) {
