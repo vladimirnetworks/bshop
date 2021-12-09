@@ -104,10 +104,17 @@ class ProductController extends Controller
 
        $rels = Relish::whereIn('cat_id',$cats)->get(['product_id']);
 
+    
        
        foreach ($rels as $hprodid) {
           // if ($hprodid->product_id != $prdid) {
-            $prd[] = $hprodid->product_id;
+
+        
+
+            if ($hprodid->product_id != $prodid) {
+                $prd[] = $hprodid->product_id;
+            }
+            
           // }
         
        }
