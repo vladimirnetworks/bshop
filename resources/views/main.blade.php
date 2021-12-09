@@ -276,17 +276,18 @@ $(".TransFormAnim").on("click touchstart", function() {
 
 <hr>
 
-<div class="p-4 bg-dark text-white text-right" style="direction:rtl">
+<div class="p-4 bg-dark text-white text-right" >
  تماس با فروشگاه :
  <span style="direction:ltr"> 066-42448787</span>
 
 <br>
-
+<div style="direction:rtl">
 آدرس فروشگاه : 
 
 <br>
 
 لرستان بروجرد خیابان جعفری بن بست ((شهبازی))، پلاک: 251.0، طبقه: همکف،
+</div>
 </div>
 
 </body>
