@@ -77,6 +77,7 @@ class CatController extends Controller
         }
 
 
+        $ret = [];
 
         return ["data" => $ret];
     }
