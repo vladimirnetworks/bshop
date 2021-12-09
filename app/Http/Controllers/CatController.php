@@ -43,9 +43,11 @@ class CatController extends Controller
 
         if ($request->type == 'relateto') {
 
-            $rels = Relish::whereProductId($request->id)->get();
+            $rels = Relish::whereProductId($request->id)->orderBy('cat_id','ASC')->first();
 
            // dd($rels);
+
+           dd($rels->cat_id);
 
             $catsid = array();
             foreach ($rels as $rel) {
