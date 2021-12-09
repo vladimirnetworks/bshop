@@ -274,6 +274,12 @@ $(".TransFormAnim").on("click touchstart", function() {
 
 </div>
 
+<hr>
+
+<div class="p-4 bg-dark">
+ تماس با فروشگاه : 06642448787
+</div>
+
 </body>
 
 </html>
