@@ -13,12 +13,12 @@
 
 
 
-<div id="gotomain" class="bottommenuitem mr-3 TransFormAnim">
+<div id="gotomain" class="bottommenuitem mr-2 TransFormAnim">
          <img src="/icons/home.png" style="height:60%"/><small>صفحه‌اول</small>
 </div>
 
 
-<div id="enamd" class="bottommenuitem mr-3 TransFormAnim">
+<div id="enamd" class="bottommenuitem mr-2 TransFormAnim">
    <img src="/icons/enamad.png" style="height:60%"/></a><small>نماد اعتماد</small>
 </div>
 
@@ -48,7 +48,7 @@ window.location = "https://trustseal.enamad.ir/?id=244136&Code=NAYvp5VDiHI1pstpo
    });
    </script>
 
-<div id="totoorders" style="margin-left: auto;" class="bottommenuitem mr-3 TransFormAnim">
+<div id="totoorders" style="margin-left: auto;" class="bottommenuitem mr-2 TransFormAnim">
 
         <img src="/icons/orders.png" style="height:60%"/><small>سفارشات‌من</small>
 </div>
