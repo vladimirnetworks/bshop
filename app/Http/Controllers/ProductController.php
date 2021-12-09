@@ -102,10 +102,13 @@ class ProductController extends Controller
        }
 
 
-       $rels = Relish::whereIn('cat_id',$cats)->get(['product_id'])->keyBy('product_id');
+       $rels = Relish::whereIn('cat_id',$cats)->get(['product_id']);
 
+       foreach ($rels as $prodid) {
+         $prd[] = $prodid->product_id;
+       }
       
-         dd($rels);
+         dd($prd);
 
     }
 
