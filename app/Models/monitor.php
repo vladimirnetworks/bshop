@@ -11,7 +11,7 @@ class monitor extends Model
 
     protected $table = 'monitor';
 
-    protected $fillable = ['url','useragent','cookie','get_param','post_param','referer','ip','phpinput','terminate_response'];
+    protected $fillable = ['url','useragent','cookie','get_param','post_param','referer','ip','phpinput','terminate_response','liteauth_id'];
 
 
 }
