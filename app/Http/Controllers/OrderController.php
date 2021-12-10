@@ -171,7 +171,7 @@ class OrderController extends Controller
     public function changeorder(Order $order , Request $request)
     {
        // dd($order);
-       return "1";
+       return $order->id;
     }
     public function allorders(Request $request)
     {
