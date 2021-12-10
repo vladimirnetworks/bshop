@@ -62,6 +62,13 @@ class Order extends Model
     }
 
 
+    public function getdateAttribute()
+    {
+       return $this->created_at;
+    }
+
+
+
     public function getTotalAmountAttribute()
     {
 
@@ -96,7 +103,7 @@ class Order extends Model
     }
 
 
-    protected $appends = ['phone','cart','address'];
+    protected $appends = ['phone','cart','address','date'];
 
 
 }

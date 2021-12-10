@@ -171,7 +171,7 @@ class OrderController extends Controller
     public function allorders(Request $request)
     {
        
-        date_default_timezone_set("Asia/Tehran");
+       
         $orders = Order::orderBy('id', 'DESC')->paginate(20, ['*'], 'page', $request->page);
 
         $ords = [];
