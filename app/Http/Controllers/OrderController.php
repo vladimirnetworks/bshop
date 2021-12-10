@@ -157,22 +157,18 @@ class OrderController extends Controller
     }
 
 
-    public function changeorder(Order $order , Request $request)
+    public function changeorder(Order $order, Request $request)
     {
-       // dd($order);
-       $order->shipping_status = $request->shipping_status;
-       return $order->save();
-
-
+        $order->shipping_status = $request->shipping_status;
+        return $order->save();
     }
     public function allorders(Request $request)
     {
-       
-       
+
+
         $orders = Order::orderBy('id', 'DESC')->paginate(20, ['*'], 'page', $request->page);
-
         $ords = [];
-
+        
         foreach ($orders as $order) {
 
 
@@ -200,17 +196,13 @@ class OrderController extends Controller
         return $orders;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    
+    /* public function store(Request $request)
     {
 
 
-       /* $tg = new TG();
+        $tg = new TG();
         $sendt = $tg->sendTextToGroup("okok");
 
 
@@ -223,9 +215,9 @@ class OrderController extends Controller
 
         $ret = Order::Create(["data" => json_encode($cartx), "price" => 369]);
         return ["zz" => $ret];
-        */
-
+       
     }
+    */
 
     public static function shipping()
     {
@@ -272,17 +264,10 @@ class OrderController extends Controller
     }
 
 
-    public function store2(Request $request)
+    public function preorder(Request $request)
     {
 
-
-
-
-
         $me = liteauth::me();
-
-
-
 
         foreach ($request->data as $hitdata) {
             $cartx[] = $hitdata;
@@ -294,14 +279,9 @@ class OrderController extends Controller
 
         $ret = Order::Create(["data" => json_encode($cartx), "liteauth_id" => $me->id, "shipping" => json_encode($xshiping)]);
 
-
-
-
-
         $tg = new TG();
         //$sendt = $tg->sendTextToGroup("new order -> " . $request->me . "\n\n" . implode("\n", $notifi) . "\n\nend");
         //Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
-
 
         $encodedid = encode_id($ret->id);
 
