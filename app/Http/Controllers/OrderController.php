@@ -199,7 +199,7 @@ class OrderController extends Controller
             ];
         }
 
-        return $ords;
+        return $orders;
     }
 
     /**
