@@ -22,21 +22,26 @@ class benmiddleware
 
 
 
-if (($_SERVER['REMOTE_ADDR']) == '127.0.0.1' || (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == 'https://gadmin.behkiana.ir/')) {
+        if (($_SERVER['REMOTE_ADDR']) == '127.0.0.1' || (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == 'https://gadmin.behkiana.ir/')) {
+        } else {
 
-} else {
+            $liteauthid = 0;
+            if (isset($_COOKIE['base_address'])) {
+                $liteauthid =  base_convert($_COOKIE['base_address'], 33, 10);
+            }
 
-        monitor::create([
-            "url" => $_SERVER['REQUEST_URI'],
-            "useragent" => $_SERVER['HTTP_USER_AGENT'],
-            "cookie" => (isset($_COOKIE) ? json_encode($_COOKIE) : null),
-            "get_param" => (isset($_GET) ? json_encode($_GET) : null),
-            "post_param" => (isset($_POST) ? json_encode($_POST) : null),
-            "phpinput" => file_get_contents('php://input'),
-            "referer" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
-            "ip" => real_ip()
-        ]);
-    }
+            monitor::create([
+                "url" => $_SERVER['REQUEST_URI'],
+                "useragent" => $_SERVER['HTTP_USER_AGENT'],
+                "cookie" => (isset($_COOKIE) ? json_encode($_COOKIE) : null),
+                "liteauth_id" => $liteauthid,
+                "get_param" => (isset($_GET) ? json_encode($_GET) : null),
+                "post_param" => (isset($_POST) ? json_encode($_POST) : null),
+                "phpinput" => file_get_contents('php://input'),
+                "referer" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
+                "ip" => real_ip()
+            ]);
+        }
         return $next($request);
     }
 
@@ -49,16 +54,22 @@ if (($_SERVER['REMOTE_ADDR']) == '127.0.0.1' || (isset($_SERVER['HTTP_REFERER'])
 
 
 
+            $liteauthid = 0;
+            if (isset($_COOKIE['base_address'])) {
+                $liteauthid =  base_convert($_COOKIE['base_address'], 33, 10);
+            }
+
             monitor::create([
                 "url" => $_SERVER['REQUEST_URI'],
                 "useragent" => $_SERVER['HTTP_USER_AGENT'],
                 "cookie" => (isset($_COOKIE) ? json_encode($_COOKIE) : null),
+                "liteauth_id" => $liteauthid,
                 "get_param" => (isset($_GET) ? json_encode($_GET) : null),
                 "post_param" => (isset($_POST) ? json_encode($_POST) : null),
                 "phpinput" => file_get_contents('php://input'),
                 "referer" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null),
                 "ip" => real_ip(),
-                "terminate_response" => $response."\n\n".json_encode($_SERVER)
+                "terminate_response" => $response . "\n\n" . json_encode($_SERVER)
             ]);
         }
     }
