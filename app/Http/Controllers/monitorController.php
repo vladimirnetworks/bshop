@@ -12,7 +12,7 @@ class monitorController extends Controller
        
       $latest = monitor::where("liteauth_id",">","0")->orderBy('liteauth_id', 'DESC')->paginate(20, ['*'], 'page', $request->page);
 
-      dd($latest);
+return  $latest ;
 
      }
 }
