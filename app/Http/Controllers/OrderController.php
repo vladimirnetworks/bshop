@@ -170,7 +170,8 @@ class OrderController extends Controller
 
     public function changeorder(Order $order , Request $request)
     {
-        dd($order);
+       // dd($order);
+       return "1";
     }
     public function allorders(Request $request)
     {
