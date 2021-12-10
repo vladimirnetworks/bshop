@@ -30,9 +30,7 @@ Route::get('/onlinepayment/{orderid}', "App\Http\Controllers\OrderController@onl
 
 
 
-Route::get('/admin',function() {
-    return redirect('https://angular-ivy-vowr18.stackblitz.io/');
-});
+
 
 
 
@@ -41,21 +39,13 @@ Route::get('/200297.txt',function() {
 });
 
 
-Route::get('/login', "App\Http\Controllers\Logincontroller@login")->middleware('tokin');
-Route::post('/login', "App\Http\Controllers\Logincontroller@login2")->middleware('tokin');
-
-
-
-Route::get('/contact-us', function() {
-    return view("contactus",["pageTitle"=>"تماس با ما"]);
-})->middleware('tokin');
 
 
 
 
-Route::get('/index2', "App\Http\Controllers\mainPageController@index2")->middleware('tokin');
 
-Route::get('/index3', "App\Http\Controllers\mainPageController@index3")->middleware('tokin');
+
+
 
 
 Route::get('/onlinepay/{orderid}', "App\Http\Controllers\OrderController@onlinepay")->middleware('tokin');
