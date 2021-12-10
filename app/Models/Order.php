@@ -96,7 +96,7 @@ class Order extends Model
     }
 
 
-    protected $appends = ['phone','cart'];
+    protected $appends = ['phone','cart','address'];
 
 
 }
