@@ -171,7 +171,10 @@ class OrderController extends Controller
     public function changeorder(Order $order , Request $request)
     {
        // dd($order);
-       return $order->id;
+       $order->shipping_status = $request->shipping_status;
+       return $order->save();
+
+
     }
     public function allorders(Request $request)
     {
