@@ -20,24 +20,24 @@ class OrderController extends Controller
      */
 
 
-     public function showorder($orderid)
-     {
+    public function showorder($orderid)
+    {
 
-       // print_r($_SERVER);exit;
+        // print_r($_SERVER);exit;
 
 
-      
-        
+
+
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
 
-        
+
 
         $payment = Payment::whereDecodedOrderId($order->id)->first();
 
-        
-        
-        return view("singleorder",["pageTitle"=>"سفارش ".$orderid,"order"=>$order,"payment"=>$payment]);
-     }
+
+
+        return view("singleorder", ["pageTitle" => "سفارش " . $orderid, "order" => $order, "payment" => $payment]);
+    }
 
     public function onlinepay($orderid)
     {
@@ -54,8 +54,8 @@ class OrderController extends Controller
         */
 
         $totamount = $order->total_amount;
-        
-       
+
+
         $ipayment = Payment::Create([
             "order_id" => $orderid,
             "decoded_order_id" => decode_id($orderid)
@@ -109,7 +109,7 @@ class OrderController extends Controller
             if (empty($result['errors'])) {
                 if ($result['data']['code'] == 100) {
 
-                    
+
 
                     return [
                         'redirecturl' => 'https://www.zarinpal.com/pg/StartPay/' . $result['data']["authority"],
@@ -167,6 +167,41 @@ class OrderController extends Controller
         return view('myorders', ['pageTitle' => "سفارشات من", "orders" => $ords]);
     }
 
+
+    public function allorders(Request $request)
+    {
+       
+        $orders = Order::orderBy('id', 'DESC')->paginate(20, ['*'], 'page', $request->page);
+
+        $ords = [];
+
+        foreach ($orders as $order) {
+
+
+            $cart = json_decode($order->data, true);
+
+            $orderItems = null;
+            $orderTot = 0;
+
+            foreach ($cart as $cartitem) {
+
+                $orderItems[] = ["text" => $cartitem['title'], "count" => $cartitem['count']];
+
+                $orderTot = $orderTot + intval($cartitem['price']) * intval($cartitem['count']);
+            }
+
+            $ords[] = [
+                'items' => $orderItems,
+                'total' => $orderTot,
+                'shipping_status' => $order->shipping_status,
+                'payment_status' => $order->payment_status,
+                'encoded_id' => $order->encoded_id,
+            ];
+        }
+
+        return $ords;
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -197,42 +232,42 @@ class OrderController extends Controller
 
         date_default_timezone_set("Asia/Tehran");
         $saat = date("H");
-      
+
         $rayg = ' (ارسال رایگان)';
-        
-         if ( $saat == 22 || $saat == 23 || ($saat >= 0 && $saat <= 4) ) {
-        $ship[] = ["text" => "فردا قبل از ظهر".$rayg, "cost" => 0];
-        $ship[] = ["text" => "فردا بعد از ظهر".$rayg, "cost" => 0];
-         }   
-        
-         if ( $saat > 4 && $saat < 6) {
-            $ship[] = ["text" => "امروز قبل از ظهر".$rayg, "cost" => 0];
-            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
-        }  
-        
-        if ( $saat >= 6 && $saat < 8)  {
-            $ship[] = ["text" => "امروز قبل از ظهر".$rayg, "cost" => 0];
-            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
+
+        if ($saat == 22 || $saat == 23 || ($saat >= 0 && $saat <= 4)) {
+            $ship[] = ["text" => "فردا قبل از ظهر" . $rayg, "cost" => 0];
+            $ship[] = ["text" => "فردا بعد از ظهر" . $rayg, "cost" => 0];
+        }
+
+        if ($saat > 4 && $saat < 6) {
+            $ship[] = ["text" => "امروز قبل از ظهر" . $rayg, "cost" => 0];
+            $ship[] = ["text" => "امروز بعد از ظهر" . $rayg, "cost" => 0];
+        }
+
+        if ($saat >= 6 && $saat < 8) {
+            $ship[] = ["text" => "امروز قبل از ظهر" . $rayg, "cost" => 0];
+            $ship[] = ["text" => "امروز بعد از ظهر" . $rayg, "cost" => 0];
             $ship[] = ["text" => "همین الان (۱۰۰۰۰ تومان هزینه)", "cost" => 10000];
-        }  
-        
-        
-        if ( $saat >= 8 && $saat < 12)  {
-            $ship[] = ["text" => "امروز قبل از ظهر".$rayg, "cost" => 0];
-            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
+        }
+
+
+        if ($saat >= 8 && $saat < 12) {
+            $ship[] = ["text" => "امروز قبل از ظهر" . $rayg, "cost" => 0];
+            $ship[] = ["text" => "امروز بعد از ظهر" . $rayg, "cost" => 0];
             $ship[] = ["text" => "همین الان (۵۰۰۰ تومان هزینه)", "cost" => 5000];
-        } 
-        
-        if ( $saat >= 12 && $saat < 19)  {
-            $ship[] = ["text" => "امروز بعد از ظهر".$rayg, "cost" => 0];
+        }
+
+        if ($saat >= 12 && $saat < 19) {
+            $ship[] = ["text" => "امروز بعد از ظهر" . $rayg, "cost" => 0];
             $ship[] = ["text" => "همین الان (۵۰۰۰ تومان هزینه)", "cost" => 5000];
-        }  
-        
-        if ( $saat >= 19 && $saat < 22)  {
-            $ship[] = ["text" => "تا آخر امشب".$rayg, "cost" => 0];
+        }
+
+        if ($saat >= 19 && $saat < 22) {
+            $ship[] = ["text" => "تا آخر امشب" . $rayg, "cost" => 0];
             $ship[] = ["text" => "همین الان (۶۰۰۰ تومان هزینه)", "cost" => 6000];
-        }  
-      
+        }
+
         return $ship;
     }
 
@@ -252,7 +287,7 @@ class OrderController extends Controller
         foreach ($request->data as $hitdata) {
             $cartx[] = $hitdata;
 
-            $notifi[] = $hitdata['title']." , (".$hitdata['count']."x)";
+            $notifi[] = $hitdata['title'] . " , (" . $hitdata['count'] . "x)";
         }
 
         $xshiping = $this::shipping();
@@ -260,12 +295,12 @@ class OrderController extends Controller
         $ret = Order::Create(["data" => json_encode($cartx), "liteauth_id" => $me->id, "shipping" => json_encode($xshiping)]);
 
 
-        
+
 
 
         $tg = new TG();
-       $sendt = $tg->sendTextToGroup("new order -> " . $request->me."\n\n".implode("\n",$notifi)."\n\nend");
-       Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
+        $sendt = $tg->sendTextToGroup("new order -> " . $request->me . "\n\n" . implode("\n", $notifi) . "\n\nend");
+        Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
         $encodedid = encode_id($ret->id);
