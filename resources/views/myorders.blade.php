@@ -53,6 +53,10 @@ $( document ).ready(function() {
        تحویل داده شده
        @endif
 
+       @if($order['shipping_status'] === 3)
+       کنسل  
+       @endif
+
        </div>
 
 
