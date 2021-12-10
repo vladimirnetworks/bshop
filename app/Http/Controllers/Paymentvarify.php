@@ -25,7 +25,7 @@ class Paymentvarify extends Controller
         $amount = $ordi->total_amount;
 
        
-        $data = array("merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d", "authority" => $Authority, "amount" => $amount*10);
+        $data = array("merchant_id" => env("ZARINMERCH"), "authority" => $Authority, "amount" => $amount*10);
         
  
         //print_r($data);

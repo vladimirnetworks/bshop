@@ -68,7 +68,7 @@ class OrderController extends Controller
     public function zarinpal_pay($amout, $title, $mob, $orderid)
     {
         $data = array(
-            "merchant_id" => "14b79a43-cb9b-44eb-b4d0-e8b37343278d",
+            "merchant_id" => env("ZARINMERCH"),
             "amount" => $amout * 10,
             "callback_url" => "https://www.behkiana.ir/zainpalverify/" . $orderid,
             "description" => $title,
