@@ -58,7 +58,7 @@ Route::post('reguserdata', 'App\Http\Controllers\UserdataController@setuserdata'
 
 Route::get('setbaseaddress', function(Request $request) {
 
-     echo env("ZARINMERCH");
+
 
   if ($request->baseaddress == 'admin' && $request->xaddress == '1234') {
       
