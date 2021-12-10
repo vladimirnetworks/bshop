@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use DateTime;
+use DateTimeZone;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -64,7 +66,16 @@ class Order extends Model
 
     public function getdateAttribute()
     {
-       return $this->created_at;
+
+      
+
+
+        $date = new DateTime($this->created_at);
+        $date->setTimezone(new DateTimeZone('Asia/Tehran')); // +04
+
+        return $date->format('Y-m-d H:i:s'); // 2012-07-15 05:00:00 
+
+       
     }
 
 
