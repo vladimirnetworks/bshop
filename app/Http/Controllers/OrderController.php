@@ -168,6 +168,10 @@ class OrderController extends Controller
     }
 
 
+    public function changeorder(Order $order , Request $request)
+    {
+        dd($order);
+    }
     public function allorders(Request $request)
     {
        

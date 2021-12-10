@@ -23,6 +23,8 @@ Route::apiResource('products', 'App\Http\Controllers\ProductController');
 Route::apiResource('fastprice', 'App\Http\Controllers\fastprice');
 
 Route::get('admin/orders', 'App\Http\Controllers\OrderController@allorders');
+Route::put('admin/orders/{order}', 'App\Http\Controllers\OrderController@changeorder');
+
 
 Route::get('categories/{parentid}', 'App\Http\Controllers\CatController@index');
 Route::post('categories/{parentid}', 'App\Http\Controllers\CatController@store');
