@@ -59,3 +59,8 @@ Route::get('/zainpalverify/{paymentid}', "App\Http\Controllers\Paymentvarify@zar
 Route::get('/testben', function() {
     return "321";
 });
+
+
+Route::get('/notif', function() {
+    return view("notif",["pageTitle"=>"notif"]);
+});
