@@ -168,7 +168,7 @@ class OrderController extends Controller
 
         $orders = Order::orderBy('id', 'DESC')->paginate(20, ['*'], 'page', $request->page);
         $ords = [];
-        
+
         foreach ($orders as $order) {
 
 
@@ -280,8 +280,8 @@ class OrderController extends Controller
         $ret = Order::Create(["data" => json_encode($cartx), "liteauth_id" => $me->id, "shipping" => json_encode($xshiping)]);
 
         $tg = new TG();
-        //$sendt = $tg->sendTextToGroup("new order -> " . $request->me . "\n\n" . implode("\n", $notifi) . "\n\nend");
-        //Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
+        $sendt = $tg->sendTextToGroup("new order -> " . $request->me . "\n\n" . implode("\n", $notifi) . "\n\nend");
+        Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
         $encodedid = encode_id($ret->id);
 
