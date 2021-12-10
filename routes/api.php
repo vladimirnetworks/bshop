@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::apiResource('orders', 'App\Http\Controllers\OrderController');
-
-
+//Route::apiResource('orders', 'App\Http\Controllers\OrderController');
 Route::post('preorder', 'App\Http\Controllers\OrderController@store2');
 
 Route::apiResource('products', 'App\Http\Controllers\ProductController');

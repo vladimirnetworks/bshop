@@ -23,19 +23,8 @@ class OrderController extends Controller
     public function showorder($orderid)
     {
 
-        // print_r($_SERVER);exit;
-
-
-
-
         $order = liteauth::me()->orders()->whereId(decode_id($orderid))->first();
-
-
-
         $payment = Payment::whereDecodedOrderId($order->id)->first();
-
-
-
         return view("singleorder", ["pageTitle" => "سفارش " . $orderid, "order" => $order, "payment" => $payment]);
     }
 
@@ -221,7 +210,7 @@ class OrderController extends Controller
     {
 
 
-        $tg = new TG();
+       /* $tg = new TG();
         $sendt = $tg->sendTextToGroup("okok");
 
 
@@ -234,6 +223,8 @@ class OrderController extends Controller
 
         $ret = Order::Create(["data" => json_encode($cartx), "price" => 369]);
         return ["zz" => $ret];
+        */
+
     }
 
     public static function shipping()
@@ -308,8 +299,8 @@ class OrderController extends Controller
 
 
         $tg = new TG();
-       $sendt = $tg->sendTextToGroup("new order -> " . $request->me . "\n\n" . implode("\n", $notifi) . "\n\nend");
-        Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
+        //$sendt = $tg->sendTextToGroup("new order -> " . $request->me . "\n\n" . implode("\n", $notifi) . "\n\nend");
+        //Notif::Create(["data" => json_encode($sendt), "status" => $sendt['ok']]);
 
 
         $encodedid = encode_id($ret->id);
@@ -324,16 +315,7 @@ class OrderController extends Controller
     public function setshipping(Request $request)
     {
 
-        //   $me = liteauth::me();
-        // $order = Order::where(["id","=",encode_id($orderid)])->first();
-        //dd(decode_id($orderid));
-
-
-
-
         $order = liteauth::me()->orders()->whereId(decode_id($request->data['orderid']))->first();
-
-
         $order->selected_shipping = $request->data['shipping'];
         $order->save();
 
