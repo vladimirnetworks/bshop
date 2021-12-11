@@ -26,10 +26,19 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/scripts/sw.js').then(function(registration) {
       // Registration was successful
       console.log(registration);
-      alert('ServiceWorker registration successful with scope: ', registration.scope);
+
+      registration.pushManager.subscribe({
+
+        userVisibleOnly : true
+
+      }).then(function(sub) {
+        console.log(sub);
+      });
+
+     // alert('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
       // registration failed :(
-      alert('ServiceWorker registration failed: ', err);
+      //alert('ServiceWorker registration failed: ', err);
     });
   });
 }
