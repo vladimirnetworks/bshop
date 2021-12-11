@@ -71,7 +71,7 @@ function updateBtn() {
     updateSubscriptionOnServer(null);
     return;
   }
-  
+
   if (isSubscribed) {
     pushButton.textContent = 'Disable Push Messaging';
   } else {
@@ -141,7 +141,7 @@ function initializeUI() {
 
 if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
-  navigator.serviceWorker.register('sw.js')
+  navigator.serviceWorker.register('sw.js?'+Math.random())
   .then(function(swReg) {
     console.log('Service Worker is registered', swReg);
     swRegistration = swReg;
