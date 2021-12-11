@@ -8,7 +8,7 @@ self.addEventListener('push', function(event) {
         badge: '/icons/orders.png'
     };
 
-    console.log("notif");
+
     const notificationPromise = self.registration.showNotification(title, options);
 
     event.waitUntil(notificationPromise);
