@@ -80,6 +80,18 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 
 
+
+function updateBtn() {
+  if (isSubscribed) {
+    pushButton.textContent = 'Disable Push Messaging';
+  } else {
+    pushButton.textContent = 'Enable Push Messaging';
+  }
+  pushButton.disabled = false;
+}
+
+
+
 function initializeUI() {
   // Set the initial subscription value
   swRegistration.pushManager.getSubscription()
@@ -93,6 +105,7 @@ function initializeUI() {
     updateBtn();
   });
 }
+
 
 
 </script>
