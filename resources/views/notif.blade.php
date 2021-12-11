@@ -18,7 +18,7 @@
 <script>
 
 
-navigator.serviceWorker.getRegistration('/').then(function(registration) {
+navigator.serviceWorker.getRegistration('https://www.behkiana.ir/scripts/swiperbox.js').then(function(registration) {
   if(registration){
     console.log("ys");
   } else {
