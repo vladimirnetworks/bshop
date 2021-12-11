@@ -20,7 +20,7 @@
 
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
-    alert("This browser does not support desktop notification");
+    alert("fail");
   }
 
   // Let's check whether notification permissions have already been granted
@@ -34,7 +34,7 @@
     Notification.requestPermission().then(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification("Hi there!");
+        var notification = new Notification("zalam");
       }
     });
   }

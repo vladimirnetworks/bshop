@@ -61,7 +61,7 @@ Route::get('/testben', function() {
 });
 
 
-Route::get('/notif', function() {
+Route::get('/notif654', function() {
     return view("notif",["pageTitle"=>"notif"]);
 });
 
