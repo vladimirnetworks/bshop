@@ -22,7 +22,7 @@ class benmiddleware
 
 
 
-        if (($_SERVER['REMOTE_ADDR']) == '127.0.0.1' || (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == 'https://gadmin.behkiana.ir/')) {
+        if (($_SERVER['REMOTE_ADDR']) == '127.0.0.1' || ($_SERVER['REMOTE_ADDR']) == '192.168.1.7' || (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == 'https://gadmin.behkiana.ir/')) {
         } else {
 
             $liteauthid = 0;

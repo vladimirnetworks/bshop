@@ -1,25 +1,33 @@
-@extends('main')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('main')
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>Change_me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+</head>
 
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
+<body>
   
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCtdaK424sHk0HT8v023xtfnBaDeAYOfDk",
-      authDomain: "behkiana-2eddb.firebaseapp.com",
-      projectId: "behkiana-2eddb",
-      storageBucket: "behkiana-2eddb.appspot.com",
-      messagingSenderId: "643879886315",
-      appId: "1:643879886315:web:a1534d29b50bd3389e8dae"
-    };
+<div class="container">
   
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-  </script>
+</div>
 
-@stop
+<script>
+
+
+navigator.serviceWorker.getRegistration('').then(function(registration) {
+  if(registration){
+    console.log("ys");
+  } else {
+    alert("no");
+  }
+});
+
+
+</script>
+
+</body>
+</html>
