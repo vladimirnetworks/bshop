@@ -7,5 +7,9 @@ self.addEventListener('push', function(event) {
         icon: '/icons/home.png',
         badge: '/icons/orders.png'
     };
-    event.waitUntil(self.registration.showNotification(title, options));
+
+    console.log("notif");
+    const notificationPromise = self.registration.showNotification(title, options);
+
+    event.waitUntil(notificationPromise);
 });
